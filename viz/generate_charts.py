@@ -1,5 +1,6 @@
 import plotly.express as px
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import os
 import json
 from jinja2 import Environment, FileSystemLoader
@@ -37,40 +38,72 @@ for key in sorted_keys:
 df_normal = pd.DataFrame({'word': word, 'normal': normal, 'date': dates})
 df_hard = pd.DataFrame({'word': word, 'hard': hard, 'date': dates})
 
-# Calculate rolling averages (window size of 7)
-df_normal['rolling_avg'] = df_normal['normal'].rolling(window=7).mean()
-df_hard['rolling_avg'] = df_hard['hard'].rolling(window=7).mean()
+# Calculate rolling averages (window sizes of 7 and 30)
+df_normal['rolling_avg_7'] = df_normal['normal'].rolling(window=7).mean()
+df_normal['rolling_avg_30'] = df_normal['normal'].rolling(window=30).mean()
+df_hard['rolling_avg_7'] = df_hard['hard'].rolling(window=7).mean()
+df_hard['rolling_avg_30'] = df_hard['hard'].rolling(window=30).mean()
 
-# Create scatter plots with dates as hover text and add rolling average line
-fig = px.scatter(df_normal, x='word', y='normal', labels={'word': 'Word', 'normal': 'Guesses'},
-                 title="Average guesses per word on Normal difficulty",
-                 hover_name='date')
+def create_figure(df, y_column, title):
+    fig = go.Figure()
 
-fig.add_trace(go.Scatter(x=df_normal['word'], y=df_normal['rolling_avg'],
-                         mode='lines', name='7-day Rolling Average',
-                         line=dict(color='green', width=2)))
+    # Add scatter plot
+    fig.add_trace(go.Scatter(
+        x=df['word'],
+        y=df[y_column],
+        mode='markers',
+        name='Daily Data',
+        hovertext=df['date'],
+        legendgroup='daily',
+        showlegend=True
+    ))
 
-fig.add_hline(y=statistics.mean(normal), line_dash="dash", line_color="red",
-              annotation_text=f"Avg: {statistics.mean(normal):.2f}",
-              annotation_position="top right")
+    # Add 7-day rolling average
+    fig.add_trace(go.Scatter(
+        x=df['word'],
+        y=df[f'rolling_avg_7'],
+        mode='lines',
+        name='7-day Rolling Average',
+        line=dict(color='green', width=2)
+    ))
 
-fig2 = px.scatter(df_hard, x='word', y='hard', labels={'word': 'Word', 'hard': 'Guesses'},
-                  title="Average guesses per word on Hard difficulty",
-                  hover_name='date')
+    # Add 30-day rolling average
+    fig.add_trace(go.Scatter(
+        x=df['word'],
+        y=df[f'rolling_avg_30'],
+        mode='lines',
+        name='30-day Rolling Average',
+        line=dict(color='blue', width=2)
+    ))
 
-fig2.add_trace(go.Scatter(x=df_hard['word'], y=df_hard['rolling_avg'],
-                          mode='lines', name='7-day Rolling Average',
-                          line=dict(color='green', width=2)))
+    # Add overall average line
+    overall_avg = df[y_column].mean()
+    fig.add_hline(
+        y=overall_avg,
+        line_dash="dash",
+        line_color="red",
+        annotation_text=f"Avg: {overall_avg:.2f}",
+        annotation_position="top right"
+    )
 
-fig2.add_hline(y=statistics.mean(hard), line_dash="dash", line_color="red",
-               annotation_text=f"Avg: {statistics.mean(hard):.2f}",
-               annotation_position="top right")
+    fig.update_layout(
+        title=title,
+        xaxis_title="Word",
+        yaxis_title="Guesses",
+        legend_title="Legend"
+    )
+
+    return fig
+
+# Create figures
+fig_normal = create_figure(df_normal, 'normal', "Average guesses per word on Normal difficulty")
+fig_hard = create_figure(df_hard, 'hard', "Average guesses per word on Hard difficulty")
 
 env = Environment(loader=FileSystemLoader('templates'))
 template = env.get_template('template.html')
 
-html = template.render({'table1': fig.to_html(),
-                        'table2': fig2.to_html()})
+html = template.render({'table1': fig_normal.to_html(),
+                        'table2': fig_hard.to_html()})
 
 output_file = 'wordle.html'
 
