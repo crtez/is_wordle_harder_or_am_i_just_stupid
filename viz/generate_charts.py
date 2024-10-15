@@ -1,11 +1,8 @@
-import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 import os
 import json
 from jinja2 import Environment, FileSystemLoader
 import webbrowser
-import statistics
 import pandas as pd
 
 def extract_number(item):
