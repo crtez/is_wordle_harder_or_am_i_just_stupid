@@ -2,7 +2,6 @@ import plotly.graph_objects as go
 import os
 import json
 from jinja2 import Environment, FileSystemLoader
-import webbrowser
 import pandas as pd
 
 def extract_number(item):
@@ -106,5 +105,3 @@ output_file = 'wordle.html'
 
 with open(output_file, 'w', encoding="utf-8") as f:
     f.write(html)
-
-webbrowser.open(output_file)
