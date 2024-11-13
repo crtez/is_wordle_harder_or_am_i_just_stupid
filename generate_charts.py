@@ -40,67 +40,125 @@ df_normal['rolling_avg_30'] = df_normal['normal'].rolling(window=30).mean()
 df_hard['rolling_avg_7'] = df_hard['hard'].rolling(window=7).mean()
 df_hard['rolling_avg_30'] = df_hard['hard'].rolling(window=30).mean()
 
-def create_figure(df, y_column, title):
-    fig = go.Figure()
+# Create a single figure with updatemenus (dropdown)
+fig = go.Figure()
 
-    # Add scatter plot
-    fig.add_trace(go.Scatter(
-        x=df['word'],
-        y=df[y_column],
-        mode='markers',
-        name='Daily Data',
-        hovertext=df['date'],
-        legendgroup='daily',
-    ))
+# Add traces for normal difficulty
+fig.add_trace(go.Scatter(
+    x=df_normal['word'],
+    y=df_normal['normal'],
+    mode='markers',
+    name='Daily Data',
+    hovertext=df_normal['date'],
+    visible=True,
+    legendgroup='daily',
+))
 
-    # Add 7-day rolling average
-    fig.add_trace(go.Scatter(
-        x=df['word'],
-        y=df[f'rolling_avg_7'],
-        mode='lines',
-        name='7-day Rolling Average',
-        line=dict(color='green', width=2)
-    ))
+fig.add_trace(go.Scatter(
+    x=df_normal['word'],
+    y=df_normal['rolling_avg_7'],
+    mode='lines',
+    name='7-day Rolling Average',
+    line=dict(color='green', width=2),
+    visible=True,
+))
 
-    # Add 30-day rolling average
-    fig.add_trace(go.Scatter(
-        x=df['word'],
-        y=df[f'rolling_avg_30'],
-        mode='lines',
-        name='30-day Rolling Average',
-        line=dict(color='blue', width=2)
-    ))
+fig.add_trace(go.Scatter(
+    x=df_normal['word'],
+    y=df_normal['rolling_avg_30'],
+    mode='lines',
+    name='30-day Rolling Average',
+    line=dict(color='blue', width=2),
+    visible=True,
+))
 
-    # Add overall average line
-    overall_avg = df[y_column].mean()
-    fig.add_hline(
-        y=overall_avg,
-        line_dash="dash",
-        line_color="red",
-        annotation_text=f"Avg: {overall_avg:.2f}",
-        annotation_position="top right"
-    )
+# Add traces for hard difficulty (initially hidden)
+fig.add_trace(go.Scatter(
+    x=df_hard['word'],
+    y=df_hard['hard'],
+    mode='markers',
+    name='Daily Data',
+    hovertext=df_hard['date'],
+    visible=False,
+    legendgroup='daily',
+))
 
-    fig.update_layout(
-        title=title,
-        xaxis_title="Word",
-        yaxis_title="Guesses",
-        legend_title="Legend"
-    )
+fig.add_trace(go.Scatter(
+    x=df_hard['word'],
+    y=df_hard['rolling_avg_7'],
+    mode='lines',
+    name='7-day Rolling Average',
+    line=dict(color='green', width=2),
+    visible=False,
+))
 
-    return fig
+fig.add_trace(go.Scatter(
+    x=df_hard['word'],
+    y=df_hard['rolling_avg_30'],
+    mode='lines',
+    name='30-day Rolling Average',
+    line=dict(color='blue', width=2),
+    visible=False,
+))
 
-# Create figures
-fig_normal = create_figure(df_normal, 'normal', "Average guesses per word on Normal difficulty")
-fig_hard = create_figure(df_hard, 'hard', "Average guesses per word on Hard difficulty")
+# Add dropdown menu
+fig.update_layout(
+    updatemenus=[
+        dict(
+            buttons=list([
+                dict(
+                    args=[{"visible": [True, True, True, False, False, False]},
+                          {"title": "Average guesses per word on Normal difficulty"}],
+                    label="Normal",
+                    method="update"
+                ),
+                dict(
+                    args=[{"visible": [False, False, False, True, True, True]},
+                          {"title": "Average guesses per word on Hard difficulty"}],
+                    label="Hard",
+                    method="update"
+                )
+            ]),
+            direction="down",
+            showactive=True,
+            x=1,
+            y=1.05,
+        ),
+    ],
+    title="Average guesses per word by difficulty",
+    xaxis_title="Word",
+    yaxis_title="Guesses",
+    legend_title="Legend"
+)
 
-env = Environment(loader=FileSystemLoader('viz/templates'))
+# Add overall average lines for both difficulties
+normal_avg = df_normal['normal'].mean()
+hard_avg = df_hard['hard'].mean()
+
+fig.add_hline(
+    y=normal_avg,
+    line_dash="dash",
+    line_color="red",
+    annotation_text=f"Normal Avg: {normal_avg:.2f}",
+    annotation_position="top right",
+    visible=True
+)
+
+fig.add_hline(
+    y=hard_avg,
+    line_dash="dash",
+    line_color="red",
+    annotation_text=f"Hard Avg: {hard_avg:.2f}",
+    annotation_position="top right",
+    visible=True
+)
+
+env = Environment(loader=FileSystemLoader('templates'))
 template = env.get_template('template.html')
 
-html = template.render({'table1': fig_normal.to_html(),
-                        'table2': fig_hard.to_html()})
+html = template.render({'table': fig.to_html()})
 
-output_file = 'viz/wordle.html'
+output_file = 'docs/index.html'
 
 with open(output_file, 'w', encoding="utf-8") as f:
     f.write(html)
