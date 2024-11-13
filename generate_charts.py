@@ -59,6 +59,7 @@ fig.add_trace(go.Scatter(
     y=df_normal['rolling_avg_7'],
     mode='lines',
     name='7-day Rolling Average',
+    hovertext=df_normal['date'],
     line=dict(color='green', width=2),
     visible=True,
 ))
@@ -68,6 +69,7 @@ fig.add_trace(go.Scatter(
     y=df_normal['rolling_avg_30'],
     mode='lines',
     name='30-day Rolling Average',
+    hovertext=df_normal['date'],
     line=dict(color='blue', width=2),
     visible=True,
 ))
@@ -88,6 +90,7 @@ fig.add_trace(go.Scatter(
     y=df_hard['rolling_avg_7'],
     mode='lines',
     name='7-day Rolling Average',
+    hovertext=df_hard['date'],
     line=dict(color='green', width=2),
     visible=False,
 ))
@@ -97,6 +100,7 @@ fig.add_trace(go.Scatter(
     y=df_hard['rolling_avg_30'],
     mode='lines',
     name='30-day Rolling Average',
+    hovertext=df_hard['date'],
     line=dict(color='blue', width=2),
     visible=False,
 ))
