@@ -51,7 +51,6 @@ def create_figure(df, y_column, title):
         name='Daily Data',
         hovertext=df['date'],
         legendgroup='daily',
-        showlegend=True
     ))
 
     # Add 7-day rolling average
