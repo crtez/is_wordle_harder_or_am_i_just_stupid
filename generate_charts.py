@@ -41,7 +41,7 @@ df_hard['rolling_avg_7'] = df_hard['hard'].rolling(window=7).mean()
 df_hard['rolling_avg_30'] = df_hard['hard'].rolling(window=30).mean()
 
 # Create a single figure with updatemenus (dropdown)
-fig = go.Figure()
+fig = go.Figure(layout_yaxis_range=[2.5,6])
 
 # Add traces for normal difficulty
 fig.add_trace(go.Scatter(
