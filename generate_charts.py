@@ -125,7 +125,7 @@ fig.update_layout(
             y=1.05,
         ),
     ],
-    title="Average guesses per word by difficulty",
+    title="Average guesses per word on Normal difficulty",
     xaxis_title="Word",
     yaxis_title="Guesses",
     legend_title="Legend"
