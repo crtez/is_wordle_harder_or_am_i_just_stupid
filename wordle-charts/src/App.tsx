@@ -31,51 +31,48 @@ const WordleChart = () => {
   };
 
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <div className="flex justify-between items-center">
-          <CardTitle>Wordle Average Scores</CardTitle>
-          <div className="flex items-center space-x-2">
-            <Label htmlFor="axis-toggle">Show Words</Label>
-            <Switch
-              checked={showWords}
-              onCheckedChange={setShowWords}
+    <div className="h-screen p-4">
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-xl font-bold">Wordle Average Scores</h1>
+        <div className="flex items-center space-x-2">
+          <Label htmlFor="axis-toggle">Show Words</Label>
+          <Switch
+            id="axis-toggle"
+            checked={showWords}
+            onCheckedChange={setShowWords}
+          />
+        </div>
+      </div>
+      <div className="h-[calc(100vh-4rem)]">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey={showWords ? "word" : "date"}
+              angle={-45}
+              textAnchor="end"
+              tick={{ fontSize: 12 }}
+              tickFormatter={(value) => showWords ? value : new Date(value).toLocaleDateString()}
             />
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div className="h-64 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis
-                dataKey={showWords ? "word" : "date"}
-                angle={-45}
-                textAnchor="end"
-                tick={{ fontSize: 12 }}
-                tickFormatter={(value) => showWords ? value : new Date(value).toLocaleDateString()}
-              />
-              <YAxis
-                domain={[2, 6]}
-                ticks={[2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]}
-                interval={0}
-                tickFormatter={(value) => value.toFixed(1)}  // This ensures .0 is shown for whole numbers
-                label={{ value: 'Average Guesses', angle: -90, position: 'insideLeft' }}
-              />
-              <Tooltip content={<CustomTooltip />} />
-              <Line
-                type="monotone"
-                dataKey="average"
-                stroke="#2563eb"
-                strokeWidth={0}
-                dot={{ fill: '#2563eb' }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-      </CardContent>
-    </Card>
+            <YAxis
+              domain={[2, 6]}
+              ticks={[2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]}
+              tickFormatter={(value) => value.toFixed(1)}
+              label={{ value: 'Average Guesses', angle: -90, position: 'insideLeft' }}
+            />
+            <Tooltip
+               content={<CustomTooltip />} />
+            <Line
+              type="monotone"
+              dataKey="average"
+              stroke="#2563eb"
+              strokeWidth={0}
+              dot={{ fill: '#2563eb', r: 4 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
   );
 };
 
