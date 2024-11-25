@@ -33,6 +33,7 @@ interface WordleData {
 }
 
 interface ChartDataPoint {
+  id: string;
   date: string;
   word: string;
   average: number;
@@ -64,6 +65,7 @@ export async function processWordleData(): Promise<ChartDataPoint[]> {
     chartData.push({
       date,
       word,
+      id,
       average: data.average.normal,
       hardAverage: data.average.hard,
       percentSolved: (1 - data.unsolvedPenalty.normal / 100) * 100,
@@ -82,7 +84,7 @@ export async function processWordleData(): Promise<ChartDataPoint[]> {
 // Optional: Create a custom hook for using this data
 import { useState, useEffect } from 'react';
 
-export function useWordleData() {
+export const useWordleData = () => {
   const [data, setData] = useState<ChartDataPoint[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);

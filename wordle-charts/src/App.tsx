@@ -20,6 +20,20 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
+interface ChartState {
+  left: string | null;
+  right: string | null;
+  bottom: number | null;
+  top: number | null;
+  displayData: any[];
+}
+
+interface TooltipProps {
+  active?: boolean;
+  payload?: any[];
+  label?: string;
+}
+
 const getAxisYDomain = (from: number, to: number, data: any[], offset: number, mode: string) => {
   const refData = data.slice(from - 1, to);
   const key = mode === 'difference' ? 'difference' : (mode === 'normal' ? 'average' : 'hardAverage');
@@ -34,18 +48,18 @@ const getAxisYDomain = (from: number, to: number, data: any[], offset: number, m
 };
 
 const WordleChart = () => {
-  const { data, loading, error } = useWordleData('normal');
+  const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
-  const [mode, setMode] = useState('normal');
+  const [mode, setMode] = useState<'normal' | 'hard' | 'difference'>('normal');
   
-  const [chartState, setChartState] = useState({
+  const [chartState, setChartState] = useState<ChartState>({
     left: null,
     right: null,
     bottom: null,
     top: null,
     displayData: [],
   });
-  const [refArea, setRefArea] = useState({ left: '', right: '' });
+  const [refArea, setRefArea] = useState<{ left: string; right: string }>({ left: '', right: '' });
 
   React.useEffect(() => {
     if (data?.length) {
@@ -59,7 +73,7 @@ const WordleChart = () => {
         bottom: mode === 'difference' ? -1 : 2.5,
         top: mode === 'difference' ? 1 : 6,
         displayData: dataWithDifference,
-      });
+      } as ChartState);
     }
   }, [data, mode]);
 
@@ -110,36 +124,51 @@ const WordleChart = () => {
     });
   };
 
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      const dataPoint = data.find(d => showWords ? d.word === label : d.date === label);
-      return (
-        <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
-          <p className="font-medium text-gray-900">{dataPoint.word}</p>
-          <p className="text-gray-600">
-            {new Date(dataPoint.date).toLocaleDateString()}
-          </p>
-          {mode === 'difference' ? (
-            <>
-              <p className="text-gray-800">
-                Difficulty Gap: {payload[0].value.toFixed(2)} guesses
-              </p>
-              <p className="text-gray-600">
-                Normal: {dataPoint.average.toFixed(2)}
-              </p>
-              <p className="text-gray-600">
-                Hard: {dataPoint.hardAverage.toFixed(2)}
-              </p>
-            </>
-          ) : (
+  const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
+    if (!active || !payload?.length) return null;
+    
+    const dataPoint = data?.find(d => showWords ? d.word === label : d.date === label);
+    if (!dataPoint) return null;
+
+    return (
+      <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
+        <p className="font-medium text-gray-900">
+          {dataPoint.word} <span className="text-gray-600">#{dataPoint.id}</span>
+        </p>
+        <p className="text-gray-600">
+          {new Date(dataPoint.date).toLocaleDateString()}
+        </p>
+        {mode === 'difference' ? (
+          <>
             <p className="text-gray-800">
-              Average ({mode === 'normal' ? 'Normal' : 'Hard'}): {payload[0].value.toFixed(2)} guesses
+              Difficulty Gap: {payload[0].value.toFixed(2)} guesses
             </p>
-          )}
-        </div>
-      );
+            <p className="text-gray-600">
+              Normal: {dataPoint.average.toFixed(2)}
+            </p>
+            <p className="text-gray-600">
+              Hard: {dataPoint.hardAverage.toFixed(2)}
+            </p>
+          </>
+        ) : (
+          <p className="text-gray-800">
+            Average ({mode === 'normal' ? 'Normal' : 'Hard'}): {payload[0].value.toFixed(2)} guesses
+          </p>
+        )}
+      </div>
+    );
+  };
+
+  const handleMouseDown = (e: any) => {
+    if (e?.activeLabel) {
+      setRefArea(prev => ({ ...prev, left: e.activeLabel }));
     }
-    return null;
+  };
+
+  const handleMouseMove = (e: any) => {
+    if (e?.activeLabel && refArea.left) {
+      setRefArea(prev => ({ ...prev, right: e.activeLabel }));
+    }
   };
 
   return (
@@ -148,7 +177,7 @@ const WordleChart = () => {
         <div className="flex gap-4 items-center">
           <Select 
             defaultValue="normal" 
-            onValueChange={(newMode) => {
+            onValueChange={(newMode: 'normal' | 'hard' | 'difference') => {
               setChartState(prev => ({
                 ...prev,
                 bottom: newMode === 'difference' ? -1 : 2.5,
@@ -191,8 +220,8 @@ const WordleChart = () => {
           <LineChart
             data={chartState.displayData}
             margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
-            onMouseDown={(e) => e && setRefArea(prev => ({ ...prev, left: e.activeLabel }))}
-            onMouseMove={(e) => e && refArea.left && setRefArea(prev => ({ ...prev, right: e.activeLabel }))}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
             onMouseUp={zoom}
           >
             <CartesianGrid strokeDasharray="3 3" />
@@ -223,7 +252,7 @@ const WordleChart = () => {
               }}
               style={{ userSelect: 'none' }}
             />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={(props: TooltipProps) => <CustomTooltip {...props} />} />
             <Line
               type="monotone"
               dataKey={mode === 'difference' ? 'difference' : (mode === 'normal' ? 'average' : 'hardAverage')}
