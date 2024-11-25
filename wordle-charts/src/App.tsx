@@ -133,6 +133,7 @@ const WordleChart = () => {
       <div className="h-[calc(100vh-4rem)]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
+          //eslint-disable-next-line react/jsx-no-bind
             data={chartState.displayData}
             margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
             onMouseDown={(e) => e && setRefArea(prev => ({ ...prev, left: e.activeLabel }))}
@@ -147,12 +148,19 @@ const WordleChart = () => {
               textAnchor="end"
               tick={{ fontSize: 12 }}
               tickFormatter={(value) => showWords ? value : new Date(value).toLocaleDateString()}
+              style={{ userSelect: 'none' }}
             />
             <YAxis
               domain={[chartState.bottom || 2.5, chartState.top || 6]}
               ticks={[2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]}
               tickFormatter={(value) => value.toFixed(1)}
-              label={{ value: 'Average Guesses', angle: -90, position: 'insideLeft' }}
+              label={{ 
+                value: 'Average Guesses', 
+                angle: -90, 
+                position: 'insideLeft',
+                style: { userSelect: 'none' }
+              }}
+              style={{ userSelect: 'none' }}
             />
             <Tooltip content={<CustomTooltip />} />
             <Line
@@ -169,7 +177,7 @@ const WordleChart = () => {
               activeDot={{ 
                 r: 6
               }}
-              animationDuration={300}
+              animationDuration={0}
             />
             {refArea.left && refArea.right ? (
               <ReferenceArea 
