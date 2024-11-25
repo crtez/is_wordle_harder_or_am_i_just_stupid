@@ -133,7 +133,6 @@ const WordleChart = () => {
       <div className="h-[calc(100vh-4rem)]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-          //eslint-disable-next-line react/jsx-no-bind
             data={chartState.displayData}
             margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
             onMouseDown={(e) => e && setRefArea(prev => ({ ...prev, left: e.activeLabel }))}
