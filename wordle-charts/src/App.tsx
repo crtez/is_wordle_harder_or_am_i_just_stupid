@@ -26,58 +26,69 @@ const getAxisYDomain = (from: number, to: number, data: any[], offset: number) =
 };
 
 const WordleChart = () => {
-  const [showWords, setShowWords] = useState(false);
   const { data, loading, error } = useWordleData();
+  const [showWords, setShowWords] = useState(false);
   
-  const [left, setLeft] = useState('dataMin');
-  const [right, setRight] = useState('dataMax');
-  const [refAreaLeft, setRefAreaLeft] = useState('');
-  const [refAreaRight, setRefAreaRight] = useState('');
-  const [bottom, setBottom] = useState(2.5);
-  const [top, setTop] = useState(6);
-  const [displayData, setDisplayData] = useState(data);
+  const [chartState, setChartState] = useState({
+    left: null,
+    right: null,
+    bottom: null,
+    top: null,
+    displayData: [],
+  });
+  const [refArea, setRefArea] = useState({ left: '', right: '' });
+
+  React.useEffect(() => {
+    if (data?.length) {
+      setChartState({
+        left: 'dataMin',
+        right: 'dataMax',
+        bottom: 2.5,
+        top: 6,
+        displayData: data,
+      });
+    }
+  }, [data]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
+  if (!data?.length) return null;
 
   const zoom = () => {
-    if (refAreaLeft === refAreaRight || refAreaRight === '') {
-      setRefAreaLeft('');
-      setRefAreaRight('');
+    const { left: refAreaLeft, right: refAreaRight } = refArea;
+    if (refAreaLeft === refAreaRight || !refAreaRight) {
+      setRefArea({ left: '', right: '' });
       return;
     }
 
-    let leftIndex = data.findIndex(d => 
-      showWords ? d.word === refAreaLeft : d.date === refAreaLeft
-    );
-    let rightIndex = data.findIndex(d => 
-      showWords ? d.word === refAreaRight : d.date === refAreaRight
-    );
+    let [leftIndex, rightIndex] = [
+      data.findIndex(d => showWords ? d.word === refAreaLeft : d.date === refAreaLeft),
+      data.findIndex(d => showWords ? d.word === refAreaRight : d.date === refAreaRight)
+    ];
 
-    if (leftIndex > rightIndex) 
-      [leftIndex, rightIndex] = [rightIndex, leftIndex];
+    if (leftIndex > rightIndex) [leftIndex, rightIndex] = [rightIndex, leftIndex];
 
     const [bottom, top] = getAxisYDomain(leftIndex + 1, rightIndex + 1, data, 0.5);
-
-    const zoomedData = data.slice(leftIndex, rightIndex + 1);
-
-    setRefAreaLeft('');
-    setRefAreaRight('');
-    setLeft(data[leftIndex][showWords ? 'word' : 'date']);
-    setRight(data[rightIndex][showWords ? 'word' : 'date']);
-    setBottom(bottom);
-    setTop(top);
-    setDisplayData(zoomedData);
+    
+    setRefArea({ left: '', right: '' });
+    setChartState({
+      left: data[leftIndex][showWords ? 'word' : 'date'],
+      right: data[rightIndex][showWords ? 'word' : 'date'],
+      bottom,
+      top,
+      displayData: data.slice(leftIndex, rightIndex + 1),
+    });
   };
 
   const zoomOut = () => {
-    setRefAreaLeft('');
-    setRefAreaRight('');
-    setLeft('dataMin');
-    setRight('dataMax');
-    setBottom(2.5);
-    setTop(6);
-    setDisplayData(data);
+    setRefArea({ left: '', right: '' });
+    setChartState({
+      left: 'dataMin',
+      right: 'dataMax',
+      bottom: 2.5,
+      top: 6,
+      displayData: data,
+    });
   };
 
   const CustomTooltip = ({ active, payload, label }) => {
@@ -122,25 +133,23 @@ const WordleChart = () => {
       <div className="h-[calc(100vh-4rem)]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            data={displayData}
+            data={chartState.displayData}
             margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
-            onMouseDown={(e) => e && setRefAreaLeft(e.activeLabel)}
-            onMouseMove={(e) => e && refAreaLeft && setRefAreaRight(e.activeLabel)}
+            onMouseDown={(e) => e && setRefArea(prev => ({ ...prev, left: e.activeLabel }))}
+            onMouseMove={(e) => e && refArea.left && setRefArea(prev => ({ ...prev, right: e.activeLabel }))}
             onMouseUp={zoom}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
-              allowDataOverflow
               dataKey={showWords ? "word" : "date"}
-              domain={[left, right]}
               angle={-45}
+              interval="preserveStartEnd"
               textAnchor="end"
               tick={{ fontSize: 12 }}
               tickFormatter={(value) => showWords ? value : new Date(value).toLocaleDateString()}
             />
             <YAxis
-              allowDataOverflow
-              domain={[bottom, top]}
+              domain={[chartState.bottom || 2.5, chartState.top || 6]}
               ticks={[2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]}
               tickFormatter={(value) => value.toFixed(1)}
               label={{ value: 'Average Guesses', angle: -90, position: 'insideLeft' }}
@@ -162,10 +171,10 @@ const WordleChart = () => {
               }}
               animationDuration={300}
             />
-            {refAreaLeft && refAreaRight ? (
+            {refArea.left && refArea.right ? (
               <ReferenceArea 
-                x1={refAreaLeft} 
-                x2={refAreaRight} 
+                x1={refArea.left} 
+                x2={refArea.right} 
                 strokeOpacity={0.3} 
                 fill="#2563eb"
                 fillOpacity={0.1}
