@@ -163,7 +163,7 @@ const WordleChart = () => {
               dot={{ 
                 fill: "#ffffff",
                 stroke: "#2563eb",
-                strokeWidth: 1,
+                strokeWidth: 1.5,
                 r: 3
               }}
               activeDot={{ 
