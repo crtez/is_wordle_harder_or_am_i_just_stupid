@@ -12,22 +12,31 @@ import {
 } from 'recharts';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
-const getAxisYDomain = (from: number, to: number, data: any[], offset: number) => {
+const getAxisYDomain = (from: number, to: number, data: any[], offset: number, mode: string) => {
   const refData = data.slice(from - 1, to);
-  let [bottom, top] = [refData[0].average, refData[0].average];
+  const key = mode === 'difference' ? 'difference' : (mode === 'normal' ? 'average' : 'hardAverage');
+  let [bottom, top] = [refData[0][key], refData[0][key]];
   
   refData.forEach((d) => {
-    if (d.average > top) top = d.average;
-    if (d.average < bottom) bottom = d.average;
+    if (d[key] > top) top = d[key];
+    if (d[key] < bottom) bottom = d[key];
   });
 
   return [(bottom | 0) - offset, (top | 0) + offset];
 };
 
 const WordleChart = () => {
-  const { data, loading, error } = useWordleData();
+  const { data, loading, error } = useWordleData('normal');
   const [showWords, setShowWords] = useState(false);
+  const [mode, setMode] = useState('normal');
   
   const [chartState, setChartState] = useState({
     left: null,
@@ -40,15 +49,19 @@ const WordleChart = () => {
 
   React.useEffect(() => {
     if (data?.length) {
+      const dataWithDifference = data.map(d => ({
+        ...d,
+        difference: d.hardAverage - d.average
+      }));
       setChartState({
         left: 'dataMin',
         right: 'dataMax',
-        bottom: 2.5,
-        top: 6,
-        displayData: data,
+        bottom: mode === 'difference' ? -1 : 2.5,
+        top: mode === 'difference' ? 1 : 6,
+        displayData: dataWithDifference,
       });
     }
-  }, [data]);
+  }, [data, mode]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
@@ -68,7 +81,7 @@ const WordleChart = () => {
 
     if (leftIndex > rightIndex) [leftIndex, rightIndex] = [rightIndex, leftIndex];
 
-    const [bottom, top] = getAxisYDomain(leftIndex + 1, rightIndex + 1, data, 0.5);
+    const [bottom, top] = getAxisYDomain(leftIndex + 1, rightIndex + 1, data, 0.5, mode);
     
     setRefArea({ left: '', right: '' });
     setChartState({
@@ -76,7 +89,10 @@ const WordleChart = () => {
       right: data[rightIndex][showWords ? 'word' : 'date'],
       bottom,
       top,
-      displayData: data.slice(leftIndex, rightIndex + 1),
+      displayData: data.slice(leftIndex, rightIndex + 1).map(d => ({
+        ...d,
+        difference: d.hardAverage - d.average
+      })),
     });
   };
 
@@ -85,9 +101,12 @@ const WordleChart = () => {
     setChartState({
       left: 'dataMin',
       right: 'dataMax',
-      bottom: 2.5,
-      top: 6,
-      displayData: data,
+      bottom: mode === 'difference' ? -1 : 2.5,
+      top: mode === 'difference' ? 1 : 6,
+      displayData: data.map(d => ({
+        ...d,
+        difference: d.hardAverage - d.average
+      })),
     });
   };
 
@@ -100,9 +119,23 @@ const WordleChart = () => {
           <p className="text-gray-600">
             {new Date(dataPoint.date).toLocaleDateString()}
           </p>
-          <p className="text-gray-800">
-            Average: {payload[0].value.toFixed(2)} guesses
-          </p>
+          {mode === 'difference' ? (
+            <>
+              <p className="text-gray-800">
+                Difficulty Gap: {payload[0].value.toFixed(2)} guesses
+              </p>
+              <p className="text-gray-600">
+                Normal: {dataPoint.average.toFixed(2)}
+              </p>
+              <p className="text-gray-600">
+                Hard: {dataPoint.hardAverage.toFixed(2)}
+              </p>
+            </>
+          ) : (
+            <p className="text-gray-800">
+              Average ({mode === 'normal' ? 'Normal' : 'Hard'}): {payload[0].value.toFixed(2)} guesses
+            </p>
+          )}
         </div>
       );
     }
@@ -110,10 +143,19 @@ const WordleChart = () => {
   };
 
   return (
-    <div className="h-screen p-4">
+    <div className="h-[100dvh] p-4 flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <div className="flex gap-4 items-center">
-          <h1 className="text-xl font-bold">Wordle Average Scores</h1>
+          <Select defaultValue="normal" onValueChange={setMode}>
+            <SelectTrigger className="w-[280px]">
+              <SelectValue placeholder="Wordle Average Scores (Normal)" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="normal">Wordle Average Scores (Normal)</SelectItem>
+              <SelectItem value="hard">Wordle Average Scores (Hard)</SelectItem>
+              <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
+            </SelectContent>
+          </Select>
           <button 
             onClick={zoomOut}
             className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
@@ -130,7 +172,7 @@ const WordleChart = () => {
           />
         </div>
       </div>
-      <div className="h-[calc(100vh-4rem)]">
+      <div className="flex-1">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={chartState.displayData}
@@ -150,11 +192,17 @@ const WordleChart = () => {
               style={{ userSelect: 'none' }}
             />
             <YAxis
-              domain={[chartState.bottom || 2.5, chartState.top || 6]}
-              ticks={[2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]}
+              domain={[
+                chartState.bottom || (mode === 'difference' ? -1 : 2.5),
+                chartState.top || (mode === 'difference' ? 1 : 6)
+              ]}
+              ticks={mode === 'difference' ? 
+                [-0.5, 0, 0.5, 1] :  // ticks for difference mode
+                [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]  // ticks for normal/hard mode
+              }
               tickFormatter={(value) => value.toFixed(1)}
               label={{ 
-                value: 'Average Guesses', 
+                value: mode === 'difference' ? 'Difference in Average' : 'Average Guesses', 
                 angle: -90, 
                 position: 'insideLeft',
                 style: { userSelect: 'none' }
@@ -164,7 +212,7 @@ const WordleChart = () => {
             <Tooltip content={<CustomTooltip />} />
             <Line
               type="monotone"
-              dataKey="average"
+              dataKey={mode === 'difference' ? 'difference' : (mode === 'normal' ? 'average' : 'hardAverage')}
               stroke="#2563eb"
               strokeWidth={0}
               dot={{ 
