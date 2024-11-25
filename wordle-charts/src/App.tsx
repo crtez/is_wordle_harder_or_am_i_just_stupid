@@ -146,7 +146,21 @@ const WordleChart = () => {
     <div className="h-[100dvh] p-4 flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <div className="flex gap-4 items-center">
-          <Select defaultValue="normal" onValueChange={setMode}>
+          <Select 
+            defaultValue="normal" 
+            onValueChange={(newMode) => {
+              setChartState(prev => ({
+                ...prev,
+                bottom: newMode === 'difference' ? -1 : 2.5,
+                top: newMode === 'difference' ? 1 : 6,
+                displayData: data.map(d => ({
+                  ...d,
+                  difference: d.hardAverage - d.average
+                }))
+              }));
+              setMode(newMode);
+            }}
+          >
             <SelectTrigger className="w-[280px]">
               <SelectValue placeholder="Wordle Average Scores (Normal)" />
             </SelectTrigger>
