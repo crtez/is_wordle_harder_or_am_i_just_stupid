@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Wordle Data Fetcher",
+  "version": "1.0",
+  "description": "Fetches Wordle puzzle data in chunks",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "scripting",
+    "cookies"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "https://www.nytimes.com/*"
+  ]
+}

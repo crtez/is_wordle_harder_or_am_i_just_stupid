@@ -48,7 +48,7 @@ interface ChartDataPoint {
 
 export async function processWordleData(): Promise<ChartDataPoint[]> {
   // Use Vite's glob import feature to get all JSON files in the data directory
-  const modules = import.meta.glob('/src/data/summary_*.json', { eager: true });
+  const modules = import.meta.glob('/src/data/summaries/summary_*.json', { eager: true });
 
   const chartData: ChartDataPoint[] = [];
 
