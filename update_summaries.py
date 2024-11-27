@@ -3,7 +3,7 @@ import requests
 from datetime import datetime, timedelta
 
 # Path to the folder containing the JSON files
-folder_path = 'wordle-charts/src/data'
+folder_path = 'data/summaries'
 
 # Extract dates directly from filenames and find the latest date
 dates = [datetime.strptime(filename.split(',')[-1].replace('.json', ''), '%Y-%m-%d')
