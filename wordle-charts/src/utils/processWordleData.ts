@@ -44,6 +44,7 @@ interface ChartDataPoint {
   percentThreeOrFewerHard: number;
   efficiency: number;
   efficiencyHard: number;
+  personalDifference?: number | null;
 }
 
 export async function processWordleData(): Promise<ChartDataPoint[]> {

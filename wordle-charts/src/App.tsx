@@ -103,7 +103,7 @@ const WordleChart = () => {
           p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
         );
         const personalGuesses = personalGame ? 
-          personalGame.game_data.boardState.filter(row => row !== "").length :
+          personalGame.game_data.boardState.filter((row: string) => row !== "").length :
           null;
         
         return {
@@ -160,7 +160,7 @@ const WordleChart = () => {
           p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
         );
         const personalGuesses = personalGame ? 
-          personalGame.game_data.boardState.filter(row => row !== "").length :
+          personalGame.game_data.boardState.filter((row: string) => row !== "").length :
           null;
         
         return {
@@ -180,7 +180,7 @@ const WordleChart = () => {
         p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
       );
       const personalGuesses = personalGame ? 
-        personalGame.game_data.boardState.filter(row => row !== "").length :
+        personalGame.game_data.boardState.filter((row: string) => row !== "").length :
         null;
       
       return {
@@ -289,7 +289,7 @@ const WordleChart = () => {
             );
             if (personalGame) {
               matchCount++;
-              const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
+              const personalGuesses = personalGame.game_data.boardState.filter((row: string) => row !== "").length;
               if (personalGuesses > d.average) aboveCount++;
               if (personalGuesses < d.average) belowCount++;
             }
