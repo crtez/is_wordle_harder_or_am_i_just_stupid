@@ -346,7 +346,9 @@ const WordleChart = () => {
               />
               {personalStats.count > 0 && (
                 <span className="text-sm text-gray-600">
-                  Found {personalStats.count} results ({personalStats.belowAverage} below average, {personalStats.aboveAverage} above average) out of {personalStats.total} total Wordles
+                  Found {personalStats.count} results (
+                    <span className="text-green-600 font-medium">{personalStats.belowAverage}</span> below the average,{' '}
+                    <span className="text-red-600 font-medium">{personalStats.aboveAverage}</span> above the average) out of {personalStats.total} total Wordles
                 </span>
               )}
             </div>
