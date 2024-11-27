@@ -4,7 +4,7 @@ import requests
 from datetime import datetime, timedelta
 
 # Path to the folder containing the JSON files
-folder_path = 'data/archive'
+folder_path = 'data/archive/json'
 
 # Create folder if it doesn't exist
 os.makedirs(folder_path, exist_ok=True)
@@ -64,8 +64,13 @@ for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         with open(file_path, 'r') as f:
             data = json.load(f)
-            ids.append(int(data['id']))
+            ids.append(data['id'])
 
-# Sort the IDs numerically and convert to strings for joining
-sorted_ids = sorted(ids)
-print(','.join(str(id) for id in sorted_ids))
+data = {
+    "last_updated": datetime.now().isoformat(),
+    "puzzle_ids": ids[227:] # from the rough acquisition of wordle by NYT
+}
+
+# Write to a JSON file
+with open('data/archive/relevant_puzzle_ids.json', 'w') as f:
+    json.dump(data, f, indent=2)
