@@ -63,7 +63,7 @@ export async function processWordleData(): Promise<ChartDataPoint[]> {
     const date = dateStr.split('.')[0];
 
     chartData.push({
-      date,
+      date: date,
       word,
       id,
       average: data.average.normal,

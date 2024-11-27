@@ -19,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Input } from "@/components/ui/input"
 
 interface ChartState {
   left: string | null;
@@ -34,9 +35,19 @@ interface TooltipProps {
   label?: string;
 }
 
+interface PersonalData {
+  puzzle_id: string;
+  game_data: {
+    boardState: string[];
+    status: string;
+  }
+}
+
 const getAxisYDomain = (from: number, to: number, data: any[], offset: number, mode: string) => {
   const refData = data.slice(from - 1, to);
-  const key = mode === 'difference' ? 'difference' : (mode === 'normal' ? 'average' : 'hardAverage');
+  const key = mode === 'difference' ? 'difference' : 
+              mode === 'personal' ? 'personalDifference' :
+              mode === 'normal' ? 'average' : 'hardAverage';
   let [bottom, top] = [refData[0][key], refData[0][key]];
   
   refData.forEach((d) => {
@@ -47,10 +58,17 @@ const getAxisYDomain = (from: number, to: number, data: any[], offset: number, m
   return [(bottom | 0) - offset, (top | 0) + offset];
 };
 
+// Helper function to add one day to a date string
+const adjustDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  date.setDate(date.getDate() + 1);
+  return date;
+};
+
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
-  const [mode, setMode] = useState<'normal' | 'hard' | 'difference'>('normal');
+  const [mode, setMode] = useState<'normal' | 'hard' | 'difference' | 'personal'>('normal');
   
   const [chartState, setChartState] = useState<ChartState>({
     left: null,
@@ -60,22 +78,40 @@ const WordleChart = () => {
     displayData: [],
   });
   const [refArea, setRefArea] = useState<{ left: string; right: string }>({ left: '', right: '' });
+  const [personalData, setPersonalData] = useState<PersonalData[]>([]);
+  const [personalStats, setPersonalStats] = useState({ count: 0, total: 0 });
 
   React.useEffect(() => {
     if (data?.length) {
-      const dataWithDifference = data.map(d => ({
-        ...d,
-        difference: d.hardAverage - d.average
-      }));
+      const processedData = data.map(d => {
+        const personalGame = personalData.find(p => 
+          p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+        );
+        const personalGuesses = personalGame ? 
+          personalGame.game_data.boardState.filter(row => row !== "").length :
+          null;
+        
+        return {
+          ...d,
+          difference: d.hardAverage - d.average,
+          personalDifference: personalGuesses ? personalGuesses - d.average : null
+        };
+      });
+
+      // Filter out data points without personal data when in personal mode
+      const displayData = mode === 'personal' 
+        ? processedData.filter(d => d.personalDifference !== null)
+        : processedData;
+
       setChartState({
         left: 'dataMin',
         right: 'dataMax',
-        bottom: mode === 'difference' ? -1 : 2.5,
-        top: mode === 'difference' ? 1 : 6,
-        displayData: dataWithDifference,
+        bottom: mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5,
+        top: mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6,
+        displayData,
       } as ChartState);
     }
-  }, [data, mode]);
+  }, [data, mode, personalData]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
@@ -103,10 +139,20 @@ const WordleChart = () => {
       right: data[rightIndex][showWords ? 'word' : 'date'],
       bottom,
       top,
-      displayData: data.slice(leftIndex, rightIndex + 1).map(d => ({
-        ...d,
-        difference: d.hardAverage - d.average
-      })),
+      displayData: data.slice(leftIndex, rightIndex + 1).map(d => {
+        const personalGame = personalData.find(p => 
+          p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+        );
+        const personalGuesses = personalGame ? 
+          personalGame.game_data.boardState.filter(row => row !== "").length :
+          null;
+        
+        return {
+          ...d,
+          difference: d.hardAverage - d.average,
+          personalDifference: personalGuesses ? personalGuesses - d.average : null
+        };
+      }),
     });
   };
 
@@ -115,12 +161,22 @@ const WordleChart = () => {
     setChartState({
       left: 'dataMin',
       right: 'dataMax',
-      bottom: mode === 'difference' ? -1 : 2.5,
-      top: mode === 'difference' ? 1 : 6,
-      displayData: data.map(d => ({
-        ...d,
-        difference: d.hardAverage - d.average
-      })),
+      bottom: mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5,
+      top: mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6,
+      displayData: data.map(d => {
+        const personalGame = personalData.find(p => 
+          p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+        );
+        const personalGuesses = personalGame ? 
+          personalGame.game_data.boardState.filter(row => row !== "").length :
+          null;
+        
+        return {
+          ...d,
+          difference: d.hardAverage - d.average,
+          personalDifference: personalGuesses ? personalGuesses - d.average : null
+        };
+      }),
     });
   };
 
@@ -136,9 +192,25 @@ const WordleChart = () => {
           {dataPoint.word} <span className="text-gray-600">#{dataPoint.id}</span>
         </p>
         <p className="text-gray-600">
-          {new Date(dataPoint.date).toLocaleDateString()}
+          {adjustDate(dataPoint.date).toLocaleDateString()}
         </p>
-        {mode === 'difference' ? (
+        {mode === 'personal' && dataPoint.personalDifference !== null ? (
+          <>
+            <p className="text-gray-800">
+              Personal vs Average: {payload[0].value > 0 ? '+' : ''}{payload[0].value.toFixed(2)} guesses
+            </p>
+            <p className="text-gray-600">
+              Your Score: {
+                personalData.find(p => 
+                  p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(dataPoint.id)
+                )?.game_data.boardState.filter(row => row !== "").length || 'N/A'
+              }
+            </p>
+            <p className="text-gray-600">
+              Global Average: {dataPoint.average.toFixed(2)}
+            </p>
+          </>
+        ) : mode === 'difference' ? (
           <>
             <p className="text-gray-800">
               Difficulty Gap: {payload[0].value.toFixed(2)} guesses
@@ -171,13 +243,39 @@ const WordleChart = () => {
     }
   };
 
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const json = JSON.parse(e.target?.result as string);
+          setPersonalData(json);
+          
+          const matchCount = data?.reduce((count, d) => {
+            const hasMatch = json.some((p: PersonalData) => p.puzzle_id === d.id.toString());
+            return count + (hasMatch ? 1 : 0);
+          }, 0) || 0;
+          
+          setPersonalStats({
+            count: matchCount,
+            total: data?.length || 0
+          });
+        } catch (error) {
+          console.error('Error parsing JSON:', error);
+        }
+      };
+      reader.readAsText(file);
+    }
+  };
+
   return (
     <div className="h-[100dvh] p-4 flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <div className="flex gap-4 items-center">
           <Select 
             defaultValue="normal" 
-            onValueChange={(newMode: 'normal' | 'hard' | 'difference') => {
+            onValueChange={(newMode: 'normal' | 'hard' | 'difference' | 'personal') => {
               setChartState(prev => ({
                 ...prev,
                 bottom: newMode === 'difference' ? -1 : 2.5,
@@ -197,6 +295,7 @@ const WordleChart = () => {
               <SelectItem value="normal">Wordle Average Scores (Normal)</SelectItem>
               <SelectItem value="hard">Wordle Average Scores (Hard)</SelectItem>
               <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
+              <SelectItem value="personal">Personal Performance Comparison</SelectItem>
             </SelectContent>
           </Select>
           <button 
@@ -205,6 +304,21 @@ const WordleChart = () => {
           >
             Zoom Out
           </button>
+          {mode === 'personal' && (
+            <div className="flex items-center gap-4">
+              <Input
+                type="file"
+                accept=".json"
+                onChange={handleFileUpload}
+                className="max-w-[280px]"
+              />
+              {personalStats.count > 0 && (
+                <span className="text-sm text-gray-600">
+                  Found {personalStats.count} personal results out of {personalStats.total} total Wordles
+                </span>
+              )}
+            </div>
+          )}
         </div>
         <div className="flex items-center space-x-2">
           <Label htmlFor="axis-toggle">Show Words</Label>
@@ -231,21 +345,23 @@ const WordleChart = () => {
               interval="preserveStartEnd"
               textAnchor="end"
               tick={{ fontSize: 12 }}
-              tickFormatter={(value) => showWords ? value : new Date(value).toLocaleDateString()}
+              tickFormatter={(value) => showWords ? value : adjustDate(value).toLocaleDateString()}
               style={{ userSelect: 'none' }}
             />
             <YAxis
               domain={[
-                chartState.bottom || (mode === 'difference' ? -1 : 2.5),
-                chartState.top || (mode === 'difference' ? 1 : 6)
+                chartState.bottom || (mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5),
+                chartState.top || (mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6)
               ]}
-              ticks={mode === 'difference' ? 
-                [-0.5, 0, 0.5, 1] :  // ticks for difference mode
+              ticks={mode === 'personal' ? 
+                [-3, -2, -1, 0, 1, 2, 3] :  // ticks for personal mode
+                mode === 'difference' ? 
+                [-2, -1, -0.5, 0, 0.5, 1, 2] :  // ticks for difference mode
                 [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]  // ticks for normal/hard mode
               }
               tickFormatter={(value) => value.toFixed(1)}
               label={{ 
-                value: mode === 'difference' ? 'Difference in Average' : 'Average Guesses', 
+                value: mode === 'difference' || mode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
                 angle: -90, 
                 position: 'insideLeft',
                 style: { userSelect: 'none' }
@@ -255,7 +371,12 @@ const WordleChart = () => {
             <Tooltip content={(props: TooltipProps) => <CustomTooltip {...props} />} />
             <Line
               type="monotone"
-              dataKey={mode === 'difference' ? 'difference' : (mode === 'normal' ? 'average' : 'hardAverage')}
+              dataKey={
+                mode === 'difference' ? 'difference' : 
+                mode === 'personal' ? 'personalDifference' :
+                mode === 'normal' ? 'average' : 
+                'hardAverage'
+              }
               stroke="#2563eb"
               strokeWidth={0}
               dot={{ 
