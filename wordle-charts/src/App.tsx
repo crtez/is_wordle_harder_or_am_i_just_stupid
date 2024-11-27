@@ -324,7 +324,7 @@ const WordleChart = () => {
           const url = URL.createObjectURL(blob);
           const a = document.createElement('a');
           a.href = url;
-          a.download = 'wordle_data_all.json';
+          a.download = 'my_wordle_data.json';
           a.click();
           return;
         }
@@ -516,6 +516,7 @@ const WordleChart = () => {
           </DialogHeader>
           <div className="space-y-4">
             <ol className="list-decimal list-inside space-y-2">
+              <li>The data fetcher script was copied to your clipboard.</li>
               <li>Open a tab with <span className="font-bold">nyt.com</span></li>
               <li>Click in the URL bar <span className="text-gray-500">(or press Ctrl/Cmd + L)</span></li>
               <li>Paste the copied code</li>
