@@ -158,25 +158,32 @@ const WordleChart = () => {
 
   const zoomOut = () => {
     setRefArea({ left: '', right: '' });
+    const processedData = data.map(d => {
+      const personalGame = personalData.find(p => 
+        p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+      );
+      const personalGuesses = personalGame ? 
+        personalGame.game_data.boardState.filter(row => row !== "").length :
+        null;
+      
+      return {
+        ...d,
+        difference: d.hardAverage - d.average,
+        personalDifference: personalGuesses ? personalGuesses - d.average : null
+      };
+    });
+
+    // Filter data points in personal mode
+    const displayData = mode === 'personal' 
+      ? processedData.filter(d => d.personalDifference !== null)
+      : processedData;
+
     setChartState({
       left: 'dataMin',
       right: 'dataMax',
       bottom: mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5,
       top: mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6,
-      displayData: data.map(d => {
-        const personalGame = personalData.find(p => 
-          p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
-        );
-        const personalGuesses = personalGame ? 
-          personalGame.game_data.boardState.filter(row => row !== "").length :
-          null;
-        
-        return {
-          ...d,
-          difference: d.hardAverage - d.average,
-          personalDifference: personalGuesses ? personalGuesses - d.average : null
-        };
-      }),
+      displayData,
     });
   };
 
