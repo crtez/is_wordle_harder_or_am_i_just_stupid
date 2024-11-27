@@ -79,7 +79,12 @@ const WordleChart = () => {
   });
   const [refArea, setRefArea] = useState<{ left: string; right: string }>({ left: '', right: '' });
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
-  const [personalStats, setPersonalStats] = useState({ count: 0, total: 0 });
+  const [personalStats, setPersonalStats] = useState({ 
+    count: 0, 
+    total: 0,
+    aboveAverage: 0,
+    belowAverage: 0 
+  });
 
   React.useEffect(() => {
     if (data?.length) {
@@ -106,8 +111,8 @@ const WordleChart = () => {
       setChartState({
         left: 'dataMin',
         right: 'dataMax',
-        bottom: mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5,
-        top: mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6,
+        bottom: mode === 'personal' ? -3 : mode === 'difference' ? -0.75 : 2.5,
+        top: mode === 'personal' ? 3 : mode === 'difference' ? 0.5 : 6,
         displayData,
       } as ChartState);
     }
@@ -181,8 +186,8 @@ const WordleChart = () => {
     setChartState({
       left: 'dataMin',
       right: 'dataMax',
-      bottom: mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5,
-      top: mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6,
+      bottom: mode === 'personal' ? -3 : mode === 'difference' ? -0.75 : 2.5,
+      top: mode === 'personal' ? 3 : mode === 'difference' ? 0.5 : 6,
       displayData,
     });
   };
@@ -259,14 +264,28 @@ const WordleChart = () => {
           const json = JSON.parse(e.target?.result as string);
           setPersonalData(json);
           
-          const matchCount = data?.reduce((count, d) => {
-            const hasMatch = json.some((p: PersonalData) => p.puzzle_id === d.id.toString());
-            return count + (hasMatch ? 1 : 0);
-          }, 0) || 0;
+          // Count matches and above/below average
+          let matchCount = 0;
+          let aboveCount = 0;
+          let belowCount = 0;
+
+          data?.forEach(d => {
+            const personalGame = json.find((p: PersonalData) => 
+              p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+            );
+            if (personalGame) {
+              matchCount++;
+              const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
+              if (personalGuesses > d.average) aboveCount++;
+              if (personalGuesses < d.average) belowCount++;
+            }
+          });
           
           setPersonalStats({
             count: matchCount,
-            total: data?.length || 0
+            total: data?.length || 0,
+            aboveAverage: aboveCount,
+            belowAverage: belowCount
           });
         } catch (error) {
           console.error('Error parsing JSON:', error);
@@ -285,8 +304,8 @@ const WordleChart = () => {
             onValueChange={(newMode: 'normal' | 'hard' | 'difference' | 'personal') => {
               setChartState(prev => ({
                 ...prev,
-                bottom: newMode === 'difference' ? -1 : 2.5,
-                top: newMode === 'difference' ? 1 : 6,
+                bottom: newMode === 'personal' ? -3 : newMode === 'difference' ? -0.75 : 2.5,
+                top: newMode === 'personal' ? 3 : newMode === 'difference' ? 0.5 : 6,
                 displayData: data.map(d => ({
                   ...d,
                   difference: d.hardAverage - d.average
@@ -321,7 +340,7 @@ const WordleChart = () => {
               />
               {personalStats.count > 0 && (
                 <span className="text-sm text-gray-600">
-                  Found {personalStats.count} personal results out of {personalStats.total} total Wordles
+                  Found {personalStats.count} results ({personalStats.belowAverage} below average, {personalStats.aboveAverage} above average) out of {personalStats.total} total Wordles
                 </span>
               )}
             </div>
@@ -357,16 +376,16 @@ const WordleChart = () => {
             />
             <YAxis
               domain={[
-                chartState.bottom || (mode === 'personal' ? -3 : mode === 'difference' ? -2 : 2.5),
-                chartState.top || (mode === 'personal' ? 3 : mode === 'difference' ? 2 : 6)
+                chartState.bottom || (mode === 'personal' ? -3 : mode === 'difference' ? -0.75 : 2.5),
+                chartState.top || (mode === 'personal' ? 3 : mode === 'difference' ? 0.5 : 6)
               ]}
               ticks={mode === 'personal' ? 
                 [-3, -2, -1, 0, 1, 2, 3] :  // ticks for personal mode
                 mode === 'difference' ? 
-                [-2, -1, -0.5, 0, 0.5, 1, 2] :  // ticks for difference mode
+                [-0.75, -0.5, -0.25, 0, 0.25, 0.5] :  // updated ticks for difference mode
                 [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]  // ticks for normal/hard mode
               }
-              tickFormatter={(value) => value.toFixed(1)}
+              tickFormatter={(value) => value.toFixed(2)}
               label={{ 
                 value: mode === 'difference' || mode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
                 angle: -90, 
