@@ -20,6 +20,13 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
+import puzzleIds from '@/data/archive/relevant_puzzle_ids.json';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 interface ChartState {
   left: string | null;
@@ -85,6 +92,7 @@ const WordleChart = () => {
     aboveAverage: 0,
     belowAverage: 0 
   });
+  const [showInstructions, setShowInstructions] = useState(false);
 
   React.useEffect(() => {
     if (data?.length) {
@@ -301,6 +309,63 @@ const WordleChart = () => {
     }
   };
 
+  const getBookmarkletCode = () => {
+    const ids = puzzleIds.puzzle_ids.join(',');
+    return `ajavascript:(function(){
+      const ids = '${ids}';
+      if (!ids) return;
+
+      const allIds = ids.split(',').map(id => id.trim()).filter(id => id !== '');
+      let allGameData = [];
+
+      async function fetchChunks(startIndex = 0) {
+        if (startIndex >= allIds.length) {
+          const blob = new Blob([JSON.stringify(allGameData, null, 2)], {type: 'application/json'});
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'wordle_data_all.json';
+          a.click();
+          return;
+        }
+
+        const chunk = allIds.slice(startIndex, startIndex + 31);
+        const url = \`https://www.nytimes.com/svc/games/state/wordleV2/latests?puzzle_ids=\${chunk.join(',')}\`;
+        
+        try {
+          const response = await fetch(url, {
+            credentials: 'include'
+          });
+          
+          if (!response.ok) throw new Error(\`HTTP error! status: \${response.status}\`);
+          
+          const data = await response.json();
+          if (data.states && Array.isArray(data.states)) {
+            allGameData = allGameData.concat(data.states);
+          }
+          
+          console.log(\`Fetched \${chunk.length} puzzles. Total: \${allGameData.length}\`);
+          setTimeout(() => fetchChunks(startIndex + 31), 1000);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      }
+
+      fetchChunks();
+    })();`;
+  };
+
+  const handleCopyBookmarklet = () => {
+    navigator.clipboard.writeText(getBookmarkletCode())
+      .then(() => {
+        setShowInstructions(true);
+      })
+      .catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Failed to copy script. Please try again.');
+      });
+  };
+
   return (
     <div className="h-[100dvh] p-4 flex flex-col">
       <div className="flex justify-between items-center mb-4">
@@ -344,6 +409,13 @@ const WordleChart = () => {
                 onChange={handleFileUpload}
                 className="max-w-[280px]"
               />
+              <button
+                onClick={handleCopyBookmarklet}
+                className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700"
+                title="Copy script to get your personal Wordle data"
+              >
+                Copy Data Fetcher
+              </button>
               {personalStats.count > 0 && (
                 <span className="text-sm text-gray-600">
                   Found {personalStats.count} results (
@@ -436,6 +508,27 @@ const WordleChart = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
+      
+      <Dialog open={showInstructions} onOpenChange={setShowInstructions}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Data Fetcher Instructions</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <ol className="list-decimal list-inside space-y-2">
+              <li>Open a tab with <span className="font-bold">nyt.com</span></li>
+              <li>Click in the URL bar <span className="text-gray-500">(or press Ctrl/Cmd + L)</span></li>
+              <li>Paste the copied code</li>
+              <li>Remove the 'a' from the beginning <span className="text-gray-500">(press HOME key, then delete)</span></li>
+              <li>Press Enter</li>
+            </ol>
+            <div className="bg-gray-50 p-3 rounded text-sm text-gray-600">
+              <p>The data will take about a minute to gather. You can watch the progress in the browser's console (F12).</p>
+              <p className="mt-2">Once complete, a .json file will download — upload that file here to see your personal data.</p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
