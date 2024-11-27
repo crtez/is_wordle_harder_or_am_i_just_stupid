@@ -89,8 +89,10 @@ const WordleChart = () => {
   React.useEffect(() => {
     if (data?.length) {
       const processedData = data.map(d => {
+        // Find winning game with matching word
         const personalGame = personalData.find(p => 
-          p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+          p.game_data.status === "WIN" && 
+          p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
         );
         const personalGuesses = personalGame ? 
           personalGame.game_data.boardState.filter(row => row !== "").length :
@@ -146,7 +148,8 @@ const WordleChart = () => {
       top,
       displayData: data.slice(leftIndex, rightIndex + 1).map(d => {
         const personalGame = personalData.find(p => 
-          p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+          p.game_data.status === "WIN" && 
+          p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
         );
         const personalGuesses = personalGame ? 
           personalGame.game_data.boardState.filter(row => row !== "").length :
@@ -165,7 +168,8 @@ const WordleChart = () => {
     setRefArea({ left: '', right: '' });
     const processedData = data.map(d => {
       const personalGame = personalData.find(p => 
-        p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+        p.game_data.status === "WIN" && 
+        p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
       );
       const personalGuesses = personalGame ? 
         personalGame.game_data.boardState.filter(row => row !== "").length :
@@ -214,7 +218,8 @@ const WordleChart = () => {
             <p className="text-gray-600">
               Your Score: {
                 personalData.find(p => 
-                  p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(dataPoint.id)
+                  p.game_data.status === "WIN" && 
+                  p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === dataPoint.word.toLowerCase()
                 )?.game_data.boardState.filter(row => row !== "").length || 'N/A'
               }
             </p>
@@ -271,7 +276,8 @@ const WordleChart = () => {
 
           data?.forEach(d => {
             const personalGame = json.find((p: PersonalData) => 
-              p.game_data.setLegacyStats?.lastWonDayOffset === parseInt(d.id)
+              p.game_data.status === "WIN" && 
+              p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
             );
             if (personalGame) {
               matchCount++;
