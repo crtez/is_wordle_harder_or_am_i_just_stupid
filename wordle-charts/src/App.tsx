@@ -537,7 +537,7 @@ const WordleChart = () => {
                 <ol className="list-decimal list-inside space-y-2">
                   <li>The data fetcher script was copied to your clipboard.</li>
                   <li>Right-click your bookmarks bar and select "Add Bookmark"</li>
-                  <li>Paste the copied code into the "Location" field</li>
+                  <li>Paste the copied code into the "URL" field</li>
                   <li>Remove the 'a' from the beginning of the pasted code</li>
                   <li>Save the bookmark</li>
                   <li>Open a tab with <span className="font-bold">nyt.com</span></li>
