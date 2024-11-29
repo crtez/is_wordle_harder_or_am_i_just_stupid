@@ -4,7 +4,7 @@ import requests
 from datetime import datetime, timedelta
 
 # Path to the folder containing the JSON files
-folder_path = 'data/archive/json'
+folder_path = 'data/wordle/archive/json'
 
 # Create folder if it doesn't exist
 os.makedirs(folder_path, exist_ok=True)
@@ -72,5 +72,5 @@ data = {
 }
 
 # Write to a JSON file
-with open('data/archive/relevant_puzzle_ids.json', 'w') as f:
+with open('data/wordle/archive/relevant_puzzle_ids.json', 'w') as f:
     json.dump(data, f, indent=2)
