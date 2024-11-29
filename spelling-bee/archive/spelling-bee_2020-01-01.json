@@ -1,0 +1,24 @@
+{
+  "date": "2020-01-01",
+  "puzzle_number": 603,
+  "letters": {
+    "center_letter": "O",
+    "outer_letters": [
+      "A",
+      "C",
+      "G",
+      "H",
+      "P",
+      "Z"
+    ],
+    "all_letters": [
+      "O",
+      "A",
+      "C",
+      "G",
+      "H",
+      "P",
+      "Z"
+    ]
+  }
+}

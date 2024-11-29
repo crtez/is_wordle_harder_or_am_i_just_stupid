@@ -1,0 +1,24 @@
+{
+  "date": "2021-09-23",
+  "puzzle_number": 1234,
+  "letters": {
+    "center_letter": "I",
+    "outer_letters": [
+      "A",
+      "C",
+      "M",
+      "R",
+      "T",
+      "U"
+    ],
+    "all_letters": [
+      "I",
+      "A",
+      "C",
+      "M",
+      "R",
+      "T",
+      "U"
+    ]
+  }
+}

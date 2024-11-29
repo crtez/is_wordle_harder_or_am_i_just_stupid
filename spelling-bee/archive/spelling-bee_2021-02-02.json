@@ -1,0 +1,24 @@
+{
+  "date": "2021-02-02",
+  "puzzle_number": 1001,
+  "letters": {
+    "center_letter": "P",
+    "outer_letters": [
+      "A",
+      "B",
+      "E",
+      "I",
+      "L",
+      "M"
+    ],
+    "all_letters": [
+      "P",
+      "A",
+      "B",
+      "E",
+      "I",
+      "L",
+      "M"
+    ]
+  }
+}
