@@ -45,7 +45,7 @@ def extract_letters(html):
 
 def save_to_json(data, date_str):
     """Save puzzle data to a JSON file."""
-    filename = os.path.join('spelling-bee', 'archive', f'spelling-bee_{date_str}.json')
+    filename = os.path.join('data', 'spelling-bee', 'archive', f'spelling-bee_{date_str}.json')
     os.makedirs(os.path.dirname(filename), exist_ok=True)  # Create directories if they don't exist
     with open(filename, 'w') as f:
         json.dump(data, f, indent=2)
@@ -53,7 +53,7 @@ def save_to_json(data, date_str):
 
 def get_latest_file():
     """Find the most recent JSON file in the current directory."""
-    archive_dir = os.path.join('spelling-bee', 'archive')
+    archive_dir = os.path.join('data', 'spelling-bee', 'archive')
     files = [f for f in os.listdir(archive_dir) if f.startswith('spelling-bee_') and f.endswith('.json')]
     if not files:
         return None

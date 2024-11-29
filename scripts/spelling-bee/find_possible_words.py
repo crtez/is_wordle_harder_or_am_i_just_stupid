@@ -27,7 +27,7 @@ def is_word_possible(word, puzzle_data):
 
 def find_possible_dates(word):
     """Find all dates where the word would have been possible."""
-    archive_dir = Path('spelling-bee/archive')
+    archive_dir = Path('data/spelling-bee/archive')
     possible_dates = []
     
     # Get all JSON files in archive
