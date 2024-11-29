@@ -1,0 +1,24 @@
+{
+  "date": "2020-03-04",
+  "puzzle_number": 666,
+  "letters": {
+    "center_letter": "O",
+    "outer_letters": [
+      "C",
+      "D",
+      "N",
+      "T",
+      "U",
+      "W"
+    ],
+    "all_letters": [
+      "O",
+      "C",
+      "D",
+      "N",
+      "T",
+      "U",
+      "W"
+    ]
+  }
+}

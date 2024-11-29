@@ -1,0 +1,24 @@
+{
+  "date": "2019-01-13",
+  "puzzle_number": 250,
+  "letters": {
+    "center_letter": "O",
+    "outer_letters": [
+      "B",
+      "G",
+      "I",
+      "L",
+      "M",
+      "R"
+    ],
+    "all_letters": [
+      "O",
+      "B",
+      "G",
+      "I",
+      "L",
+      "M",
+      "R"
+    ]
+  }
+}

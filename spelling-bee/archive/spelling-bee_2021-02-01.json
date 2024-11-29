@@ -1,0 +1,24 @@
+{
+  "date": "2021-02-01",
+  "puzzle_number": 1000,
+  "letters": {
+    "center_letter": "O",
+    "outer_letters": [
+      "A",
+      "G",
+      "I",
+      "L",
+      "N",
+      "Y"
+    ],
+    "all_letters": [
+      "O",
+      "A",
+      "G",
+      "I",
+      "L",
+      "N",
+      "Y"
+    ]
+  }
+}

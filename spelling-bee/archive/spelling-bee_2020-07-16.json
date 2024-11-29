@@ -1,0 +1,24 @@
+{
+  "date": "2020-07-16",
+  "puzzle_number": 800,
+  "letters": {
+    "center_letter": "O",
+    "outer_letters": [
+      "B",
+      "D",
+      "G",
+      "H",
+      "U",
+      "Y"
+    ],
+    "all_letters": [
+      "O",
+      "B",
+      "D",
+      "G",
+      "H",
+      "U",
+      "Y"
+    ]
+  }
+}

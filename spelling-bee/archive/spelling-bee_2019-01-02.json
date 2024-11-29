@@ -1,0 +1,24 @@
+{
+  "date": "2019-01-02",
+  "puzzle_number": 239,
+  "letters": {
+    "center_letter": "A",
+    "outer_letters": [
+      "B",
+      "C",
+      "K",
+      "O",
+      "R",
+      "Z"
+    ],
+    "all_letters": [
+      "A",
+      "B",
+      "C",
+      "K",
+      "O",
+      "R",
+      "Z"
+    ]
+  }
+}
