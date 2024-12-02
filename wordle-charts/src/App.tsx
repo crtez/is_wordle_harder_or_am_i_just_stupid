@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useWordleData } from '@/utils/processWordleData';
 import { 
   ScatterChart, 
@@ -23,6 +23,9 @@ import { InstructionsDialog } from '@/components/InstructionsDialog';
 import { TooltipProps } from 'recharts';
 import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
 import { getBookmarkletCode } from '@/utils/bookmarklet';
+import { DateTimePicker } from '@/components/datetime-picker';
+import { addMonths, subMonths } from 'date-fns';
+
 
 interface ChartState {
   allData: {
@@ -129,6 +132,9 @@ const WordleChart = () => {
     belowAverage: 0 
   });
   const [showInstructions, setShowInstructions] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const minDate = useMemo(() => subMonths(new Date(), 12), []); // Changed to 12 months back for Wordle history
+  const maxDate = useMemo(() => new Date(), []); // Set max date to today since future Wordles don't exist
 
   React.useEffect(() => {
     if (data?.length) {
@@ -259,6 +265,15 @@ const WordleChart = () => {
               <SelectItem value="personal">Personal Performance Comparison</SelectItem>
             </SelectContent>
           </Select>
+          
+          <DateTimePicker
+            value={selectedDate} 
+            onChange={setSelectedDate} 
+            min={minDate} 
+            max={maxDate}
+            hideTime={true}
+          />
+
           {mode === 'personal' && (
             <div className="flex items-center gap-4">
               <Input
