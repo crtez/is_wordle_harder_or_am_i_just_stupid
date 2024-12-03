@@ -24,7 +24,7 @@ import { TooltipProps } from 'recharts';
 import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
 import { getBookmarkletCode } from '@/utils/bookmarklet';
 import { DateTimePicker } from '@/components/datetime-picker';
-import { addMonths, subMonths } from 'date-fns';
+import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 
 
@@ -129,31 +129,40 @@ const WordleChart = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
   const minDate = useMemo(() => 
-    data?.length ? new Date(data[0].date) : subMonths(new Date(), 12), 
+    data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
     [data]
   );
   
   const maxDate = useMemo(() => 
-    data?.length ? new Date(data[data.length - 1].date) : new Date(), 
+    data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
     [data]
   );
 
   React.useEffect(() => {
     if (data?.length) {
       const processedData = processWordleData(data, personalData);
+      
+      // Filter data based on date range
+      const filteredData = processedData.filter(d => {
+        const date = parseISO(d.date);
+        const isAfterStart = !selectedDate || date >= startOfDay(selectedDate);
+        const isBeforeEnd = !selectedEndDate || date <= endOfDay(selectedEndDate);
+        return isAfterStart && isBeforeEnd;
+      });
+
       setChartState({
         allData: {
-          normal: processedData,
-          hard: processedData,
-          difference: processedData,
-          personal: processedData.filter(d => d.personalDifference !== null)
+          normal: filteredData,
+          hard: filteredData,
+          difference: filteredData,
+          personal: filteredData.filter(d => d.personalDifference !== null)
         },
         displayData: mode === 'personal' 
-          ? processedData.filter(d => d.personalDifference !== null)
-          : processedData
+          ? filteredData.filter(d => d.personalDifference !== null)
+          : filteredData
       });
     }
-  }, [data, personalData]);
+  }, [data, personalData, selectedDate, selectedEndDate]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
@@ -279,6 +288,7 @@ const WordleChart = () => {
             min={minDate} 
             max={maxDate}
             hideTime={true}
+            clearable={true}
           />
 
           <DateTimePicker
@@ -287,6 +297,7 @@ const WordleChart = () => {
             min={selectedDate || minDate}
             max={maxDate}
             hideTime={true}
+            clearable={true}
           />
           
           {mode === 'personal' && (
@@ -305,11 +316,11 @@ const WordleChart = () => {
               </button>
               {personalStats.count > 0 && (
                 <div className="col-span-1 text-sm text-gray-600 text-center">
-                  {personalStats.count} found
+                  Found <span className="font-bold">{personalStats.count}</span> wordles done
                   <br />
-                  <span className="text-green-600">{personalStats.belowAverage}</span>
-                  {' / '}
-                  <span className="text-red-600">{personalStats.aboveAverage}</span>
+                  <span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> were above the daily average
+                  <br />
+                  <span className="text-green-600 font-bold">{personalStats.belowAverage}</span> were below the daily average
                 </div>
               )}
             </>
