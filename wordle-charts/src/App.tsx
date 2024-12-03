@@ -107,7 +107,8 @@ const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
-  const [mode, setMode] = useState<'normal' | 'hard' | 'difference' | 'personal'>('normal');
+  const [isHardMode, setIsHardMode] = useState(false);
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal'>('standard');
   
   const [chartState, setChartState] = useState<ChartState>({
     allData: {
@@ -157,7 +158,7 @@ const WordleChart = () => {
           difference: filteredData,
           personal: filteredData.filter(d => d.personalDifference !== null)
         },
-        displayData: mode === 'personal' 
+        displayData: chartMode === 'personal' 
           ? filteredData.filter(d => d.personalDifference !== null)
           : filteredData
       });
@@ -168,11 +169,11 @@ const WordleChart = () => {
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
 
-  const handleModeChange = (newMode: 'normal' | 'hard' | 'difference' | 'personal') => {
-    setMode(newMode);
+  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal') => {
+    setChartMode(newMode);
     setChartState(prev => ({
       ...prev,
-      displayData: prev.allData[newMode]
+      displayData: prev.allData[newMode === 'standard' ? 'normal' : newMode]
     }));
   };
 
@@ -190,7 +191,7 @@ const WordleChart = () => {
         <p className="text-gray-600">
           {format(parseISO(dataPoint.date), 'M/d/yyyy')}
         </p>
-        {mode === 'personal' && dataPoint.personalDifference !== null ? (
+        {chartMode === 'personal' && dataPoint.personalDifference !== null ? (
           <>
             <p className="text-gray-800">
               Personal vs Average: {dataPoint.personalDifference > 0 ? '+' : ''}{dataPoint.personalDifference.toFixed(2)} guesses
@@ -207,7 +208,7 @@ const WordleChart = () => {
               Global Average: {dataPoint.average.toFixed(2)}
             </p>
           </>
-        ) : mode === 'difference' ? (
+        ) : chartMode === 'difference' ? (
           <>
             <p className="text-gray-800">
               Difficulty Gap: {dataPoint.difference?.toFixed(2)} guesses
@@ -221,8 +222,8 @@ const WordleChart = () => {
           </>
         ) : (
           <p className="text-gray-800">
-            Average ({mode === 'normal' ? 'Normal' : 'Hard'}): {
-              (mode === 'normal' ? dataPoint.average : dataPoint.hardAverage).toFixed(2)
+            Average ({chartMode === 'standard' ? 'Normal' : 'Hard'}): {
+              (chartMode === 'standard' ? dataPoint.average : dataPoint.hardAverage).toFixed(2)
             } guesses
           </p>
         )}
@@ -263,20 +264,18 @@ const WordleChart = () => {
       <div className="grid grid-cols-12 gap-3 mb-4 items-center">
         <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
           <Select 
-            defaultValue="normal" 
+            defaultValue="standard" 
             onValueChange={handleModeChange}
           >
             <SelectTrigger>
               <SelectValue>
-                {mode === 'normal' ? 'Wordle Average (Normal)' : 
-                 mode === 'hard' ? 'Wordle Average (Hard)' : 
-                 mode === 'difference' ? 'Hard Mode Difficulty Gap' : 
+                {chartMode === 'standard' ? 'Wordle Average' : 
+                 chartMode === 'difference' ? 'Hard Mode Difficulty Gap' : 
                  'Personal Performance'}
               </SelectValue>
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="normal">Wordle Average (Normal)</SelectItem>
-              <SelectItem value="hard">Wordle Average (Hard)</SelectItem>
+              <SelectItem value="standard">Wordle Average</SelectItem>
               <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
               <SelectItem value="personal">Personal Performance</SelectItem>
             </SelectContent>
@@ -299,8 +298,19 @@ const WordleChart = () => {
             hideTime={true}
             clearable={true}
           />
+
+          {chartMode === 'standard' && (
+            <div className="flex items-center gap-2">
+              <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+              <Switch
+                id="hard-mode-toggle"
+                checked={isHardMode}
+                onCheckedChange={setIsHardMode}
+              />
+            </div>
+          )}
           
-          {mode === 'personal' && (
+          {chartMode === 'personal' && (
             <>
               <Input
                 type="file"
@@ -315,13 +325,13 @@ const WordleChart = () => {
                 Copy Data Fetcher
               </button>
               {personalStats.count > 0 && (
-                <div className="col-span-1 text-xs text-gray-600 flex items-center justify-center">
-                <span>
-                  Found <span className="font-bold">{personalStats.count}</span> wordles 
-                  (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
-                  <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
-                </span>
-              </div>
+                <div className="col-span-1 text-sm text-gray-600 text-center">
+                  Found <span className="font-bold">{personalStats.count}</span> wordles done
+                  <br />
+                  <span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> were above the daily average
+                  <br />
+                  <span className="text-green-600 font-bold">{personalStats.belowAverage}</span> were below the daily average
+                </div>
               )}
             </>
           )}
@@ -352,15 +362,15 @@ const WordleChart = () => {
               style={{ userSelect: 'none' }}
             />
             <YAxis
-              domain={mode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
-                     mode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
+              domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
+                     chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
                      CHART_CONFIG.yAxisDomains.default}
-              ticks={mode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
-                     mode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
+              ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
+                     chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
                      CHART_CONFIG.yAxisTicks.default}
               tickFormatter={(value) => value.toFixed(2)}
               label={{ 
-                value: mode === 'difference' || mode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
+                value: chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
                 angle: -90, 
                 position: 'insideLeft',
                 style: { userSelect: 'none' }
@@ -376,10 +386,9 @@ const WordleChart = () => {
               shape="circle"
               isAnimationActive={false}
               dataKey={
-                mode === 'difference' ? 'difference' : 
-                mode === 'personal' ? 'personalDifference' :
-                mode === 'normal' ? 'average' : 
-                'hardAverage'
+                chartMode === 'difference' ? 'difference' : 
+                chartMode === 'personal' ? 'personalDifference' :
+                isHardMode ? 'hardAverage' : 'average'
               }
             />
           </ScatterChart>
