@@ -373,7 +373,7 @@ const WordleChart = () => {
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
       <div className="grid grid-cols-12 gap-3 mb-4">
-        <div className="col-span-10 grid grid-cols-6 gap-3 items-start">
+        <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
           <Select 
             defaultValue="standard" 
             onValueChange={handleModeChange}
