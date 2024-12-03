@@ -26,6 +26,13 @@ import { getBookmarkletCode } from '@/utils/bookmarklet';
 import { DateTimePicker } from '@/components/datetime-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 
 interface ChartState {
@@ -46,6 +53,16 @@ interface PersonalData {
     boardState: string[];
     status: string;
   }
+}
+
+interface WordleStats {
+  gamesPlayed: number;
+  gamesWon: number;
+  currentStreak: number;
+  maxStreak: number;
+  guessDistribution: Record<string, number>;
+  winRate: number;
+  averageGuesses: number;
 }
 
 // Move chart config to a separate object
@@ -125,6 +142,32 @@ const calculateRollingAverage = (data: any[], days: number, isHardMode: boolean)
   });
 };
 
+const calculateWordleStats = (data: PersonalData[]): WordleStats => {
+  if (!data.length) return {} as WordleStats;
+
+  // Find the game data with the latest timestamp
+  const latestGameData = data.reduce((latest, current) => 
+    current.timestamp > latest.timestamp ? current : latest
+  );
+
+  const stats = latestGameData?.game_data?.setLegacyStats;
+  if (!stats) return {} as WordleStats;
+
+  const totalGuesses = Object.entries(stats.guesses)
+    .filter(([key]) => key !== 'fail')
+    .reduce((sum, [key, value]) => sum + (Number(key) * value), 0);
+  
+  return {
+    gamesPlayed: stats.gamesPlayed,
+    gamesWon: stats.gamesWon,
+    currentStreak: stats.currentStreak,
+    maxStreak: stats.maxStreak,
+    guessDistribution: stats.guesses,
+    winRate: (stats.gamesWon / stats.gamesPlayed) * 100,
+    averageGuesses: totalGuesses / stats.gamesWon
+  };
+};
+
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
@@ -161,6 +204,8 @@ const WordleChart = () => {
     data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
     [data]
   );
+
+  const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
 
   React.useEffect(() => {
     if (data?.length) {
@@ -297,6 +342,7 @@ const WordleChart = () => {
           const json = JSON.parse(e.target?.result as string);
           setPersonalData(json);
           setPersonalStats(calculatePersonalStats(data, json));
+          setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
         }
@@ -317,8 +363,8 @@ const WordleChart = () => {
   };
 
   return (
-    <div className="h-[100dvh] p-4 flex flex-col">
-      <div className="grid grid-cols-12 gap-3 mb-4 items-center">
+    <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
+      <div className="grid grid-cols-12 gap-3 mb-4">
         <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
           <Select 
             defaultValue="standard" 
@@ -361,7 +407,7 @@ const WordleChart = () => {
           />
 
           {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 h-10">
               <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
               <Switch
                 id="hard-mode-toggle"
@@ -372,33 +418,70 @@ const WordleChart = () => {
           )}
           
           {chartMode === 'personal' && (
-            <>
+            <div className="contents">
               <Input
                 type="file"
                 accept=".json"
                 onChange={handleFileUpload}
                 className="col-span-1"
               />
-              <button
-                onClick={handleCopyBookmarklet}
-                className="col-span-1 px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 text-center"
-              >
-                Copy Data Fetcher
-              </button>
-              {personalStats.count > 0 && (
-                <div className="col-span-1 text-xs text-gray-600 flex">
-                  <span>
-                    Found <span className="font-bold">{personalStats.count}</span> wordles 
-                    (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
-                    <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
-                  </span>
+              <div className="col-span-2 flex gap-2">
+                <button
+                  onClick={handleCopyBookmarklet}
+                  className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
+                >
+                  Copy Data Fetcher
+                </button>
+                {personalData.length > 0 && (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap">
+                        View Stats
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Your Wordle Statistics</DialogTitle>
+                      </DialogHeader>
+                      <div className="grid grid-cols-2 gap-4 p-4">
+                        <div className="space-y-2">
+                          <p>Games Played: {wordleStats.gamesPlayed}</p>
+                          <p>Games Won: {wordleStats.gamesWon}</p>
+                          <p>Win Rate: {wordleStats.winRate?.toFixed(1)}%</p>
+                          <p>Average Guesses: {wordleStats.averageGuesses?.toFixed(2)}</p>
+                        </div>
+                        <div className="space-y-2">
+                          <p>Current Streak: {wordleStats.currentStreak}</p>
+                          <p>Max Streak: {wordleStats.maxStreak}</p>
+                          <p>Guess Distribution:</p>
+                          <div className="text-sm">
+                            {Object.entries(wordleStats.guessDistribution || {})
+                              .filter(([key]) => key !== 'fail')
+                              .map(([guesses, count]) => (
+                                <p key={guesses}>
+                                  {guesses}: {count} times
+                                </p>
+                              ))}
+                            <p>Failed: {wordleStats.guessDistribution?.fail || 0} times</p>
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                )}
               </div>
+              {personalStats.count > 0 && (
+                <div className="col-span-3 text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
+                  Found <span className="font-bold">{personalStats.count}</span> wordles 
+                  (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
+                  <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
+                </div>
               )}
-            </>
+            </div>
           )}
         </div>
 
-        <div className="col-span-2 flex items-center gap-2 justify-end">
+        <div className="col-span-2 flex items-center gap-2 justify-end h-10">
           <Label htmlFor="axis-toggle" className="whitespace-nowrap">Show Words</Label>
           <Switch
             id="axis-toggle"
@@ -407,7 +490,7 @@ const WordleChart = () => {
           />
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 overflow-hidden">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart 
             margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
