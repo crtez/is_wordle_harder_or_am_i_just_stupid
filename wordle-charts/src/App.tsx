@@ -24,7 +24,7 @@ import { TooltipProps } from 'recharts';
 import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
 import { getBookmarkletCode } from '@/utils/bookmarklet';
 import { DateTimePicker } from '@/components/datetime-picker';
-import { addMonths, subMonths } from 'date-fns';
+import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 
 
@@ -288,6 +288,7 @@ const WordleChart = () => {
             min={minDate} 
             max={maxDate}
             hideTime={true}
+            clearable={true}
           />
 
           <DateTimePicker
@@ -296,6 +297,7 @@ const WordleChart = () => {
             min={selectedDate || minDate}
             max={maxDate}
             hideTime={true}
+            clearable={true}
           />
           
           {mode === 'personal' && (
@@ -314,12 +316,12 @@ const WordleChart = () => {
               </button>
               {personalStats.count > 0 && (
                 <div className="col-span-1 text-xs text-gray-600 flex items-center justify-center">
-                  <span>
-                    Found <span className="font-bold">{personalStats.count}</span> wordles 
-                    (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
-                    <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
-                  </span>
-                </div>
+                <span>
+                  Found <span className="font-bold">{personalStats.count}</span> wordles 
+                  (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
+                  <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
+                </span>
+              </div>
               )}
             </>
           )}
