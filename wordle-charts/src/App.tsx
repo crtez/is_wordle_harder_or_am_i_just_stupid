@@ -52,7 +52,15 @@ interface PersonalData {
   game_data: {
     boardState: string[];
     status: string;
-  }
+    setLegacyStats: {
+      gamesPlayed: number;
+      gamesWon: number;
+      currentStreak: number;
+      maxStreak: number;
+      guesses: Record<string, number>;
+    };
+  };
+  timestamp: number;
 }
 
 interface WordleStats {
@@ -407,7 +415,7 @@ const WordleChart = () => {
           />
 
           {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
-            <div className="flex items-center gap-2 h-10">
+            <div className="flex items-center gap-2">
               <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
               <Switch
                 id="hard-mode-toggle"
@@ -418,7 +426,7 @@ const WordleChart = () => {
           )}
           
           {chartMode === 'personal' && (
-            <div className="contents">
+            <>
               <Input
                 type="file"
                 accept=".json"
@@ -477,7 +485,7 @@ const WordleChart = () => {
                   <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
                 </div>
               )}
-            </div>
+            </>
           )}
         </div>
 
