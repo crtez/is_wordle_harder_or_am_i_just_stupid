@@ -164,6 +164,13 @@ const WordleChart = () => {
 
   React.useEffect(() => {
     if (data?.length) {
+      setSelectedDate(parseISO(data[0].date));
+      setSelectedEndDate(parseISO(data[data.length - 1].date));
+    }
+  }, [data]);
+
+  React.useEffect(() => {
+    if (data?.length) {
       const processedData = processWordleData(data, personalData);
       
       // Calculate rolling averages before date filtering
