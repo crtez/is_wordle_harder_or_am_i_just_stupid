@@ -1,0 +1,24 @@
+{
+  "date": "2018-11-24",
+  "puzzle_number": 200,
+  "letters": {
+    "center_letter": "C",
+    "outer_letters": [
+      "A",
+      "B",
+      "K",
+      "L",
+      "P",
+      "U"
+    ],
+    "all_letters": [
+      "C",
+      "A",
+      "B",
+      "K",
+      "L",
+      "P",
+      "U"
+    ]
+  }
+}
