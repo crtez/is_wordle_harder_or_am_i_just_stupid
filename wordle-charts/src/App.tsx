@@ -34,6 +34,8 @@ interface ChartState {
     hard: any[];
     difference: any[];
     personal: any[];
+    rolling7: any[];
+    rolling30: any[];
   };
   displayData: any[];
 }
@@ -51,12 +53,14 @@ const CHART_CONFIG = {
   yAxisDomains: {
     personal: [-3, 3],
     difference: [-0.75, 0.5],
-    default: [2.5, 6]
+    default: [2.5, 6],
+    rolling: [3.5, 4.5]
   },
   yAxisTicks: {
     personal: [-3, -2, -1, 0, 1, 2, 3],
     difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
-    default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]
+    default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+    rolling: [3.5, 3.75, 4, 4.25, 4.5]
   }
 };
 
@@ -104,18 +108,37 @@ const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
   };
 };
 
+const calculateRollingAverage = (data: any[], days: number, isHardMode: boolean) => {
+  return data.map((item, index) => {
+    if (index < days - 1) {
+      return { ...item, rollingAverage: null };  // Return null for points before we have enough data
+    }
+    const startIndex = index - days + 1;
+    const window = data.slice(startIndex, index + 1);
+    const sum = window.reduce((acc, curr) => 
+      acc + (isHardMode ? curr.hardAverage : curr.average), 0
+    );
+    return {
+      ...item,
+      rollingAverage: sum / days
+    };
+  });
+};
+
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
   const [isHardMode, setIsHardMode] = useState(false);
-  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal'>('standard');
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30'>('standard');
   
   const [chartState, setChartState] = useState<ChartState>({
     allData: {
       normal: [],
       hard: [],
       difference: [],
-      personal: []
+      personal: [],
+      rolling7: [],
+      rolling30: []
     },
     displayData: []
   });
@@ -151,25 +174,34 @@ const WordleChart = () => {
         return isAfterStart && isBeforeEnd;
       });
 
+      const rolling7Data = calculateRollingAverage(filteredData, 7, isHardMode);
+      const rolling30Data = calculateRollingAverage(filteredData, 30, isHardMode);
+
       setChartState({
         allData: {
           normal: filteredData,
           hard: filteredData,
           difference: filteredData,
-          personal: filteredData.filter(d => d.personalDifference !== null)
+          personal: filteredData.filter(d => d.personalDifference !== null),
+          rolling7: rolling7Data,
+          rolling30: rolling30Data
         },
         displayData: chartMode === 'personal' 
           ? filteredData.filter(d => d.personalDifference !== null)
-          : filteredData
+          : chartMode === 'rolling7' 
+            ? rolling7Data 
+            : chartMode === 'rolling30'
+              ? rolling30Data
+              : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate]);
+  }, [data, personalData, selectedDate, selectedEndDate, isHardMode]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
 
-  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal') => {
+  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30') => {
     setChartMode(newMode);
     setChartState(prev => ({
       ...prev,
@@ -218,6 +250,17 @@ const WordleChart = () => {
             </p>
             <p className="text-gray-600">
               Hard: {dataPoint.hardAverage.toFixed(2)}
+            </p>
+          </>
+        ) : chartMode.startsWith('rolling') ? (
+          <>
+            <p className="text-gray-800">
+              {chartMode === 'rolling7' ? '7' : '30'}-Day Average: {
+                dataPoint.rollingAverage?.toFixed(2)
+              } guesses
+            </p>
+            <p className="text-gray-600">
+              Daily Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
             </p>
           </>
         ) : (
@@ -271,13 +314,17 @@ const WordleChart = () => {
               <SelectValue>
                 {chartMode === 'standard' ? 'Wordle Average' : 
                  chartMode === 'difference' ? 'Hard Mode Difficulty Gap' : 
-                 'Personal Performance'}
+                 chartMode === 'personal' ? 'Personal Performance' :
+                 chartMode === 'rolling7' ? '7-Day Rolling Average' :
+                 '30-Day Rolling Average'}
               </SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="standard">Wordle Average</SelectItem>
               <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
               <SelectItem value="personal">Personal Performance</SelectItem>
+              <SelectItem value="rolling7">7-Day Rolling Average</SelectItem>
+              <SelectItem value="rolling30">30-Day Rolling Average</SelectItem>
             </SelectContent>
           </Select>
           
@@ -299,7 +346,7 @@ const WordleChart = () => {
             clearable={true}
           />
 
-          {chartMode === 'standard' && (
+          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
             <div className="flex items-center gap-2">
               <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
               <Switch
@@ -364,9 +411,11 @@ const WordleChart = () => {
             <YAxis
               domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
                      chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
+                     chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisDomains.rolling :
                      CHART_CONFIG.yAxisDomains.default}
               ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
                      chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
+                     chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisTicks.rolling :
                      CHART_CONFIG.yAxisTicks.default}
               tickFormatter={(value) => value.toFixed(2)}
               label={{ 
@@ -382,12 +431,13 @@ const WordleChart = () => {
               name="Wordle Data"
               data={chartState.displayData}
               fill="#2563eb"
-              line={false}
+              line={chartMode === 'rolling7' || chartMode === 'rolling30'}
               shape="circle"
               isAnimationActive={false}
               dataKey={
                 chartMode === 'difference' ? 'difference' : 
                 chartMode === 'personal' ? 'personalDifference' :
+                chartMode === 'rolling7' || chartMode === 'rolling30' ? 'rollingAverage' :
                 isHardMode ? 'hardAverage' : 'average'
               }
             />
