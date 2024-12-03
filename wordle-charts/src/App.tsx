@@ -25,6 +25,7 @@ import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipCont
 import { getBookmarkletCode } from '@/utils/bookmarklet';
 import { DateTimePicker } from '@/components/datetime-picker';
 import { addMonths, subMonths } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 
 interface ChartState {
@@ -44,13 +45,6 @@ interface PersonalData {
     status: string;
   }
 }
-
-// Helper function to add one day to a date string
-const adjustDate = (dateStr: string) => {
-  const date = new Date(dateStr);
-  date.setDate(date.getDate() + 1);
-  return date;
-};
 
 // Move chart config to a separate object
 const CHART_CONFIG = {
@@ -133,8 +127,16 @@ const WordleChart = () => {
   });
   const [showInstructions, setShowInstructions] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const minDate = useMemo(() => subMonths(new Date(), 12), []); // Changed to 12 months back for Wordle history
-  const maxDate = useMemo(() => new Date(), []); // Set max date to today since future Wordles don't exist
+  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
+  const minDate = useMemo(() => 
+    data?.length ? new Date(data[0].date) : subMonths(new Date(), 12), 
+    [data]
+  );
+  
+  const maxDate = useMemo(() => 
+    data?.length ? new Date(data[data.length - 1].date) : new Date(), 
+    [data]
+  );
 
   React.useEffect(() => {
     if (data?.length) {
@@ -177,7 +179,7 @@ const WordleChart = () => {
           {dataPoint.word} <span className="text-gray-600">#{dataPoint.id}</span>
         </p>
         <p className="text-gray-600">
-          {adjustDate(dataPoint.date).toLocaleDateString()}
+          {format(parseISO(dataPoint.date), 'M/d/yyyy')}
         </p>
         {mode === 'personal' && dataPoint.personalDifference !== null ? (
           <>
@@ -249,20 +251,25 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col">
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex gap-4 items-center">
+      <div className="grid grid-cols-12 gap-3 mb-4 items-center">
+        <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
           <Select 
             defaultValue="normal" 
             onValueChange={handleModeChange}
           >
-            <SelectTrigger className="w-[280px]">
-              <SelectValue placeholder="Wordle Average Scores (Normal)" />
+            <SelectTrigger>
+              <SelectValue>
+                {mode === 'normal' ? 'Wordle Average (Normal)' : 
+                 mode === 'hard' ? 'Wordle Average (Hard)' : 
+                 mode === 'difference' ? 'Hard Mode Difficulty Gap' : 
+                 'Personal Performance'}
+              </SelectValue>
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="normal">Wordle Average Scores (Normal)</SelectItem>
-              <SelectItem value="hard">Wordle Average Scores (Hard)</SelectItem>
+              <SelectItem value="normal">Wordle Average (Normal)</SelectItem>
+              <SelectItem value="hard">Wordle Average (Hard)</SelectItem>
               <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
-              <SelectItem value="personal">Personal Performance Comparison</SelectItem>
+              <SelectItem value="personal">Personal Performance</SelectItem>
             </SelectContent>
           </Select>
           
@@ -274,33 +281,43 @@ const WordleChart = () => {
             hideTime={true}
           />
 
+          <DateTimePicker
+            value={selectedEndDate}
+            onChange={setSelectedEndDate}
+            min={selectedDate || minDate}
+            max={maxDate}
+            hideTime={true}
+          />
+          
           {mode === 'personal' && (
-            <div className="flex items-center gap-4">
+            <>
               <Input
                 type="file"
                 accept=".json"
                 onChange={handleFileUpload}
-                className="max-w-[280px]"
+                className="col-span-1"
               />
               <button
                 onClick={handleCopyBookmarklet}
-                className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700"
-                title="Copy script to get your personal Wordle data"
+                className="col-span-1 px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 text-center"
               >
                 Copy Data Fetcher
               </button>
               {personalStats.count > 0 && (
-                <span className="text-sm text-gray-600">
-                  Found {personalStats.count} results (
-                    <span className="text-green-600 font-medium">{personalStats.belowAverage}</span> below the average,{' '}
-                    <span className="text-red-600 font-medium">{personalStats.aboveAverage}</span> above the average) out of {personalStats.total} total Wordles
-                </span>
+                <div className="col-span-1 text-sm text-gray-600 text-center">
+                  {personalStats.count} found
+                  <br />
+                  <span className="text-green-600">{personalStats.belowAverage}</span>
+                  {' / '}
+                  <span className="text-red-600">{personalStats.aboveAverage}</span>
+                </div>
               )}
-            </div>
+            </>
           )}
         </div>
-        <div className="flex items-center space-x-2">
-          <Label htmlFor="axis-toggle">Show Words</Label>
+
+        <div className="col-span-2 flex items-center gap-2 justify-end">
+          <Label htmlFor="axis-toggle" className="whitespace-nowrap">Show Words</Label>
           <Switch
             id="axis-toggle"
             checked={showWords}
@@ -320,7 +337,7 @@ const WordleChart = () => {
               interval="preserveStartEnd"
               textAnchor="end"
               tick={{ fontSize: 12 }}
-              tickFormatter={(value) => showWords ? value : adjustDate(value).toLocaleDateString()}
+              tickFormatter={(value) => showWords ? value : format(parseISO(value), 'M/d/yyyy')}
               style={{ userSelect: 'none' }}
             />
             <YAxis
