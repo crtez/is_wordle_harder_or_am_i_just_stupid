@@ -166,16 +166,23 @@ const WordleChart = () => {
     if (data?.length) {
       const processedData = processWordleData(data, personalData);
       
-      // Filter data based on date range
-      const filteredData = processedData.filter(d => {
+      // Calculate rolling averages before date filtering
+      const rolling7Data = calculateRollingAverage(processedData, 7, isHardMode)
+        .filter(d => d.rollingAverage !== null);
+      const rolling30Data = calculateRollingAverage(processedData, 30, isHardMode)
+        .filter(d => d.rollingAverage !== null);
+
+      // Apply date filtering to all datasets
+      const filterByDate = (d: any) => {
         const date = parseISO(d.date);
         const isAfterStart = !selectedDate || date >= startOfDay(selectedDate);
         const isBeforeEnd = !selectedEndDate || date <= endOfDay(selectedEndDate);
         return isAfterStart && isBeforeEnd;
-      });
+      };
 
-      const rolling7Data = calculateRollingAverage(filteredData, 7, isHardMode);
-      const rolling30Data = calculateRollingAverage(filteredData, 30, isHardMode);
+      const filteredData = processedData.filter(filterByDate);
+      const filtered7Data = rolling7Data.filter(filterByDate);
+      const filtered30Data = rolling30Data.filter(filterByDate);
 
       setChartState({
         allData: {
@@ -183,15 +190,15 @@ const WordleChart = () => {
           hard: filteredData,
           difference: filteredData,
           personal: filteredData.filter(d => d.personalDifference !== null),
-          rolling7: rolling7Data,
-          rolling30: rolling30Data
+          rolling7: filtered7Data,
+          rolling30: filtered30Data
         },
         displayData: chartMode === 'personal' 
           ? filteredData.filter(d => d.personalDifference !== null)
           : chartMode === 'rolling7' 
-            ? rolling7Data 
+            ? filtered7Data 
             : chartMode === 'rolling30'
-              ? rolling30Data
+              ? filtered30Data
               : filteredData
       });
     }
@@ -321,10 +328,10 @@ const WordleChart = () => {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="standard">Wordle Average</SelectItem>
-              <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
-              <SelectItem value="personal">Personal Performance</SelectItem>
               <SelectItem value="rolling7">7-Day Rolling Average</SelectItem>
               <SelectItem value="rolling30">30-Day Rolling Average</SelectItem>
+              <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
+              <SelectItem value="personal">Personal Performance</SelectItem>
             </SelectContent>
           </Select>
           
