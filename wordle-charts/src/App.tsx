@@ -325,13 +325,13 @@ const WordleChart = () => {
                 Copy Data Fetcher
               </button>
               {personalStats.count > 0 && (
-                <div className="col-span-1 text-sm text-gray-600 text-center">
-                  Found <span className="font-bold">{personalStats.count}</span> wordles done
-                  <br />
-                  <span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> were above the daily average
-                  <br />
-                  <span className="text-green-600 font-bold">{personalStats.belowAverage}</span> were below the daily average
-                </div>
+                <div className="col-span-1 text-xs text-gray-600 flex">
+                  <span>
+                    Found <span className="font-bold">{personalStats.count}</span> wordles 
+                    (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
+                    <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
+                  </span>
+              </div>
               )}
             </>
           )}
