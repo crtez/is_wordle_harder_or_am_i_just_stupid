@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useWordleData } from '@/utils/processWordleData';
 import { 
-  LineChart, 
-  Line, 
+  ScatterChart, 
+  Scatter, 
   XAxis, 
   YAxis, 
   CartesianGrid, 
   Tooltip, 
-  ResponsiveContainer,
-  ReferenceArea 
+  ResponsiveContainer, 
 } from 'recharts';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -20,27 +19,25 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
-import puzzleIds from '@/data/archive/relevant_puzzle_ids.json';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { InstructionsDialog } from '@/components/InstructionsDialog';
+import { TooltipProps } from 'recharts';
+import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
+import { getBookmarkletCode } from '@/utils/bookmarklet';
+import { DateTimePicker } from '@/components/datetime-picker';
+import { subMonths, startOfDay, endOfDay } from 'date-fns';
+import { format, parseISO } from 'date-fns';
+
 
 interface ChartState {
-  left: string | null;
-  right: string | null;
-  bottom: number | null;
-  top: number | null;
+  allData: {
+    normal: any[];
+    hard: any[];
+    difference: any[];
+    personal: any[];
+    rolling7: any[];
+    rolling30: any[];
+  };
   displayData: any[];
-}
-
-interface TooltipProps {
-  active?: boolean;
-  payload?: any[];
-  label?: string;
 }
 
 interface PersonalData {
@@ -51,41 +48,100 @@ interface PersonalData {
   }
 }
 
-const getAxisYDomain = (from: number, to: number, data: any[], offset: number, mode: string) => {
-  const refData = data.slice(from - 1, to);
-  const key = mode === 'difference' ? 'difference' : 
-              mode === 'personal' ? 'personalDifference' :
-              mode === 'normal' ? 'average' : 'hardAverage';
-  let [bottom, top] = [refData[0][key], refData[0][key]];
-  
-  refData.forEach((d) => {
-    if (d[key] > top) top = d[key];
-    if (d[key] < bottom) bottom = d[key];
-  });
-
-  return [(bottom | 0) - offset, (top | 0) + offset];
+// Move chart config to a separate object
+const CHART_CONFIG = {
+  yAxisDomains: {
+    personal: [-3, 3],
+    difference: [-0.75, 0.5],
+    default: [2.5, 6],
+    rolling: [3.5, 4.5]
+  },
+  yAxisTicks: {
+    personal: [-3, -2, -1, 0, 1, 2, 3],
+    difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
+    default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
+    rolling: [3.5, 3.75, 4, 4.25, 4.5]
+  }
 };
 
-// Helper function to add one day to a date string
-const adjustDate = (dateStr: string) => {
-  const date = new Date(dateStr);
-  date.setDate(date.getDate() + 1);
-  return date;
+// Move data processing to a separate function
+const processWordleData = (data: any[], personalData: PersonalData[]) => {
+  return data.map(d => {
+    const personalGame = personalData.find(p => 
+      p.game_data.status === "WIN" && 
+      p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
+    );
+    const personalGuesses = personalGame ? 
+      personalGame.game_data.boardState.filter((row: string) => row !== "").length :
+      null;
+    
+    return {
+      ...d,
+      difference: d.hardAverage - d.average,
+      personalDifference: personalGuesses ? personalGuesses - d.average : null
+    };
+  });
+};
+
+// Move stats calculation to a separate function
+const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
+  let matchCount = 0, aboveCount = 0, belowCount = 0;
+
+  data?.forEach(d => {
+    const personalGame = personalData.find(p => 
+      p.game_data.status === "WIN" && 
+      p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
+    );
+    if (personalGame) {
+      matchCount++;
+      const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
+      if (personalGuesses > d.average) aboveCount++;
+      if (personalGuesses < d.average) belowCount++;
+    }
+  });
+
+  return {
+    count: matchCount,
+    total: data?.length || 0,
+    aboveAverage: aboveCount,
+    belowAverage: belowCount
+  };
+};
+
+const calculateRollingAverage = (data: any[], days: number, isHardMode: boolean) => {
+  return data.map((item, index) => {
+    if (index < days - 1) {
+      return { ...item, rollingAverage: null };  // Return null for points before we have enough data
+    }
+    const startIndex = index - days + 1;
+    const window = data.slice(startIndex, index + 1);
+    const sum = window.reduce((acc, curr) => 
+      acc + (isHardMode ? curr.hardAverage : curr.average), 0
+    );
+    return {
+      ...item,
+      rollingAverage: sum / days
+    };
+  });
 };
 
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
-  const [mode, setMode] = useState<'normal' | 'hard' | 'difference' | 'personal'>('normal');
+  const [isHardMode, setIsHardMode] = useState(false);
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30'>('standard');
   
   const [chartState, setChartState] = useState<ChartState>({
-    left: null,
-    right: null,
-    bottom: null,
-    top: null,
-    displayData: [],
+    allData: {
+      normal: [],
+      hard: [],
+      difference: [],
+      personal: [],
+      rolling7: [],
+      rolling30: []
+    },
+    displayData: []
   });
-  const [refArea, setRefArea] = useState<{ left: string; right: string }>({ left: '', right: '' });
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
   const [personalStats, setPersonalStats] = useState({ 
     count: 0, 
@@ -94,121 +150,83 @@ const WordleChart = () => {
     belowAverage: 0 
   });
   const [showInstructions, setShowInstructions] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
+  const minDate = useMemo(() => 
+    data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
+    [data]
+  );
+  
+  const maxDate = useMemo(() => 
+    data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
+    [data]
+  );
 
   React.useEffect(() => {
     if (data?.length) {
-      const processedData = data.map(d => {
-        // Find winning game with matching word
-        const personalGame = personalData.find(p => 
-          p.game_data.status === "WIN" && 
-          p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-        );
-        const personalGuesses = personalGame ? 
-          personalGame.game_data.boardState.filter((row: string) => row !== "").length :
-          null;
-        
-        return {
-          ...d,
-          difference: d.hardAverage - d.average,
-          personalDifference: personalGuesses ? personalGuesses - d.average : null
-        };
-      });
+      setSelectedDate(parseISO(data[0].date));
+      setSelectedEndDate(parseISO(data[data.length - 1].date));
+    }
+  }, [data]);
 
-      // Filter out data points without personal data when in personal mode
-      const displayData = mode === 'personal' 
-        ? processedData.filter(d => d.personalDifference !== null)
-        : processedData;
+  React.useEffect(() => {
+    if (data?.length) {
+      const processedData = processWordleData(data, personalData);
+      
+      // Calculate rolling averages before date filtering
+      const rolling7Data = calculateRollingAverage(processedData, 7, isHardMode)
+        .filter(d => d.rollingAverage !== null);
+      const rolling30Data = calculateRollingAverage(processedData, 30, isHardMode)
+        .filter(d => d.rollingAverage !== null);
+
+      // Apply date filtering to all datasets
+      const filterByDate = (d: any) => {
+        const date = parseISO(d.date);
+        const isAfterStart = !selectedDate || date >= startOfDay(selectedDate);
+        const isBeforeEnd = !selectedEndDate || date <= endOfDay(selectedEndDate);
+        return isAfterStart && isBeforeEnd;
+      };
+
+      const filteredData = processedData.filter(filterByDate);
+      const filtered7Data = rolling7Data.filter(filterByDate);
+      const filtered30Data = rolling30Data.filter(filterByDate);
 
       setChartState({
-        left: 'dataMin',
-        right: 'dataMax',
-        bottom: mode === 'personal' ? -3 : mode === 'difference' ? -0.75 : 2.5,
-        top: mode === 'personal' ? 3 : mode === 'difference' ? 0.5 : 6,
-        displayData,
-      } as ChartState);
+        allData: {
+          normal: filteredData,
+          hard: filteredData,
+          difference: filteredData,
+          personal: filteredData.filter(d => d.personalDifference !== null),
+          rolling7: filtered7Data,
+          rolling30: filtered30Data
+        },
+        displayData: chartMode === 'personal' 
+          ? filteredData.filter(d => d.personalDifference !== null)
+          : chartMode === 'rolling7' 
+            ? filtered7Data 
+            : chartMode === 'rolling30'
+              ? filtered30Data
+              : filteredData
+      });
     }
-  }, [data, mode, personalData]);
+  }, [data, personalData, selectedDate, selectedEndDate, isHardMode]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
 
-  const zoom = () => {
-    const { left: refAreaLeft, right: refAreaRight } = refArea;
-    if (refAreaLeft === refAreaRight || !refAreaRight) {
-      setRefArea({ left: '', right: '' });
-      return;
-    }
-
-    let [leftIndex, rightIndex] = [
-      data.findIndex(d => showWords ? d.word === refAreaLeft : d.date === refAreaLeft),
-      data.findIndex(d => showWords ? d.word === refAreaRight : d.date === refAreaRight)
-    ];
-
-    if (leftIndex > rightIndex) [leftIndex, rightIndex] = [rightIndex, leftIndex];
-
-    const [bottom, top] = getAxisYDomain(leftIndex + 1, rightIndex + 1, data, 0.5, mode);
-    
-    setRefArea({ left: '', right: '' });
-    setChartState({
-      left: data[leftIndex][showWords ? 'word' : 'date'],
-      right: data[rightIndex][showWords ? 'word' : 'date'],
-      bottom,
-      top,
-      displayData: data.slice(leftIndex, rightIndex + 1).map(d => {
-        const personalGame = personalData.find(p => 
-          p.game_data.status === "WIN" && 
-          p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-        );
-        const personalGuesses = personalGame ? 
-          personalGame.game_data.boardState.filter((row: string) => row !== "").length :
-          null;
-        
-        return {
-          ...d,
-          difference: d.hardAverage - d.average,
-          personalDifference: personalGuesses ? personalGuesses - d.average : null
-        };
-      }),
-    });
+  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30') => {
+    setChartMode(newMode);
+    setChartState(prev => ({
+      ...prev,
+      displayData: prev.allData[newMode === 'standard' ? 'normal' : newMode]
+    }));
   };
 
-  const zoomOut = () => {
-    setRefArea({ left: '', right: '' });
-    const processedData = data.map(d => {
-      const personalGame = personalData.find(p => 
-        p.game_data.status === "WIN" && 
-        p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-      );
-      const personalGuesses = personalGame ? 
-        personalGame.game_data.boardState.filter((row: string) => row !== "").length :
-        null;
-      
-      return {
-        ...d,
-        difference: d.hardAverage - d.average,
-        personalDifference: personalGuesses ? personalGuesses - d.average : null
-      };
-    });
-
-    // Filter data points in personal mode
-    const displayData = mode === 'personal' 
-      ? processedData.filter(d => d.personalDifference !== null)
-      : processedData;
-
-    setChartState({
-      left: 'dataMin',
-      right: 'dataMax',
-      bottom: mode === 'personal' ? -3 : mode === 'difference' ? -0.75 : 2.5,
-      top: mode === 'personal' ? 3 : mode === 'difference' ? 0.5 : 6,
-      displayData,
-    });
-  };
-
-  const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
-    if (!active || !payload?.length) return null;
+  const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
+    if (!active || !payload?.[0]) return null;
     
-    const dataPoint = data?.find(d => showWords ? d.word === label : d.date === label);
+    const dataPoint = payload[0].payload;
     if (!dataPoint) return null;
 
     return (
@@ -217,12 +235,12 @@ const WordleChart = () => {
           {dataPoint.word} <span className="text-gray-600">#{dataPoint.id}</span>
         </p>
         <p className="text-gray-600">
-          {adjustDate(dataPoint.date).toLocaleDateString()}
+          {format(parseISO(dataPoint.date), 'M/d/yyyy')}
         </p>
-        {mode === 'personal' && dataPoint.personalDifference !== null ? (
+        {chartMode === 'personal' && dataPoint.personalDifference !== null ? (
           <>
             <p className="text-gray-800">
-              Personal vs Average: {payload[0].value > 0 ? '+' : ''}{payload[0].value.toFixed(2)} guesses
+              Personal vs Average: {dataPoint.personalDifference > 0 ? '+' : ''}{dataPoint.personalDifference.toFixed(2)} guesses
             </p>
             <p className="text-gray-600">
               Your Score: {
@@ -236,10 +254,10 @@ const WordleChart = () => {
               Global Average: {dataPoint.average.toFixed(2)}
             </p>
           </>
-        ) : mode === 'difference' ? (
+        ) : chartMode === 'difference' ? (
           <>
             <p className="text-gray-800">
-              Difficulty Gap: {payload[0].value.toFixed(2)} guesses
+              Difficulty Gap: {dataPoint.difference?.toFixed(2)} guesses
             </p>
             <p className="text-gray-600">
               Normal: {dataPoint.average.toFixed(2)}
@@ -248,25 +266,26 @@ const WordleChart = () => {
               Hard: {dataPoint.hardAverage.toFixed(2)}
             </p>
           </>
+        ) : chartMode.startsWith('rolling') ? (
+          <>
+            <p className="text-gray-800">
+              {chartMode === 'rolling7' ? '7' : '30'}-Day Average: {
+                dataPoint.rollingAverage?.toFixed(2)
+              } guesses
+            </p>
+            <p className="text-gray-600">
+              Daily Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
+            </p>
+          </>
         ) : (
           <p className="text-gray-800">
-            Average ({mode === 'normal' ? 'Normal' : 'Hard'}): {payload[0].value.toFixed(2)} guesses
+            Average ({chartMode === 'standard' ? 'Normal' : 'Hard'}): {
+              (chartMode === 'standard' ? dataPoint.average : dataPoint.hardAverage).toFixed(2)
+            } guesses
           </p>
         )}
       </div>
     );
-  };
-
-  const handleMouseDown = (e: any) => {
-    if (e?.activeLabel) {
-      setRefArea(prev => ({ ...prev, left: e.activeLabel }));
-    }
-  };
-
-  const handleMouseMove = (e: any) => {
-    if (e?.activeLabel && refArea.left) {
-      setRefArea(prev => ({ ...prev, right: e.activeLabel }));
-    }
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -277,83 +296,13 @@ const WordleChart = () => {
         try {
           const json = JSON.parse(e.target?.result as string);
           setPersonalData(json);
-          
-          // Count matches and above/below average
-          let matchCount = 0;
-          let aboveCount = 0;
-          let belowCount = 0;
-
-          data?.forEach(d => {
-            const personalGame = json.find((p: PersonalData) => 
-              p.game_data.status === "WIN" && 
-              p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-            );
-            if (personalGame) {
-              matchCount++;
-              const personalGuesses = personalGame.game_data.boardState.filter((row: string) => row !== "").length;
-              if (personalGuesses > d.average) aboveCount++;
-              if (personalGuesses < d.average) belowCount++;
-            }
-          });
-          
-          setPersonalStats({
-            count: matchCount,
-            total: data?.length || 0,
-            aboveAverage: aboveCount,
-            belowAverage: belowCount
-          });
+          setPersonalStats(calculatePersonalStats(data, json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
         }
       };
       reader.readAsText(file);
     }
-  };
-
-  const getBookmarkletCode = () => {
-    const ids = puzzleIds.puzzle_ids.join(',');
-    return `ajavascript:(function(){
-      const ids = '${ids}';
-      if (!ids) return;
-
-      const allIds = ids.split(',').map(id => id.trim()).filter(id => id !== '');
-      let allGameData = [];
-
-      async function fetchChunks(startIndex = 0) {
-        if (startIndex >= allIds.length) {
-          const blob = new Blob([JSON.stringify(allGameData, null, 2)], {type: 'application/json'});
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'my_wordle_data.json';
-          a.click();
-          return;
-        }
-
-        const chunk = allIds.slice(startIndex, startIndex + 31);
-        const url = \`https://www.nytimes.com/svc/games/state/wordleV2/latests?puzzle_ids=\${chunk.join(',')}\`;
-        
-        try {
-          const response = await fetch(url, {
-            credentials: 'include'
-          });
-          
-          if (!response.ok) throw new Error(\`HTTP error! status: \${response.status}\`);
-          
-          const data = await response.json();
-          if (data.states && Array.isArray(data.states)) {
-            allGameData = allGameData.concat(data.states);
-          }
-          
-          console.log(\`Fetched \${chunk.length} puzzles. Total: \${allGameData.length}\`);
-          setTimeout(() => fetchChunks(startIndex + 31), 1000);
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      }
-
-      fetchChunks();
-    })();`;
   };
 
   const handleCopyBookmarklet = () => {
@@ -369,66 +318,88 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col">
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex gap-4 items-center">
+      <div className="grid grid-cols-12 gap-3 mb-4 items-center">
+        <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
           <Select 
-            defaultValue="normal" 
-            onValueChange={(newMode: 'normal' | 'hard' | 'difference' | 'personal') => {
-              setChartState(prev => ({
-                ...prev,
-                bottom: newMode === 'personal' ? -3 : newMode === 'difference' ? -0.75 : 2.5,
-                top: newMode === 'personal' ? 3 : newMode === 'difference' ? 0.5 : 6,
-                displayData: data.map(d => ({
-                  ...d,
-                  difference: d.hardAverage - d.average
-                }))
-              }));
-              setMode(newMode);
-            }}
+            defaultValue="standard" 
+            onValueChange={handleModeChange}
           >
-            <SelectTrigger className="w-[280px]">
-              <SelectValue placeholder="Wordle Average Scores (Normal)" />
+            <SelectTrigger>
+              <SelectValue>
+                {chartMode === 'standard' ? 'Wordle Average' : 
+                 chartMode === 'difference' ? 'Hard Mode Difficulty Gap' : 
+                 chartMode === 'personal' ? 'Personal Performance' :
+                 chartMode === 'rolling7' ? '7-Day Rolling Average' :
+                 '30-Day Rolling Average'}
+              </SelectValue>
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="normal">Wordle Average Scores (Normal)</SelectItem>
-              <SelectItem value="hard">Wordle Average Scores (Hard)</SelectItem>
+              <SelectItem value="standard">Wordle Average</SelectItem>
+              <SelectItem value="rolling7">7-Day Rolling Average</SelectItem>
+              <SelectItem value="rolling30">30-Day Rolling Average</SelectItem>
               <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
-              <SelectItem value="personal">Personal Performance Comparison</SelectItem>
+              <SelectItem value="personal">Personal Performance</SelectItem>
             </SelectContent>
           </Select>
-          <button 
-            onClick={zoomOut}
-            className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
-          >
-            Zoom Out
-          </button>
-          {mode === 'personal' && (
-            <div className="flex items-center gap-4">
+          
+          <DateTimePicker
+            value={selectedDate} 
+            onChange={setSelectedDate} 
+            min={minDate} 
+            max={maxDate}
+            hideTime={true}
+            clearable={true}
+          />
+
+          <DateTimePicker
+            value={selectedEndDate}
+            onChange={setSelectedEndDate}
+            min={selectedDate || minDate}
+            max={maxDate}
+            hideTime={true}
+            clearable={true}
+          />
+
+          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
+            <div className="flex items-center gap-2">
+              <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+              <Switch
+                id="hard-mode-toggle"
+                checked={isHardMode}
+                onCheckedChange={setIsHardMode}
+              />
+            </div>
+          )}
+          
+          {chartMode === 'personal' && (
+            <>
               <Input
                 type="file"
                 accept=".json"
                 onChange={handleFileUpload}
-                className="max-w-[280px]"
+                className="col-span-1"
               />
               <button
                 onClick={handleCopyBookmarklet}
-                className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700"
-                title="Copy script to get your personal Wordle data"
+                className="col-span-1 px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 text-center"
               >
                 Copy Data Fetcher
               </button>
               {personalStats.count > 0 && (
-                <span className="text-sm text-gray-600">
-                  Found {personalStats.count} results (
-                    <span className="text-green-600 font-medium">{personalStats.belowAverage}</span> below the average,{' '}
-                    <span className="text-red-600 font-medium">{personalStats.aboveAverage}</span> above the average) out of {personalStats.total} total Wordles
-                </span>
+                <div className="col-span-1 text-xs text-gray-600 flex">
+                  <span>
+                    Found <span className="font-bold">{personalStats.count}</span> wordles 
+                    (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
+                    <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
+                  </span>
+              </div>
               )}
-            </div>
+            </>
           )}
         </div>
-        <div className="flex items-center space-x-2">
-          <Label htmlFor="axis-toggle">Show Words</Label>
+
+        <div className="col-span-2 flex items-center gap-2 justify-end">
+          <Label htmlFor="axis-toggle" className="whitespace-nowrap">Show Words</Label>
           <Switch
             id="axis-toggle"
             checked={showWords}
@@ -438,12 +409,8 @@ const WordleChart = () => {
       </div>
       <div className="flex-1">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            data={chartState.displayData}
+          <ScatterChart 
             margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={zoom}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
@@ -452,107 +419,50 @@ const WordleChart = () => {
               interval="preserveStartEnd"
               textAnchor="end"
               tick={{ fontSize: 12 }}
-              tickFormatter={(value) => showWords ? value : adjustDate(value).toLocaleDateString()}
+              tickFormatter={(value) => showWords ? value : format(parseISO(value), 'M/d/yyyy')}
               style={{ userSelect: 'none' }}
             />
             <YAxis
-              domain={[
-                chartState.bottom || (mode === 'personal' ? -3 : mode === 'difference' ? -0.75 : 2.5),
-                chartState.top || (mode === 'personal' ? 3 : mode === 'difference' ? 0.5 : 6)
-              ]}
-              ticks={mode === 'personal' ? 
-                [-3, -2, -1, 0, 1, 2, 3] :  // ticks for personal mode
-                mode === 'difference' ? 
-                [-0.75, -0.5, -0.25, 0, 0.25, 0.5] :  // updated ticks for difference mode
-                [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]  // ticks for normal/hard mode
-              }
+              domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
+                     chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
+                     chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisDomains.rolling :
+                     CHART_CONFIG.yAxisDomains.default}
+              ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
+                     chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
+                     chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisTicks.rolling :
+                     CHART_CONFIG.yAxisTicks.default}
               tickFormatter={(value) => value.toFixed(2)}
               label={{ 
-                value: mode === 'difference' || mode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
+                value: chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
                 angle: -90, 
                 position: 'insideLeft',
                 style: { userSelect: 'none' }
               }}
               style={{ userSelect: 'none' }}
             />
-            <Tooltip content={(props: TooltipProps) => <CustomTooltip {...props} />} />
-            <Line
-              type="monotone"
+            <Tooltip content={(props: TooltipProps<ValueType, NameType>) => <CustomTooltip {...props} />} />
+            <Scatter 
+              name="Wordle Data"
+              data={chartState.displayData}
+              fill="#2563eb"
+              line={chartMode === 'rolling7' || chartMode === 'rolling30'}
+              shape="circle"
+              isAnimationActive={false}
               dataKey={
-                mode === 'difference' ? 'difference' : 
-                mode === 'personal' ? 'personalDifference' :
-                mode === 'normal' ? 'average' : 
-                'hardAverage'
+                chartMode === 'difference' ? 'difference' : 
+                chartMode === 'personal' ? 'personalDifference' :
+                chartMode === 'rolling7' || chartMode === 'rolling30' ? 'rollingAverage' :
+                isHardMode ? 'hardAverage' : 'average'
               }
-              stroke="#2563eb"
-              strokeWidth={0}
-              dot={{ 
-                fill: "#ffffff",
-                stroke: "#2563eb",
-                strokeWidth: 1.5,
-                r: 3
-              }}
-              activeDot={{ 
-                r: 6
-              }}
-              animationDuration={0}
             />
-            {refArea.left && refArea.right ? (
-              <ReferenceArea 
-                x1={refArea.left} 
-                x2={refArea.right} 
-                strokeOpacity={0.3} 
-                fill="#2563eb"
-                fillOpacity={0.1}
-              />
-            ) : null}
-          </LineChart>
+          </ScatterChart>
         </ResponsiveContainer>
       </div>
       
-      <Dialog open={showInstructions} onOpenChange={setShowInstructions}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle>Data Fetcher Instructions</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <Tabs defaultValue="chrome">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="chrome">Chrome</TabsTrigger>
-                <TabsTrigger value="firefox">Firefox</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="chrome">
-                <ol className="list-decimal list-inside space-y-2">
-                  <li>The data fetcher script was copied to your clipboard.</li>
-                  <li>Open a tab with <span className="font-bold">nyt.com</span></li>
-                  <li>Click in the URL bar <span className="text-gray-500">(or press Ctrl/Cmd + L)</span></li>
-                  <li>Paste the copied code</li>
-                  <li>Remove the 'a' from the beginning <span className="text-gray-500">(press HOME key, then delete)</span></li>
-                  <li>Press Enter</li>
-                </ol>
-              </TabsContent>
-
-              <TabsContent value="firefox">
-                <ol className="list-decimal list-inside space-y-2">
-                  <li>The data fetcher script was copied to your clipboard.</li>
-                  <li>Right-click your bookmarks bar and select "Add Bookmark"</li>
-                  <li>Paste the copied code into the "URL" field</li>
-                  <li>Remove the 'a' from the beginning of the pasted code</li>
-                  <li>Save the bookmark</li>
-                  <li>Open a tab with <span className="font-bold">nyt.com</span></li>
-                  <li>Click the bookmark you just created</li>
-                </ol>
-              </TabsContent>
-            </Tabs>
-
-            <div className="bg-gray-50 p-3 rounded text-sm text-gray-600">
-              <p>The data will take about a minute to gather. You can watch the progress in the browser's console (F12).</p>
-              <p className="mt-2">Once complete, a .json file will download — upload that file here to see your personal data.</p>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+      <InstructionsDialog 
+        open={showInstructions} 
+        onOpenChange={setShowInstructions} 
+      />
     </div>
   );
 };
