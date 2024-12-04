@@ -321,7 +321,7 @@ const WordleChart = () => {
           )}
           
           {chartMode === 'personal' && (
-            <div>
+            <>
               <Input
                 type="file"
                 accept=".json"
@@ -380,7 +380,7 @@ const WordleChart = () => {
                   <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
                 </div>
               )}
-            </div>
+            </>
           )}
         </div>
 
