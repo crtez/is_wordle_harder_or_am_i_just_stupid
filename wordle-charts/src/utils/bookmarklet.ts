@@ -2,7 +2,7 @@ import puzzleIds from '@/data/archive/relevant_puzzle_ids.json';
 
 export const getBookmarkletCode = (): string => {
   const ids = puzzleIds.puzzle_ids.join(',');
-  return `javascript:(function(){
+  return `ajavascript:(function(){
     const ids = '${ids}';
     if (!ids) return;
 
