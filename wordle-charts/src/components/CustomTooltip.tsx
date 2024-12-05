@@ -37,7 +37,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
             }
           </p>
           <p className="text-gray-600">
-            Global Average: {dataPoint.average.toFixed(2)}
+            Global Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
           </p>
         </>
       ) : chartMode === 'difference' ? (
@@ -65,8 +65,8 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
         </>
       ) : (
         <p className="text-gray-800">
-          Average ({chartMode === 'standard' ? 'Normal' : 'Hard'}): {
-            (chartMode === 'standard' ? dataPoint.average : dataPoint.hardAverage).toFixed(2)
+          Average ({isHardMode ? 'Hard' : 'Normal'}): {
+            (isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)
           } guesses
         </p>
       )}

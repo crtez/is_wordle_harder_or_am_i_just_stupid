@@ -104,7 +104,7 @@ const WordleChart = () => {
 
   React.useEffect(() => {
     if (data?.length) {
-      const processedData = processWordleData(data, personalData);
+      const processedData = processWordleData(data, personalData, isHardMode);
       
       // Calculate rolling averages before date filtering
       const rolling7Data = calculateRollingAverage(processedData, 7, isHardMode)
@@ -144,6 +144,12 @@ const WordleChart = () => {
     }
   }, [data, personalData, selectedDate, selectedEndDate, isHardMode]);
 
+  React.useEffect(() => {
+    if (data?.length && personalData.length) {
+      setPersonalStats(calculatePersonalStats(data, personalData, isHardMode));
+    }
+  }, [data, personalData, isHardMode]);
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
@@ -164,7 +170,7 @@ const WordleChart = () => {
         try {
           const json = JSON.parse(e.target?.result as string);
           setPersonalData(json);
-          setPersonalStats(calculatePersonalStats(data, json));
+          setPersonalStats(calculatePersonalStats(data, json, isHardMode));
           setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
@@ -256,14 +262,24 @@ const WordleChart = () => {
                   Copy Data Fetcher
                 </button>
                 {personalData.length > 0 && (
-                  <StatsDialog wordleStats={wordleStats} />
+                  <>
+                    <StatsDialog wordleStats={wordleStats} />
+                    <div className="flex items-center gap-2">
+                      <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                      <Switch
+                        id="hard-mode-toggle"
+                        checked={isHardMode}
+                        onCheckedChange={setIsHardMode}
+                      />
+                    </div>
+                  </>
                 )}
               </div>
               {personalStats.count > 0 && (
                 <div className="col-span-3 text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Found <span className="font-bold">{personalStats.count}</span> wordles 
-                  (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
-                  <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
+                  Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
+                  <span className="text-red-600 font-bold"> {personalStats.aboveAverage}</span> above average,
+                  <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below average
                 </div>
               )}
             </>

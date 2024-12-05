@@ -47,7 +47,7 @@ export const getBookmarkletCode = (): string => {
   })();`;
 }; 
 
-export const processWordleData = (data: any[], personalData: PersonalData[]) => {
+export const processWordleData = (data: any[], personalData: PersonalData[], isHardMode = false) => {
   return data.map(d => {
     const personalGame = personalData.find(p => 
       p.game_data.status === "WIN" && 
@@ -60,12 +60,12 @@ export const processWordleData = (data: any[], personalData: PersonalData[]) => 
     return {
       ...d,
       difference: d.hardAverage - d.average,
-      personalDifference: personalGuesses ? personalGuesses - d.average : null
+      personalDifference: personalGuesses ? personalGuesses - (isHardMode ? d.hardAverage : d.average) : null
     };
   });
 };
 
-export const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
+export const calculatePersonalStats = (data: any[], personalData: PersonalData[], isHardMode: boolean = false) => {
   let matchCount = 0, aboveCount = 0, belowCount = 0;
 
   data?.forEach(d => {
@@ -76,8 +76,9 @@ export const calculatePersonalStats = (data: any[], personalData: PersonalData[]
     if (personalGame) {
       matchCount++;
       const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
-      if (personalGuesses > d.average) aboveCount++;
-      if (personalGuesses < d.average) belowCount++;
+      const compareAverage = isHardMode ? d.hardAverage : d.average;
+      if (personalGuesses > compareAverage) aboveCount++;
+      if (personalGuesses < compareAverage) belowCount++;
     }
   });
 
