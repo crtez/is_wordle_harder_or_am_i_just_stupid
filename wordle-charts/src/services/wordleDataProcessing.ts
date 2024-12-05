@@ -1,4 +1,4 @@
-import { WordleStats, PersonalData } from '@/types/wordle_types';
+import { WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
 import puzzleIds from '@/data/archive/relevant_puzzle_ids.json';
 
 export const getBookmarkletCode = (): string => {
@@ -47,7 +47,7 @@ export const getBookmarkletCode = (): string => {
   })();`;
 }; 
 
-export const processWordleData = (data: any[], personalData: PersonalData[], isHardMode = false) => {
+export const processWordleData = (data: any[], personalData: PersonalData[]) => {
   return data.map(d => {
     const personalGame = personalData.find(p => 
       p.game_data.status === "WIN" && 
@@ -66,10 +66,10 @@ export const processWordleData = (data: any[], personalData: PersonalData[], isH
   });
 };
 
-export const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
+export const calculatePersonalStats = (data: any[], personalData: PersonalData[]): PersonalStats => {
   let matchCount = 0;
-  let aboveNormal = 0, belowNormal = 0;
-  let aboveHard = 0, belowHard = 0;
+  let normalAbove = 0, normalBelow = 0;
+  let hardAbove = 0, hardBelow = 0;
 
   data?.forEach(d => {
     const personalGame = personalData.find(p => 
@@ -80,13 +80,11 @@ export const calculatePersonalStats = (data: any[], personalData: PersonalData[]
       matchCount++;
       const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
       
-      // Normal mode comparison
-      if (personalGuesses > d.average) aboveNormal++;
-      if (personalGuesses < d.average) belowNormal++;
+      if (personalGuesses > d.average) normalAbove++;
+      if (personalGuesses < d.average) normalBelow++;
       
-      // Hard mode comparison
-      if (personalGuesses > d.hardAverage) aboveHard++;
-      if (personalGuesses < d.hardAverage) belowHard++;
+      if (personalGuesses > d.hardAverage) hardAbove++;
+      if (personalGuesses < d.hardAverage) hardBelow++;
     }
   });
 
@@ -94,12 +92,12 @@ export const calculatePersonalStats = (data: any[], personalData: PersonalData[]
     count: matchCount,
     total: data?.length || 0,
     normal: {
-      aboveAverage: aboveNormal,
-      belowAverage: belowNormal
+      aboveAverage: normalAbove,
+      belowAverage: normalBelow
     },
     hard: {
-      aboveAverage: aboveHard,
-      belowAverage: belowHard
+      aboveAverage: hardAbove,
+      belowAverage: hardBelow
     }
   };
 };

@@ -35,3 +35,16 @@ export interface ChartState {
   };
   displayData: any[];
 }
+  
+export interface PersonalStats {
+  count: number;
+  total: number;
+  normal: {
+    aboveAverage: number;
+    belowAverage: number;
+  };
+  hard: {
+    aboveAverage: number;
+    belowAverage: number;
+  };
+}

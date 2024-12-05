@@ -25,7 +25,7 @@ import { DateTimePicker } from '@/components/datetime-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
-import { ChartState, WordleStats, PersonalData } from '@/types/wordle_types';
+import { ChartState, WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
 import { StatsDialog } from '@/components/StatsDialog';
 import {
   processWordleData,
@@ -68,11 +68,11 @@ const WordleChart = () => {
     displayData: []
   });
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
-  const [personalStats, setPersonalStats] = useState({ 
+  const [personalStats, setPersonalStats] = useState<PersonalStats>({ 
     count: 0, 
     total: 0,
-    aboveAverage: 0,
-    belowAverage: 0 
+    normal: { aboveAverage: 0, belowAverage: 0 },
+    hard: { aboveAverage: 0, belowAverage: 0 }
   });
   const [showInstructions, setShowInstructions] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
@@ -104,12 +104,12 @@ const WordleChart = () => {
 
   React.useEffect(() => {
     if (data?.length) {
-      const processedData = processWordleData(data, personalData, isHardMode);
+      const processedData = processWordleData(data, personalData);
       
       // Calculate rolling averages before date filtering
-      const rolling7Data = calculateRollingAverage(processedData, 7, isHardMode)
+      const rolling7Data = calculateRollingAverage(processedData, 7)
         .filter(d => d.rollingAverage !== null);
-      const rolling30Data = calculateRollingAverage(processedData, 30, isHardMode)
+      const rolling30Data = calculateRollingAverage(processedData, 30)
         .filter(d => d.rollingAverage !== null);
 
       // Apply date filtering to all datasets
@@ -142,13 +142,13 @@ const WordleChart = () => {
               : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate, isHardMode]);
+  }, [data, personalData, selectedDate, selectedEndDate]);
 
   React.useEffect(() => {
     if (data?.length && personalData.length) {
-      setPersonalStats(calculatePersonalStats(data, personalData, isHardMode));
+      setPersonalStats(calculatePersonalStats(data, personalData));
     }
-  }, [data, personalData, isHardMode]);
+  }, [data, personalData]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
@@ -170,7 +170,7 @@ const WordleChart = () => {
         try {
           const json = JSON.parse(e.target?.result as string);
           setPersonalData(json);
-          setPersonalStats(calculatePersonalStats(data, json, isHardMode));
+          setPersonalStats(calculatePersonalStats(data, json));
           setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
@@ -269,8 +269,8 @@ const WordleChart = () => {
                 <div className="col-span-3 flex items-center gap-4">
                   <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
                     Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
-                    <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
-                    <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
+                    <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above the average,
+                    <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below the average
                   </div>
                   <div className="flex items-center gap-2">
                     <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
