@@ -262,24 +262,24 @@ const WordleChart = () => {
                   Copy Data Fetcher
                 </button>
                 {personalData.length > 0 && (
-                  <>
-                    <StatsDialog wordleStats={wordleStats} />
-                    <div className="flex items-center gap-2">
-                      <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
-                      <Switch
-                        id="hard-mode-toggle"
-                        checked={isHardMode}
-                        onCheckedChange={setIsHardMode}
-                      />
-                    </div>
-                  </>
+                  <StatsDialog wordleStats={wordleStats} />
                 )}
               </div>
               {personalStats.count > 0 && (
-                <div className="col-span-3 text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
-                  <span className="text-red-600 font-bold"> {personalStats.aboveAverage}</span> above average,
-                  <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below average
+                <div className="col-span-3 flex items-center gap-4">
+                  <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
+                    Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
+                    <span className="text-red-600 font-bold"> {personalStats.aboveAverage}</span> above average,
+                    <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below average
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                    <Switch
+                      id="hard-mode-toggle"
+                      checked={isHardMode}
+                      onCheckedChange={setIsHardMode}
+                    />
+                  </div>
                 </div>
               )}
             </>
