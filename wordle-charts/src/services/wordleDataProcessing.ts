@@ -90,19 +90,25 @@ export const calculatePersonalStats = (data: any[], personalData: PersonalData[]
   };
 };
 
-export const calculateRollingAverage = (data: any[], days: number, isHardMode: boolean) => {
+export const calculateRollingAverage = (data: any[], days: number) => {
   return data.map((item, index) => {
     if (index < days - 1) {
-      return { ...item, rollingAverage: null };
+      return { 
+        ...item, 
+        rollingAverage: null,
+        rollingAverageHard: null 
+      };
     }
     const startIndex = index - days + 1;
     const window = data.slice(startIndex, index + 1);
-    const sum = window.reduce((acc, curr) => 
-      acc + (isHardMode ? curr.hardAverage : curr.average), 0
-    );
+    
+    const normalSum = window.reduce((acc, curr) => acc + curr.average, 0);
+    const hardSum = window.reduce((acc, curr) => acc + curr.hardAverage, 0);
+    
     return {
       ...item,
-      rollingAverage: sum / days
+      rollingAverage: normalSum / days,
+      rollingAverageHard: hardSum / days
     };
   });
 };

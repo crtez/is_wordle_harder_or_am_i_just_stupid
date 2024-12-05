@@ -40,13 +40,13 @@ const CHART_CONFIG = {
     personal: [-3, 3],
     difference: [-0.75, 0.5],
     default: [2.5, 6],
-    rolling: [3.5, 4.5]
+    rolling: [3.25, 4.5]
   },
   yAxisTicks: {
     personal: [-3, -2, -1, 0, 1, 2, 3],
     difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
     default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
-    rolling: [3.5, 3.75, 4, 4.25, 4.5]
+    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5]
   }
 };
 
@@ -363,7 +363,7 @@ const WordleChart = () => {
               dataKey={
                 chartMode === 'difference' ? 'difference' : 
                 chartMode === 'personal' ? 'personalDifference' :
-                chartMode === 'rolling7' || chartMode === 'rolling30' ? 'rollingAverage' :
+                chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :
                 isHardMode ? 'hardAverage' : 'average'
               }
             />

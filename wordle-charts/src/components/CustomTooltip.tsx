@@ -56,7 +56,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
         <>
           <p className="text-gray-800">
             {chartMode === 'rolling7' ? '7' : '30'}-Day Average: {
-              dataPoint.rollingAverage?.toFixed(2)
+              (isHardMode ? dataPoint.rollingAverageHard : dataPoint.rollingAverage)?.toFixed(2)
             } guesses
           </p>
           <p className="text-gray-600">
