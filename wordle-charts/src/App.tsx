@@ -7,7 +7,8 @@ import {
   YAxis, 
   CartesianGrid, 
   Tooltip, 
-  ResponsiveContainer, 
+  ResponsiveContainer,
+  ReferenceLine,
 } from 'recharts';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -20,13 +21,19 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
-import { getBookmarkletCode } from '@/utils/bookmarklet';
 import { DateTimePicker } from '@/components/datetime-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
-import { ChartState, WordleStats, PersonalData } from '@/components/wordle_types';
+import { ChartState, WordleStats, PersonalData } from '@/types/wordle_types';
 import { StatsDialog } from '@/components/StatsDialog';
+import {
+  processWordleData,
+  calculatePersonalStats,
+  calculateRollingAverage,
+  calculateWordleStats,
+  getBookmarkletCode,
+} from '@/services/wordleDataProcessing';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -41,93 +48,6 @@ const CHART_CONFIG = {
     default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
     rolling: [3.5, 3.75, 4, 4.25, 4.5]
   }
-};
-
-// Move data processing to a separate function
-const processWordleData = (data: any[], personalData: PersonalData[]) => {
-  return data.map(d => {
-    const personalGame = personalData.find(p => 
-      p.game_data.status === "WIN" && 
-      p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-    );
-    const personalGuesses = personalGame ? 
-      personalGame.game_data.boardState.filter((row: string) => row !== "").length :
-      null;
-    
-    return {
-      ...d,
-      difference: d.hardAverage - d.average,
-      personalDifference: personalGuesses ? personalGuesses - d.average : null
-    };
-  });
-};
-
-// Move stats calculation to a separate function
-const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
-  let matchCount = 0, aboveCount = 0, belowCount = 0;
-
-  data?.forEach(d => {
-    const personalGame = personalData.find(p => 
-      p.game_data.status === "WIN" && 
-      p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-    );
-    if (personalGame) {
-      matchCount++;
-      const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
-      if (personalGuesses > d.average) aboveCount++;
-      if (personalGuesses < d.average) belowCount++;
-    }
-  });
-
-  return {
-    count: matchCount,
-    total: data?.length || 0,
-    aboveAverage: aboveCount,
-    belowAverage: belowCount
-  };
-};
-
-const calculateRollingAverage = (data: any[], days: number, isHardMode: boolean) => {
-  return data.map((item, index) => {
-    if (index < days - 1) {
-      return { ...item, rollingAverage: null };  // Return null for points before we have enough data
-    }
-    const startIndex = index - days + 1;
-    const window = data.slice(startIndex, index + 1);
-    const sum = window.reduce((acc, curr) => 
-      acc + (isHardMode ? curr.hardAverage : curr.average), 0
-    );
-    return {
-      ...item,
-      rollingAverage: sum / days
-    };
-  });
-};
-
-const calculateWordleStats = (data: PersonalData[]): WordleStats => {
-  if (!data.length) return {} as WordleStats;
-
-  // Find the game data with the latest timestamp
-  const latestGameData = data.reduce((latest, current) => 
-    current.timestamp > latest.timestamp ? current : latest
-  );
-
-  const stats = latestGameData?.game_data?.setLegacyStats;
-  if (!stats) return {} as WordleStats;
-
-  const totalGuesses = Object.entries(stats.guesses)
-    .filter(([key]) => key !== 'fail')
-    .reduce((sum, [key, value]) => sum + (Number(key) * value), 0);
-  
-  return {
-    gamesPlayed: stats.gamesPlayed,
-    gamesWon: stats.gamesWon,
-    currentStreak: stats.currentStreak,
-    maxStreak: stats.maxStreak,
-    guessDistribution: stats.guesses,
-    winRate: (stats.gamesWon / stats.gamesPlayed) * 100,
-    averageGuesses: totalGuesses / stats.gamesWon
-  };
 };
 
 const WordleChart = () => {
@@ -168,6 +88,12 @@ const WordleChart = () => {
   );
 
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
+
+  const cumulativeAverage = useMemo(() => {
+    if (!data?.length) return 0;
+    const sum = data.reduce((acc, curr) => acc + (isHardMode ? curr.hardAverage : curr.average), 0);
+    return sum / data.length;
+  }, [data, isHardMode]);
 
   React.useEffect(() => {
     if (data?.length) {
@@ -396,6 +322,21 @@ const WordleChart = () => {
                 />
               )} 
             />
+            {(chartMode === 'standard' || chartMode.startsWith('rolling')) && (
+              <ReferenceLine 
+              y={cumulativeAverage} 
+              stroke="#666"
+              strokeWidth={2}
+              strokeDasharray="5 5"
+              label={{
+                value: `Avg: ${cumulativeAverage.toFixed(2)}`,
+                position: 'left',
+                fill: '#666',
+                fontSize: 12,
+                fontWeight: 'bold'
+              }}
+            />
+            )}
             <Scatter 
               name="Wordle Data"
               data={chartState.displayData}

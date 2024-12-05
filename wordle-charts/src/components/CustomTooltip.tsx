@@ -1,7 +1,7 @@
 import { format, parseISO } from 'date-fns';
 import { TooltipProps } from 'recharts';
 import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
-import { PersonalData } from '@/components/wordle_types';
+import { PersonalData } from '@/types/wordle_types';
 
 interface CustomTooltipProps extends TooltipProps<ValueType, NameType> {
   chartMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30';

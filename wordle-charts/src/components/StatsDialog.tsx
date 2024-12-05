@@ -5,7 +5,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { WordleStats } from '@/components/wordle_types';
+import { WordleStats } from '@/types/wordle_types';
 
 interface StatsDialogProps {
   wordleStats: WordleStats;
