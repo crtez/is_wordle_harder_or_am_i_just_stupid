@@ -60,13 +60,16 @@ export const processWordleData = (data: any[], personalData: PersonalData[], isH
     return {
       ...d,
       difference: d.hardAverage - d.average,
-      personalDifference: personalGuesses ? personalGuesses - (isHardMode ? d.hardAverage : d.average) : null
+      personalDifference: personalGuesses ? personalGuesses - d.average : null,
+      personalDifferenceHard: personalGuesses ? personalGuesses - d.hardAverage : null
     };
   });
 };
 
-export const calculatePersonalStats = (data: any[], personalData: PersonalData[], isHardMode: boolean = false) => {
-  let matchCount = 0, aboveCount = 0, belowCount = 0;
+export const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
+  let matchCount = 0;
+  let aboveNormal = 0, belowNormal = 0;
+  let aboveHard = 0, belowHard = 0;
 
   data?.forEach(d => {
     const personalGame = personalData.find(p => 
@@ -76,17 +79,28 @@ export const calculatePersonalStats = (data: any[], personalData: PersonalData[]
     if (personalGame) {
       matchCount++;
       const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
-      const compareAverage = isHardMode ? d.hardAverage : d.average;
-      if (personalGuesses > compareAverage) aboveCount++;
-      if (personalGuesses < compareAverage) belowCount++;
+      
+      // Normal mode comparison
+      if (personalGuesses > d.average) aboveNormal++;
+      if (personalGuesses < d.average) belowNormal++;
+      
+      // Hard mode comparison
+      if (personalGuesses > d.hardAverage) aboveHard++;
+      if (personalGuesses < d.hardAverage) belowHard++;
     }
   });
 
   return {
     count: matchCount,
     total: data?.length || 0,
-    aboveAverage: aboveCount,
-    belowAverage: belowCount
+    normal: {
+      aboveAverage: aboveNormal,
+      belowAverage: belowNormal
+    },
+    hard: {
+      aboveAverage: aboveHard,
+      belowAverage: belowHard
+    }
   };
 };
 

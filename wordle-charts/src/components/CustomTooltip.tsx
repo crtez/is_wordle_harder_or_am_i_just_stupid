@@ -23,10 +23,12 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
       <p className="text-gray-600">
         {format(parseISO(dataPoint.date), 'M/d/yyyy')}
       </p>
-      {chartMode === 'personal' && dataPoint.personalDifference !== null ? (
+      {chartMode === 'personal' && (dataPoint.personalDifference !== null || dataPoint.personalDifferenceHard !== null) ? (
         <>
           <p className="text-gray-800">
-            Personal vs Average: {dataPoint.personalDifference > 0 ? '+' : ''}{dataPoint.personalDifference.toFixed(2)} guesses
+            Personal vs Average: {
+              (isHardMode ? dataPoint.personalDifferenceHard : dataPoint.personalDifference) > 0 ? '+' : ''
+            }{(isHardMode ? dataPoint.personalDifferenceHard : dataPoint.personalDifference).toFixed(2)} guesses
           </p>
           <p className="text-gray-600">
             Your Score: {
