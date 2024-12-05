@@ -40,13 +40,13 @@ const CHART_CONFIG = {
     personal: [-3, 3],
     difference: [-0.75, 0.5],
     default: [2.5, 6],
-    rolling: [3.5, 4.5]
+    rolling: [3.25, 4.5]
   },
   yAxisTicks: {
     personal: [-3, -2, -1, 0, 1, 2, 3],
     difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
     default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
-    rolling: [3.5, 3.75, 4, 4.25, 4.5]
+    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5]
   }
 };
 
@@ -68,11 +68,11 @@ const WordleChart = () => {
     displayData: []
   });
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
-  const [personalStats, setPersonalStats] = useState<PersonalStats>({ 
+  const [personalStats, setPersonalStats] = useState({ 
     count: 0, 
     total: 0,
-    normal: { aboveAverage: 0, belowAverage: 0 },
-    hard: { aboveAverage: 0, belowAverage: 0 }
+    aboveAverage: 0,
+    belowAverage: 0 
   });
   const [showInstructions, setShowInstructions] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
@@ -269,8 +269,8 @@ const WordleChart = () => {
                 <div className="col-span-3 flex items-center gap-4">
                   <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
                     Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
-                    <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above the average,
-                    <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below the average
+                    <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
+                    <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
                   </div>
                   <div className="flex items-center gap-2">
                     <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
