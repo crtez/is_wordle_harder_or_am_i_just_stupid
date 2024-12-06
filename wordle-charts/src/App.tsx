@@ -68,11 +68,11 @@ const WordleChart = () => {
     displayData: []
   });
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
-  const [personalStats, setPersonalStats] = useState({ 
+  const [personalStats, setPersonalStats] = useState<PersonalStats>({ 
     count: 0, 
     total: 0,
-    aboveAverage: 0,
-    belowAverage: 0 
+    normal: { aboveAverage: 0, belowAverage: 0 },
+    hard: { aboveAverage: 0, belowAverage: 0 }
   });
   const [showInstructions, setShowInstructions] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
