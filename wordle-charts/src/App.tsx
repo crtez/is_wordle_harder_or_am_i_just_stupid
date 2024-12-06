@@ -262,7 +262,7 @@ const WordleChart = () => {
                   Copy Data Fetcher
                 </button>
                 {personalData.length > 0 && (
-                  <StatsDialog wordleStats={wordleStats} />
+                  <StatsDialog wordleStats={wordleStats} personalData={personalData} />
                 )}
               </div>
               {personalStats.count > 0 && (

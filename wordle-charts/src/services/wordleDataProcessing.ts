@@ -1,5 +1,6 @@
 import { WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
 import puzzleIds from '@/data/archive/relevant_puzzle_ids.json';
+import { fromUnixTime, format } from 'date-fns';
 
 export const getBookmarkletCode = (): string => {
   const ids = puzzleIds.puzzle_ids.join(',');
@@ -154,4 +155,27 @@ export const calculateCumulativeAverage = (data: any[], isHardMode: boolean): nu
   if (!data?.length) return 0;
   const sum = data.reduce((acc, curr) => acc + (isHardMode ? curr.hardAverage : curr.average), 0);
   return sum / data.length;
+};
+
+export const calculateAverageCompletionTime = (data: PersonalData[]): string => {
+  if (!data.length) return 'N/A';
+
+  const wins = data.filter(entry => entry.game_data.status === "WIN");
+  if (!wins.length) return 'N/A';
+
+  const totalMinutes = wins.reduce((sum, entry) => {
+    const date = fromUnixTime(entry.timestamp);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    return sum + (hours * 60) + minutes;
+  }, 0);
+
+  const averageMinutes = totalMinutes / wins.length;
+  const averageHours = Math.floor(averageMinutes / 60);
+  const averageMins = Math.round(averageMinutes % 60);
+
+  const timeString = format(new Date(0, 0, 0, averageHours, averageMins), 'h:mm a');
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  return `${timeString} ${timezone}`;
 }; 
