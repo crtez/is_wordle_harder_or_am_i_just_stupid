@@ -6,7 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { PersonalData, WordleStats } from '@/types/wordle_types';
-import { calculateAverageCompletionTime } from '@/services/wordleDataProcessing';
+import { calculateCompletionTimes } from '@/services/wordleDataProcessing';
 
 interface StatsDialogProps {
   wordleStats: WordleStats;
@@ -14,7 +14,7 @@ interface StatsDialogProps {
 }
 
 export function StatsDialog({ wordleStats, personalData }: StatsDialogProps) {
-  const averageTime = calculateAverageCompletionTime(personalData);
+  const times = calculateCompletionTimes(personalData);
   
   return (
     <Dialog>
@@ -62,8 +62,12 @@ export function StatsDialog({ wordleStats, personalData }: StatsDialogProps) {
                 <p className="text-sm text-gray-600"><strong>Average Guesses</strong></p>
               </div>
               <div className="bg-gray-100 p-4 rounded-lg text-center col-span-2">
-                <p className="text-2xl font-bold">{averageTime}</p>
+                <p className="text-2xl font-bold">{times.average}</p>
                 <p className="text-sm text-gray-600"><strong>Average Completion Time</strong></p>
+                <div className="mt-2 text-sm text-gray-600">
+                  <p>Earliest: {times.earliest.time} ({times.earliest.date})</p>
+                  <p>Latest: {times.latest.time} ({times.latest.date})</p>
+                </div>
               </div>
             </div>
           </div>

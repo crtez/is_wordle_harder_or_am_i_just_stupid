@@ -157,12 +157,33 @@ export const calculateCumulativeAverage = (data: any[], isHardMode: boolean): nu
   return sum / data.length;
 };
 
-export const calculateAverageCompletionTime = (data: PersonalData[]): string => {
-  if (!data.length) return 'N/A';
+interface CompletionTimes {
+  average: string;
+  earliest: {
+    time: string;
+    date: string;
+  };
+  latest: {
+    time: string;
+    date: string;
+  };
+}
+
+export const calculateCompletionTimes = (data: PersonalData[]): CompletionTimes => {
+  if (!data.length) return { 
+    average: 'N/A', 
+    earliest: { time: 'N/A', date: 'N/A' }, 
+    latest: { time: 'N/A', date: 'N/A' } 
+  };
 
   const wins = data.filter(entry => entry.game_data.status === "WIN");
-  if (!wins.length) return 'N/A';
+  if (!wins.length) return { 
+    average: 'N/A', 
+    earliest: { time: 'N/A', date: 'N/A' }, 
+    latest: { time: 'N/A', date: 'N/A' } 
+  };
 
+  // Calculate average
   const totalMinutes = wins.reduce((sum, entry) => {
     const date = fromUnixTime(entry.timestamp);
     const hours = date.getHours();
@@ -174,8 +195,34 @@ export const calculateAverageCompletionTime = (data: PersonalData[]): string => 
   const averageHours = Math.floor(averageMinutes / 60);
   const averageMins = Math.round(averageMinutes % 60);
 
-  const timeString = format(new Date(0, 0, 0, averageHours, averageMins), 'h:mm a');
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  // Find earliest and latest
+  const [earliest, latest] = wins.reduce(([earliest, latest], entry) => {
+    const date = fromUnixTime(entry.timestamp);
+    const minutes = date.getHours() * 60 + date.getMinutes();
+    
+    if (!earliest || minutes < (earliest.getHours() * 60 + earliest.getMinutes())) {
+      earliest = date;
+    }
+    if (!latest || minutes > (latest.getHours() * 60 + latest.getMinutes())) {
+      latest = date;
+    }
+    
+    return [earliest, latest];
+  }, [null, null] as [Date | null, Date | null]);
 
-  return `${timeString} ${timezone}`;
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const timeFormat = 'h:mm a';
+  const dateFormat = 'MMM d, yyyy';
+
+  return {
+    average: `${format(new Date(0, 0, 0, averageHours, averageMins), timeFormat)} ${timezone}`,
+    earliest: {
+      time: format(earliest!, timeFormat),
+      date: format(earliest!, dateFormat)
+    },
+    latest: {
+      time: format(latest!, timeFormat),
+      date: format(latest!, dateFormat)
+    }
+  };
 }; 
