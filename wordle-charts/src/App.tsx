@@ -267,12 +267,12 @@ const WordleChart = () => {
               </div>
               {personalStats.count > 0 && (
                 <div className="col-span-3 flex items-center gap-4">
-                  <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
+                  <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis w-[540px]">
                     Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
                     <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
                     <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 justify-end">
                     <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
                     <Switch
                       id="hard-mode-toggle"
