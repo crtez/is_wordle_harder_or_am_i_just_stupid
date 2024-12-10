@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useWordleData } from '@/utils/processWordleData';
 import { 
   ScatterChart, 
@@ -150,6 +150,19 @@ const WordleChart = () => {
     }
   }, [data, personalData]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the width as needed
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
@@ -193,6 +206,12 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
+      {isMobile && (
+        <div className="bg-yellow-300 text-black text-center p-2 font-bold">
+          This site is best viewed on desktop, if you're on a phone good luck.
+        </div>
+      )}
+      
       <div className="grid grid-cols-12 gap-3 mb-4">
         <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
           <Select 
