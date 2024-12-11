@@ -226,3 +226,22 @@ export const calculateCompletionTimes = (data: PersonalData[]): CompletionTimes 
     }
   };
 }; 
+
+export const calculateMostActiveHour = (data: PersonalData[]): { hour: string; count: number } => {
+  const hourCount: { [key: string]: number } = {};
+
+  data.forEach(entry => {
+    if (entry.game_data.status === "WIN") {
+      const date = fromUnixTime(entry.timestamp);
+      const hour = date.getHours();
+      const hourKey = `${hour % 12 || 12}:00 ${hour < 12 ? 'AM' : 'PM'} - ${((hour + 1) % 12) || 12}:00 ${hour + 1 < 12 ? 'AM' : 'PM'}`;
+      hourCount[hourKey] = (hourCount[hourKey] || 0) + 1;
+    }
+  });
+
+  const mostActiveHour = Object.entries(hourCount).reduce((prev, curr) => 
+    curr[1] > prev[1] ? curr : prev
+  );
+
+  return { hour: mostActiveHour[0], count: mostActiveHour[1] || 0 };
+}; 

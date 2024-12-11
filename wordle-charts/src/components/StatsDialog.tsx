@@ -6,7 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { PersonalData, WordleStats } from '@/types/wordle_types';
-import { calculateCompletionTimes } from '@/services/wordleDataProcessing';
+import { calculateCompletionTimes, calculateMostActiveHour } from '@/services/wordleDataProcessing';
 
 interface StatsDialogProps {
   wordleStats: WordleStats;
@@ -15,6 +15,7 @@ interface StatsDialogProps {
 
 export function StatsDialog({ wordleStats, personalData }: StatsDialogProps) {
   const times = calculateCompletionTimes(personalData);
+  const mostActiveHour = calculateMostActiveHour(personalData);
   
   return (
     <Dialog>
@@ -68,6 +69,11 @@ export function StatsDialog({ wordleStats, personalData }: StatsDialogProps) {
                   <p>Earliest: {times.earliest.time} ({times.earliest.date})</p>
                   <p>Latest: {times.latest.time} ({times.latest.date})</p>
                 </div>
+              </div>
+              <div className="bg-gray-100 p-4 rounded-lg text-center col-span-2">
+                <p className="text-2xl font-bold">{mostActiveHour.hour}</p>
+                <p className="text-sm text-gray-600"><strong>Most Active Hour</strong></p>
+                <p className="text-sm text-gray-600">Games Completed: {mostActiveHour.count}</p>
               </div>
             </div>
           </div>

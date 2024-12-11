@@ -13,12 +13,15 @@ import {
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
 import { DateTimePicker } from '@/components/datetime-picker';
@@ -214,27 +217,38 @@ const WordleChart = () => {
       
       <div className="grid grid-cols-12 gap-3 mb-4">
         <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
-          <Select 
-            defaultValue="standard" 
-            onValueChange={handleModeChange}
-          >
-            <SelectTrigger>
-              <SelectValue>
-                {chartMode === 'standard' ? 'Wordle Average' : 
-                 chartMode === 'difference' ? 'Hard Mode Difficulty Gap' : 
-                 chartMode === 'personal' ? 'Personal Performance' :
-                 chartMode === 'rolling7' ? '7-Day Rolling Average' :
-                 '30-Day Rolling Average'}
-              </SelectValue>
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="standard">Wordle Average</SelectItem>
-              <SelectItem value="rolling7">7-Day Rolling Average</SelectItem>
-              <SelectItem value="rolling30">30-Day Rolling Average</SelectItem>
-              <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
-              <SelectItem value="personal">Personal Performance</SelectItem>
-            </SelectContent>
-          </Select>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+              {chartMode === 'standard' ? 'Wordle Average' : 
+               chartMode === 'difference' ? 'Normal vs. Hard' : 
+               chartMode === 'personal' ? 'Personal vs. Average' :
+               chartMode === 'rolling7' ? '7-Day Rolling Average' :
+               '30-Day Rolling Average'}
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem onSelect={() => handleModeChange('standard')}>
+                Wordle Average
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('rolling7')}>
+                7-Day Rolling Average
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('rolling30')}>
+                30-Day Rolling Average
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
+                Normal vs. Hard
+              </DropdownMenuItem>
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem onSelect={() => handleModeChange('personal')}>
+                    Personal vs. Average
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
+            </DropdownMenuContent>
+          </DropdownMenu>
           
           <DateTimePicker
             value={selectedDate} 
