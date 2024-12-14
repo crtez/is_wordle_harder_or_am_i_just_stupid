@@ -21,7 +21,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
     const percentage = ((dataPoint.size / totalGuesses) * 100).toFixed(1);
     return (
       <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
-        <p className="font-medium text-gray-900">{dataPoint.name}</p>
+        <p className="font-bold text-gray-900">{dataPoint.name}</p>
         <p className="text-gray-800">Used {dataPoint.size} times ({percentage}%)</p>
       </div>
     );
@@ -29,11 +29,10 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
 
   return (
     <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
-      <p className="font-medium text-gray-900">
-        {dataPoint.word} <span className="text-gray-600">#{dataPoint.id}</span>
-      </p>
-      <p className="text-gray-600">
-        {format(parseISO(dataPoint.date), 'M/d/yyyy')}
+      <p className="text-gray-900">
+        <span className="font-bold">{dataPoint.word}</span>
+        <span className="font-bold text-gray-600"> #{dataPoint.id}</span>
+        <span className="font-bold text-gray-600"> • {format(parseISO(dataPoint.date), 'M/d/yyyy')}</span>
       </p>
       {chartMode === 'personal' && (dataPoint.personalDifference !== null || dataPoint.personalDifferenceHard !== null) ? (
         <>
@@ -42,7 +41,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
               (isHardMode ? dataPoint.personalDifferenceHard : dataPoint.personalDifference) > 0 ? '+' : ''
             }{(isHardMode ? dataPoint.personalDifferenceHard : dataPoint.personalDifference).toFixed(2)} guesses
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-800">
             Your Score: {
               personalData.find(p => 
                 p.game_data.status === "WIN" && 
@@ -50,7 +49,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
               )?.game_data.boardState.filter(row => row !== "").length || 'N/A'
             }
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-800">
             Global Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
           </p>
         </>
@@ -59,10 +58,10 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
           <p className="text-gray-800">
             Difficulty Gap: {dataPoint.difference?.toFixed(2)} guesses
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-800">
             Normal: {dataPoint.average.toFixed(2)}
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-800">
             Hard: {dataPoint.hardAverage.toFixed(2)}
           </p>
         </>
@@ -73,7 +72,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
               (isHardMode ? dataPoint.rollingAverageHard : dataPoint.rollingAverage)?.toFixed(2)
             } guesses
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-800">
             Daily Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
           </p>
         </>
