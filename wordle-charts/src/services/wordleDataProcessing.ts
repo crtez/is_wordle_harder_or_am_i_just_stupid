@@ -245,3 +245,23 @@ export const calculateMostActiveHour = (data: PersonalData[]): { hour: string; c
 
   return { hour: mostActiveHour[0], count: mostActiveHour[1] || 0 };
 }; 
+
+export interface FirstGuessData {
+  name: string;
+  size: number;
+}
+
+export const calculateFirstGuessFrequency = (data: PersonalData[]): FirstGuessData[] => {
+  const firstGuesses: { [key: string]: number } = {};
+  
+  data.forEach(entry => {
+    if (entry.game_data.boardState.length > 0 && entry.game_data.boardState[0]) {
+      const firstGuess = entry.game_data.boardState[0].toUpperCase();
+      firstGuesses[firstGuess] = (firstGuesses[firstGuess] || 0) + 1;
+    }
+  });
+
+  return Object.entries(firstGuesses)
+    .map(([name, size]) => ({ name, size }))
+    .sort((a, b) => b.size - a.size);
+};

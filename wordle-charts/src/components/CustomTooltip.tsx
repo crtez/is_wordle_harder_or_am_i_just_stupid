@@ -4,16 +4,28 @@ import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipCont
 import { PersonalData } from '@/types/wordle_types';
 
 interface CustomTooltipProps extends TooltipProps<ValueType, NameType> {
-  chartMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30';
+  chartMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess';
   personalData: PersonalData[];
   isHardMode?: boolean;
+  firstGuessData?: { name: string; size: number }[];
 }
 
-export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode }: CustomTooltipProps) => {
+export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData }: CustomTooltipProps) => {
   if (!active || !payload?.[0]) return null;
   
   const dataPoint = payload[0].payload;
   if (!dataPoint) return null;
+
+  if (chartMode === 'firstGuess' && firstGuessData) {
+    const totalGuesses = firstGuessData.reduce((sum, item) => sum + item.size, 0);
+    const percentage = ((dataPoint.size / totalGuesses) * 100).toFixed(1);
+    return (
+      <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
+        <p className="font-medium text-gray-900">{dataPoint.name}</p>
+        <p className="text-gray-800">Used {dataPoint.size} times ({percentage}%)</p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
