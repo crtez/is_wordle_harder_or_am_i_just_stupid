@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useWordleData } from '@/utils/processWordleData';
 import { 
   ScatterChart, 
@@ -7,129 +7,60 @@ import {
   YAxis, 
   CartesianGrid, 
   Tooltip, 
-  ResponsiveContainer, 
+  ResponsiveContainer,
+  ReferenceLine,
+  Treemap,
 } from 'recharts';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
-import { TooltipProps } from 'recharts';
-import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
-import { getBookmarkletCode } from '@/utils/bookmarklet';
 import { DateTimePicker } from '@/components/datetime-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
+import { CustomTooltip } from '@/components/CustomTooltip';
+import { ChartState, WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
+import { StatsDialog } from '@/components/StatsDialog';
+import {
+  processWordleData,
+  calculatePersonalStats,
+  calculateRollingAverage,
+  calculateWordleStats,
+  getBookmarkletCode,
+  calculateFirstGuessFrequency,
+  FirstGuessData,
+} from '@/services/wordleDataProcessing';
 
-
-interface ChartState {
-  allData: {
-    normal: any[];
-    hard: any[];
-    difference: any[];
-    personal: any[];
-    rolling7: any[];
-    rolling30: any[];
-  };
-  displayData: any[];
-}
-
-interface PersonalData {
-  puzzle_id: string;
-  game_data: {
-    boardState: string[];
-    status: string;
-  }
-}
-
-// Move chart config to a separate object
 const CHART_CONFIG = {
   yAxisDomains: {
     personal: [-3, 3],
     difference: [-0.75, 0.5],
     default: [2.5, 6],
-    rolling: [3.5, 4.5]
+    rolling: [3.25, 4.5]
   },
   yAxisTicks: {
     personal: [-3, -2, -1, 0, 1, 2, 3],
     difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
     default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
-    rolling: [3.5, 3.75, 4, 4.25, 4.5]
+    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5]
   }
-};
-
-// Move data processing to a separate function
-const processWordleData = (data: any[], personalData: PersonalData[]) => {
-  return data.map(d => {
-    const personalGame = personalData.find(p => 
-      p.game_data.status === "WIN" && 
-      p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-    );
-    const personalGuesses = personalGame ? 
-      personalGame.game_data.boardState.filter((row: string) => row !== "").length :
-      null;
-    
-    return {
-      ...d,
-      difference: d.hardAverage - d.average,
-      personalDifference: personalGuesses ? personalGuesses - d.average : null
-    };
-  });
-};
-
-// Move stats calculation to a separate function
-const calculatePersonalStats = (data: any[], personalData: PersonalData[]) => {
-  let matchCount = 0, aboveCount = 0, belowCount = 0;
-
-  data?.forEach(d => {
-    const personalGame = personalData.find(p => 
-      p.game_data.status === "WIN" && 
-      p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === d.word.toLowerCase()
-    );
-    if (personalGame) {
-      matchCount++;
-      const personalGuesses = personalGame.game_data.boardState.filter(row => row !== "").length;
-      if (personalGuesses > d.average) aboveCount++;
-      if (personalGuesses < d.average) belowCount++;
-    }
-  });
-
-  return {
-    count: matchCount,
-    total: data?.length || 0,
-    aboveAverage: aboveCount,
-    belowAverage: belowCount
-  };
-};
-
-const calculateRollingAverage = (data: any[], days: number, isHardMode: boolean) => {
-  return data.map((item, index) => {
-    if (index < days - 1) {
-      return { ...item, rollingAverage: null };  // Return null for points before we have enough data
-    }
-    const startIndex = index - days + 1;
-    const window = data.slice(startIndex, index + 1);
-    const sum = window.reduce((acc, curr) => 
-      acc + (isHardMode ? curr.hardAverage : curr.average), 0
-    );
-    return {
-      ...item,
-      rollingAverage: sum / days
-    };
-  });
 };
 
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
   const [isHardMode, setIsHardMode] = useState(false);
-  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30'>('standard');
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess'>('standard');
   
   const [chartState, setChartState] = useState<ChartState>({
     allData: {
@@ -143,11 +74,11 @@ const WordleChart = () => {
     displayData: []
   });
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
-  const [personalStats, setPersonalStats] = useState({ 
+  const [personalStats, setPersonalStats] = useState<PersonalStats>({ 
     count: 0, 
     total: 0,
-    aboveAverage: 0,
-    belowAverage: 0 
+    normal: { aboveAverage: 0, belowAverage: 0 },
+    hard: { aboveAverage: 0, belowAverage: 0 }
   });
   const [showInstructions, setShowInstructions] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
@@ -162,6 +93,15 @@ const WordleChart = () => {
     [data]
   );
 
+  const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
+  const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
+
+  const cumulativeAverage = useMemo(() => {
+    if (!data?.length) return 0;
+    const sum = data.reduce((acc, curr) => acc + (isHardMode ? curr.hardAverage : curr.average), 0);
+    return sum / data.length;
+  }, [data, isHardMode]);
+
   React.useEffect(() => {
     if (data?.length) {
       setSelectedDate(parseISO(data[0].date));
@@ -174,9 +114,9 @@ const WordleChart = () => {
       const processedData = processWordleData(data, personalData);
       
       // Calculate rolling averages before date filtering
-      const rolling7Data = calculateRollingAverage(processedData, 7, isHardMode)
+      const rolling7Data = calculateRollingAverage(processedData, 7)
         .filter(d => d.rollingAverage !== null);
-      const rolling30Data = calculateRollingAverage(processedData, 30, isHardMode)
+      const rolling30Data = calculateRollingAverage(processedData, 30)
         .filter(d => d.rollingAverage !== null);
 
       // Apply date filtering to all datasets
@@ -209,83 +149,46 @@ const WordleChart = () => {
               : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate, isHardMode]);
+  }, [data, personalData, selectedDate, selectedEndDate]);
+
+  React.useEffect(() => {
+    if (data?.length && personalData.length) {
+      setPersonalStats(calculatePersonalStats(data, personalData));
+    }
+  }, [data, personalData]);
+
+  React.useEffect(() => {
+    if (personalData.length) {
+      setFirstGuessData(calculateFirstGuessFrequency(personalData));
+    }
+  }, [personalData]);
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [showMobileBanner, setShowMobileBanner] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the width as needed
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Check on mount
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
 
-  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30') => {
+  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess') => {
     setChartMode(newMode);
-    setChartState(prev => ({
-      ...prev,
-      displayData: prev.allData[newMode === 'standard' ? 'normal' : newMode]
-    }));
-  };
-
-  const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
-    if (!active || !payload?.[0]) return null;
-    
-    const dataPoint = payload[0].payload;
-    if (!dataPoint) return null;
-
-    return (
-      <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
-        <p className="font-medium text-gray-900">
-          {dataPoint.word} <span className="text-gray-600">#{dataPoint.id}</span>
-        </p>
-        <p className="text-gray-600">
-          {format(parseISO(dataPoint.date), 'M/d/yyyy')}
-        </p>
-        {chartMode === 'personal' && dataPoint.personalDifference !== null ? (
-          <>
-            <p className="text-gray-800">
-              Personal vs Average: {dataPoint.personalDifference > 0 ? '+' : ''}{dataPoint.personalDifference.toFixed(2)} guesses
-            </p>
-            <p className="text-gray-600">
-              Your Score: {
-                personalData.find(p => 
-                  p.game_data.status === "WIN" && 
-                  p.game_data.boardState.filter(row => row !== "").slice(-1)[0]?.toLowerCase() === dataPoint.word.toLowerCase()
-                )?.game_data.boardState.filter(row => row !== "").length || 'N/A'
-              }
-            </p>
-            <p className="text-gray-600">
-              Global Average: {dataPoint.average.toFixed(2)}
-            </p>
-          </>
-        ) : chartMode === 'difference' ? (
-          <>
-            <p className="text-gray-800">
-              Difficulty Gap: {dataPoint.difference?.toFixed(2)} guesses
-            </p>
-            <p className="text-gray-600">
-              Normal: {dataPoint.average.toFixed(2)}
-            </p>
-            <p className="text-gray-600">
-              Hard: {dataPoint.hardAverage.toFixed(2)}
-            </p>
-          </>
-        ) : chartMode.startsWith('rolling') ? (
-          <>
-            <p className="text-gray-800">
-              {chartMode === 'rolling7' ? '7' : '30'}-Day Average: {
-                dataPoint.rollingAverage?.toFixed(2)
-              } guesses
-            </p>
-            <p className="text-gray-600">
-              Daily Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
-            </p>
-          </>
-        ) : (
-          <p className="text-gray-800">
-            Average ({chartMode === 'standard' ? 'Normal' : 'Hard'}): {
-              (chartMode === 'standard' ? dataPoint.average : dataPoint.hardAverage).toFixed(2)
-            } guesses
-          </p>
-        )}
-      </div>
-    );
+    if (newMode !== 'firstGuess') {
+      setChartState(prev => ({
+        ...prev,
+        displayData: prev.allData[newMode === 'standard' ? 'normal' : newMode]
+      }));
+    }
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -295,10 +198,19 @@ const WordleChart = () => {
       reader.onload = (e) => {
         try {
           const json = JSON.parse(e.target?.result as string);
+          if (!Array.isArray(json)) {
+            throw new Error('Invalid data format: expected an array');
+          }
           setPersonalData(json);
           setPersonalStats(calculatePersonalStats(data, json));
+          setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
+          alert('Error parsing file. Please make sure you uploaded a valid JSON file with Wordle data.');
+        } finally {
+          if (event.target) {
+            event.target.value = '';
+          }
         }
       };
       reader.readAsText(file);
@@ -317,30 +229,58 @@ const WordleChart = () => {
   };
 
   return (
-    <div className="h-[100dvh] p-4 flex flex-col">
-      <div className="grid grid-cols-12 gap-3 mb-4 items-center">
-        <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
-          <Select 
-            defaultValue="standard" 
-            onValueChange={handleModeChange}
+    <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
+      {isMobile && showMobileBanner && (
+        <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
+          This site is best viewed on desktop, if you're on a phone good luck.
+          <button 
+            onClick={() => setShowMobileBanner(false)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
+            aria-label="Dismiss banner"
           >
-            <SelectTrigger>
-              <SelectValue>
-                {chartMode === 'standard' ? 'Wordle Average' : 
-                 chartMode === 'difference' ? 'Hard Mode Difficulty Gap' : 
-                 chartMode === 'personal' ? 'Personal Performance' :
-                 chartMode === 'rolling7' ? '7-Day Rolling Average' :
-                 '30-Day Rolling Average'}
-              </SelectValue>
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="standard">Wordle Average</SelectItem>
-              <SelectItem value="rolling7">7-Day Rolling Average</SelectItem>
-              <SelectItem value="rolling30">30-Day Rolling Average</SelectItem>
-              <SelectItem value="difference">Hard Mode Difficulty Gap</SelectItem>
-              <SelectItem value="personal">Personal Performance</SelectItem>
-            </SelectContent>
-          </Select>
+            ✕
+          </button>
+        </div>
+      )}
+      
+      <div className="grid grid-cols-12 gap-3 mb-4">
+        <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
+          <DropdownMenu>
+            <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+              {chartMode === 'standard' ? 'Wordle Average' : 
+               chartMode === 'difference' ? 'Normal vs. Hard' : 
+               chartMode === 'personal' ? 'Personal vs. Average' :
+               chartMode === 'rolling7' ? '7-Day Rolling Average' :
+               chartMode === 'rolling30' ? '30-Day Rolling Average' :
+               'First Guess Frequency'}
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem onSelect={() => handleModeChange('standard')}>
+                Wordle Average
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('rolling7')}>
+                7-Day Rolling Average
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('rolling30')}>
+                30-Day Rolling Average
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
+                Normal vs. Hard
+              </DropdownMenuItem>
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
+                <DropdownMenuSubContent>
+                  <DropdownMenuItem onSelect={() => handleModeChange('personal')}>
+                    Personal vs. Average
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onSelect={() => handleModeChange('firstGuess')}>
+                    First Guess Frequency
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuSub>
+            </DropdownMenuContent>
+          </DropdownMenu>
           
           <DateTimePicker
             value={selectedDate} 
@@ -379,83 +319,144 @@ const WordleChart = () => {
                 onChange={handleFileUpload}
                 className="col-span-1"
               />
-              <button
-                onClick={handleCopyBookmarklet}
-                className="col-span-1 px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 text-center"
-              >
-                Copy Data Fetcher
-              </button>
-              {personalStats.count > 0 && (
-                <div className="col-span-1 text-xs text-gray-600 flex">
-                  <span>
-                    Found <span className="font-bold">{personalStats.count}</span> wordles 
-                    (<span className="text-red-600 font-bold">{personalStats.aboveAverage}</span> above the average,
-                    <span className="text-green-600 font-bold"> {personalStats.belowAverage}</span> below the average)
-                  </span>
+              <div className="col-span-2 flex gap-2">
+                <button
+                  onClick={handleCopyBookmarklet}
+                  className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
+                >
+                  Copy Data Fetcher
+                </button>
+                {personalData.length > 0 && (
+                  <StatsDialog wordleStats={wordleStats} personalData={personalData} />
+                )}
               </div>
+              {personalStats.count > 0 && (
+                <div className="col-span-3 flex items-center gap-4">
+                  <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis w-[540px]">
+                    Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
+                    <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
+                    <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
+                  </div>
+                  <div className="flex items-center gap-2 justify-end">
+                    <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                    <Switch
+                      id="hard-mode-toggle"
+                      checked={isHardMode}
+                      onCheckedChange={setIsHardMode}
+                    />
+                  </div>
+                </div>
               )}
             </>
           )}
         </div>
 
-        <div className="col-span-2 flex items-center gap-2 justify-end">
-          <Label htmlFor="axis-toggle" className="whitespace-nowrap">Show Words</Label>
-          <Switch
-            id="axis-toggle"
-            checked={showWords}
-            onCheckedChange={setShowWords}
-          />
-        </div>
+        {chartMode !== 'firstGuess' && (
+          <div className="col-span-2 flex items-center gap-2 justify-end h-10">
+            <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
+            <Switch
+              id="show-words"
+              checked={showWords}
+              onCheckedChange={setShowWords}
+            />
+          </div>
+        )}
       </div>
-      <div className="flex-1">
+      <div className="flex-1 overflow-hidden">
         <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart 
-            margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis
-              dataKey={showWords ? "word" : "date"}
-              angle={-45}
-              interval="preserveStartEnd"
-              textAnchor="end"
-              tick={{ fontSize: 12 }}
-              tickFormatter={(value) => showWords ? value : format(parseISO(value), 'M/d/yyyy')}
-              style={{ userSelect: 'none' }}
-            />
-            <YAxis
-              domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
-                     chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
-                     chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisDomains.rolling :
-                     CHART_CONFIG.yAxisDomains.default}
-              ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
-                     chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
-                     chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisTicks.rolling :
-                     CHART_CONFIG.yAxisTicks.default}
-              tickFormatter={(value) => value.toFixed(2)}
-              label={{ 
-                value: chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
-                angle: -90, 
-                position: 'insideLeft',
-                style: { userSelect: 'none' }
-              }}
-              style={{ userSelect: 'none' }}
-            />
-            <Tooltip content={(props: TooltipProps<ValueType, NameType>) => <CustomTooltip {...props} />} />
-            <Scatter 
-              name="Wordle Data"
-              data={chartState.displayData}
+          {chartMode === 'firstGuess' ? (
+            <Treemap
+              data={firstGuessData}
+              dataKey="size"
+              nameKey="name"
+              aspectRatio={4 / 3}
+              stroke="#fff"
               fill="#2563eb"
-              line={chartMode === 'rolling7' || chartMode === 'rolling30'}
-              shape="circle"
-              isAnimationActive={false}
-              dataKey={
-                chartMode === 'difference' ? 'difference' : 
-                chartMode === 'personal' ? 'personalDifference' :
-                chartMode === 'rolling7' || chartMode === 'rolling30' ? 'rollingAverage' :
-                isHardMode ? 'hardAverage' : 'average'
-              }
-            />
-          </ScatterChart>
+            >
+              <Tooltip
+                content={(props) => (
+                  <CustomTooltip 
+                    {...props} 
+                    chartMode={chartMode} 
+                    personalData={personalData} 
+                    firstGuessData={firstGuessData}
+                  />
+                )}
+              />
+            </Treemap>
+          ) : (
+            <ScatterChart 
+              margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                dataKey={showWords ? "word" : "date"}
+                angle={-45}
+                interval="preserveStartEnd"
+                textAnchor="end"
+                tick={{ fontSize: 12 }}
+                tickFormatter={(value) => showWords ? value : format(parseISO(value), 'M/d/yyyy')}
+                style={{ userSelect: 'none' }}
+              />
+              <YAxis
+                domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
+                       chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
+                       chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisDomains.rolling :
+                       CHART_CONFIG.yAxisDomains.default}
+                ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
+                       chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
+                       chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisTicks.rolling :
+                       CHART_CONFIG.yAxisTicks.default}
+                tickFormatter={(value) => value.toFixed(2)}
+                label={{ 
+                  value: chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
+                  angle: -90, 
+                  position: 'insideLeft',
+                  style: { userSelect: 'none' }
+                }}
+                style={{ userSelect: 'none' }}
+              />
+              <Tooltip 
+                content={(props) => (
+                  <CustomTooltip 
+                    {...props} 
+                    chartMode={chartMode} 
+                    personalData={personalData}
+                    isHardMode={isHardMode}
+                  />
+                )} 
+              />
+              {(chartMode === 'standard' || chartMode.startsWith('rolling')) && (
+                <ReferenceLine 
+                y={cumulativeAverage} 
+                stroke="#666"
+                strokeWidth={2}
+                strokeDasharray="5 5"
+                label={{
+                  value: `Avg: ${cumulativeAverage.toFixed(2)}`,
+                  position: 'left',
+                  fill: '#666',
+                  fontSize: 12,
+                  fontWeight: 'bold'
+                }}
+              />
+              )}
+              <Scatter 
+                name="Wordle Data"
+                data={chartState.displayData}
+                fill="#2563eb"
+                line={chartMode === 'rolling7' || chartMode === 'rolling30'}
+                shape="circle"
+                isAnimationActive={false}
+                dataKey={
+                  chartMode === 'difference' ? 'difference' : 
+                  chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
+                  chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :
+                  isHardMode ? 'hardAverage' : 'average'
+                }
+              />
+            </ScatterChart>
+          )}
         </ResponsiveContainer>
       </div>
       

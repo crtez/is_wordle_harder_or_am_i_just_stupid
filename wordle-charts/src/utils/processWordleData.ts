@@ -1,6 +1,3 @@
-// src/utils/processWordleData.ts
-
-// This tells TypeScript about the shape of our JSON data
 interface WordleData {
   efficiency: {
     normal: number;
