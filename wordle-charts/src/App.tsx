@@ -164,6 +164,7 @@ const WordleChart = () => {
   }, [personalData]);
 
   const [isMobile, setIsMobile] = useState(false);
+  const [showMobileBanner, setShowMobileBanner] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -197,11 +198,19 @@ const WordleChart = () => {
       reader.onload = (e) => {
         try {
           const json = JSON.parse(e.target?.result as string);
+          if (!Array.isArray(json)) {
+            throw new Error('Invalid data format: expected an array');
+          }
           setPersonalData(json);
           setPersonalStats(calculatePersonalStats(data, json));
           setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
+          alert('Error parsing file. Please make sure you uploaded a valid JSON file with Wordle data.');
+        } finally {
+          if (event.target) {
+            event.target.value = '';
+          }
         }
       };
       reader.readAsText(file);
@@ -221,9 +230,16 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
-      {isMobile && (
-        <div className="bg-yellow-300 text-black text-center p-2 font-bold">
+      {isMobile && showMobileBanner && (
+        <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
           This site is best viewed on desktop, if you're on a phone good luck.
+          <button 
+            onClick={() => setShowMobileBanner(false)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
+            aria-label="Dismiss banner"
+          >
+            ✕
+          </button>
         </div>
       )}
       
