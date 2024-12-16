@@ -97,6 +97,8 @@ const WordleChart = () => {
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
   const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
 
+  const [soundEnabled, setSoundEnabled] = useState(false);
+
   const fetchWordImage = async (word: string) => {
     if (word in wordImages) return;
     
@@ -263,7 +265,7 @@ const WordleChart = () => {
       });
   };
 
-  const createOscillator = (frequency: number, startTime: number, duration: number = 1.0) => {
+  const createOscillator = (frequency: number, startTime: number, duration: number = 2.0) => {
     const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
@@ -316,7 +318,9 @@ const WordleChart = () => {
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
       fetchWordImage(data.name);
-      playF69Chord();
+      if (soundEnabled) {
+        playF69Chord();
+      }
     }
   };
 
@@ -443,16 +447,27 @@ const WordleChart = () => {
           )}
         </div>
 
-        {chartMode !== 'firstGuess' && (
-          <div className="col-span-2 flex items-center gap-2 justify-end h-10">
-            <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
-            <Switch
-              id="show-words"
-              checked={showWords}
-              onCheckedChange={setShowWords}
-            />
-          </div>
-        )}
+        <div className="col-span-2 flex items-center gap-4 justify-end h-10">
+          {chartMode !== 'firstGuess' ? (
+            <>
+              <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
+              <Switch
+                id="show-words"
+                checked={showWords}
+                onCheckedChange={setShowWords}
+              />
+            </>
+          ) : (
+            <>
+              <Label htmlFor="sound-toggle" className="whitespace-nowrap">Sound On</Label>
+              <Switch
+                id="sound-toggle"
+                checked={soundEnabled}
+                onCheckedChange={setSoundEnabled}
+              />
+            </>
+          )}
+        </div>
       </div>
       <div className="flex-1 overflow-hidden">
         <ResponsiveContainer width="100%" height="100%">
