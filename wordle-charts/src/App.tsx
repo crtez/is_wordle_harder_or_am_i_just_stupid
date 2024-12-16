@@ -96,6 +96,7 @@ const WordleChart = () => {
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
   const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
+  const [wordAudio, setWordAudio] = useState<Record<string, string | null>>({});
 
   const fetchWordImage = async (word: string) => {
     if (word in wordImages) return;
@@ -125,6 +126,49 @@ const WordleChart = () => {
     } catch (error) {
       console.error(`Error fetching image for ${word}:`, error);
       setWordImages(prev => ({
+        ...prev,
+        [word]: null
+      }));
+    }
+  };
+
+  const fetchWordAudio = async (word: string) => {
+    if (word in wordAudio) return;
+    
+    try {
+      const response = await fetch(`https://en.wiktionary.org/api/rest_v1/page/media-list/${word.toLowerCase()}`);
+      const data = await response.json();
+      
+      // Find audio files
+      const audioItem = data.items.find((item: any) => 
+        item.type === 'audio' && 
+        item.title.toLowerCase().endsWith('.ogg')
+      );
+      
+      if (audioItem) {
+        const apiResponse = await fetch(`https://api.wikimedia.org/core/v1/commons/file/${audioItem.title}`);
+        const apiData = await apiResponse.json();
+        
+        if (apiData.original?.url) {
+          setWordAudio(prev => ({
+            ...prev,
+            [word]: apiData.original.url
+          }));
+        } else {
+          setWordAudio(prev => ({
+            ...prev,
+            [word]: null
+          }));
+        }
+      } else {
+        setWordAudio(prev => ({
+          ...prev,
+          [word]: null
+        }));
+      }
+    } catch (error) {
+      console.error(`Error fetching audio for ${word}:`, error);
+      setWordAudio(prev => ({
         ...prev,
         [word]: null
       }));
@@ -266,6 +310,7 @@ const WordleChart = () => {
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
       fetchWordImage(data.name);
+      fetchWordAudio(data.name);
     }
   };
 
@@ -423,6 +468,7 @@ const WordleChart = () => {
                     personalData={personalData} 
                     firstGuessData={firstGuessData}
                     wordImages={wordImages}
+                    wordAudio={wordAudio}
                   />
                 )}
               />

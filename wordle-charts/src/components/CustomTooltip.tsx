@@ -9,9 +9,10 @@ interface CustomTooltipProps extends TooltipProps<ValueType, NameType> {
   isHardMode?: boolean;
   firstGuessData?: { name: string; size: number }[];
   wordImages?: { [key: string]: string };
+  wordAudio?: { [key: string]: string | null };
 }
 
-export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData, wordImages }: CustomTooltipProps) => {
+export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData, wordImages, wordAudio}: CustomTooltipProps) => {
   if (!active || !payload?.[0]) return null;
   
   const dataPoint = payload[0].payload;
@@ -25,6 +26,17 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
       <div className="bg-white p-3 border rounded-lg shadow-lg">
         <p className="font-bold">{dataPoint.name}</p>
         <p>Used {dataPoint.size} times ({percentage}%)</p>
+        {wordAudio?.[dataPoint.name] && (
+          <div className="mt-2">
+            <audio autoPlay className="w-full">
+              <source 
+                src={wordAudio[dataPoint.name] || undefined} 
+                type={wordAudio[dataPoint.name]?.endsWith('.ogg') ? 'audio/ogg' : 'audio/wav'} 
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        )}
         {wordImages?.[dataPoint.name] && (
           <div className="mt-2">
             <img 
