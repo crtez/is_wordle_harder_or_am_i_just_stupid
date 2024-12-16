@@ -263,7 +263,7 @@ const WordleChart = () => {
       });
   };
 
-  const createOscillator = (frequency: number, duration: number = 0.2) => {
+  const createOscillator = (frequency: number, startTime: number, duration: number = 1.0) => {
     const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
@@ -274,37 +274,49 @@ const WordleChart = () => {
     oscillator.type = 'sine';
     oscillator.frequency.value = frequency;
 
-    // Add fade out to avoid clicks
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+    // Shorter sustain but still smooth attack/release
+    gainNode.gain.setValueAtTime(0, audioContext.currentTime + startTime);
+    gainNode.gain.linearRampToValueAtTime(0.15, audioContext.currentTime + startTime + 0.05); // Faster attack
+    gainNode.gain.setValueAtTime(0.15, audioContext.currentTime + startTime + duration - 0.2);
+    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + startTime + duration); // Quicker release
 
-    oscillator.start();
-    oscillator.stop(audioContext.currentTime + duration);
+    oscillator.start(audioContext.currentTime + startTime);
+    oscillator.stop(audioContext.currentTime + startTime + duration);
   };
 
-  const getWordFrequency = (word: string) => {
-    // Base frequency (C4 = 261.63Hz)
-    const baseFrequency = 261.63;
+  const playF69Chord = () => {
+    // Base F6/9 chord frequencies
+    const baseFrequencies = [
+        349.23,  // F4
+        523.25,  // C5
+        698.46,  // F5
+        783.99,  // G5
+        880.00,  // A5
+        1318.51  // E6
+    ];
+
+    // Possible transpositions (in semitones), all lower than original
+    const transpositions = [-20, -18, -16, -14, -12, -10, -8, -7, -5, -3, 0]; // Different intervals below or at original
     
-    // Sum up character codes and use it to modify the base frequency
-    const frequencyModifier = word
-      .split('')
-      .reduce((sum, char) => sum + char.charCodeAt(0), 0) % 24;
+    // Choose random transposition
+    const transpose = transpositions[Math.floor(Math.random() * transpositions.length)];
     
-    // Map to a musical scale (C major scale)
-    const scaleMultipliers = [1, 1.122, 1.259, 1.334, 1.498, 1.682, 1.887];
-    const scalePosition = frequencyModifier % scaleMultipliers.length;
-    
-    return baseFrequency * scaleMultipliers[scalePosition];
+    // Apply transposition to all frequencies
+    const transposedFrequencies = baseFrequencies.map(freq => 
+        freq * Math.pow(2, transpose/12)
+    );
+
+    // Play each note with slight staggering and shorter duration
+    transposedFrequencies.forEach((freq, index) => {
+        const staggerTime = index * 0.01; // 10ms stagger (faster)
+        createOscillator(freq, staggerTime, 1.0); // 1 second duration
+    });
   };
 
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
       fetchWordImage(data.name);
-      
-      // Play a note based on the word
-      const frequency = getWordFrequency(data.name);
-      createOscillator(frequency);
+      playF69Chord();
     }
   };
 
