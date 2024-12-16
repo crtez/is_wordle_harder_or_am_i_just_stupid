@@ -95,6 +95,41 @@ const WordleChart = () => {
 
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
+  const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
+
+  const fetchWordImage = async (word: string) => {
+    if (word in wordImages) return;
+    
+    try {
+      console.log(word.toLowerCase()); // Debug log
+      const response = await fetch(`https://en.wiktionary.org/api/rest_v1/page/media-list/${word.toLowerCase()}`);
+      const data = await response.json();
+      
+      // Find the lead image
+      const leadImage = data.items.find((item: any) => item.leadImage && item.type === 'image');
+      
+      if (leadImage && leadImage.srcset && leadImage.srcset[0]) {
+        // Add 'https:' to the beginning of the URL
+        const imageUrl = `https:${leadImage.srcset[0].src}`;
+        console.log('Found image:', imageUrl); // Debug log
+        setWordImages(prev => ({
+          ...prev,
+          [word]: imageUrl
+        }));
+      } else {
+        setWordImages(prev => ({
+          ...prev,
+          [word]: null
+        }));
+      }
+    } catch (error) {
+      console.error(`Error fetching image for ${word}:`, error);
+      setWordImages(prev => ({
+        ...prev,
+        [word]: null
+      }));
+    }
+  };
 
   const cumulativeAverage = useMemo(() => {
     if (!data?.length) return 0;
@@ -226,6 +261,12 @@ const WordleChart = () => {
         console.error('Failed to copy:', err);
         alert('Failed to copy script. Please try again.');
       });
+  };
+
+  const handleTreemapMouseEnter = (data: any) => {
+    if (data && data.name) {
+      fetchWordImage(data.name);
+    }
   };
 
   return (
@@ -372,6 +413,7 @@ const WordleChart = () => {
               aspectRatio={4 / 3}
               stroke="#fff"
               fill="#2563eb"
+              onMouseEnter={handleTreemapMouseEnter}
             >
               <Tooltip
                 content={(props) => (
@@ -380,6 +422,7 @@ const WordleChart = () => {
                     chartMode={chartMode} 
                     personalData={personalData} 
                     firstGuessData={firstGuessData}
+                    wordImages={wordImages}
                   />
                 )}
               />

@@ -8,21 +8,32 @@ interface CustomTooltipProps extends TooltipProps<ValueType, NameType> {
   personalData: PersonalData[];
   isHardMode?: boolean;
   firstGuessData?: { name: string; size: number }[];
+  wordImages?: { [key: string]: string };
 }
 
-export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData }: CustomTooltipProps) => {
+export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData, wordImages }: CustomTooltipProps) => {
   if (!active || !payload?.[0]) return null;
   
   const dataPoint = payload[0].payload;
   if (!dataPoint) return null;
 
+
   if (chartMode === 'firstGuess' && firstGuessData) {
     const totalGuesses = firstGuessData.reduce((sum, item) => sum + item.size, 0);
     const percentage = ((dataPoint.size / totalGuesses) * 100).toFixed(1);
     return (
-      <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
-        <p className="font-bold text-gray-900">{dataPoint.name}</p>
-        <p className="text-gray-800">Used {dataPoint.size} times ({percentage}%)</p>
+      <div className="bg-white p-3 border rounded-lg shadow-lg">
+        <p className="font-bold">{dataPoint.name}</p>
+        <p>Used {dataPoint.size} times ({percentage}%)</p>
+        {wordImages?.[dataPoint.name] && (
+          <div className="mt-2">
+            <img 
+              src={wordImages[dataPoint.name]} 
+              alt={dataPoint.name}
+              className="max-w-[200px] max-h-[200px] object-contain"
+            />
+          </div>
+        )}
       </div>
     );
   }
