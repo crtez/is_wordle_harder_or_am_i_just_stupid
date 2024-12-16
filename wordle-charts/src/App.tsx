@@ -96,7 +96,6 @@ const WordleChart = () => {
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
   const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
-  const [wordAudio, setWordAudio] = useState<Record<string, string | null>>({});
 
   const fetchWordImage = async (word: string) => {
     if (word in wordImages) return;
@@ -126,49 +125,6 @@ const WordleChart = () => {
     } catch (error) {
       console.error(`Error fetching image for ${word}:`, error);
       setWordImages(prev => ({
-        ...prev,
-        [word]: null
-      }));
-    }
-  };
-
-  const fetchWordAudio = async (word: string) => {
-    if (word in wordAudio) return;
-    
-    try {
-      const response = await fetch(`https://en.wiktionary.org/api/rest_v1/page/media-list/${word.toLowerCase()}`);
-      const data = await response.json();
-      
-      // Find audio files
-      const audioItem = data.items.find((item: any) => 
-        item.type === 'audio' && 
-        item.title.toLowerCase().endsWith('.ogg')
-      );
-      
-      if (audioItem) {
-        const apiResponse = await fetch(`https://api.wikimedia.org/core/v1/commons/file/${audioItem.title}`);
-        const apiData = await apiResponse.json();
-        
-        if (apiData.original?.url) {
-          setWordAudio(prev => ({
-            ...prev,
-            [word]: apiData.original.url
-          }));
-        } else {
-          setWordAudio(prev => ({
-            ...prev,
-            [word]: null
-          }));
-        }
-      } else {
-        setWordAudio(prev => ({
-          ...prev,
-          [word]: null
-        }));
-      }
-    } catch (error) {
-      console.error(`Error fetching audio for ${word}:`, error);
-      setWordAudio(prev => ({
         ...prev,
         [word]: null
       }));
@@ -307,10 +263,48 @@ const WordleChart = () => {
       });
   };
 
+  const createOscillator = (frequency: number, duration: number = 0.2) => {
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.type = 'sine';
+    oscillator.frequency.value = frequency;
+
+    // Add fade out to avoid clicks
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + duration);
+  };
+
+  const getWordFrequency = (word: string) => {
+    // Base frequency (C4 = 261.63Hz)
+    const baseFrequency = 261.63;
+    
+    // Sum up character codes and use it to modify the base frequency
+    const frequencyModifier = word
+      .split('')
+      .reduce((sum, char) => sum + char.charCodeAt(0), 0) % 24;
+    
+    // Map to a musical scale (C major scale)
+    const scaleMultipliers = [1, 1.122, 1.259, 1.334, 1.498, 1.682, 1.887];
+    const scalePosition = frequencyModifier % scaleMultipliers.length;
+    
+    return baseFrequency * scaleMultipliers[scalePosition];
+  };
+
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
       fetchWordImage(data.name);
-      fetchWordAudio(data.name);
+      
+      // Play a note based on the word
+      const frequency = getWordFrequency(data.name);
+      createOscillator(frequency);
     }
   };
 
@@ -468,7 +462,6 @@ const WordleChart = () => {
                     personalData={personalData} 
                     firstGuessData={firstGuessData}
                     wordImages={wordImages}
-                    wordAudio={wordAudio}
                   />
                 )}
               />
