@@ -40,6 +40,7 @@ import {
   calculateFirstGuessFrequency,
   FirstGuessData,
 } from '@/services/wordleDataProcessing';
+import { Slider } from "@/components/ui/slider"
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -97,7 +98,7 @@ const WordleChart = () => {
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
   const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
 
-  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [volume, setVolume] = useState(0);
 
   const fetchWordImage = async (word: string) => {
     if (word in wordImages) return;
@@ -269,19 +270,22 @@ const WordleChart = () => {
     const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
-
+  
     oscillator.connect(gainNode);
     gainNode.connect(audioContext.destination);
-
+  
     oscillator.type = 'sine';
     oscillator.frequency.value = frequency;
-
-    // Shorter sustain but still smooth attack/release
+  
+    // Use volume state to control gain
+    const maxGain = 0.05; // Maximum gain value
+    const actualGain = maxGain * volume; // Scale by volume setting
+  
     gainNode.gain.setValueAtTime(0, audioContext.currentTime + startTime);
-    gainNode.gain.linearRampToValueAtTime(0.15, audioContext.currentTime + startTime + 0.05); // Faster attack
-    gainNode.gain.setValueAtTime(0.15, audioContext.currentTime + startTime + duration - 0.2);
-    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + startTime + duration); // Quicker release
-
+    gainNode.gain.linearRampToValueAtTime(actualGain, audioContext.currentTime + startTime + 0.05);
+    gainNode.gain.setValueAtTime(actualGain, audioContext.currentTime + startTime + duration - 0.2);
+    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + startTime + duration);
+  
     oscillator.start(audioContext.currentTime + startTime);
     oscillator.stop(audioContext.currentTime + startTime + duration);
   };
@@ -318,7 +322,7 @@ const WordleChart = () => {
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
       fetchWordImage(data.name);
-      if (soundEnabled) {
+      if (volume > 0) {
         playF69Chord();
       }
     }
@@ -459,11 +463,15 @@ const WordleChart = () => {
             </>
           ) : (
             <>
-              <Label htmlFor="sound-toggle" className="whitespace-nowrap">Sound On</Label>
-              <Switch
-                id="sound-toggle"
-                checked={soundEnabled}
-                onCheckedChange={setSoundEnabled}
+              <Label htmlFor="volume-slider" className="whitespace-nowrap">Volume</Label>
+              <Slider
+                id="volume-slider"
+                min={0}
+                max={2}
+                step={0.1}
+                value={[volume]}
+                onValueChange={(value) => setVolume(value[0])}
+                className="w-24"
               />
             </>
           )}
