@@ -40,7 +40,6 @@ import {
   calculateFirstGuessFrequency,
   FirstGuessData,
 } from '@/services/wordleDataProcessing';
-import { Slider } from "@/components/ui/slider"
 
 const CHART_CONFIG = {
   yAxisDomains: {
