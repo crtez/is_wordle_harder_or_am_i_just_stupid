@@ -10,22 +10,39 @@ hard_folder_path = 'data/wordle/guesses_by_round/hard'
 os.makedirs(normal_folder_path, exist_ok=True)
 os.makedirs(hard_folder_path, exist_ok=True)
 
-# Set start date to March 29, 2023
-start_date = datetime(2023, 3, 29)
-today = datetime.now()
+def get_latest_file_date(folder_path):
+    """Get the date of the most recent JSON file in the folder."""
+    files = os.listdir(folder_path)
+    if not files:
+        return None
+    
+    dates = []
+    for file in files:
+        # Extract date from filename format: guesses-by-round-mode-YYYY-MM-DD-solution.json
+        try:
+            date_str = file.split('-')[4:7]  # ['YYYY', 'MM', 'DD']
+            dates.append(datetime.strptime('-'.join(date_str), '%Y-%m-%d'))
+        except (IndexError, ValueError):
+            continue
+    
+    return max(dates) if dates else None
+
+# Find the latest date from both normal and hard mode folders
+latest_normal = get_latest_file_date(normal_folder_path)
+latest_hard = get_latest_file_date(hard_folder_path)
+
+# Use the most recent date from either folder, or fall back to the start date
+start_date = max(filter(None, [latest_normal, latest_hard])) + timedelta(days=1) if any([latest_normal, latest_hard]) else start_date
 
 # Initialize an empty list to store the dates
 dates_to_process = []
 
-# Start from March 29, 2023
-current_date = start_date
-
 # Continue until we reach today's date
-while current_date <= today:
+while start_date <= datetime.now():
     # Add the current date to the list of dates
-    dates_to_process.append(current_date)
+    dates_to_process.append(start_date)
     # Move to the next day
-    current_date += timedelta(days=1)
+    start_date += timedelta(days=1)
 
 # Process each date
 for date_obj in dates_to_process:
