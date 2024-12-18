@@ -98,7 +98,18 @@ const WordleChart = () => {
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
   const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
 
-  const [volume, setVolume] = useState(0);
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [audioIndex, setAudioIndex] = useState(0);
+  const [audioElements] = useState(() => {
+    const basePath = '/is_wordle_harder_or_am_i_just_stupid';
+    // Create multiple instances of each audio file
+    return [
+      new Audio(`${basePath}/sounds/chord1.mp3`),
+      new Audio(`${basePath}/sounds/chord2.mp3`),
+      new Audio(`${basePath}/sounds/chord3.mp3`),
+      new Audio(`${basePath}/sounds/chord4.mp3`)
+    ];
+  });
 
   const fetchWordImage = async (word: string) => {
     if (word in wordImages) return;
@@ -266,65 +277,34 @@ const WordleChart = () => {
       });
   };
 
-  const createOscillator = (frequency: number, startTime: number, duration: number = 2.0) => {
-    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-  
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-  
-    oscillator.type = 'sine';
-    oscillator.frequency.value = frequency;
-  
-    // Use volume state to control gain
-    const maxGain = 0.05; // Maximum gain value
-    const actualGain = maxGain * volume; // Scale by volume setting
-  
-    gainNode.gain.setValueAtTime(0, audioContext.currentTime + startTime);
-    gainNode.gain.linearRampToValueAtTime(actualGain, audioContext.currentTime + startTime + 0.05);
-    gainNode.gain.setValueAtTime(actualGain, audioContext.currentTime + startTime + duration - 0.2);
-    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + startTime + duration);
-  
-    oscillator.start(audioContext.currentTime + startTime);
-    oscillator.stop(audioContext.currentTime + startTime + duration);
-  };
-
-  const playF69Chord = () => {
-    // Base F6/9 chord frequencies
-    const baseFrequencies = [
-        349.23,  // F4
-        523.25,  // C5
-        698.46,  // F5
-        783.99,  // G5
-        880.00,  // A5
-        1318.51  // E6
-    ];
-
-    // Possible transpositions (in semitones), all lower than original
-    const transpositions = [-20, -18, -16, -14, -12, -10, -8, -7, -5, -3, 0]; // Different intervals below or at original
-    
-    // Choose random transposition
-    const transpose = transpositions[Math.floor(Math.random() * transpositions.length)];
-    
-    // Apply transposition to all frequencies
-    const transposedFrequencies = baseFrequencies.map(freq => 
-        freq * Math.pow(2, transpose/12)
-    );
-
-    // Play each note with slight staggering and shorter duration
-    transposedFrequencies.forEach((freq, index) => {
-        const staggerTime = index * 0.01; // 10ms stagger (faster)
-        createOscillator(freq, staggerTime, 1.0); // 1 second duration
-    });
+  const playNextChord = () => {
+    if (soundEnabled) {
+      const audio = audioElements[audioIndex];
+      audio.volume = 1.0; // Full volume when sound is enabled
+      
+      // Reset the audio to start
+      audio.currentTime = 0;
+      
+      // Stop any currently playing audio
+      audioElements.forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+      });
+      
+      // Play the new audio
+      audio.play().catch(error => {
+        console.error('Error playing audio:', error);
+      });
+      
+      // Move to next audio file, loop back to start if at end
+      setAudioIndex((prevIndex) => (prevIndex + 1) % audioElements.length);
+    }
   };
 
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
       fetchWordImage(data.name);
-      if (volume > 0) {
-        playF69Chord();
-      }
+      playNextChord();
     }
   };
 
@@ -463,15 +443,11 @@ const WordleChart = () => {
             </>
           ) : (
             <>
-              <Label htmlFor="volume-slider" className="whitespace-nowrap">Volume</Label>
-              <Slider
-                id="volume-slider"
-                min={0}
-                max={2}
-                step={0.1}
-                value={[volume]}
-                onValueChange={(value) => setVolume(value[0])}
-                className="w-24"
+              <Label htmlFor="sound-toggle" className="whitespace-nowrap">Sound</Label>
+              <Switch
+                id="sound-toggle"
+                checked={soundEnabled}
+                onCheckedChange={setSoundEnabled}
               />
             </>
           )}
