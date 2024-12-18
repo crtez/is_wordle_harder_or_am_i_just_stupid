@@ -4,15 +4,44 @@ import { fromUnixTime, format } from 'date-fns';
 
 export const getBookmarkletCode = (): string => {
   const ids = puzzleIds.puzzle_ids.join(',');
-  return `ajavascript:(function(){
+  return `javascript:(function(){
     const ids = '${ids}';
     if (!ids) return;
 
     const allIds = ids.split(',').map(id => id.trim()).filter(id => id !== '');
     let allGameData = [];
+    
+    const CONCURRENT_REQUESTS = 3;
+    const CHUNK_SIZE = 31;
+    const DELAY = 1000;
 
-    async function fetchChunks(startIndex = 0) {
-      if (startIndex >= allIds.length) {
+    async function fetchChunk(chunk) {
+      const url = 'https://www.nytimes.com/svc/games/state/wordleV2/latests?puzzle_ids=' + chunk.join(',');
+      
+      try {
+        const response = await fetch(url, { credentials: 'include' });
+        if (!response.ok) throw new Error('HTTP error! status: ' + response.status);
+        
+        const data = await response.json();
+        return data.states || [];
+      } catch (error) {
+        console.error('Error fetching chunk:', error);
+        return [];
+      }
+    }
+
+    async function processBatch(startIndex) {
+      const chunks = [];
+      
+      for (let i = 0; i < CONCURRENT_REQUESTS; i++) {
+        const chunkStart = startIndex + (i * CHUNK_SIZE);
+        if (chunkStart >= allIds.length) break;
+        
+        const chunk = allIds.slice(chunkStart, chunkStart + CHUNK_SIZE);
+        chunks.push(fetchChunk(chunk));
+      }
+
+      if (chunks.length === 0) {
         const blob = new Blob([JSON.stringify(allGameData, null, 2)], {type: 'application/json'});
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -22,31 +51,20 @@ export const getBookmarkletCode = (): string => {
         return;
       }
 
-      const chunk = allIds.slice(startIndex, startIndex + 31);
-      const url = \`https://www.nytimes.com/svc/games/state/wordleV2/latests?puzzle_ids=\${chunk.join(',')}\`;
+      const results = await Promise.all(chunks);
+      const newData = results.flat();
+      allGameData = allGameData.concat(newData);
       
-      try {
-        const response = await fetch(url, {
-          credentials: 'include'
-        });
-        
-        if (!response.ok) throw new Error(\`HTTP error! status: \${response.status}\`);
-        
-        const data = await response.json();
-        if (data.states && Array.isArray(data.states)) {
-          allGameData = allGameData.concat(data.states);
-        }
-        
-        console.log(\`Fetched \${chunk.length} puzzles. Total: \${allGameData.length}\`);
-        setTimeout(() => fetchChunks(startIndex + 31), 1000);
-      } catch (error) {
-        console.error('Error:', error);
-      }
+      console.log('Fetched ' + newData.length + ' puzzles. Total: ' + allGameData.length);
+      
+      setTimeout(() => {
+        processBatch(startIndex + (CONCURRENT_REQUESTS * CHUNK_SIZE));
+      }, DELAY);
     }
 
-    fetchChunks();
-  })();`;
-}; 
+    processBatch(0);
+  })()`;
+};
 
 export const processWordleData = (data: any[], personalData: PersonalData[]) => {
   return data.map(d => {
