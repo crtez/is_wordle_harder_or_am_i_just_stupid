@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 'use client'
 
-import React, { type FC, useState, useEffect, useRef } from 'react'
+import { type FC, useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Calendar } from '@/components/ui/calendar'

@@ -365,7 +365,6 @@ const WordleChart = () => {
           
           {chartMode !== 'firstGuess' && (
             <DateRangePicker
-              align="start"
               initialDateFrom={selectedDate || minDate}
               initialDateTo={selectedEndDate || maxDate}
               onUpdate={({ range }) => {
