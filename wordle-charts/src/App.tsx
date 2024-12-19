@@ -95,6 +95,54 @@ const WordleChart = () => {
 
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
+  const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
+
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [audioIndex, setAudioIndex] = useState(0);
+  const [audioElements] = useState(() => {
+    const basePath = '/is_wordle_harder_or_am_i_just_stupid';
+    // Create multiple instances of each audio file
+    return [
+      new Audio(`${basePath}/sounds/chord1.mp3`),
+      new Audio(`${basePath}/sounds/chord2.mp3`),
+      new Audio(`${basePath}/sounds/chord3.mp3`),
+      new Audio(`${basePath}/sounds/chord4.mp3`)
+    ];
+  });
+
+  const fetchWordImage = async (word: string) => {
+    if (word in wordImages) return;
+    
+    try {
+      console.log(word.toLowerCase()); // Debug log
+      const response = await fetch(`https://en.wiktionary.org/api/rest_v1/page/media-list/${word.toLowerCase()}`);
+      const data = await response.json();
+      
+      // Find the lead image
+      const leadImage = data.items.find((item: any) => item.leadImage && item.type === 'image');
+      
+      if (leadImage && leadImage.srcset && leadImage.srcset[0]) {
+        // Add 'https:' to the beginning of the URL
+        const imageUrl = `https:${leadImage.srcset[0].src}`;
+        console.log('Found image:', imageUrl); // Debug log
+        setWordImages(prev => ({
+          ...prev,
+          [word]: imageUrl
+        }));
+      } else {
+        setWordImages(prev => ({
+          ...prev,
+          [word]: null
+        }));
+      }
+    } catch (error) {
+      console.error(`Error fetching image for ${word}:`, error);
+      setWordImages(prev => ({
+        ...prev,
+        [word]: null
+      }));
+    }
+  };
 
   const cumulativeAverage = useMemo(() => {
     if (!data?.length) return 0;
@@ -228,6 +276,37 @@ const WordleChart = () => {
       });
   };
 
+  const playNextChord = () => {
+    if (soundEnabled) {
+      const audio = audioElements[audioIndex];
+      audio.volume = 1.0; // Full volume when sound is enabled
+      
+      // Reset the audio to start
+      audio.currentTime = 0;
+      
+      // Stop any currently playing audio
+      audioElements.forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+      });
+      
+      // Play the new audio
+      audio.play().catch(error => {
+        console.error('Error playing audio:', error);
+      });
+      
+      // Move to next audio file, loop back to start if at end
+      setAudioIndex((prevIndex) => (prevIndex + 1) % audioElements.length);
+    }
+  };
+
+  const handleTreemapMouseEnter = (data: any) => {
+    if (data && data.name) {
+      fetchWordImage(data.name);
+      playNextChord();
+    }
+  };
+
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
       {isMobile && showMobileBanner && (
@@ -282,23 +361,27 @@ const WordleChart = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <DateTimePicker
-            value={selectedDate} 
-            onChange={setSelectedDate} 
-            min={minDate} 
-            max={maxDate}
-            hideTime={true}
-            clearable={true}
-          />
+          {chartMode !== 'firstGuess' && (
+            <>
+              <DateTimePicker
+                value={selectedDate} 
+                onChange={setSelectedDate} 
+                min={minDate} 
+                max={maxDate}
+                hideTime={true}
+                clearable={true}
+              />
 
-          <DateTimePicker
-            value={selectedEndDate}
-            onChange={setSelectedEndDate}
-            min={selectedDate || minDate}
-            max={maxDate}
-            hideTime={true}
-            clearable={true}
-          />
+              <DateTimePicker
+                value={selectedEndDate}
+                onChange={setSelectedEndDate}
+                min={selectedDate || minDate}
+                max={maxDate}
+                hideTime={true}
+                clearable={true}
+              />
+            </>
+          )}
 
           {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
             <div className="flex items-center gap-2">
@@ -351,16 +434,27 @@ const WordleChart = () => {
           )}
         </div>
 
-        {chartMode !== 'firstGuess' && (
-          <div className="col-span-2 flex items-center gap-2 justify-end h-10">
-            <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
-            <Switch
-              id="show-words"
-              checked={showWords}
-              onCheckedChange={setShowWords}
-            />
-          </div>
-        )}
+        <div className="col-span-2 flex items-center gap-4 justify-end h-10">
+          {chartMode !== 'firstGuess' ? (
+            <>
+              <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
+              <Switch
+                id="show-words"
+                checked={showWords}
+                onCheckedChange={setShowWords}
+              />
+            </>
+          ) : (
+            <>
+              <Label htmlFor="sound-toggle" className="whitespace-nowrap">Sound</Label>
+              <Switch
+                id="sound-toggle"
+                checked={soundEnabled}
+                onCheckedChange={setSoundEnabled}
+              />
+            </>
+          )}
+        </div>
       </div>
       <div className="flex-1 overflow-hidden">
         <ResponsiveContainer width="100%" height="100%">
@@ -372,6 +466,7 @@ const WordleChart = () => {
               aspectRatio={4 / 3}
               stroke="#fff"
               fill="#2563eb"
+              onMouseEnter={handleTreemapMouseEnter}
             >
               <Tooltip
                 content={(props) => (
@@ -380,6 +475,7 @@ const WordleChart = () => {
                     chartMode={chartMode} 
                     personalData={personalData} 
                     firstGuessData={firstGuessData}
+                    wordImages={wordImages}
                   />
                 )}
               />
