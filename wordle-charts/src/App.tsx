@@ -40,6 +40,8 @@ import {
   calculateFirstGuessFrequency,
   FirstGuessData,
 } from '@/services/wordleDataProcessing';
+import { ModeToggle } from '@/components/mode-toggle';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -435,6 +437,7 @@ const WordleChart = () => {
         </div>
 
         <div className="col-span-2 flex items-center gap-4 justify-end h-10">
+          <ModeToggle />
           {chartMode !== 'firstGuess' ? (
             <>
               <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
@@ -564,4 +567,12 @@ const WordleChart = () => {
   );
 };
 
-export default WordleChart;
+function App() {
+  return (
+    <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
+      <WordleChart />
+    </ThemeProvider>
+  );
+}
+
+export default App;

@@ -22,9 +22,9 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
     const totalGuesses = firstGuessData.reduce((sum, item) => sum + item.size, 0);
     const percentage = ((dataPoint.size / totalGuesses) * 100).toFixed(1);
     return (
-      <div className="bg-white p-3 border rounded-lg shadow-lg">
-        <p className="font-bold">{dataPoint.name}</p>
-        <p>Used {dataPoint.size} times ({percentage}%)</p>
+      <div className="bg-background p-3 border rounded-lg shadow-lg">
+        <p className="font-bold text-foreground">{dataPoint.name}</p>
+        <p className="text-foreground">Used {dataPoint.size} times ({percentage}%)</p>
         {wordImages?.[dataPoint.name] && (
           <div className="mt-2">
             <img 
@@ -39,20 +39,20 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
   }
 
   return (
-    <div className="bg-white p-2 border border-gray-200 rounded shadow-sm">
-      <p className="text-gray-900">
+    <div className="bg-background p-2 border border-border rounded shadow-sm">
+      <p className="text-foreground">
         <span className="font-bold">{dataPoint.word}</span>
-        <span className="font-bold text-gray-600"> #{dataPoint.id}</span>
-        <span className="font-bold text-gray-600"> • {format(parseISO(dataPoint.date), 'M/d/yyyy')}</span>
+        <span className="font-bold text-muted-foreground"> #{dataPoint.id}</span>
+        <span className="font-bold text-muted-foreground"> • {format(parseISO(dataPoint.date), 'M/d/yyyy')}</span>
       </p>
       {chartMode === 'personal' && (dataPoint.personalDifference !== null || dataPoint.personalDifferenceHard !== null) ? (
         <>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Personal vs Average: {
               (isHardMode ? dataPoint.personalDifferenceHard : dataPoint.personalDifference) > 0 ? '+' : ''
             }{(isHardMode ? dataPoint.personalDifferenceHard : dataPoint.personalDifference).toFixed(2)} guesses
           </p>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Your Score: {
               personalData.find(p => 
                 p.game_data.status === "WIN" && 
@@ -60,35 +60,35 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
               )?.game_data.boardState.filter(row => row !== "").length || 'N/A'
             }
           </p>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Global Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
           </p>
         </>
       ) : chartMode === 'difference' ? (
         <>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Difficulty Gap: {dataPoint.difference?.toFixed(2)} guesses
           </p>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Normal: {dataPoint.average.toFixed(2)}
           </p>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Hard: {dataPoint.hardAverage.toFixed(2)}
           </p>
         </>
       ) : chartMode.startsWith('rolling') ? (
         <>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             {chartMode === 'rolling7' ? '7' : '30'}-Day Average: {
               (isHardMode ? dataPoint.rollingAverageHard : dataPoint.rollingAverage)?.toFixed(2)
             } guesses
           </p>
-          <p className="text-gray-800">
+          <p className="text-foreground">
             Daily Average: {(isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)}
           </p>
         </>
       ) : (
-        <p className="text-gray-800">
+        <p className="text-foreground">
           Average ({isHardMode ? 'Hard' : 'Normal'}): {
             (isHardMode ? dataPoint.hardAverage : dataPoint.average).toFixed(2)
           } guesses
