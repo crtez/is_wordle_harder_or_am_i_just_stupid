@@ -40,6 +40,8 @@ import {
   calculateFirstGuessFrequency,
   FirstGuessData,
 } from '@/services/wordleDataProcessing';
+import { ModeToggle } from '@/components/mode-toggle';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -55,9 +57,6 @@ const CHART_CONFIG = {
     rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5]
   }
 };
-
-import { ThemeProvider } from '@/components/theme-provider';
-import { ModeToggle } from '@/mode-toggle';
 
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
@@ -312,11 +311,6 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
-      {/* Add mode toggle in top right */}
-      <div className="absolute top-4 right-4 z-10">
-        <ModeToggle />
-      </div>
-
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
           This site is best viewed on desktop, if you're on a phone good luck.
