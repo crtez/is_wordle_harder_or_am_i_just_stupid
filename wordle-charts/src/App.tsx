@@ -25,7 +25,7 @@ import {
 import { ChevronDown } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
-import { DateTimePicker } from '@/components/datetime-picker';
+import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
@@ -364,25 +364,16 @@ const WordleChart = () => {
           </DropdownMenu>
           
           {chartMode !== 'firstGuess' && (
-            <>
-              <DateTimePicker
-                value={selectedDate} 
-                onChange={setSelectedDate} 
-                min={minDate} 
-                max={maxDate}
-                hideTime={true}
-                clearable={true}
-              />
-
-              <DateTimePicker
-                value={selectedEndDate}
-                onChange={setSelectedEndDate}
-                min={selectedDate || minDate}
-                max={maxDate}
-                hideTime={true}
-                clearable={true}
-              />
-            </>
+            <DateRangePicker
+              align="start"
+              initialDateFrom={selectedDate || minDate}
+              initialDateTo={selectedEndDate || maxDate}
+              onUpdate={({ range }) => {
+                setSelectedDate(range.from);
+                setSelectedEndDate(range.to || range.from);
+              }}
+              showCompare={false}
+            />
           )}
 
           {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
@@ -437,7 +428,6 @@ const WordleChart = () => {
         </div>
 
         <div className="col-span-2 flex items-center gap-4 justify-end h-10">
-          <ModeToggle />
           {chartMode !== 'firstGuess' ? (
             <>
               <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
@@ -457,6 +447,7 @@ const WordleChart = () => {
               />
             </>
           )}
+          <ModeToggle />
         </div>
       </div>
       <div className="flex-1 overflow-hidden">
