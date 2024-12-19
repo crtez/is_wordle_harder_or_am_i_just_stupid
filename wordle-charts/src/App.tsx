@@ -361,23 +361,27 @@ const WordleChart = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <DateTimePicker
-            value={selectedDate} 
-            onChange={setSelectedDate} 
-            min={minDate} 
-            max={maxDate}
-            hideTime={true}
-            clearable={true}
-          />
+          {chartMode !== 'firstGuess' && (
+            <>
+              <DateTimePicker
+                value={selectedDate} 
+                onChange={setSelectedDate} 
+                min={minDate} 
+                max={maxDate}
+                hideTime={true}
+                clearable={true}
+              />
 
-          <DateTimePicker
-            value={selectedEndDate}
-            onChange={setSelectedEndDate}
-            min={selectedDate || minDate}
-            max={maxDate}
-            hideTime={true}
-            clearable={true}
-          />
+              <DateTimePicker
+                value={selectedEndDate}
+                onChange={setSelectedEndDate}
+                min={selectedDate || minDate}
+                max={maxDate}
+                hideTime={true}
+                clearable={true}
+              />
+            </>
+          )}
 
           {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
             <div className="flex items-center gap-2">
