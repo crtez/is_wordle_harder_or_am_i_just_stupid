@@ -56,6 +56,9 @@ const CHART_CONFIG = {
   }
 };
 
+import { ThemeProvider } from '@/components/theme-provider';
+import { ModeToggle } from '@/mode-toggle';
+
 const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [showWords, setShowWords] = useState(false);
@@ -309,6 +312,11 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
+      {/* Add mode toggle in top right */}
+      <div className="absolute top-4 right-4 z-10">
+        <ModeToggle />
+      </div>
+
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
           This site is best viewed on desktop, if you're on a phone good luck.
@@ -564,4 +572,12 @@ const WordleChart = () => {
   );
 };
 
-export default WordleChart;
+function App() {
+  return (
+    <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
+      <WordleChart />
+    </ThemeProvider>
+  );
+}
+
+export default App;
