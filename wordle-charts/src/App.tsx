@@ -365,6 +365,7 @@ const WordleChart = () => {
           
           {chartMode !== 'firstGuess' && (
             <DateRangePicker
+              align="start"
               initialDateFrom={selectedDate || minDate}
               initialDateTo={selectedEndDate || maxDate}
               onUpdate={({ range }) => {
@@ -427,7 +428,6 @@ const WordleChart = () => {
         </div>
 
         <div className="col-span-2 flex items-center gap-4 justify-end h-10">
-          <ModeToggle />
           {chartMode !== 'firstGuess' ? (
             <>
               <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
@@ -447,6 +447,7 @@ const WordleChart = () => {
               />
             </>
           )}
+          <ModeToggle />
         </div>
       </div>
       <div className="flex-1 overflow-hidden">
