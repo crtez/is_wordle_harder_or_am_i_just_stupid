@@ -313,7 +313,7 @@ const WordleChart = () => {
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
-          This site is best viewed on desktop, if you're on a phone good luck.
+          This site is best viewed on desktop. If you're on a phone, good luck.
           <button 
             onClick={() => setShowMobileBanner(false)}
             className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
