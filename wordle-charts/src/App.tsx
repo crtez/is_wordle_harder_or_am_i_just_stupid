@@ -97,8 +97,7 @@ const WordleChart = () => {
 
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
-  const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
-
+ 
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioElements] = useState(() => {
