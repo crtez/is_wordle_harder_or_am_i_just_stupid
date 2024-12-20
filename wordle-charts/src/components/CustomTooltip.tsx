@@ -17,28 +17,21 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
   const dataPoint = payload[0].payload;
   if (!dataPoint) return null;
 
-
-  if (chartMode === 'firstGuess' && firstGuessData) {
-    const totalGuesses = firstGuessData.reduce((sum, item) => sum + item.size, 0);
-    const percentage = ((dataPoint.size / totalGuesses) * 100).toFixed(1);
-    return (
-      <div className="bg-background p-3 border rounded-lg shadow-lg">
-        <p className="font-bold text-foreground">{dataPoint.name}</p>
-        <p className="text-foreground">Used {dataPoint.size} times ({percentage}%)</p>
-        {wordImages?.[dataPoint.name] && (
-          <div className="mt-2">
-            <img 
-              src={wordImages[dataPoint.name] ?? undefined} 
-              alt={dataPoint.name}
-              className="max-w-[200px] max-h-[200px] object-contain"
-            />
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  return (
+  return chartMode === 'firstGuess' && firstGuessData ? (
+    <div className="bg-background p-3 border rounded-lg shadow-lg">
+      <p className="font-bold text-foreground">{dataPoint.name}</p>
+      <p className="text-foreground">Used {dataPoint.size} times ({((dataPoint.size / firstGuessData.reduce((sum, item) => sum + item.size, 0)) * 100).toFixed(1)}%)</p>
+      {wordImages?.[dataPoint.name] && (
+        <div className="mt-2">
+          <img 
+            src={wordImages[dataPoint.name] ?? undefined} 
+            alt={dataPoint.name}
+            className="max-w-[200px] max-h-[200px] object-contain"
+          />
+        </div>
+      )}
+    </div>
+  ) : (
     <div className="bg-background p-2 border border-border rounded shadow-sm">
       <p className="text-foreground">
         <span className="font-bold">{dataPoint.word}</span>
