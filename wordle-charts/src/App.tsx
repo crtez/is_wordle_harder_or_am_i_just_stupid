@@ -59,11 +59,33 @@ const CHART_CONFIG = {
 };
 
 const WordleChart = () => {
+  // Data and Loading States
   const { data, loading, error } = useWordleData();
+  const [personalData, setPersonalData] = useState<PersonalData[]>([]);
+  const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
+  
+  // UI Control States
   const [showWords, setShowWords] = useState(false);
   const [isHardMode, setIsHardMode] = useState(false);
   const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess'>('standard');
-  
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showMobileBanner, setShowMobileBanner] = useState(true);
+  const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
+
+  // Date States
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
+  const minDate = useMemo(() => 
+    data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
+    [data]
+  );
+  const maxDate = useMemo(() => 
+    data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
+    [data]
+  );
+
+  // Chart Data States
   const [chartState, setChartState] = useState<ChartState>({
     allData: {
       normal: [],
@@ -75,34 +97,19 @@ const WordleChart = () => {
     },
     displayData: []
   });
-  const [personalData, setPersonalData] = useState<PersonalData[]>([]);
   const [personalStats, setPersonalStats] = useState<PersonalStats>({ 
     count: 0, 
     total: 0,
     normal: { aboveAverage: 0, belowAverage: 0 },
     hard: { aboveAverage: 0, belowAverage: 0 }
   });
-  const [showInstructions, setShowInstructions] = useState(false);
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
-  const minDate = useMemo(() => 
-    data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
-    [data]
-  );
-  
-  const maxDate = useMemo(() => 
-    data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
-    [data]
-  );
-
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
-  const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
- 
+
+  // Audio States
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioElements] = useState(() => {
     const basePath = '/is_wordle_harder_or_am_i_just_stupid';
-    // Create multiple instances of each audio file
     return [
       new Audio(`${basePath}/sounds/chord1.mp3`),
       new Audio(`${basePath}/sounds/chord2.mp3`),
@@ -178,9 +185,6 @@ const WordleChart = () => {
     }
   }, [personalData]);
 
-  const [isMobile, setIsMobile] = useState(false);
-  const [showMobileBanner, setShowMobileBanner] = useState(true);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Adjust the width as needed
@@ -191,12 +195,6 @@ const WordleChart = () => {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
-  if (!data?.length) return null;
 
   const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess') => {
     setChartMode(newMode);
@@ -275,6 +273,10 @@ const WordleChart = () => {
       playNextChord();
     }
   };
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
+  if (!data?.length) return null;
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
@@ -435,7 +437,6 @@ const WordleChart = () => {
                     chartMode={chartMode} 
                     personalData={personalData} 
                     firstGuessData={firstGuessData}
-                    wordImages={wordImages}
                   />
                 )}
               />
