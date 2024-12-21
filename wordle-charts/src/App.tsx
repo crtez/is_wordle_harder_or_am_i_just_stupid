@@ -23,7 +23,6 @@ import {
   DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
-import { Input } from "@/components/ui/input"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
 import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
@@ -42,28 +41,55 @@ import {
 } from '@/services/wordleDataProcessing';
 import { ModeToggle } from '@/components/mode-toggle';
 import { ThemeProvider } from '@/components/theme-provider';
+import { FileInput } from '@/components/FileInput';
+import { useCheatingData } from '@/utils/useCheatingData';
 
 const CHART_CONFIG = {
   yAxisDomains: {
     personal: [-3, 3],
     difference: [-0.75, 0.5],
     default: [2.5, 6],
-    rolling: [3.25, 4.5]
+    rolling: [3.25, 4.5],
+    clairvoyant: [0, 1.7]
   },
   yAxisTicks: {
     personal: [-3, -2, -1, 0, 1, 2, 3],
     difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
     default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
-    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5]
+    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5],
+    clairvoyant: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7]
   }
 };
 
 const WordleChart = () => {
+  // Data and Loading States
   const { data, loading, error } = useWordleData();
+  const [personalData, setPersonalData] = useState<PersonalData[]>([]);
+  const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
+  const { data: cheatingData, loading: cheatingLoading } = useCheatingData();
+  
+  // UI Control States
   const [showWords, setShowWords] = useState(false);
   const [isHardMode, setIsHardMode] = useState(false);
-  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess'>('standard');
-  
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant'>('standard');
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showMobileBanner, setShowMobileBanner] = useState(true);
+  const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
+
+  // Date States
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
+  const minDate = useMemo(() => 
+    data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
+    [data]
+  );
+  const maxDate = useMemo(() => 
+    data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
+    [data]
+  );
+
+  // Chart Data States
   const [chartState, setChartState] = useState<ChartState>({
     allData: {
       normal: [],
@@ -71,39 +97,24 @@ const WordleChart = () => {
       difference: [],
       personal: [],
       rolling7: [],
-      rolling30: []
+      rolling30: [],
+      clairvoyant: []
     },
     displayData: []
   });
-  const [personalData, setPersonalData] = useState<PersonalData[]>([]);
   const [personalStats, setPersonalStats] = useState<PersonalStats>({ 
     count: 0, 
     total: 0,
     normal: { aboveAverage: 0, belowAverage: 0 },
     hard: { aboveAverage: 0, belowAverage: 0 }
   });
-  const [showInstructions, setShowInstructions] = useState(false);
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
-  const minDate = useMemo(() => 
-    data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
-    [data]
-  );
-  
-  const maxDate = useMemo(() => 
-    data?.length ? parseISO(data[data.length - 1].date) : new Date(), 
-    [data]
-  );
-
   const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
-  const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
-  const [wordImages, setWordImages] = useState<Record<string, string | null>>({});
 
+  // Audio States
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioElements] = useState(() => {
     const basePath = '/is_wordle_harder_or_am_i_just_stupid';
-    // Create multiple instances of each audio file
     return [
       new Audio(`${basePath}/sounds/chord1.mp3`),
       new Audio(`${basePath}/sounds/chord2.mp3`),
@@ -111,40 +122,6 @@ const WordleChart = () => {
       new Audio(`${basePath}/sounds/chord4.mp3`)
     ];
   });
-
-  const fetchWordImage = async (word: string) => {
-    if (word in wordImages) return;
-    
-    try {
-      console.log(word.toLowerCase()); // Debug log
-      const response = await fetch(`https://en.wiktionary.org/api/rest_v1/page/media-list/${word.toLowerCase()}`);
-      const data = await response.json();
-      
-      // Find the lead image
-      const leadImage = data.items.find((item: any) => item.leadImage && item.type === 'image');
-      
-      if (leadImage && leadImage.srcset && leadImage.srcset[0]) {
-        // Add 'https:' to the beginning of the URL
-        const imageUrl = `https:${leadImage.srcset[0].src}`;
-        console.log('Found image:', imageUrl); // Debug log
-        setWordImages(prev => ({
-          ...prev,
-          [word]: imageUrl
-        }));
-      } else {
-        setWordImages(prev => ({
-          ...prev,
-          [word]: null
-        }));
-      }
-    } catch (error) {
-      console.error(`Error fetching image for ${word}:`, error);
-      setWordImages(prev => ({
-        ...prev,
-        [word]: null
-      }));
-    }
-  };
 
   const cumulativeAverage = useMemo(() => {
     if (!data?.length) return 0;
@@ -181,6 +158,20 @@ const WordleChart = () => {
       const filtered7Data = rolling7Data.filter(filterByDate);
       const filtered30Data = rolling30Data.filter(filterByDate);
 
+      // Process cheating analysis data
+      const cheatingProcessedData = data.map(d => {
+        const normalCheating = cheatingData.normal.find(c => c.date === d.date);
+        const hardCheating = cheatingData.hard.find(c => c.date === d.date);
+        
+        return {
+          ...d,
+          proportionDelta: normalCheating?.guesses.proportion.delta || null,
+          hardProportionDelta: hardCheating?.guesses.proportion.delta || null,
+          proportion: normalCheating?.guesses.proportion || null,
+          hardProportion: hardCheating?.guesses.proportion || null
+        };
+      }).filter(filterByDate);
+
       setChartState({
         allData: {
           normal: filteredData,
@@ -188,18 +179,21 @@ const WordleChart = () => {
           difference: filteredData,
           personal: filteredData.filter(d => d.personalDifference !== null),
           rolling7: filtered7Data,
-          rolling30: filtered30Data
+          rolling30: filtered30Data,
+          clairvoyant: cheatingProcessedData
         },
-        displayData: chartMode === 'personal' 
-          ? filteredData.filter(d => d.personalDifference !== null)
-          : chartMode === 'rolling7' 
-            ? filtered7Data 
-            : chartMode === 'rolling30'
-              ? filtered30Data
-              : filteredData
+        displayData: chartMode === 'clairvoyant' 
+          ? cheatingProcessedData
+          : chartMode === 'personal' 
+            ? filteredData.filter(d => d.personalDifference !== null)
+            : chartMode === 'rolling7' 
+              ? filtered7Data 
+              : chartMode === 'rolling30'
+                ? filtered30Data
+                : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate]);
+  }, [data, personalData, selectedDate, selectedEndDate, cheatingData]);
 
   React.useEffect(() => {
     if (data?.length && personalData.length) {
@@ -213,9 +207,6 @@ const WordleChart = () => {
     }
   }, [personalData]);
 
-  const [isMobile, setIsMobile] = useState(false);
-  const [showMobileBanner, setShowMobileBanner] = useState(true);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Adjust the width as needed
@@ -227,11 +218,7 @@ const WordleChart = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
-  if (!data?.length) return null;
-
-  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess') => {
+  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant') => {
     setChartMode(newMode);
     if (newMode !== 'firstGuess') {
       setChartState(prev => ({
@@ -244,6 +231,7 @@ const WordleChart = () => {
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      setFileName(file.name);
       const reader = new FileReader();
       reader.onload = (e) => {
         try {
@@ -304,16 +292,19 @@ const WordleChart = () => {
 
   const handleTreemapMouseEnter = (data: any) => {
     if (data && data.name) {
-      fetchWordImage(data.name);
       playNextChord();
     }
   };
+
+  if (loading || cheatingLoading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
+  if (!data?.length) return null;
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
-          This site is best viewed on desktop, if you're on a phone good luck.
+          This site is best viewed on desktop. If you're on a phone, good luck.
           <button 
             onClick={() => setShowMobileBanner(false)}
             className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
@@ -333,6 +324,7 @@ const WordleChart = () => {
                chartMode === 'personal' ? 'Personal vs. Average' :
                chartMode === 'rolling7' ? '7-Day Rolling Average' :
                chartMode === 'rolling30' ? '30-Day Rolling Average' :
+               chartMode === 'clairvoyant' ? 'Clairvoyant Guesses' :
                'First Guess Frequency'}
               <ChevronDown className="ml-2 h-4 w-4" />
             </DropdownMenuTrigger>
@@ -348,6 +340,9 @@ const WordleChart = () => {
               </DropdownMenuItem>
               <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
                 Normal vs. Hard
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('clairvoyant')}>
+                Clairvoyant Guesses
               </DropdownMenuItem>
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
@@ -376,7 +371,7 @@ const WordleChart = () => {
             />
           )}
 
-          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
+          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30' || chartMode === 'clairvoyant') && (
             <div className="flex items-center gap-2">
               <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
               <Switch
@@ -389,13 +384,12 @@ const WordleChart = () => {
           
           {chartMode === 'personal' && (
             <>
-              <Input
-                type="file"
-                accept=".json"
+              <FileInput
                 onChange={handleFileUpload}
                 className="col-span-1"
+                fileName={fileName}
               />
-              <div className="col-span-2 flex gap-2">
+              <div className="col-span-2 flex items-center gap-2">
                 <button
                   onClick={handleCopyBookmarklet}
                   className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
@@ -403,23 +397,25 @@ const WordleChart = () => {
                   Copy Data Fetcher
                 </button>
                 {personalData.length > 0 && (
-                  <StatsDialog wordleStats={wordleStats} personalData={personalData} />
+                  <>
+                    <StatsDialog wordleStats={wordleStats} personalData={personalData} />
+                    <div className="flex items-center gap-2">
+                      <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                      <Switch
+                        id="hard-mode-toggle"
+                        checked={isHardMode}
+                        onCheckedChange={setIsHardMode}
+                      />
+                    </div>
+                  </>
                 )}
               </div>
               {personalStats.count > 0 && (
-                <div className="col-span-3 flex items-center gap-4">
-                  <div className="text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis w-[540px]">
+                <div className="col-span-3 flex items-center gap-4 min-w-0">
+                  <div className="text-sm text-gray-600 break-normal">
                     Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
                     <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
                     <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
-                  </div>
-                  <div className="flex items-center gap-2 justify-end">
-                    <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
-                    <Switch
-                      id="hard-mode-toggle"
-                      checked={isHardMode}
-                      onCheckedChange={setIsHardMode}
-                    />
                   </div>
                 </div>
               )}
@@ -469,7 +465,6 @@ const WordleChart = () => {
                     chartMode={chartMode} 
                     personalData={personalData} 
                     firstGuessData={firstGuessData}
-                    wordImages={wordImages}
                   />
                 )}
               />
@@ -489,17 +484,20 @@ const WordleChart = () => {
                 style={{ userSelect: 'none' }}
               />
               <YAxis
-                domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
+                domain={chartMode === 'clairvoyant' ? CHART_CONFIG.yAxisDomains.clairvoyant :
+                       chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
                        chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
                        chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisDomains.rolling :
                        CHART_CONFIG.yAxisDomains.default}
-                ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
+                ticks={chartMode === 'clairvoyant' ? CHART_CONFIG.yAxisTicks.clairvoyant :
+                       chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
                        chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
                        chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisTicks.rolling :
                        CHART_CONFIG.yAxisTicks.default}
                 tickFormatter={(value) => value.toFixed(2)}
                 label={{ 
-                  value: chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
+                  value: chartMode === 'clairvoyant' ? 'Proportion Delta' :
+                         chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
                   angle: -90, 
                   position: 'insideLeft',
                   style: { userSelect: 'none' }
@@ -539,6 +537,7 @@ const WordleChart = () => {
                 shape="circle"
                 isAnimationActive={false}
                 dataKey={
+                  chartMode === 'clairvoyant' ? (isHardMode ? 'hardProportionDelta' : 'proportionDelta') :
                   chartMode === 'difference' ? 'difference' : 
                   chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
                   chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :

@@ -1,0 +1,8864 @@
+[
+  {
+    "date": "2023-03-30",
+    "word": "bread",
+    "guesses": {
+      "today": 1176,
+      "yesterday": 516,
+      "delta": 660,
+      "proportion": {
+        "today": 0.54,
+        "yesterday": 0.24,
+        "delta": 0.3
+      }
+    }
+  },
+  {
+    "date": "2023-03-31",
+    "word": "every",
+    "guesses": {
+      "today": 472,
+      "yesterday": 5,
+      "delta": 467,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-04-01",
+    "word": "march",
+    "guesses": {
+      "today": 582,
+      "yesterday": 130,
+      "delta": 452,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.06,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-04-02",
+    "word": "stock",
+    "guesses": {
+      "today": 377,
+      "yesterday": 29,
+      "delta": 348,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-04-03",
+    "word": "flora",
+    "guesses": {
+      "today": 414,
+      "yesterday": 18,
+      "delta": 396,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-04-04",
+    "word": "ratio",
+    "guesses": {
+      "today": 1376,
+      "yesterday": 744,
+      "delta": 632,
+      "proportion": {
+        "today": 0.63,
+        "yesterday": 0.34,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2023-04-05",
+    "word": "smash",
+    "guesses": {
+      "today": 392,
+      "yesterday": 7,
+      "delta": 385,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-04-06",
+    "word": "leafy",
+    "guesses": {
+      "today": 368,
+      "yesterday": 21,
+      "delta": 347,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-04-07",
+    "word": "locus",
+    "guesses": {
+      "today": 343,
+      "yesterday": 7,
+      "delta": 336,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-04-08",
+    "word": "ledge",
+    "guesses": {
+      "today": 362,
+      "yesterday": 3,
+      "delta": 359,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-04-09",
+    "word": "snafu",
+    "guesses": {
+      "today": 485,
+      "yesterday": 1,
+      "delta": 484,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-04-10",
+    "word": "under",
+    "guesses": {
+      "today": 588,
+      "yesterday": 62,
+      "delta": 526,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.03,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-04-11",
+    "word": "qualm",
+    "guesses": {
+      "today": 359,
+      "yesterday": 7,
+      "delta": 352,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-04-12",
+    "word": "borax",
+    "guesses": {
+      "today": 501,
+      "yesterday": 3,
+      "delta": 498,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-04-13",
+    "word": "carat",
+    "guesses": {
+      "today": 449,
+      "yesterday": 3,
+      "delta": 446,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-04-14",
+    "word": "thief",
+    "guesses": {
+      "today": 620,
+      "yesterday": 66,
+      "delta": 554,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.03,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-04-15",
+    "word": "agony",
+    "guesses": {
+      "today": 452,
+      "yesterday": 80,
+      "delta": 372,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.04,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-04-16",
+    "word": "dwelt",
+    "guesses": {
+      "today": 311,
+      "yesterday": 2,
+      "delta": 309,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-04-17",
+    "word": "whiff",
+    "guesses": {
+      "today": 460,
+      "yesterday": 0,
+      "delta": 460,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-04-18",
+    "word": "hound",
+    "guesses": {
+      "today": 557,
+      "yesterday": 62,
+      "delta": 495,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.03,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-04-19",
+    "word": "thump",
+    "guesses": {
+      "today": 347,
+      "yesterday": 16,
+      "delta": 331,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-04-20",
+    "word": "plate",
+    "guesses": {
+      "today": 1490,
+      "yesterday": 640,
+      "delta": 850,
+      "proportion": {
+        "today": 0.68,
+        "yesterday": 0.29,
+        "delta": 0.39
+      }
+    }
+  },
+  {
+    "date": "2023-04-21",
+    "word": "kayak",
+    "guesses": {
+      "today": 434,
+      "yesterday": 2,
+      "delta": 432,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-04-22",
+    "word": "broke",
+    "guesses": {
+      "today": 510,
+      "yesterday": 84,
+      "delta": 426,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-04-23",
+    "word": "unzip",
+    "guesses": {
+      "today": 279,
+      "yesterday": 1,
+      "delta": 278,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-04-24",
+    "word": "ditto",
+    "guesses": {
+      "today": 417,
+      "yesterday": 2,
+      "delta": 415,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-04-25",
+    "word": "joker",
+    "guesses": {
+      "today": 524,
+      "yesterday": 25,
+      "delta": 499,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.01,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-04-26",
+    "word": "metro",
+    "guesses": {
+      "today": 441,
+      "yesterday": 22,
+      "delta": 419,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-04-27",
+    "word": "logic",
+    "guesses": {
+      "today": 439,
+      "yesterday": 17,
+      "delta": 422,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-04-28",
+    "word": "circa",
+    "guesses": {
+      "today": 384,
+      "yesterday": 3,
+      "delta": 381,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-04-29",
+    "word": "cedar",
+    "guesses": {
+      "today": 393,
+      "yesterday": 27,
+      "delta": 366,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-04-30",
+    "word": "plaza",
+    "guesses": {
+      "today": 330,
+      "yesterday": 8,
+      "delta": 322,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-05-01",
+    "word": "range",
+    "guesses": {
+      "today": 614,
+      "yesterday": 79,
+      "delta": 535,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.04,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-05-02",
+    "word": "sulky",
+    "guesses": {
+      "today": 305,
+      "yesterday": 5,
+      "delta": 300,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-05-03",
+    "word": "horde",
+    "guesses": {
+      "today": 388,
+      "yesterday": 15,
+      "delta": 373,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-05-04",
+    "word": "guppy",
+    "guesses": {
+      "today": 387,
+      "yesterday": 1,
+      "delta": 386,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-05-05",
+    "word": "below",
+    "guesses": {
+      "today": 411,
+      "yesterday": 16,
+      "delta": 395,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-05-06",
+    "word": "anger",
+    "guesses": {
+      "today": 525,
+      "yesterday": 54,
+      "delta": 471,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-05-07",
+    "word": "ghoul",
+    "guesses": {
+      "today": 483,
+      "yesterday": 109,
+      "delta": 374,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.05,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-05-08",
+    "word": "aglow",
+    "guesses": {
+      "today": 343,
+      "yesterday": 4,
+      "delta": 339,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-05-09",
+    "word": "cocoa",
+    "guesses": {
+      "today": 423,
+      "yesterday": 4,
+      "delta": 419,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-05-10",
+    "word": "ethic",
+    "guesses": {
+      "today": 482,
+      "yesterday": 26,
+      "delta": 456,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-05-11",
+    "word": "broom",
+    "guesses": {
+      "today": 424,
+      "yesterday": 1,
+      "delta": 423,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-05-12",
+    "word": "snack",
+    "guesses": {
+      "today": 554,
+      "yesterday": 42,
+      "delta": 512,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.02,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-05-13",
+    "word": "acrid",
+    "guesses": {
+      "today": 390,
+      "yesterday": 26,
+      "delta": 364,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-05-14",
+    "word": "scarf",
+    "guesses": {
+      "today": 401,
+      "yesterday": 42,
+      "delta": 359,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-05-15",
+    "word": "canoe",
+    "guesses": {
+      "today": 1062,
+      "yesterday": 456,
+      "delta": 606,
+      "proportion": {
+        "today": 0.48,
+        "yesterday": 0.2,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2023-05-16",
+    "word": "latte",
+    "guesses": {
+      "today": 453,
+      "yesterday": 3,
+      "delta": 450,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-05-17",
+    "word": "plank",
+    "guesses": {
+      "today": 643,
+      "yesterday": 142,
+      "delta": 501,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.06,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-05-18",
+    "word": "shorn",
+    "guesses": {
+      "today": 371,
+      "yesterday": 11,
+      "delta": 360,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-05-19",
+    "word": "grief",
+    "guesses": {
+      "today": 517,
+      "yesterday": 113,
+      "delta": 404,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.05,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-05-20",
+    "word": "flask",
+    "guesses": {
+      "today": 373,
+      "yesterday": 34,
+      "delta": 339,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.02,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-05-21",
+    "word": "brash",
+    "guesses": {
+      "today": 373,
+      "yesterday": 28,
+      "delta": 345,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-05-22",
+    "word": "igloo",
+    "guesses": {
+      "today": 479,
+      "yesterday": 6,
+      "delta": 473,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-05-23",
+    "word": "clerk",
+    "guesses": {
+      "today": 379,
+      "yesterday": 15,
+      "delta": 364,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-05-24",
+    "word": "utter",
+    "guesses": {
+      "today": 363,
+      "yesterday": 1,
+      "delta": 362,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-05-25",
+    "word": "bagel",
+    "guesses": {
+      "today": 582,
+      "yesterday": 66,
+      "delta": 516,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.03,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-05-26",
+    "word": "swine",
+    "guesses": {
+      "today": 125,
+      "yesterday": 26,
+      "delta": 99,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-05-27",
+    "word": "ramen",
+    "guesses": {
+      "today": 142,
+      "yesterday": 11,
+      "delta": 131,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-05-28",
+    "word": "skimp",
+    "guesses": {
+      "today": 106,
+      "yesterday": 2,
+      "delta": 104,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-05-29",
+    "word": "mouse",
+    "guesses": {
+      "today": 368,
+      "yesterday": 183,
+      "delta": 185,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.22,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-05-30",
+    "word": "kneel",
+    "guesses": {
+      "today": 328,
+      "yesterday": 1,
+      "delta": 327,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-05-31",
+    "word": "agile",
+    "guesses": {
+      "today": 611,
+      "yesterday": 151,
+      "delta": 460,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.07,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-06-01",
+    "word": "jazzy",
+    "guesses": {
+      "today": 448,
+      "yesterday": 7,
+      "delta": 441,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-06-02",
+    "word": "humid",
+    "guesses": {
+      "today": 528,
+      "yesterday": 43,
+      "delta": 485,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.02,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-06-03",
+    "word": "nanny",
+    "guesses": {
+      "today": 442,
+      "yesterday": 2,
+      "delta": 440,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-06-04",
+    "word": "beast",
+    "guesses": {
+      "today": 1283,
+      "yesterday": 523,
+      "delta": 760,
+      "proportion": {
+        "today": 0.57,
+        "yesterday": 0.23,
+        "delta": 0.34
+      }
+    }
+  },
+  {
+    "date": "2023-06-05",
+    "word": "ennui",
+    "guesses": {
+      "today": 471,
+      "yesterday": 5,
+      "delta": 466,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-06-06",
+    "word": "scout",
+    "guesses": {
+      "today": 611,
+      "yesterday": 115,
+      "delta": 496,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.05,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-06-07",
+    "word": "hater",
+    "guesses": {
+      "today": 406,
+      "yesterday": 32,
+      "delta": 374,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-06-08",
+    "word": "crumb",
+    "guesses": {
+      "today": 420,
+      "yesterday": 42,
+      "delta": 378,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-06-09",
+    "word": "balsa",
+    "guesses": {
+      "today": 365,
+      "yesterday": 0,
+      "delta": 365,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-06-10",
+    "word": "again",
+    "guesses": {
+      "today": 495,
+      "yesterday": 18,
+      "delta": 477,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-06-11",
+    "word": "guard",
+    "guesses": {
+      "today": 504,
+      "yesterday": 73,
+      "delta": 431,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.03,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-06-12",
+    "word": "wrong",
+    "guesses": {
+      "today": 537,
+      "yesterday": 58,
+      "delta": 479,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-06-13",
+    "word": "plunk",
+    "guesses": {
+      "today": 326,
+      "yesterday": 20,
+      "delta": 306,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-06-14",
+    "word": "crime",
+    "guesses": {
+      "today": 770,
+      "yesterday": 237,
+      "delta": 533,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.11,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-06-15",
+    "word": "maybe",
+    "guesses": {
+      "today": 492,
+      "yesterday": 32,
+      "delta": 460,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-06-16",
+    "word": "strap",
+    "guesses": {
+      "today": 832,
+      "yesterday": 284,
+      "delta": 548,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.13,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-06-17",
+    "word": "ranch",
+    "guesses": {
+      "today": 537,
+      "yesterday": 46,
+      "delta": 491,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.02,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-06-18",
+    "word": "shyly",
+    "guesses": {
+      "today": 388,
+      "yesterday": 3,
+      "delta": 385,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-06-19",
+    "word": "kazoo",
+    "guesses": {
+      "today": 369,
+      "yesterday": 1,
+      "delta": 368,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-06-20",
+    "word": "frost",
+    "guesses": {
+      "today": 686,
+      "yesterday": 138,
+      "delta": 548,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.06,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-06-21",
+    "word": "crane",
+    "guesses": {
+      "today": 4062,
+      "yesterday": 3079,
+      "delta": 983,
+      "proportion": {
+        "today": 1.83,
+        "yesterday": 1.39,
+        "delta": 0.44
+      }
+    }
+  },
+  {
+    "date": "2023-06-22",
+    "word": "taste",
+    "guesses": {
+      "today": 500,
+      "yesterday": 14,
+      "delta": 486,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-06-23",
+    "word": "covet",
+    "guesses": {
+      "today": 338,
+      "yesterday": 7,
+      "delta": 331,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-06-24",
+    "word": "grand",
+    "guesses": {
+      "today": 544,
+      "yesterday": 113,
+      "delta": 431,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.05,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-06-25",
+    "word": "rodeo",
+    "guesses": {
+      "today": 516,
+      "yesterday": 6,
+      "delta": 510,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-06-26",
+    "word": "guest",
+    "guesses": {
+      "today": 610,
+      "yesterday": 147,
+      "delta": 463,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.07,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-06-27",
+    "word": "about",
+    "guesses": {
+      "today": 1451,
+      "yesterday": 727,
+      "delta": 724,
+      "proportion": {
+        "today": 0.65,
+        "yesterday": 0.32,
+        "delta": 0.33
+      }
+    }
+  },
+  {
+    "date": "2023-06-28",
+    "word": "tract",
+    "guesses": {
+      "today": 307,
+      "yesterday": 0,
+      "delta": 307,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-06-29",
+    "word": "diner",
+    "guesses": {
+      "today": 425,
+      "yesterday": 47,
+      "delta": 378,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-06-30",
+    "word": "straw",
+    "guesses": {
+      "today": 436,
+      "yesterday": 57,
+      "delta": 379,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.03,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-07-01",
+    "word": "bleep",
+    "guesses": {
+      "today": 295,
+      "yesterday": 3,
+      "delta": 292,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-02",
+    "word": "mossy",
+    "guesses": {
+      "today": 318,
+      "yesterday": 1,
+      "delta": 317,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-07-03",
+    "word": "hotel",
+    "guesses": {
+      "today": 501,
+      "yesterday": 99,
+      "delta": 402,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-07-04",
+    "word": "irate",
+    "guesses": {
+      "today": 4527,
+      "yesterday": 3398,
+      "delta": 1129,
+      "proportion": {
+        "today": 2.01,
+        "yesterday": 1.51,
+        "delta": 0.49
+      }
+    }
+  },
+  {
+    "date": "2023-07-05",
+    "word": "venom",
+    "guesses": {
+      "today": 362,
+      "yesterday": 4,
+      "delta": 358,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-07-06",
+    "word": "windy",
+    "guesses": {
+      "today": 456,
+      "yesterday": 33,
+      "delta": 423,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-07-07",
+    "word": "donut",
+    "guesses": {
+      "today": 587,
+      "yesterday": 47,
+      "delta": 540,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.02,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-07-08",
+    "word": "cower",
+    "guesses": {
+      "today": 306,
+      "yesterday": 8,
+      "delta": 298,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-09",
+    "word": "enter",
+    "guesses": {
+      "today": 383,
+      "yesterday": 10,
+      "delta": 373,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-07-10",
+    "word": "folly",
+    "guesses": {
+      "today": 236,
+      "yesterday": 0,
+      "delta": 236,
+      "proportion": {
+        "today": 0.11,
+        "yesterday": 0.0,
+        "delta": 0.11
+      }
+    }
+  },
+  {
+    "date": "2023-07-11",
+    "word": "earth",
+    "guesses": {
+      "today": 1606,
+      "yesterday": 865,
+      "delta": 741,
+      "proportion": {
+        "today": 0.7,
+        "yesterday": 0.4,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2023-07-12",
+    "word": "whirl",
+    "guesses": {
+      "today": 296,
+      "yesterday": 10,
+      "delta": 286,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-13",
+    "word": "barge",
+    "guesses": {
+      "today": 326,
+      "yesterday": 24,
+      "delta": 302,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-14",
+    "word": "fiend",
+    "guesses": {
+      "today": 384,
+      "yesterday": 76,
+      "delta": 308,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.03,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-07-15",
+    "word": "crone",
+    "guesses": {
+      "today": 405,
+      "yesterday": 43,
+      "delta": 362,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-07-16",
+    "word": "topaz",
+    "guesses": {
+      "today": 316,
+      "yesterday": 12,
+      "delta": 304,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-07-17",
+    "word": "droop",
+    "guesses": {
+      "today": 297,
+      "yesterday": 4,
+      "delta": 293,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-18",
+    "word": "flyer",
+    "guesses": {
+      "today": 283,
+      "yesterday": 14,
+      "delta": 269,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.01,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-07-19",
+    "word": "tonic",
+    "guesses": {
+      "today": 410,
+      "yesterday": 132,
+      "delta": 278,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.06,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-07-20",
+    "word": "flank",
+    "guesses": {
+      "today": 351,
+      "yesterday": 46,
+      "delta": 305,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.02,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-21",
+    "word": "burly",
+    "guesses": {
+      "today": 245,
+      "yesterday": 0,
+      "delta": 245,
+      "proportion": {
+        "today": 0.11,
+        "yesterday": 0.0,
+        "delta": 0.11
+      }
+    }
+  },
+  {
+    "date": "2023-07-22",
+    "word": "froze",
+    "guesses": {
+      "today": 393,
+      "yesterday": 21,
+      "delta": 372,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-07-23",
+    "word": "whale",
+    "guesses": {
+      "today": 562,
+      "yesterday": 92,
+      "delta": 470,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.04,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-07-24",
+    "word": "hobby",
+    "guesses": {
+      "today": 304,
+      "yesterday": 1,
+      "delta": 303,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-07-25",
+    "word": "wheel",
+    "guesses": {
+      "today": 371,
+      "yesterday": 6,
+      "delta": 365,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-07-26",
+    "word": "heart",
+    "guesses": {
+      "today": 2876,
+      "yesterday": 1858,
+      "delta": 1018,
+      "proportion": {
+        "today": 1.25,
+        "yesterday": 0.82,
+        "delta": 0.44
+      }
+    }
+  },
+  {
+    "date": "2023-07-27",
+    "word": "disco",
+    "guesses": {
+      "today": 406,
+      "yesterday": 11,
+      "delta": 395,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-07-28",
+    "word": "ethos",
+    "guesses": {
+      "today": 405,
+      "yesterday": 10,
+      "delta": 395,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-07-29",
+    "word": "curly",
+    "guesses": {
+      "today": 352,
+      "yesterday": 13,
+      "delta": 339,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-07-30",
+    "word": "bathe",
+    "guesses": {
+      "today": 426,
+      "yesterday": 24,
+      "delta": 402,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-07-31",
+    "word": "style",
+    "guesses": {
+      "today": 575,
+      "yesterday": 153,
+      "delta": 422,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.07,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-08-01",
+    "word": "tenth",
+    "guesses": {
+      "today": 284,
+      "yesterday": 2,
+      "delta": 282,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-08-02",
+    "word": "beget",
+    "guesses": {
+      "today": 202,
+      "yesterday": 0,
+      "delta": 202,
+      "proportion": {
+        "today": 0.09,
+        "yesterday": 0.0,
+        "delta": 0.09
+      }
+    }
+  },
+  {
+    "date": "2023-08-03",
+    "word": "party",
+    "guesses": {
+      "today": 1070,
+      "yesterday": 332,
+      "delta": 738,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.15,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2023-08-04",
+    "word": "chart",
+    "guesses": {
+      "today": 854,
+      "yesterday": 261,
+      "delta": 593,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.11,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2023-08-05",
+    "word": "anode",
+    "guesses": {
+      "today": 321,
+      "yesterday": 36,
+      "delta": 285,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.02,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-08-06",
+    "word": "polyp",
+    "guesses": {
+      "today": 278,
+      "yesterday": 2,
+      "delta": 276,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-08-07",
+    "word": "brook",
+    "guesses": {
+      "today": 274,
+      "yesterday": 4,
+      "delta": 270,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-08-08",
+    "word": "bully",
+    "guesses": {
+      "today": 332,
+      "yesterday": 1,
+      "delta": 331,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-08-09",
+    "word": "lover",
+    "guesses": {
+      "today": 779,
+      "yesterday": 147,
+      "delta": 632,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.06,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2023-08-10",
+    "word": "empty",
+    "guesses": {
+      "today": 435,
+      "yesterday": 35,
+      "delta": 400,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.02,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-08-11",
+    "word": "hello",
+    "guesses": {
+      "today": 490,
+      "yesterday": 13,
+      "delta": 477,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-08-12",
+    "word": "quick",
+    "guesses": {
+      "today": 470,
+      "yesterday": 45,
+      "delta": 425,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.02,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-08-13",
+    "word": "wrath",
+    "guesses": {
+      "today": 533,
+      "yesterday": 55,
+      "delta": 478,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-08-14",
+    "word": "snaky",
+    "guesses": {
+      "today": 253,
+      "yesterday": 0,
+      "delta": 253,
+      "proportion": {
+        "today": 0.11,
+        "yesterday": 0.0,
+        "delta": 0.11
+      }
+    }
+  },
+  {
+    "date": "2023-08-15",
+    "word": "index",
+    "guesses": {
+      "today": 326,
+      "yesterday": 6,
+      "delta": 320,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-08-16",
+    "word": "scrub",
+    "guesses": {
+      "today": 328,
+      "yesterday": 11,
+      "delta": 317,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-08-17",
+    "word": "amiss",
+    "guesses": {
+      "today": 323,
+      "yesterday": 0,
+      "delta": 323,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-08-18",
+    "word": "exact",
+    "guesses": {
+      "today": 393,
+      "yesterday": 18,
+      "delta": 375,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-08-19",
+    "word": "magma",
+    "guesses": {
+      "today": 166,
+      "yesterday": 0,
+      "delta": 166,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-08-20",
+    "word": "quest",
+    "guesses": {
+      "today": 586,
+      "yesterday": 93,
+      "delta": 493,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.07,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-08-21",
+    "word": "beach",
+    "guesses": {
+      "today": 1263,
+      "yesterday": 596,
+      "delta": 667,
+      "proportion": {
+        "today": 0.55,
+        "yesterday": 0.26,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2023-08-22",
+    "word": "spice",
+    "guesses": {
+      "today": 500,
+      "yesterday": 79,
+      "delta": 421,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.03,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-08-23",
+    "word": "verve",
+    "guesses": {
+      "today": 272,
+      "yesterday": 5,
+      "delta": 267,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-08-24",
+    "word": "wordy",
+    "guesses": {
+      "today": 334,
+      "yesterday": 30,
+      "delta": 304,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-08-25",
+    "word": "ocean",
+    "guesses": {
+      "today": 1840,
+      "yesterday": 1038,
+      "delta": 802,
+      "proportion": {
+        "today": 0.81,
+        "yesterday": 0.45,
+        "delta": 0.36
+      }
+    }
+  },
+  {
+    "date": "2023-08-26",
+    "word": "choir",
+    "guesses": {
+      "today": 724,
+      "yesterday": 234,
+      "delta": 490,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.1,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-08-27",
+    "word": "peace",
+    "guesses": {
+      "today": 633,
+      "yesterday": 120,
+      "delta": 513,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.05,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-08-28",
+    "word": "write",
+    "guesses": {
+      "today": 830,
+      "yesterday": 123,
+      "delta": 707,
+      "proportion": {
+        "today": 0.36,
+        "yesterday": 0.05,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2023-08-29",
+    "word": "caper",
+    "guesses": {
+      "today": 334,
+      "yesterday": 29,
+      "delta": 305,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-08-30",
+    "word": "audio",
+    "guesses": {
+      "today": 8849,
+      "yesterday": 6271,
+      "delta": 2578,
+      "proportion": {
+        "today": 3.95,
+        "yesterday": 2.73,
+        "delta": 1.22
+      }
+    }
+  },
+  {
+    "date": "2023-08-31",
+    "word": "bride",
+    "guesses": {
+      "today": 606,
+      "yesterday": 82,
+      "delta": 524,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.04,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-09-01",
+    "word": "space",
+    "guesses": {
+      "today": 1098,
+      "yesterday": 506,
+      "delta": 592,
+      "proportion": {
+        "today": 0.48,
+        "yesterday": 0.22,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2023-09-02",
+    "word": "onion",
+    "guesses": {
+      "today": 462,
+      "yesterday": 8,
+      "delta": 454,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-09-03",
+    "word": "await",
+    "guesses": {
+      "today": 313,
+      "yesterday": 3,
+      "delta": 310,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-09-04",
+    "word": "giddy",
+    "guesses": {
+      "today": 269,
+      "yesterday": 2,
+      "delta": 267,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-09-05",
+    "word": "birch",
+    "guesses": {
+      "today": 326,
+      "yesterday": 13,
+      "delta": 313,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-09-06",
+    "word": "gnash",
+    "guesses": {
+      "today": 303,
+      "yesterday": 3,
+      "delta": 300,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-09-07",
+    "word": "dwell",
+    "guesses": {
+      "today": 303,
+      "yesterday": 0,
+      "delta": 303,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-09-08",
+    "word": "rouse",
+    "guesses": {
+      "today": 674,
+      "yesterday": 273,
+      "delta": 401,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.12,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-09-09",
+    "word": "lucky",
+    "guesses": {
+      "today": 622,
+      "yesterday": 88,
+      "delta": 534,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.04,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-09-10",
+    "word": "quote",
+    "guesses": {
+      "today": 457,
+      "yesterday": 78,
+      "delta": 379,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.03,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-09-11",
+    "word": "older",
+    "guesses": {
+      "today": 368,
+      "yesterday": 13,
+      "delta": 355,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-09-12",
+    "word": "whisk",
+    "guesses": {
+      "today": 525,
+      "yesterday": 23,
+      "delta": 502,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-09-13",
+    "word": "clear",
+    "guesses": {
+      "today": 1036,
+      "yesterday": 472,
+      "delta": 564,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.21,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-09-14",
+    "word": "rayon",
+    "guesses": {
+      "today": 296,
+      "yesterday": 2,
+      "delta": 294,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-09-15",
+    "word": "exert",
+    "guesses": {
+      "today": 285,
+      "yesterday": 0,
+      "delta": 285,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-09-16",
+    "word": "angel",
+    "guesses": {
+      "today": 479,
+      "yesterday": 60,
+      "delta": 419,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.03,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-09-17",
+    "word": "music",
+    "guesses": {
+      "today": 705,
+      "yesterday": 206,
+      "delta": 499,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.09,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-09-18",
+    "word": "frank",
+    "guesses": {
+      "today": 469,
+      "yesterday": 90,
+      "delta": 379,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.04,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-09-19",
+    "word": "close",
+    "guesses": {
+      "today": 737,
+      "yesterday": 156,
+      "delta": 581,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.07,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-09-20",
+    "word": "snare",
+    "guesses": {
+      "today": 778,
+      "yesterday": 368,
+      "delta": 410,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.16,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-09-21",
+    "word": "stone",
+    "guesses": {
+      "today": 1086,
+      "yesterday": 499,
+      "delta": 587,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.22,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-09-22",
+    "word": "brush",
+    "guesses": {
+      "today": 449,
+      "yesterday": 67,
+      "delta": 382,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.03,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-09-23",
+    "word": "carol",
+    "guesses": {
+      "today": 397,
+      "yesterday": 17,
+      "delta": 380,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-09-24",
+    "word": "right",
+    "guesses": {
+      "today": 636,
+      "yesterday": 158,
+      "delta": 478,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.07,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-09-25",
+    "word": "rocky",
+    "guesses": {
+      "today": 368,
+      "yesterday": 22,
+      "delta": 346,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-09-26",
+    "word": "loyal",
+    "guesses": {
+      "today": 322,
+      "yesterday": 2,
+      "delta": 320,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-09-27",
+    "word": "smile",
+    "guesses": {
+      "today": 875,
+      "yesterday": 279,
+      "delta": 596,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.12,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2023-09-28",
+    "word": "coach",
+    "guesses": {
+      "today": 342,
+      "yesterday": 11,
+      "delta": 331,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-09-29",
+    "word": "azure",
+    "guesses": {
+      "today": 441,
+      "yesterday": 10,
+      "delta": 431,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-09-30",
+    "word": "daddy",
+    "guesses": {
+      "today": 388,
+      "yesterday": 3,
+      "delta": 385,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-10-01",
+    "word": "beret",
+    "guesses": {
+      "today": 318,
+      "yesterday": 2,
+      "delta": 316,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-02",
+    "word": "merry",
+    "guesses": {
+      "today": 314,
+      "yesterday": 3,
+      "delta": 311,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-03",
+    "word": "while",
+    "guesses": {
+      "today": 399,
+      "yesterday": 50,
+      "delta": 349,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.02,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-10-04",
+    "word": "spurt",
+    "guesses": {
+      "today": 294,
+      "yesterday": 25,
+      "delta": 269,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.01,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-10-05",
+    "word": "bunch",
+    "guesses": {
+      "today": 361,
+      "yesterday": 25,
+      "delta": 336,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-06",
+    "word": "chime",
+    "guesses": {
+      "today": 500,
+      "yesterday": 127,
+      "delta": 373,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.05,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-10-07",
+    "word": "viola",
+    "guesses": {
+      "today": 372,
+      "yesterday": 32,
+      "delta": 340,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-10-08",
+    "word": "binge",
+    "guesses": {
+      "today": 320,
+      "yesterday": 23,
+      "delta": 297,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-10-09",
+    "word": "truth",
+    "guesses": {
+      "today": 399,
+      "yesterday": 29,
+      "delta": 370,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-10-10",
+    "word": "snail",
+    "guesses": {
+      "today": 594,
+      "yesterday": 159,
+      "delta": 435,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.07,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-10-11",
+    "word": "skunk",
+    "guesses": {
+      "today": 334,
+      "yesterday": 4,
+      "delta": 330,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-12",
+    "word": "knelt",
+    "guesses": {
+      "today": 277,
+      "yesterday": 1,
+      "delta": 276,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-10-13",
+    "word": "uncle",
+    "guesses": {
+      "today": 397,
+      "yesterday": 25,
+      "delta": 372,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-10-14",
+    "word": "agent",
+    "guesses": {
+      "today": 340,
+      "yesterday": 40,
+      "delta": 300,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.02,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-10-15",
+    "word": "leaky",
+    "guesses": {
+      "today": 294,
+      "yesterday": 16,
+      "delta": 278,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.01,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-10-16",
+    "word": "graph",
+    "guesses": {
+      "today": 386,
+      "yesterday": 84,
+      "delta": 302,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.04,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-10-17",
+    "word": "adult",
+    "guesses": {
+      "today": 573,
+      "yesterday": 16,
+      "delta": 557,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-10-18",
+    "word": "mercy",
+    "guesses": {
+      "today": 351,
+      "yesterday": 31,
+      "delta": 320,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-19",
+    "word": "splat",
+    "guesses": {
+      "today": 470,
+      "yesterday": 101,
+      "delta": 369,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.04,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-10-20",
+    "word": "occur",
+    "guesses": {
+      "today": 314,
+      "yesterday": 2,
+      "delta": 312,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-10-21",
+    "word": "smirk",
+    "guesses": {
+      "today": 298,
+      "yesterday": 6,
+      "delta": 292,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-10-22",
+    "word": "given",
+    "guesses": {
+      "today": 239,
+      "yesterday": 16,
+      "delta": 223,
+      "proportion": {
+        "today": 0.1,
+        "yesterday": 0.01,
+        "delta": 0.09
+      }
+    }
+  },
+  {
+    "date": "2023-10-23",
+    "word": "tempo",
+    "guesses": {
+      "today": 335,
+      "yesterday": 15,
+      "delta": 320,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-24",
+    "word": "cause",
+    "guesses": {
+      "today": 851,
+      "yesterday": 409,
+      "delta": 442,
+      "proportion": {
+        "today": 0.36,
+        "yesterday": 0.17,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-10-25",
+    "word": "retry",
+    "guesses": {
+      "today": 295,
+      "yesterday": 5,
+      "delta": 290,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-10-26",
+    "word": "pique",
+    "guesses": {
+      "today": 326,
+      "yesterday": 5,
+      "delta": 321,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-27",
+    "word": "noble",
+    "guesses": {
+      "today": 374,
+      "yesterday": 16,
+      "delta": 358,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-10-28",
+    "word": "mason",
+    "guesses": {
+      "today": 357,
+      "yesterday": 21,
+      "delta": 336,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-10-29",
+    "word": "phony",
+    "guesses": {
+      "today": 274,
+      "yesterday": 17,
+      "delta": 257,
+      "proportion": {
+        "today": 0.11,
+        "yesterday": 0.01,
+        "delta": 0.11
+      }
+    }
+  },
+  {
+    "date": "2023-10-30",
+    "word": "grail",
+    "guesses": {
+      "today": 340,
+      "yesterday": 33,
+      "delta": 307,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-10-31",
+    "word": "bleak",
+    "guesses": {
+      "today": 476,
+      "yesterday": 137,
+      "delta": 339,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.06,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-11-01",
+    "word": "noise",
+    "guesses": {
+      "today": 1227,
+      "yesterday": 680,
+      "delta": 547,
+      "proportion": {
+        "today": 0.51,
+        "yesterday": 0.28,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-11-02",
+    "word": "until",
+    "guesses": {
+      "today": 312,
+      "yesterday": 17,
+      "delta": 295,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.01,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-11-03",
+    "word": "ardor",
+    "guesses": {
+      "today": 337,
+      "yesterday": 0,
+      "delta": 337,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-11-04",
+    "word": "mania",
+    "guesses": {
+      "today": 230,
+      "yesterday": 0,
+      "delta": 230,
+      "proportion": {
+        "today": 0.09,
+        "yesterday": 0.0,
+        "delta": 0.09
+      }
+    }
+  },
+  {
+    "date": "2023-11-05",
+    "word": "flare",
+    "guesses": {
+      "today": 456,
+      "yesterday": 97,
+      "delta": 359,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.04,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-11-06",
+    "word": "trade",
+    "guesses": {
+      "today": 1860,
+      "yesterday": 1253,
+      "delta": 607,
+      "proportion": {
+        "today": 0.76,
+        "yesterday": 0.51,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-11-07",
+    "word": "limit",
+    "guesses": {
+      "today": 333,
+      "yesterday": 2,
+      "delta": 331,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-11-08",
+    "word": "ninja",
+    "guesses": {
+      "today": 373,
+      "yesterday": 0,
+      "delta": 373,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-11-09",
+    "word": "glaze",
+    "guesses": {
+      "today": 376,
+      "yesterday": 25,
+      "delta": 351,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-11-10",
+    "word": "leash",
+    "guesses": {
+      "today": 616,
+      "yesterday": 107,
+      "delta": 509,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.04,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-11-11",
+    "word": "actor",
+    "guesses": {
+      "today": 439,
+      "yesterday": 55,
+      "delta": 384,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-11-12",
+    "word": "meant",
+    "guesses": {
+      "today": 549,
+      "yesterday": 162,
+      "delta": 387,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.07,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-11-13",
+    "word": "green",
+    "guesses": {
+      "today": 415,
+      "yesterday": 11,
+      "delta": 404,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-11-14",
+    "word": "sassy",
+    "guesses": {
+      "today": 341,
+      "yesterday": 4,
+      "delta": 337,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-11-15",
+    "word": "sight",
+    "guesses": {
+      "today": 631,
+      "yesterday": 50,
+      "delta": 581,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.02,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-11-16",
+    "word": "trust",
+    "guesses": {
+      "today": 646,
+      "yesterday": 81,
+      "delta": 565,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.03,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-11-17",
+    "word": "tardy",
+    "guesses": {
+      "today": 737,
+      "yesterday": 21,
+      "delta": 716,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-11-18",
+    "word": "think",
+    "guesses": {
+      "today": 1152,
+      "yesterday": 316,
+      "delta": 836,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.09,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-11-19",
+    "word": "queue",
+    "guesses": {
+      "today": 434,
+      "yesterday": 9,
+      "delta": 425,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-11-20",
+    "word": "candy",
+    "guesses": {
+      "today": 824,
+      "yesterday": 68,
+      "delta": 756,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.03,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2023-11-21",
+    "word": "piano",
+    "guesses": {
+      "today": 1721,
+      "yesterday": 784,
+      "delta": 937,
+      "proportion": {
+        "today": 0.53,
+        "yesterday": 0.24,
+        "delta": 0.3
+      }
+    }
+  },
+  {
+    "date": "2023-11-22",
+    "word": "pixel",
+    "guesses": {
+      "today": 429,
+      "yesterday": 6,
+      "delta": 423,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-11-23",
+    "word": "queen",
+    "guesses": {
+      "today": 654,
+      "yesterday": 31,
+      "delta": 623,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-11-24",
+    "word": "throw",
+    "guesses": {
+      "today": 602,
+      "yesterday": 96,
+      "delta": 506,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.03,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-11-25",
+    "word": "guide",
+    "guesses": {
+      "today": 886,
+      "yesterday": 225,
+      "delta": 661,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.07,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2023-11-26",
+    "word": "solid",
+    "guesses": {
+      "today": 563,
+      "yesterday": 68,
+      "delta": 495,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.02,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-11-27",
+    "word": "tawny",
+    "guesses": {
+      "today": 441,
+      "yesterday": 6,
+      "delta": 435,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-11-28",
+    "word": "scope",
+    "guesses": {
+      "today": 539,
+      "yesterday": 70,
+      "delta": 469,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.02,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-11-29",
+    "word": "sushi",
+    "guesses": {
+      "today": 586,
+      "yesterday": 10,
+      "delta": 576,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-11-30",
+    "word": "resin",
+    "guesses": {
+      "today": 661,
+      "yesterday": 82,
+      "delta": 579,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.03,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-12-01",
+    "word": "taken",
+    "guesses": {
+      "today": 595,
+      "yesterday": 29,
+      "delta": 566,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-12-02",
+    "word": "genre",
+    "guesses": {
+      "today": 345,
+      "yesterday": 5,
+      "delta": 340,
+      "proportion": {
+        "today": 0.11,
+        "yesterday": 0.0,
+        "delta": 0.11
+      }
+    }
+  },
+  {
+    "date": "2023-12-03",
+    "word": "adapt",
+    "guesses": {
+      "today": 430,
+      "yesterday": 1,
+      "delta": 429,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-12-04",
+    "word": "worst",
+    "guesses": {
+      "today": 617,
+      "yesterday": 60,
+      "delta": 557,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2023-12-05",
+    "word": "young",
+    "guesses": {
+      "today": 657,
+      "yesterday": 114,
+      "delta": 543,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-12-06",
+    "word": "woman",
+    "guesses": {
+      "today": 538,
+      "yesterday": 31,
+      "delta": 507,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-12-07",
+    "word": "sleep",
+    "guesses": {
+      "today": 810,
+      "yesterday": 56,
+      "delta": 754,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.02,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2023-12-08",
+    "word": "sharp",
+    "guesses": {
+      "today": 702,
+      "yesterday": 127,
+      "delta": 575,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-12-09",
+    "word": "shift",
+    "guesses": {
+      "today": 445,
+      "yesterday": 63,
+      "delta": 382,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.02,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-12-10",
+    "word": "chain",
+    "guesses": {
+      "today": 1061,
+      "yesterday": 367,
+      "delta": 694,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.12,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2023-12-11",
+    "word": "house",
+    "guesses": {
+      "today": 2866,
+      "yesterday": 1890,
+      "delta": 976,
+      "proportion": {
+        "today": 0.91,
+        "yesterday": 0.6,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2023-12-12",
+    "word": "these",
+    "guesses": {
+      "today": 426,
+      "yesterday": 7,
+      "delta": 419,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-12-13",
+    "word": "spent",
+    "guesses": {
+      "today": 583,
+      "yesterday": 83,
+      "delta": 500,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.03,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-12-14",
+    "word": "would",
+    "guesses": {
+      "today": 481,
+      "yesterday": 59,
+      "delta": 422,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.02,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-12-15",
+    "word": "topic",
+    "guesses": {
+      "today": 424,
+      "yesterday": 30,
+      "delta": 394,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-12-16",
+    "word": "globe",
+    "guesses": {
+      "today": 526,
+      "yesterday": 82,
+      "delta": 444,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.03,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-12-17",
+    "word": "bacon",
+    "guesses": {
+      "today": 686,
+      "yesterday": 133,
+      "delta": 553,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-12-18",
+    "word": "funny",
+    "guesses": {
+      "today": 429,
+      "yesterday": 27,
+      "delta": 402,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2023-12-19",
+    "word": "table",
+    "guesses": {
+      "today": 1038,
+      "yesterday": 255,
+      "delta": 783,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.08,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2023-12-20",
+    "word": "small",
+    "guesses": {
+      "today": 456,
+      "yesterday": 6,
+      "delta": 450,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-12-21",
+    "word": "built",
+    "guesses": {
+      "today": 450,
+      "yesterday": 31,
+      "delta": 419,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2023-12-22",
+    "word": "touch",
+    "guesses": {
+      "today": 673,
+      "yesterday": 127,
+      "delta": 546,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2023-12-23",
+    "word": "slope",
+    "guesses": {
+      "today": 780,
+      "yesterday": 244,
+      "delta": 536,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.08,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2023-12-24",
+    "word": "grace",
+    "guesses": {
+      "today": 1307,
+      "yesterday": 567,
+      "delta": 740,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.19,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2023-12-25",
+    "word": "evoke",
+    "guesses": {
+      "today": 345,
+      "yesterday": 2,
+      "delta": 343,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2023-12-26",
+    "word": "phone",
+    "guesses": {
+      "today": 754,
+      "yesterday": 150,
+      "delta": 604,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.05,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-12-27",
+    "word": "daisy",
+    "guesses": {
+      "today": 729,
+      "yesterday": 144,
+      "delta": 585,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.05,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2023-12-28",
+    "word": "learn",
+    "guesses": {
+      "today": 1949,
+      "yesterday": 1208,
+      "delta": 741,
+      "proportion": {
+        "today": 0.68,
+        "yesterday": 0.42,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2023-12-29",
+    "word": "child",
+    "guesses": {
+      "today": 613,
+      "yesterday": 186,
+      "delta": 427,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.06,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2023-12-30",
+    "word": "three",
+    "guesses": {
+      "today": 479,
+      "yesterday": 16,
+      "delta": 463,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2023-12-31",
+    "word": "salty",
+    "guesses": {
+      "today": 793,
+      "yesterday": 75,
+      "delta": 718,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.03,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "word": "mural",
+    "guesses": {
+      "today": 333,
+      "yesterday": 11,
+      "delta": 322,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.11
+      }
+    }
+  },
+  {
+    "date": "2024-01-02",
+    "word": "aging",
+    "guesses": {
+      "today": 370,
+      "yesterday": 1,
+      "delta": 369,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2024-01-03",
+    "word": "twirl",
+    "guesses": {
+      "today": 375,
+      "yesterday": 39,
+      "delta": 336,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2024-01-04",
+    "word": "scant",
+    "guesses": {
+      "today": 423,
+      "yesterday": 60,
+      "delta": 363,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.02,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-01-05",
+    "word": "lunge",
+    "guesses": {
+      "today": 400,
+      "yesterday": 17,
+      "delta": 383,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-01-06",
+    "word": "cable",
+    "guesses": {
+      "today": 423,
+      "yesterday": 47,
+      "delta": 376,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.02,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-01-07",
+    "word": "stony",
+    "guesses": {
+      "today": 303,
+      "yesterday": 8,
+      "delta": 295,
+      "proportion": {
+        "today": 0.12,
+        "yesterday": 0.0,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2024-01-08",
+    "word": "final",
+    "guesses": {
+      "today": 505,
+      "yesterday": 244,
+      "delta": 261,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.1,
+        "delta": 0.1
+      }
+    }
+  },
+  {
+    "date": "2024-01-09",
+    "word": "liner",
+    "guesses": {
+      "today": 419,
+      "yesterday": 35,
+      "delta": 384,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-01-10",
+    "word": "threw",
+    "guesses": {
+      "today": 350,
+      "yesterday": 28,
+      "delta": 322,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-01-11",
+    "word": "brief",
+    "guesses": {
+      "today": 405,
+      "yesterday": 32,
+      "delta": 373,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-01-12",
+    "word": "route",
+    "guesses": {
+      "today": 2054,
+      "yesterday": 1108,
+      "delta": 946,
+      "proportion": {
+        "today": 0.79,
+        "yesterday": 0.47,
+        "delta": 0.32
+      }
+    }
+  },
+  {
+    "date": "2024-01-13",
+    "word": "heard",
+    "guesses": {
+      "today": 684,
+      "yesterday": 188,
+      "delta": 496,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.07,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-01-14",
+    "word": "doing",
+    "guesses": {
+      "today": 476,
+      "yesterday": 20,
+      "delta": 456,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-01-15",
+    "word": "lunch",
+    "guesses": {
+      "today": 646,
+      "yesterday": 92,
+      "delta": 554,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-01-16",
+    "word": "blond",
+    "guesses": {
+      "today": 541,
+      "yesterday": 19,
+      "delta": 522,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-01-17",
+    "word": "court",
+    "guesses": {
+      "today": 845,
+      "yesterday": 179,
+      "delta": 666,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.07,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-01-18",
+    "word": "stole",
+    "guesses": {
+      "today": 860,
+      "yesterday": 120,
+      "delta": 740,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.05,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-01-19",
+    "word": "thing",
+    "guesses": {
+      "today": 816,
+      "yesterday": 160,
+      "delta": 656,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.06,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-01-20",
+    "word": "large",
+    "guesses": {
+      "today": 632,
+      "yesterday": 72,
+      "delta": 560,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-01-21",
+    "word": "north",
+    "guesses": {
+      "today": 602,
+      "yesterday": 58,
+      "delta": 544,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-01-22",
+    "word": "tweak",
+    "guesses": {
+      "today": 633,
+      "yesterday": 32,
+      "delta": 601,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.01,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-01-23",
+    "word": "still",
+    "guesses": {
+      "today": 661,
+      "yesterday": 2,
+      "delta": 659,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-01-24",
+    "word": "relic",
+    "guesses": {
+      "today": 641,
+      "yesterday": 20,
+      "delta": 621,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-01-25",
+    "word": "block",
+    "guesses": {
+      "today": 711,
+      "yesterday": 101,
+      "delta": 610,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.04,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-01-26",
+    "word": "aloof",
+    "guesses": {
+      "today": 610,
+      "yesterday": 5,
+      "delta": 605,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-01-27",
+    "word": "snake",
+    "guesses": {
+      "today": 865,
+      "yesterday": 98,
+      "delta": 767,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.04,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-01-28",
+    "word": "ember",
+    "guesses": {
+      "today": 321,
+      "yesterday": 1,
+      "delta": 320,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-01-29",
+    "word": "leggy",
+    "guesses": {
+      "today": 601,
+      "yesterday": 0,
+      "delta": 601,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-01-30",
+    "word": "expel",
+    "guesses": {
+      "today": 522,
+      "yesterday": 1,
+      "delta": 521,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-01-31",
+    "word": "bulky",
+    "guesses": {
+      "today": 536,
+      "yesterday": 5,
+      "delta": 531,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-02-01",
+    "word": "alive",
+    "guesses": {
+      "today": 1068,
+      "yesterday": 222,
+      "delta": 846,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.09,
+        "delta": 0.32
+      }
+    }
+  },
+  {
+    "date": "2024-02-02",
+    "word": "cleft",
+    "guesses": {
+      "today": 595,
+      "yesterday": 14,
+      "delta": 581,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-02-03",
+    "word": "micro",
+    "guesses": {
+      "today": 426,
+      "yesterday": 6,
+      "delta": 420,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-02-04",
+    "word": "verge",
+    "guesses": {
+      "today": 433,
+      "yesterday": 8,
+      "delta": 425,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-02-05",
+    "word": "repel",
+    "guesses": {
+      "today": 516,
+      "yesterday": 0,
+      "delta": 516,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-02-06",
+    "word": "which",
+    "guesses": {
+      "today": 568,
+      "yesterday": 4,
+      "delta": 564,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-02-07",
+    "word": "after",
+    "guesses": {
+      "today": 826,
+      "yesterday": 98,
+      "delta": 728,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.04,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-02-08",
+    "word": "place",
+    "guesses": {
+      "today": 1954,
+      "yesterday": 1040,
+      "delta": 914,
+      "proportion": {
+        "today": 0.76,
+        "yesterday": 0.4,
+        "delta": 0.36
+      }
+    }
+  },
+  {
+    "date": "2024-02-09",
+    "word": "stiff",
+    "guesses": {
+      "today": 592,
+      "yesterday": 1,
+      "delta": 591,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-02-10",
+    "word": "fried",
+    "guesses": {
+      "today": 765,
+      "yesterday": 248,
+      "delta": 517,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.1,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-02-11",
+    "word": "never",
+    "guesses": {
+      "today": 512,
+      "yesterday": 13,
+      "delta": 499,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-02-12",
+    "word": "pasta",
+    "guesses": {
+      "today": 706,
+      "yesterday": 9,
+      "delta": 697,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-02-13",
+    "word": "scram",
+    "guesses": {
+      "today": 595,
+      "yesterday": 37,
+      "delta": 558,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-02-14",
+    "word": "talon",
+    "guesses": {
+      "today": 679,
+      "yesterday": 28,
+      "delta": 651,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.01,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-02-15",
+    "word": "ascot",
+    "guesses": {
+      "today": 670,
+      "yesterday": 11,
+      "delta": 659,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-02-16",
+    "word": "stash",
+    "guesses": {
+      "today": 599,
+      "yesterday": 2,
+      "delta": 597,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-02-17",
+    "word": "psalm",
+    "guesses": {
+      "today": 502,
+      "yesterday": 15,
+      "delta": 487,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-02-18",
+    "word": "ridge",
+    "guesses": {
+      "today": 420,
+      "yesterday": 35,
+      "delta": 385,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-02-19",
+    "word": "price",
+    "guesses": {
+      "today": 817,
+      "yesterday": 221,
+      "delta": 596,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.09,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-02-20",
+    "word": "match",
+    "guesses": {
+      "today": 702,
+      "yesterday": 223,
+      "delta": 479,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.09,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-02-21",
+    "word": "build",
+    "guesses": {
+      "today": 789,
+      "yesterday": 78,
+      "delta": 711,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.03,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-02-22",
+    "word": "heavy",
+    "guesses": {
+      "today": 682,
+      "yesterday": 49,
+      "delta": 633,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.02,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-02-23",
+    "word": "apart",
+    "guesses": {
+      "today": 629,
+      "yesterday": 4,
+      "delta": 625,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-02-24",
+    "word": "piper",
+    "guesses": {
+      "today": 481,
+      "yesterday": 3,
+      "delta": 478,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-02-25",
+    "word": "smith",
+    "guesses": {
+      "today": 534,
+      "yesterday": 16,
+      "delta": 518,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-02-26",
+    "word": "often",
+    "guesses": {
+      "today": 664,
+      "yesterday": 18,
+      "delta": 646,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.01,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-02-27",
+    "word": "sense",
+    "guesses": {
+      "today": 599,
+      "yesterday": 3,
+      "delta": 596,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.0,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-02-28",
+    "word": "devil",
+    "guesses": {
+      "today": 734,
+      "yesterday": 20,
+      "delta": 714,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.01,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-02-29",
+    "word": "image",
+    "guesses": {
+      "today": 811,
+      "yesterday": 103,
+      "delta": 708,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.04,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-03-01",
+    "word": "forty",
+    "guesses": {
+      "today": 584,
+      "yesterday": 24,
+      "delta": 560,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-03-02",
+    "word": "urban",
+    "guesses": {
+      "today": 447,
+      "yesterday": 13,
+      "delta": 434,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-03-03",
+    "word": "state",
+    "guesses": {
+      "today": 649,
+      "yesterday": 28,
+      "delta": 621,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-03-04",
+    "word": "flame",
+    "guesses": {
+      "today": 912,
+      "yesterday": 253,
+      "delta": 659,
+      "proportion": {
+        "today": 0.36,
+        "yesterday": 0.1,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-03-05",
+    "word": "hunch",
+    "guesses": {
+      "today": 706,
+      "yesterday": 8,
+      "delta": 698,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.0,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-03-06",
+    "word": "teary",
+    "guesses": {
+      "today": 964,
+      "yesterday": 233,
+      "delta": 731,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.09,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-03-07",
+    "word": "clone",
+    "guesses": {
+      "today": 869,
+      "yesterday": 95,
+      "delta": 774,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.04,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2024-03-08",
+    "word": "early",
+    "guesses": {
+      "today": 1236,
+      "yesterday": 442,
+      "delta": 794,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.18,
+        "delta": 0.32
+      }
+    }
+  },
+  {
+    "date": "2024-03-09",
+    "word": "cheer",
+    "guesses": {
+      "today": 522,
+      "yesterday": 10,
+      "delta": 512,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-03-10",
+    "word": "grasp",
+    "guesses": {
+      "today": 574,
+      "yesterday": 85,
+      "delta": 489,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.03,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-03-11",
+    "word": "pesky",
+    "guesses": {
+      "today": 546,
+      "yesterday": 6,
+      "delta": 540,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-03-12",
+    "word": "heave",
+    "guesses": {
+      "today": 523,
+      "yesterday": 3,
+      "delta": 520,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-03-13",
+    "word": "local",
+    "guesses": {
+      "today": 561,
+      "yesterday": 12,
+      "delta": 549,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-03-14",
+    "word": "since",
+    "guesses": {
+      "today": 629,
+      "yesterday": 35,
+      "delta": 594,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-03-15",
+    "word": "erupt",
+    "guesses": {
+      "today": 1206,
+      "yesterday": 39,
+      "delta": 1167,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.02,
+        "delta": 0.48
+      }
+    }
+  },
+  {
+    "date": "2024-03-16",
+    "word": "toxin",
+    "guesses": {
+      "today": 494,
+      "yesterday": 3,
+      "delta": 491,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-03-17",
+    "word": "snort",
+    "guesses": {
+      "today": 620,
+      "yesterday": 129,
+      "delta": 491,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-03-18",
+    "word": "spelt",
+    "guesses": {
+      "today": 595,
+      "yesterday": 23,
+      "delta": 572,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-03-19",
+    "word": "abide",
+    "guesses": {
+      "today": 947,
+      "yesterday": 151,
+      "delta": 796,
+      "proportion": {
+        "today": 0.4,
+        "yesterday": 0.06,
+        "delta": 0.33
+      }
+    }
+  },
+  {
+    "date": "2024-03-20",
+    "word": "lingo",
+    "guesses": {
+      "today": 599,
+      "yesterday": 7,
+      "delta": 592,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-03-21",
+    "word": "shade",
+    "guesses": {
+      "today": 862,
+      "yesterday": 133,
+      "delta": 729,
+      "proportion": {
+        "today": 0.36,
+        "yesterday": 0.06,
+        "delta": 0.3
+      }
+    }
+  },
+  {
+    "date": "2024-03-22",
+    "word": "decay",
+    "guesses": {
+      "today": 570,
+      "yesterday": 8,
+      "delta": 562,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.0,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-03-23",
+    "word": "risen",
+    "guesses": {
+      "today": 663,
+      "yesterday": 56,
+      "delta": 607,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.02,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-03-24",
+    "word": "towel",
+    "guesses": {
+      "today": 593,
+      "yesterday": 47,
+      "delta": 546,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.02,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-03-25",
+    "word": "sally",
+    "guesses": {
+      "today": 631,
+      "yesterday": 1,
+      "delta": 630,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-03-26",
+    "word": "mayor",
+    "guesses": {
+      "today": 668,
+      "yesterday": 17,
+      "delta": 651,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.01,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-03-27",
+    "word": "stung",
+    "guesses": {
+      "today": 555,
+      "yesterday": 7,
+      "delta": 548,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-03-28",
+    "word": "speak",
+    "guesses": {
+      "today": 868,
+      "yesterday": 233,
+      "delta": 635,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.1,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-03-29",
+    "word": "realm",
+    "guesses": {
+      "today": 694,
+      "yesterday": 177,
+      "delta": 517,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.07,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-03-30",
+    "word": "force",
+    "guesses": {
+      "today": 578,
+      "yesterday": 93,
+      "delta": 485,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.04,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-03-31",
+    "word": "taboo",
+    "guesses": {
+      "today": 435,
+      "yesterday": 2,
+      "delta": 433,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-04-01",
+    "word": "frond",
+    "guesses": {
+      "today": 604,
+      "yesterday": 18,
+      "delta": 586,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.01,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-04-02",
+    "word": "serum",
+    "guesses": {
+      "today": 561,
+      "yesterday": 13,
+      "delta": 548,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.01,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-04-03",
+    "word": "plait",
+    "guesses": {
+      "today": 651,
+      "yesterday": 50,
+      "delta": 601,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.02,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-04-04",
+    "word": "climb",
+    "guesses": {
+      "today": 1041,
+      "yesterday": 111,
+      "delta": 930,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.05,
+        "delta": 0.41
+      }
+    }
+  },
+  {
+    "date": "2024-04-05",
+    "word": "wrist",
+    "guesses": {
+      "today": 722,
+      "yesterday": 41,
+      "delta": 681,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.02,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-04-06",
+    "word": "finch",
+    "guesses": {
+      "today": 472,
+      "yesterday": 12,
+      "delta": 460,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-04-07",
+    "word": "voila",
+    "guesses": {
+      "today": 422,
+      "yesterday": 9,
+      "delta": 413,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-04-08",
+    "word": "breed",
+    "guesses": {
+      "today": 560,
+      "yesterday": 1,
+      "delta": 559,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-04-09",
+    "word": "merge",
+    "guesses": {
+      "today": 586,
+      "yesterday": 4,
+      "delta": 582,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-04-10",
+    "word": "broth",
+    "guesses": {
+      "today": 700,
+      "yesterday": 31,
+      "delta": 669,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.01,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-04-11",
+    "word": "louse",
+    "guesses": {
+      "today": 992,
+      "yesterday": 203,
+      "delta": 789,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.09,
+        "delta": 0.35
+      }
+    }
+  },
+  {
+    "date": "2024-04-12",
+    "word": "whiny",
+    "guesses": {
+      "today": 585,
+      "yesterday": 2,
+      "delta": 583,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-04-13",
+    "word": "steel",
+    "guesses": {
+      "today": 523,
+      "yesterday": 1,
+      "delta": 522,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-04-14",
+    "word": "blimp",
+    "guesses": {
+      "today": 541,
+      "yesterday": 27,
+      "delta": 514,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-04-15",
+    "word": "equip",
+    "guesses": {
+      "today": 690,
+      "yesterday": 13,
+      "delta": 677,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.01,
+        "delta": 0.32
+      }
+    }
+  },
+  {
+    "date": "2024-04-16",
+    "word": "shank",
+    "guesses": {
+      "today": 673,
+      "yesterday": 21,
+      "delta": 652,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.01,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-04-17",
+    "word": "tithe",
+    "guesses": {
+      "today": 648,
+      "yesterday": 1,
+      "delta": 647,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.0,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-04-18",
+    "word": "facet",
+    "guesses": {
+      "today": 697,
+      "yesterday": 15,
+      "delta": 682,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.01,
+        "delta": 0.3
+      }
+    }
+  },
+  {
+    "date": "2024-04-19",
+    "word": "raise",
+    "guesses": {
+      "today": 10182,
+      "yesterday": 6497,
+      "delta": 3685,
+      "proportion": {
+        "today": 4.45,
+        "yesterday": 2.88,
+        "delta": 1.57
+      }
+    }
+  },
+  {
+    "date": "2024-04-20",
+    "word": "lucid",
+    "guesses": {
+      "today": 523,
+      "yesterday": 14,
+      "delta": 509,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-04-21",
+    "word": "jolly",
+    "guesses": {
+      "today": 506,
+      "yesterday": 1,
+      "delta": 505,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-04-22",
+    "word": "laser",
+    "guesses": {
+      "today": 1091,
+      "yesterday": 222,
+      "delta": 869,
+      "proportion": {
+        "today": 0.48,
+        "yesterday": 0.09,
+        "delta": 0.38
+      }
+    }
+  },
+  {
+    "date": "2024-04-23",
+    "word": "rover",
+    "guesses": {
+      "today": 634,
+      "yesterday": 3,
+      "delta": 631,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-04-24",
+    "word": "overt",
+    "guesses": {
+      "today": 645,
+      "yesterday": 33,
+      "delta": 612,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.01,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-04-25",
+    "word": "intro",
+    "guesses": {
+      "today": 585,
+      "yesterday": 5,
+      "delta": 580,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-04-26",
+    "word": "vapid",
+    "guesses": {
+      "today": 469,
+      "yesterday": 3,
+      "delta": 466,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-04-27",
+    "word": "gleam",
+    "guesses": {
+      "today": 430,
+      "yesterday": 35,
+      "delta": 395,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-04-28",
+    "word": "prune",
+    "guesses": {
+      "today": 465,
+      "yesterday": 30,
+      "delta": 435,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-04-29",
+    "word": "craft",
+    "guesses": {
+      "today": 826,
+      "yesterday": 137,
+      "delta": 689,
+      "proportion": {
+        "today": 0.36,
+        "yesterday": 0.06,
+        "delta": 0.3
+      }
+    }
+  },
+  {
+    "date": "2024-04-30",
+    "word": "prowl",
+    "guesses": {
+      "today": 569,
+      "yesterday": 12,
+      "delta": 557,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-05-01",
+    "word": "diary",
+    "guesses": {
+      "today": 707,
+      "yesterday": 65,
+      "delta": 642,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.03,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-05-02",
+    "word": "slice",
+    "guesses": {
+      "today": 1006,
+      "yesterday": 248,
+      "delta": 758,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.11,
+        "delta": 0.33
+      }
+    }
+  },
+  {
+    "date": "2024-05-03",
+    "word": "ebony",
+    "guesses": {
+      "today": 658,
+      "yesterday": 14,
+      "delta": 644,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.01,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-05-04",
+    "word": "value",
+    "guesses": {
+      "today": 602,
+      "yesterday": 103,
+      "delta": 499,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.05,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-05-05",
+    "word": "decal",
+    "guesses": {
+      "today": 385,
+      "yesterday": 8,
+      "delta": 377,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-05-06",
+    "word": "shave",
+    "guesses": {
+      "today": 727,
+      "yesterday": 30,
+      "delta": 697,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.01,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2024-05-07",
+    "word": "musty",
+    "guesses": {
+      "today": 607,
+      "yesterday": 8,
+      "delta": 599,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-05-08",
+    "word": "pious",
+    "guesses": {
+      "today": 1502,
+      "yesterday": 580,
+      "delta": 922,
+      "proportion": {
+        "today": 0.7,
+        "yesterday": 0.26,
+        "delta": 0.44
+      }
+    }
+  },
+  {
+    "date": "2024-05-09",
+    "word": "jerky",
+    "guesses": {
+      "today": 563,
+      "yesterday": 5,
+      "delta": 558,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-05-10",
+    "word": "media",
+    "guesses": {
+      "today": 1031,
+      "yesterday": 220,
+      "delta": 811,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.1,
+        "delta": 0.38
+      }
+    }
+  },
+  {
+    "date": "2024-05-11",
+    "word": "tidal",
+    "guesses": {
+      "today": 482,
+      "yesterday": 10,
+      "delta": 472,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-05-12",
+    "word": "outer",
+    "guesses": {
+      "today": 780,
+      "yesterday": 238,
+      "delta": 542,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.1,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-05-13",
+    "word": "cumin",
+    "guesses": {
+      "today": 612,
+      "yesterday": 11,
+      "delta": 601,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-05-14",
+    "word": "amass",
+    "guesses": {
+      "today": 531,
+      "yesterday": 0,
+      "delta": 531,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.0,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-05-15",
+    "word": "pinch",
+    "guesses": {
+      "today": 674,
+      "yesterday": 54,
+      "delta": 620,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.02,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-05-16",
+    "word": "stall",
+    "guesses": {
+      "today": 614,
+      "yesterday": 5,
+      "delta": 609,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-05-17",
+    "word": "tutor",
+    "guesses": {
+      "today": 540,
+      "yesterday": 1,
+      "delta": 539,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.0,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-05-18",
+    "word": "briny",
+    "guesses": {
+      "today": 325,
+      "yesterday": 2,
+      "delta": 323,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-05-19",
+    "word": "hitch",
+    "guesses": {
+      "today": 427,
+      "yesterday": 7,
+      "delta": 420,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-05-20",
+    "word": "nicer",
+    "guesses": {
+      "today": 558,
+      "yesterday": 9,
+      "delta": 549,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-05-21",
+    "word": "dingo",
+    "guesses": {
+      "today": 614,
+      "yesterday": 32,
+      "delta": 582,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.01,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-05-22",
+    "word": "exalt",
+    "guesses": {
+      "today": 387,
+      "yesterday": 6,
+      "delta": 381,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-05-23",
+    "word": "swish",
+    "guesses": {
+      "today": 508,
+      "yesterday": 1,
+      "delta": 507,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-05-24",
+    "word": "glide",
+    "guesses": {
+      "today": 556,
+      "yesterday": 62,
+      "delta": 494,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-05-25",
+    "word": "titan",
+    "guesses": {
+      "today": 414,
+      "yesterday": 3,
+      "delta": 411,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-05-26",
+    "word": "bevel",
+    "guesses": {
+      "today": 401,
+      "yesterday": 0,
+      "delta": 401,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-05-27",
+    "word": "skier",
+    "guesses": {
+      "today": 399,
+      "yesterday": 3,
+      "delta": 396,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-05-28",
+    "word": "minus",
+    "guesses": {
+      "today": 512,
+      "yesterday": 15,
+      "delta": 497,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-05-29",
+    "word": "papal",
+    "guesses": {
+      "today": 479,
+      "yesterday": 0,
+      "delta": 479,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-05-30",
+    "word": "gummy",
+    "guesses": {
+      "today": 484,
+      "yesterday": 1,
+      "delta": 483,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-05-31",
+    "word": "chaos",
+    "guesses": {
+      "today": 944,
+      "yesterday": 215,
+      "delta": 729,
+      "proportion": {
+        "today": 0.42,
+        "yesterday": 0.09,
+        "delta": 0.32
+      }
+    }
+  },
+  {
+    "date": "2024-06-01",
+    "word": "basin",
+    "guesses": {
+      "today": 387,
+      "yesterday": 8,
+      "delta": 379,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-06-02",
+    "word": "bravo",
+    "guesses": {
+      "today": 456,
+      "yesterday": 24,
+      "delta": 432,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-06-03",
+    "word": "stark",
+    "guesses": {
+      "today": 684,
+      "yesterday": 119,
+      "delta": 565,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.05,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-06-04",
+    "word": "groom",
+    "guesses": {
+      "today": 461,
+      "yesterday": 7,
+      "delta": 454,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-06-05",
+    "word": "organ",
+    "guesses": {
+      "today": 466,
+      "yesterday": 19,
+      "delta": 447,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-06-06",
+    "word": "ether",
+    "guesses": {
+      "today": 462,
+      "yesterday": 2,
+      "delta": 460,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-06-07",
+    "word": "melon",
+    "guesses": {
+      "today": 594,
+      "yesterday": 38,
+      "delta": 556,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.02,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-06-08",
+    "word": "hence",
+    "guesses": {
+      "today": 366,
+      "yesterday": 2,
+      "delta": 364,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-06-09",
+    "word": "crowd",
+    "guesses": {
+      "today": 444,
+      "yesterday": 59,
+      "delta": 385,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.03,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-06-10",
+    "word": "manga",
+    "guesses": {
+      "today": 471,
+      "yesterday": 1,
+      "delta": 470,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-06-11",
+    "word": "swung",
+    "guesses": {
+      "today": 315,
+      "yesterday": 1,
+      "delta": 314,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-06-12",
+    "word": "deter",
+    "guesses": {
+      "today": 388,
+      "yesterday": 1,
+      "delta": 387,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-06-13",
+    "word": "angst",
+    "guesses": {
+      "today": 490,
+      "yesterday": 43,
+      "delta": 447,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.02,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-06-14",
+    "word": "vault",
+    "guesses": {
+      "today": 491,
+      "yesterday": 38,
+      "delta": 453,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.02,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-06-15",
+    "word": "proud",
+    "guesses": {
+      "today": 1145,
+      "yesterday": 379,
+      "delta": 766,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.17,
+        "delta": 0.33
+      }
+    }
+  },
+  {
+    "date": "2024-06-16",
+    "word": "grind",
+    "guesses": {
+      "today": 644,
+      "yesterday": 129,
+      "delta": 515,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.06,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-06-17",
+    "word": "prior",
+    "guesses": {
+      "today": 386,
+      "yesterday": 9,
+      "delta": 377,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-06-18",
+    "word": "cover",
+    "guesses": {
+      "today": 543,
+      "yesterday": 36,
+      "delta": 507,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.02,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-06-19",
+    "word": "terse",
+    "guesses": {
+      "today": 420,
+      "yesterday": 3,
+      "delta": 417,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-06-20",
+    "word": "scent",
+    "guesses": {
+      "today": 551,
+      "yesterday": 57,
+      "delta": 494,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.02,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-06-21",
+    "word": "paint",
+    "guesses": {
+      "today": 1081,
+      "yesterday": 363,
+      "delta": 718,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.16,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2024-06-22",
+    "word": "edict",
+    "guesses": {
+      "today": 470,
+      "yesterday": 8,
+      "delta": 462,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-06-23",
+    "word": "bugle",
+    "guesses": {
+      "today": 363,
+      "yesterday": 5,
+      "delta": 358,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-06-24",
+    "word": "dolly",
+    "guesses": {
+      "today": 421,
+      "yesterday": 0,
+      "delta": 421,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-06-25",
+    "word": "savor",
+    "guesses": {
+      "today": 447,
+      "yesterday": 21,
+      "delta": 426,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-06-26",
+    "word": "knead",
+    "guesses": {
+      "today": 371,
+      "yesterday": 12,
+      "delta": 359,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-06-27",
+    "word": "order",
+    "guesses": {
+      "today": 434,
+      "yesterday": 14,
+      "delta": 420,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-06-28",
+    "word": "drove",
+    "guesses": {
+      "today": 420,
+      "yesterday": 38,
+      "delta": 382,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-06-29",
+    "word": "zebra",
+    "guesses": {
+      "today": 589,
+      "yesterday": 35,
+      "delta": 554,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.02,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-06-30",
+    "word": "buddy",
+    "guesses": {
+      "today": 446,
+      "yesterday": 0,
+      "delta": 446,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-07-01",
+    "word": "adage",
+    "guesses": {
+      "today": 366,
+      "yesterday": 55,
+      "delta": 311,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.02,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-07-02",
+    "word": "inlay",
+    "guesses": {
+      "today": 318,
+      "yesterday": 10,
+      "delta": 308,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-07-03",
+    "word": "thigh",
+    "guesses": {
+      "today": 396,
+      "yesterday": 1,
+      "delta": 395,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-07-04",
+    "word": "debut",
+    "guesses": {
+      "today": 407,
+      "yesterday": 13,
+      "delta": 394,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-07-05",
+    "word": "crush",
+    "guesses": {
+      "today": 579,
+      "yesterday": 59,
+      "delta": 520,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.03,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-07-06",
+    "word": "scoff",
+    "guesses": {
+      "today": 308,
+      "yesterday": 0,
+      "delta": 308,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-07-07",
+    "word": "canon",
+    "guesses": {
+      "today": 347,
+      "yesterday": 1,
+      "delta": 346,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-07-08",
+    "word": "shape",
+    "guesses": {
+      "today": 759,
+      "yesterday": 211,
+      "delta": 548,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.09,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-07-09",
+    "word": "blare",
+    "guesses": {
+      "today": 439,
+      "yesterday": 40,
+      "delta": 399,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-07-10",
+    "word": "gaunt",
+    "guesses": {
+      "today": 368,
+      "yesterday": 20,
+      "delta": 348,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-07-11",
+    "word": "cameo",
+    "guesses": {
+      "today": 556,
+      "yesterday": 91,
+      "delta": 465,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.04,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-07-12",
+    "word": "jiffy",
+    "guesses": {
+      "today": 470,
+      "yesterday": 2,
+      "delta": 468,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-07-13",
+    "word": "enact",
+    "guesses": {
+      "today": 516,
+      "yesterday": 38,
+      "delta": 478,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-07-14",
+    "word": "video",
+    "guesses": {
+      "today": 572,
+      "yesterday": 52,
+      "delta": 520,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.02,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-07-15",
+    "word": "swoon",
+    "guesses": {
+      "today": 339,
+      "yesterday": 0,
+      "delta": 339,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-07-16",
+    "word": "decoy",
+    "guesses": {
+      "today": 337,
+      "yesterday": 10,
+      "delta": 327,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-07-17",
+    "word": "quite",
+    "guesses": {
+      "today": 465,
+      "yesterday": 89,
+      "delta": 376,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.04,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-07-18",
+    "word": "nerdy",
+    "guesses": {
+      "today": 365,
+      "yesterday": 6,
+      "delta": 359,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-07-19",
+    "word": "refer",
+    "guesses": {
+      "today": 373,
+      "yesterday": 8,
+      "delta": 365,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-07-20",
+    "word": "shaft",
+    "guesses": {
+      "today": 427,
+      "yesterday": 32,
+      "delta": 395,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-07-21",
+    "word": "speck",
+    "guesses": {
+      "today": 392,
+      "yesterday": 11,
+      "delta": 381,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-07-22",
+    "word": "cadet",
+    "guesses": {
+      "today": 443,
+      "yesterday": 19,
+      "delta": 424,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-07-23",
+    "word": "prong",
+    "guesses": {
+      "today": 381,
+      "yesterday": 10,
+      "delta": 371,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-07-24",
+    "word": "forte",
+    "guesses": {
+      "today": 424,
+      "yesterday": 11,
+      "delta": 413,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-07-25",
+    "word": "porch",
+    "guesses": {
+      "today": 540,
+      "yesterday": 53,
+      "delta": 487,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-07-26",
+    "word": "awash",
+    "guesses": {
+      "today": 344,
+      "yesterday": 1,
+      "delta": 343,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-07-27",
+    "word": "juice",
+    "guesses": {
+      "today": 762,
+      "yesterday": 146,
+      "delta": 616,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.06,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-07-28",
+    "word": "smock",
+    "guesses": {
+      "today": 340,
+      "yesterday": 2,
+      "delta": 338,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-07-29",
+    "word": "super",
+    "guesses": {
+      "today": 575,
+      "yesterday": 104,
+      "delta": 471,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-07-30",
+    "word": "feral",
+    "guesses": {
+      "today": 443,
+      "yesterday": 32,
+      "delta": 411,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-07-31",
+    "word": "penne",
+    "guesses": {
+      "today": 418,
+      "yesterday": 0,
+      "delta": 418,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-08-01",
+    "word": "chalk",
+    "guesses": {
+      "today": 568,
+      "yesterday": 91,
+      "delta": 477,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.04,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-08-02",
+    "word": "flake",
+    "guesses": {
+      "today": 513,
+      "yesterday": 97,
+      "delta": 416,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-08-03",
+    "word": "scale",
+    "guesses": {
+      "today": 761,
+      "yesterday": 205,
+      "delta": 556,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.09,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-08-04",
+    "word": "lower",
+    "guesses": {
+      "today": 410,
+      "yesterday": 22,
+      "delta": 388,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-05",
+    "word": "ensue",
+    "guesses": {
+      "today": 307,
+      "yesterday": 0,
+      "delta": 307,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-08-06",
+    "word": "anvil",
+    "guesses": {
+      "today": 472,
+      "yesterday": 13,
+      "delta": 459,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-08-07",
+    "word": "macaw",
+    "guesses": {
+      "today": 352,
+      "yesterday": 2,
+      "delta": 350,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-08-08",
+    "word": "saucy",
+    "guesses": {
+      "today": 524,
+      "yesterday": 79,
+      "delta": 445,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-08-09",
+    "word": "ounce",
+    "guesses": {
+      "today": 769,
+      "yesterday": 198,
+      "delta": 571,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.09,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-08-10",
+    "word": "medic",
+    "guesses": {
+      "today": 404,
+      "yesterday": 13,
+      "delta": 391,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-11",
+    "word": "scone",
+    "guesses": {
+      "today": 617,
+      "yesterday": 61,
+      "delta": 556,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.03,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-08-12",
+    "word": "skiff",
+    "guesses": {
+      "today": 322,
+      "yesterday": 0,
+      "delta": 322,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-08-13",
+    "word": "neigh",
+    "guesses": {
+      "today": 387,
+      "yesterday": 13,
+      "delta": 374,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-14",
+    "word": "shore",
+    "guesses": {
+      "today": 888,
+      "yesterday": 215,
+      "delta": 673,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.1,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2024-08-15",
+    "word": "acorn",
+    "guesses": {
+      "today": 639,
+      "yesterday": 85,
+      "delta": 554,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.04,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-08-16",
+    "word": "brace",
+    "guesses": {
+      "today": 571,
+      "yesterday": 119,
+      "delta": 452,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-08-17",
+    "word": "storm",
+    "guesses": {
+      "today": 991,
+      "yesterday": 271,
+      "delta": 720,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.12,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2024-08-18",
+    "word": "lanky",
+    "guesses": {
+      "today": 336,
+      "yesterday": 8,
+      "delta": 328,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-08-19",
+    "word": "meter",
+    "guesses": {
+      "today": 388,
+      "yesterday": 0,
+      "delta": 388,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-20",
+    "word": "delay",
+    "guesses": {
+      "today": 511,
+      "yesterday": 68,
+      "delta": 443,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.03,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-08-21",
+    "word": "mulch",
+    "guesses": {
+      "today": 392,
+      "yesterday": 16,
+      "delta": 376,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-22",
+    "word": "brute",
+    "guesses": {
+      "today": 411,
+      "yesterday": 19,
+      "delta": 392,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-23",
+    "word": "leech",
+    "guesses": {
+      "today": 352,
+      "yesterday": 0,
+      "delta": 352,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-08-24",
+    "word": "filet",
+    "guesses": {
+      "today": 363,
+      "yesterday": 9,
+      "delta": 354,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-08-25",
+    "word": "skate",
+    "guesses": {
+      "today": 717,
+      "yesterday": 89,
+      "delta": 628,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.04,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-08-26",
+    "word": "stake",
+    "guesses": {
+      "today": 761,
+      "yesterday": 163,
+      "delta": 598,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.07,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-08-27",
+    "word": "crown",
+    "guesses": {
+      "today": 609,
+      "yesterday": 73,
+      "delta": 536,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.03,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2024-08-28",
+    "word": "lithe",
+    "guesses": {
+      "today": 416,
+      "yesterday": 12,
+      "delta": 404,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-08-29",
+    "word": "flunk",
+    "guesses": {
+      "today": 392,
+      "yesterday": 17,
+      "delta": 375,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-08-30",
+    "word": "knave",
+    "guesses": {
+      "today": 391,
+      "yesterday": 4,
+      "delta": 387,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-08-31",
+    "word": "spout",
+    "guesses": {
+      "today": 592,
+      "yesterday": 186,
+      "delta": 406,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.08,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-09-01",
+    "word": "mushy",
+    "guesses": {
+      "today": 342,
+      "yesterday": 4,
+      "delta": 338,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-09-02",
+    "word": "camel",
+    "guesses": {
+      "today": 457,
+      "yesterday": 31,
+      "delta": 426,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-09-03",
+    "word": "faint",
+    "guesses": {
+      "today": 489,
+      "yesterday": 61,
+      "delta": 428,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.03,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-09-04",
+    "word": "stern",
+    "guesses": {
+      "today": 2209,
+      "yesterday": 1441,
+      "delta": 768,
+      "proportion": {
+        "today": 1.0,
+        "yesterday": 0.65,
+        "delta": 0.35
+      }
+    }
+  },
+  {
+    "date": "2024-09-05",
+    "word": "widen",
+    "guesses": {
+      "today": 390,
+      "yesterday": 1,
+      "delta": 389,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-09-06",
+    "word": "rerun",
+    "guesses": {
+      "today": 398,
+      "yesterday": 0,
+      "delta": 398,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-09-07",
+    "word": "owner",
+    "guesses": {
+      "today": 352,
+      "yesterday": 10,
+      "delta": 342,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-09-08",
+    "word": "drawn",
+    "guesses": {
+      "today": 331,
+      "yesterday": 30,
+      "delta": 301,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2024-09-09",
+    "word": "debit",
+    "guesses": {
+      "today": 394,
+      "yesterday": 11,
+      "delta": 383,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-09-10",
+    "word": "rebel",
+    "guesses": {
+      "today": 388,
+      "yesterday": 2,
+      "delta": 386,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-09-11",
+    "word": "aisle",
+    "guesses": {
+      "today": 2703,
+      "yesterday": 1771,
+      "delta": 932,
+      "proportion": {
+        "today": 1.24,
+        "yesterday": 0.8,
+        "delta": 0.44
+      }
+    }
+  },
+  {
+    "date": "2024-09-12",
+    "word": "brass",
+    "guesses": {
+      "today": 405,
+      "yesterday": 0,
+      "delta": 405,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-09-13",
+    "word": "harsh",
+    "guesses": {
+      "today": 441,
+      "yesterday": 7,
+      "delta": 434,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-09-14",
+    "word": "broad",
+    "guesses": {
+      "today": 488,
+      "yesterday": 59,
+      "delta": 429,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.03,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-09-15",
+    "word": "recur",
+    "guesses": {
+      "today": 290,
+      "yesterday": 1,
+      "delta": 289,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2024-09-16",
+    "word": "honey",
+    "guesses": {
+      "today": 564,
+      "yesterday": 95,
+      "delta": 469,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.04,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-09-17",
+    "word": "beaut",
+    "guesses": {
+      "today": 556,
+      "yesterday": 105,
+      "delta": 451,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.05,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-09-18",
+    "word": "fully",
+    "guesses": {
+      "today": 373,
+      "yesterday": 0,
+      "delta": 373,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-09-19",
+    "word": "press",
+    "guesses": {
+      "today": 427,
+      "yesterday": 4,
+      "delta": 423,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-09-20",
+    "word": "smoke",
+    "guesses": {
+      "today": 522,
+      "yesterday": 69,
+      "delta": 453,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-09-21",
+    "word": "seven",
+    "guesses": {
+      "today": 415,
+      "yesterday": 9,
+      "delta": 406,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-09-22",
+    "word": "teach",
+    "guesses": {
+      "today": 1327,
+      "yesterday": 545,
+      "delta": 782,
+      "proportion": {
+        "today": 0.59,
+        "yesterday": 0.24,
+        "delta": 0.35
+      }
+    }
+  },
+  {
+    "date": "2024-09-23",
+    "word": "steam",
+    "guesses": {
+      "today": 2231,
+      "yesterday": 1480,
+      "delta": 751,
+      "proportion": {
+        "today": 1.01,
+        "yesterday": 0.66,
+        "delta": 0.35
+      }
+    }
+  },
+  {
+    "date": "2024-09-24",
+    "word": "handy",
+    "guesses": {
+      "today": 459,
+      "yesterday": 17,
+      "delta": 442,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-09-25",
+    "word": "torch",
+    "guesses": {
+      "today": 500,
+      "yesterday": 40,
+      "delta": 460,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-09-26",
+    "word": "thank",
+    "guesses": {
+      "today": 736,
+      "yesterday": 111,
+      "delta": 625,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.05,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-09-27",
+    "word": "faith",
+    "guesses": {
+      "today": 829,
+      "yesterday": 256,
+      "delta": 573,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.12,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-09-28",
+    "word": "brain",
+    "guesses": {
+      "today": 1049,
+      "yesterday": 418,
+      "delta": 631,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.19,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-09-29",
+    "word": "rider",
+    "guesses": {
+      "today": 347,
+      "yesterday": 2,
+      "delta": 345,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-09-30",
+    "word": "cloud",
+    "guesses": {
+      "today": 1091,
+      "yesterday": 514,
+      "delta": 577,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.23,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-10-01",
+    "word": "modem",
+    "guesses": {
+      "today": 384,
+      "yesterday": 6,
+      "delta": 378,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-10-02",
+    "word": "shell",
+    "guesses": {
+      "today": 466,
+      "yesterday": 2,
+      "delta": 464,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-10-03",
+    "word": "wagon",
+    "guesses": {
+      "today": 428,
+      "yesterday": 4,
+      "delta": 424,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-10-04",
+    "word": "title",
+    "guesses": {
+      "today": 461,
+      "yesterday": 2,
+      "delta": 459,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-10-05",
+    "word": "miner",
+    "guesses": {
+      "today": 367,
+      "yesterday": 23,
+      "delta": 344,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-10-06",
+    "word": "lager",
+    "guesses": {
+      "today": 383,
+      "yesterday": 17,
+      "delta": 366,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-10-07",
+    "word": "flour",
+    "guesses": {
+      "today": 556,
+      "yesterday": 121,
+      "delta": 435,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-10-08",
+    "word": "joint",
+    "guesses": {
+      "today": 493,
+      "yesterday": 58,
+      "delta": 435,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.03,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-10-09",
+    "word": "mommy",
+    "guesses": {
+      "today": 486,
+      "yesterday": 0,
+      "delta": 486,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-10-10",
+    "word": "carve",
+    "guesses": {
+      "today": 424,
+      "yesterday": 27,
+      "delta": 397,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-10-11",
+    "word": "gusty",
+    "guesses": {
+      "today": 375,
+      "yesterday": 11,
+      "delta": 364,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-10-12",
+    "word": "stain",
+    "guesses": {
+      "today": 1308,
+      "yesterday": 692,
+      "delta": 616,
+      "proportion": {
+        "today": 0.58,
+        "yesterday": 0.31,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-10-13",
+    "word": "prone",
+    "guesses": {
+      "today": 445,
+      "yesterday": 59,
+      "delta": 386,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.03,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-10-14",
+    "word": "gamut",
+    "guesses": {
+      "today": 371,
+      "yesterday": 2,
+      "delta": 369,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-10-15",
+    "word": "corer",
+    "guesses": {
+      "today": 367,
+      "yesterday": 0,
+      "delta": 367,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-10-16",
+    "word": "grant",
+    "guesses": {
+      "today": 720,
+      "yesterday": 136,
+      "delta": 584,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.06,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-10-17",
+    "word": "halve",
+    "guesses": {
+      "today": 393,
+      "yesterday": 11,
+      "delta": 382,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-10-18",
+    "word": "stint",
+    "guesses": {
+      "today": 362,
+      "yesterday": 0,
+      "delta": 362,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-10-19",
+    "word": "fiber",
+    "guesses": {
+      "today": 360,
+      "yesterday": 12,
+      "delta": 348,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-10-20",
+    "word": "dicey",
+    "guesses": {
+      "today": 312,
+      "yesterday": 2,
+      "delta": 310,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-10-21",
+    "word": "spoon",
+    "guesses": {
+      "today": 623,
+      "yesterday": 5,
+      "delta": 618,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.0,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-10-22",
+    "word": "shout",
+    "guesses": {
+      "today": 867,
+      "yesterday": 307,
+      "delta": 560,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.14,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-10-23",
+    "word": "goofy",
+    "guesses": {
+      "today": 461,
+      "yesterday": 1,
+      "delta": 460,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-10-24",
+    "word": "bossy",
+    "guesses": {
+      "today": 450,
+      "yesterday": 2,
+      "delta": 448,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-10-25",
+    "word": "frown",
+    "guesses": {
+      "today": 518,
+      "yesterday": 78,
+      "delta": 440,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.04,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-10-26",
+    "word": "wreak",
+    "guesses": {
+      "today": 341,
+      "yesterday": 15,
+      "delta": 326,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-10-27",
+    "word": "sandy",
+    "guesses": {
+      "today": 473,
+      "yesterday": 30,
+      "delta": 443,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-10-28",
+    "word": "bawdy",
+    "guesses": {
+      "today": 363,
+      "yesterday": 3,
+      "delta": 360,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-10-29",
+    "word": "tunic",
+    "guesses": {
+      "today": 423,
+      "yesterday": 10,
+      "delta": 413,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-10-30",
+    "word": "easel",
+    "guesses": {
+      "today": 401,
+      "yesterday": 5,
+      "delta": 396,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-10-31",
+    "word": "weird",
+    "guesses": {
+      "today": 821,
+      "yesterday": 219,
+      "delta": 602,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.1,
+        "delta": 0.28
+      }
+    }
+  },
+  {
+    "date": "2024-11-01",
+    "word": "sixth",
+    "guesses": {
+      "today": 389,
+      "yesterday": 3,
+      "delta": 386,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-11-02",
+    "word": "snoop",
+    "guesses": {
+      "today": 360,
+      "yesterday": 1,
+      "delta": 359,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-11-03",
+    "word": "blaze",
+    "guesses": {
+      "today": 400,
+      "yesterday": 31,
+      "delta": 369,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-11-04",
+    "word": "vinyl",
+    "guesses": {
+      "today": 418,
+      "yesterday": 12,
+      "delta": 406,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-11-05",
+    "word": "octet",
+    "guesses": {
+      "today": 399,
+      "yesterday": 0,
+      "delta": 399,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-11-06",
+    "word": "truly",
+    "guesses": {
+      "today": 468,
+      "yesterday": 11,
+      "delta": 457,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-11-07",
+    "word": "event",
+    "guesses": {
+      "today": 440,
+      "yesterday": 11,
+      "delta": 429,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-11-08",
+    "word": "ready",
+    "guesses": {
+      "today": 1413,
+      "yesterday": 778,
+      "delta": 635,
+      "proportion": {
+        "today": 0.66,
+        "yesterday": 0.37,
+        "delta": 0.3
+      }
+    }
+  },
+  {
+    "date": "2024-11-09",
+    "word": "swell",
+    "guesses": {
+      "today": 293,
+      "yesterday": 1,
+      "delta": 292,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2024-11-10",
+    "word": "inner",
+    "guesses": {
+      "today": 320,
+      "yesterday": 0,
+      "delta": 320,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-11-11",
+    "word": "stoic",
+    "guesses": {
+      "today": 539,
+      "yesterday": 107,
+      "delta": 432,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-11-12",
+    "word": "flown",
+    "guesses": {
+      "today": 416,
+      "yesterday": 24,
+      "delta": 392,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-11-13",
+    "word": "primp",
+    "guesses": {
+      "today": 382,
+      "yesterday": 0,
+      "delta": 382,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-11-14",
+    "word": "uvula",
+    "guesses": {
+      "today": 472,
+      "yesterday": 0,
+      "delta": 472,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2024-11-15",
+    "word": "tacky",
+    "guesses": {
+      "today": 438,
+      "yesterday": 11,
+      "delta": 427,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-11-16",
+    "word": "visor",
+    "guesses": {
+      "today": 331,
+      "yesterday": 7,
+      "delta": 324,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-11-17",
+    "word": "tally",
+    "guesses": {
+      "today": 366,
+      "yesterday": 3,
+      "delta": 363,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-11-18",
+    "word": "frail",
+    "guesses": {
+      "today": 547,
+      "yesterday": 79,
+      "delta": 468,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.04,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-11-19",
+    "word": "going",
+    "guesses": {
+      "today": 449,
+      "yesterday": 7,
+      "delta": 442,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2024-11-20",
+    "word": "niche",
+    "guesses": {
+      "today": 441,
+      "yesterday": 25,
+      "delta": 416,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-11-21",
+    "word": "spine",
+    "guesses": {
+      "today": 755,
+      "yesterday": 206,
+      "delta": 549,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.1,
+        "delta": 0.26
+      }
+    }
+  },
+  {
+    "date": "2024-11-22",
+    "word": "pearl",
+    "guesses": {
+      "today": 909,
+      "yesterday": 538,
+      "delta": 371,
+      "proportion": {
+        "today": 0.42,
+        "yesterday": 0.25,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-11-23",
+    "word": "jelly",
+    "guesses": {
+      "today": 381,
+      "yesterday": 5,
+      "delta": 376,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-11-24",
+    "word": "twist",
+    "guesses": {
+      "today": 383,
+      "yesterday": 25,
+      "delta": 358,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-11-25",
+    "word": "brown",
+    "guesses": {
+      "today": 538,
+      "yesterday": 67,
+      "delta": 471,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.03,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2024-11-26",
+    "word": "witch",
+    "guesses": {
+      "today": 539,
+      "yesterday": 73,
+      "delta": 466,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.03,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-11-27",
+    "word": "slang",
+    "guesses": {
+      "today": 325,
+      "yesterday": 21,
+      "delta": 304,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-11-28",
+    "word": "chock",
+    "guesses": {
+      "today": 294,
+      "yesterday": 0,
+      "delta": 294,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2024-11-29",
+    "word": "hippo",
+    "guesses": {
+      "today": 404,
+      "yesterday": 1,
+      "delta": 403,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-11-30",
+    "word": "dogma",
+    "guesses": {
+      "today": 365,
+      "yesterday": 3,
+      "delta": 362,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-12-01",
+    "word": "mauve",
+    "guesses": {
+      "today": 430,
+      "yesterday": 43,
+      "delta": 387,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-12-02",
+    "word": "guile",
+    "guesses": {
+      "today": 415,
+      "yesterday": 48,
+      "delta": 367,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-12-03",
+    "word": "shaky",
+    "guesses": {
+      "today": 379,
+      "yesterday": 3,
+      "delta": 376,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-12-04",
+    "word": "crypt",
+    "guesses": {
+      "today": 596,
+      "yesterday": 57,
+      "delta": 539,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.03,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-12-05",
+    "word": "endow",
+    "guesses": {
+      "today": 397,
+      "yesterday": 6,
+      "delta": 391,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-12-06",
+    "word": "shove",
+    "guesses": {
+      "today": 442,
+      "yesterday": 20,
+      "delta": 422,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-12-07",
+    "word": "hilly",
+    "guesses": {
+      "today": 290,
+      "yesterday": 0,
+      "delta": 290,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2024-12-08",
+    "word": "hyena",
+    "guesses": {
+      "today": 361,
+      "yesterday": 19,
+      "delta": 342,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2024-12-09",
+    "word": "flung",
+    "guesses": {
+      "today": 327,
+      "yesterday": 2,
+      "delta": 325,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-12-10",
+    "word": "patio",
+    "guesses": {
+      "today": 679,
+      "yesterday": 141,
+      "delta": 538,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.06,
+        "delta": 0.25
+      }
+    }
+  },
+  {
+    "date": "2024-12-11",
+    "word": "plumb",
+    "guesses": {
+      "today": 432,
+      "yesterday": 47,
+      "delta": 385,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.02,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-12-12",
+    "word": "vying",
+    "guesses": {
+      "today": 392,
+      "yesterday": 4,
+      "delta": 388,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-12-13",
+    "word": "boxer",
+    "guesses": {
+      "today": 477,
+      "yesterday": 14,
+      "delta": 463,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-12-14",
+    "word": "drool",
+    "guesses": {
+      "today": 328,
+      "yesterday": 3,
+      "delta": 325,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-12-15",
+    "word": "funky",
+    "guesses": {
+      "today": 356,
+      "yesterday": 18,
+      "delta": 338,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2024-12-16",
+    "word": "boast",
+    "guesses": {
+      "today": 497,
+      "yesterday": 83,
+      "delta": 414,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-12-17",
+    "word": "scowl",
+    "guesses": {
+      "today": 312,
+      "yesterday": 18,
+      "delta": 294,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2024-12-18",
+    "word": "hefty",
+    "guesses": {
+      "today": 379,
+      "yesterday": 4,
+      "delta": 375,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2024-12-19",
+    "word": "stray",
+    "guesses": {
+      "today": 609,
+      "yesterday": 158,
+      "delta": 451,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.07,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2024-12-20",
+    "word": "flash",
+    "guesses": {
+      "today": 531,
+      "yesterday": 113,
+      "delta": 418,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.05,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2024-12-21",
+    "word": "blade",
+    "guesses": {
+      "today": 508,
+      "yesterday": 129,
+      "delta": 379,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.06,
+        "delta": 0.17
+      }
+    }
+  }
+]
