@@ -26,7 +26,10 @@ jobs:
       - name: Copy data folder
         run: |
           mkdir -p wordle-charts/src/data
-          cp -r data/wordle/* wordle-charts/src/data/
+          cp -r data/wordle/archive wordle-charts/src/data/
+          cp -r data/wordle/summaries wordle-charts/src/data/
+          cp -r data/wordle/guesses_by_round/cheating_analysis_normal.json wordle-charts/src/data/
+          cp -r data/wordle/guesses_by_round/cheating_analysis_hard.json wordle-charts/src/data/
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
