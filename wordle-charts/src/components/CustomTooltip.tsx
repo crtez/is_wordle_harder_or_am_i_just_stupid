@@ -33,10 +33,10 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
             Delta: {dataPoint.hardProportionDelta}%
           </p>
           <p className="text-foreground">
-            Day of: {dataPoint.hardProportion?.today}%
+            Guessed First: {dataPoint.hardProportion?.today}%
           </p>
           <p className="text-foreground">
-            Day before: {dataPoint.hardProportion?.yesterday}%
+            Guessed First (Day Before): {dataPoint.hardProportion?.yesterday}%
           </p>
         </>
       ) : (
@@ -45,10 +45,10 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
           Delta: {dataPoint.proportionDelta}%
           </p>
           <p className="text-foreground">
-            Day of: {dataPoint.proportion?.today}%
+            Guessed First: {dataPoint.proportion?.today}%
           </p>
           <p className="text-foreground">
-            Day before: {dataPoint.proportion?.yesterday}%
+            Guessed First (Day Before): {dataPoint.proportion?.yesterday}%
           </p>
         </>
       )}
