@@ -42,19 +42,22 @@ import {
 import { ModeToggle } from '@/components/mode-toggle';
 import { ThemeProvider } from '@/components/theme-provider';
 import { FileInput } from '@/components/FileInput';
+import { useCheatingData } from '@/utils/useCheatingData';
 
 const CHART_CONFIG = {
   yAxisDomains: {
     personal: [-3, 3],
     difference: [-0.75, 0.5],
     default: [2.5, 6],
-    rolling: [3.25, 4.5]
+    rolling: [3.25, 4.5],
+    clairvoyant: [0, 1.7]
   },
   yAxisTicks: {
     personal: [-3, -2, -1, 0, 1, 2, 3],
     difference: [-0.75, -0.5, -0.25, 0, 0.25, 0.5],
     default: [2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6],
-    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5]
+    rolling: [3.25, 3.5, 3.75, 4, 4.25, 4.5],
+    clairvoyant: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7]
   }
 };
 
@@ -63,11 +66,12 @@ const WordleChart = () => {
   const { data, loading, error } = useWordleData();
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
+  const { data: cheatingData, loading: cheatingLoading } = useCheatingData();
   
   // UI Control States
   const [showWords, setShowWords] = useState(false);
   const [isHardMode, setIsHardMode] = useState(false);
-  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess'>('standard');
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant'>('standard');
   const [showInstructions, setShowInstructions] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
@@ -93,7 +97,8 @@ const WordleChart = () => {
       difference: [],
       personal: [],
       rolling7: [],
-      rolling30: []
+      rolling30: [],
+      clairvoyant: []
     },
     displayData: []
   });
@@ -153,6 +158,20 @@ const WordleChart = () => {
       const filtered7Data = rolling7Data.filter(filterByDate);
       const filtered30Data = rolling30Data.filter(filterByDate);
 
+      // Process cheating analysis data
+      const cheatingProcessedData = data.map(d => {
+        const normalCheating = cheatingData.normal.find(c => c.date === d.date);
+        const hardCheating = cheatingData.hard.find(c => c.date === d.date);
+        
+        return {
+          ...d,
+          proportionDelta: normalCheating?.guesses.proportion.delta || null,
+          hardProportionDelta: hardCheating?.guesses.proportion.delta || null,
+          proportion: normalCheating?.guesses.proportion || null,
+          hardProportion: hardCheating?.guesses.proportion || null
+        };
+      }).filter(filterByDate);
+
       setChartState({
         allData: {
           normal: filteredData,
@@ -160,18 +179,21 @@ const WordleChart = () => {
           difference: filteredData,
           personal: filteredData.filter(d => d.personalDifference !== null),
           rolling7: filtered7Data,
-          rolling30: filtered30Data
+          rolling30: filtered30Data,
+          clairvoyant: cheatingProcessedData
         },
-        displayData: chartMode === 'personal' 
-          ? filteredData.filter(d => d.personalDifference !== null)
-          : chartMode === 'rolling7' 
-            ? filtered7Data 
-            : chartMode === 'rolling30'
-              ? filtered30Data
-              : filteredData
+        displayData: chartMode === 'clairvoyant' 
+          ? cheatingProcessedData
+          : chartMode === 'personal' 
+            ? filteredData.filter(d => d.personalDifference !== null)
+            : chartMode === 'rolling7' 
+              ? filtered7Data 
+              : chartMode === 'rolling30'
+                ? filtered30Data
+                : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate]);
+  }, [data, personalData, selectedDate, selectedEndDate, cheatingData]);
 
   React.useEffect(() => {
     if (data?.length && personalData.length) {
@@ -196,7 +218,7 @@ const WordleChart = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess') => {
+  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant') => {
     setChartMode(newMode);
     if (newMode !== 'firstGuess') {
       setChartState(prev => ({
@@ -274,7 +296,7 @@ const WordleChart = () => {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading || cheatingLoading) return <div>Loading...</div>;
   if (error) return <div>Error loading data</div>;
   if (!data?.length) return null;
 
@@ -302,6 +324,7 @@ const WordleChart = () => {
                chartMode === 'personal' ? 'Personal vs. Average' :
                chartMode === 'rolling7' ? '7-Day Rolling Average' :
                chartMode === 'rolling30' ? '30-Day Rolling Average' :
+               chartMode === 'clairvoyant' ? 'Clairvoyant Guesses' :
                'First Guess Frequency'}
               <ChevronDown className="ml-2 h-4 w-4" />
             </DropdownMenuTrigger>
@@ -317,6 +340,9 @@ const WordleChart = () => {
               </DropdownMenuItem>
               <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
                 Normal vs. Hard
+              </DropdownMenuItem>
+              <DropdownMenuItem onSelect={() => handleModeChange('clairvoyant')}>
+                Clairvoyant Guesses
               </DropdownMenuItem>
               <DropdownMenuSub>
                 <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
@@ -345,7 +371,7 @@ const WordleChart = () => {
             />
           )}
 
-          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30') && (
+          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30' || chartMode === 'clairvoyant') && (
             <div className="flex items-center gap-2">
               <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
               <Switch
@@ -456,17 +482,20 @@ const WordleChart = () => {
                 style={{ userSelect: 'none' }}
               />
               <YAxis
-                domain={chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
+                domain={chartMode === 'clairvoyant' ? CHART_CONFIG.yAxisDomains.clairvoyant :
+                       chartMode === 'personal' ? CHART_CONFIG.yAxisDomains.personal :
                        chartMode === 'difference' ? CHART_CONFIG.yAxisDomains.difference :
                        chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisDomains.rolling :
                        CHART_CONFIG.yAxisDomains.default}
-                ticks={chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
+                ticks={chartMode === 'clairvoyant' ? CHART_CONFIG.yAxisTicks.clairvoyant :
+                       chartMode === 'personal' ? CHART_CONFIG.yAxisTicks.personal :
                        chartMode === 'difference' ? CHART_CONFIG.yAxisTicks.difference :
                        chartMode.startsWith('rolling') ? CHART_CONFIG.yAxisTicks.rolling :
                        CHART_CONFIG.yAxisTicks.default}
                 tickFormatter={(value) => value.toFixed(2)}
                 label={{ 
-                  value: chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
+                  value: chartMode === 'clairvoyant' ? 'Proportion Delta' :
+                         chartMode === 'difference' || chartMode === 'personal' ? 'Difference in Guesses' : 'Average Guesses', 
                   angle: -90, 
                   position: 'insideLeft',
                   style: { userSelect: 'none' }
@@ -506,6 +535,7 @@ const WordleChart = () => {
                 shape="circle"
                 isAnimationActive={false}
                 dataKey={
+                  chartMode === 'clairvoyant' ? (isHardMode ? 'hardProportionDelta' : 'proportionDelta') :
                   chartMode === 'difference' ? 'difference' : 
                   chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
                   chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :

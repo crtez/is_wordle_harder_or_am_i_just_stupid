@@ -4,31 +4,49 @@ import { ValueType, NameType } from 'recharts/types/component/DefaultTooltipCont
 import { PersonalData } from '@/types/wordle_types';
 
 interface CustomTooltipProps extends TooltipProps<ValueType, NameType> {
-  chartMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess';
+  chartMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant';
   personalData: PersonalData[];
   isHardMode?: boolean;
   firstGuessData?: { name: string; size: number }[];
   wordImages?: Record<string, string | null>;
 }
 
-export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData, wordImages }: CustomTooltipProps) => {
+export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode }: CustomTooltipProps) => {
   if (!active || !payload?.[0]) return null;
   
   const dataPoint = payload[0].payload;
   if (!dataPoint) return null;
 
-  return chartMode === 'firstGuess' && firstGuessData ? (
-    <div className="bg-background p-3 border rounded-lg shadow-lg">
-      <p className="font-bold text-foreground">{dataPoint.name}</p>
-      <p className="text-foreground">Used {dataPoint.size} times ({((dataPoint.size / firstGuessData.reduce((sum, item) => sum + item.size, 0)) * 100).toFixed(1)}%)</p>
-      {wordImages?.[dataPoint.name] && (
-        <div className="mt-2">
-          <img 
-            src={wordImages[dataPoint.name] ?? undefined} 
-            alt={dataPoint.name}
-            className="max-w-[200px] max-h-[200px] object-contain"
-          />
-        </div>
+  return chartMode === 'clairvoyant' ? (
+    <div className="bg-background p-2 border border-border rounded shadow-sm">
+      <p className="text-foreground">
+        <span className="font-bold">{dataPoint.word}</span>
+        <span className="font-bold text-muted-foreground"> • {format(parseISO(dataPoint.date), 'M/d/yyyy')}</span>
+      </p>
+      {isHardMode ? (
+        <>
+          <p className="text-foreground">
+            Delta: {dataPoint.hardProportionDelta}%
+          </p>
+          <p className="text-foreground">
+            Day of: {dataPoint.hardProportion?.today}%
+          </p>
+          <p className="text-foreground">
+            Day before: {dataPoint.hardProportion?.yesterday}%
+          </p>
+        </>
+      ) : (
+        <>
+          <p className="text-foreground">
+          Delta: {dataPoint.proportionDelta}%
+          </p>
+          <p className="text-foreground">
+            Day of: {dataPoint.proportion?.today}%
+          </p>
+          <p className="text-foreground">
+            Day before: {dataPoint.proportion?.yesterday}%
+          </p>
+        </>
       )}
     </div>
   ) : (

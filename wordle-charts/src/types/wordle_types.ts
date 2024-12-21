@@ -32,6 +32,7 @@ export interface ChartState {
     personal: any[];
     rolling7: any[];
     rolling30: any[];
+    clairvoyant: any[];
   };
   displayData: any[];
 }
@@ -47,4 +48,19 @@ export interface PersonalStats {
     aboveAverage: number;
     belowAverage: number;
   };
+}
+  
+export interface CheatingAnalysisData {
+  date: string;
+  word: string;
+  guesses: {
+    today: number;
+    yesterday: number;
+    delta: number;
+    proportion: {
+      today: number;
+      yesterday: number;
+      delta: number;
+    }
+  }
 }
