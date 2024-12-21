@@ -8,16 +8,20 @@ interface CustomTooltipProps extends TooltipProps<ValueType, NameType> {
   personalData: PersonalData[];
   isHardMode?: boolean;
   firstGuessData?: { name: string; size: number }[];
-  wordImages?: Record<string, string | null>;
 }
 
-export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode }: CustomTooltipProps) => {
+export const CustomTooltip = ({ active, payload, chartMode, personalData, isHardMode, firstGuessData }: CustomTooltipProps) => {
   if (!active || !payload?.[0]) return null;
   
   const dataPoint = payload[0].payload;
   if (!dataPoint) return null;
 
-  return chartMode === 'clairvoyant' ? (
+  return chartMode === 'firstGuess' && firstGuessData ? (
+    <div className="bg-background p-3 border rounded-lg shadow-lg">
+      <p className="font-bold text-foreground">{dataPoint.name}</p>
+      <p className="text-foreground">Used {dataPoint.size} times ({((dataPoint.size / firstGuessData.reduce((sum, item) => sum + item.size, 0)) * 100).toFixed(1)}%)</p>
+    </div>
+  ) : chartMode === 'clairvoyant' ? (
     <div className="bg-background p-2 border border-border rounded shadow-sm">
       <p className="text-foreground">
         <span className="font-bold">{dataPoint.word}</span>
