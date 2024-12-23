@@ -372,6 +372,26 @@ const WordleChart = () => {
           )}
         </div>
 
+        {chartMode === 'personal' && (
+          <div className="col-span-12 flex items-center gap-3">
+            <div className="flex-grow">
+              <FileInput
+                onChange={handleFileUpload}
+                fileName={fileName}
+              />
+            </div>
+            <button
+              onClick={handleCopyBookmarklet}
+              className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
+            >
+              Copy Data Fetcher
+            </button>
+            {personalData.length > 0 && (
+              <StatsDialog wordleStats={wordleStats} personalData={personalData} />
+            )}
+          </div>
+        )}
+
         <div className="col-span-12 flex items-center justify-between">
           <div className="flex flex-wrap items-center gap-4">
             {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30' || chartMode === 'clairvoyant') && (
@@ -406,51 +426,32 @@ const WordleChart = () => {
                 />
               </div>
             )}
+
+            {chartMode === 'personal' && personalData.length > 0 && (
+              <div className="flex items-center gap-2">
+                <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                <Switch
+                  id="hard-mode-toggle"
+                  checked={isHardMode}
+                  onCheckedChange={setIsHardMode}
+                />
+              </div>
+            )}
           </div>
           
           <ModeToggle />
         </div>
-      </div>
 
-      {chartMode === 'personal' && (
-        <>
-          <FileInput
-            onChange={handleFileUpload}
-            className="col-span-1"
-            fileName={fileName}
-          />
-          <div className="col-span-2 flex items-center gap-2">
-            <button
-              onClick={handleCopyBookmarklet}
-              className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
-            >
-              Copy Data Fetcher
-            </button>
-            {personalData.length > 0 && (
-              <>
-                <StatsDialog wordleStats={wordleStats} personalData={personalData} />
-                <div className="flex items-center gap-2">
-                  <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
-                  <Switch
-                    id="hard-mode-toggle"
-                    checked={isHardMode}
-                    onCheckedChange={setIsHardMode}
-                  />
-                </div>
-              </>
-            )}
-          </div>
-          {personalStats.count > 0 && (
-            <div className="col-span-3 flex items-center gap-4 min-w-0">
-              <div className="text-sm text-gray-600 break-normal">
-                Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
-                <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
-                <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
-              </div>
+        {chartMode === 'personal' && personalStats.count > 0 && (
+          <div className="col-span-12">
+            <div className="text-sm text-gray-600 break-normal">
+              Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
+              <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
+              <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
             </div>
-          )}
-        </>
-      )}
+          </div>
+        )}
+      </div>
 
       <div className="flex-1 overflow-hidden">
         <ResponsiveContainer width="100%" height="100%">
