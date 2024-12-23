@@ -304,7 +304,7 @@ const WordleChart = () => {
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
-          This site is best viewed on desktop. If you're on a phone, good luck.
+          This site is best viewed on desktop. 
           <button 
             onClick={() => setShowMobileBanner(false)}
             className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
@@ -316,7 +316,7 @@ const WordleChart = () => {
       )}
       
       <div className="grid grid-cols-12 gap-3 mb-4">
-        <div className="col-span-12 lg:col-span-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 items-center">
+        <div className="col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-3 items-center">
           <DropdownMenu>
             <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
               {chartMode === 'standard' ? 'Wordle Average' : 
@@ -370,83 +370,88 @@ const WordleChart = () => {
               showCompare={false}
             />
           )}
-
-          {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30' || chartMode === 'clairvoyant') && (
-            <div className="flex items-center gap-2">
-              <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
-              <Switch
-                id="hard-mode-toggle"
-                checked={isHardMode}
-                onCheckedChange={setIsHardMode}
-              />
-            </div>
-          )}
-          
-          {chartMode === 'personal' && (
-            <>
-              <FileInput
-                onChange={handleFileUpload}
-                className="col-span-1"
-                fileName={fileName}
-              />
-              <div className="col-span-2 flex items-center gap-2">
-                <button
-                  onClick={handleCopyBookmarklet}
-                  className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
-                >
-                  Copy Data Fetcher
-                </button>
-                {personalData.length > 0 && (
-                  <>
-                    <StatsDialog wordleStats={wordleStats} personalData={personalData} />
-                    <div className="flex items-center gap-2">
-                      <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
-                      <Switch
-                        id="hard-mode-toggle"
-                        checked={isHardMode}
-                        onCheckedChange={setIsHardMode}
-                      />
-                    </div>
-                  </>
-                )}
-              </div>
-              {personalStats.count > 0 && (
-                <div className="col-span-3 flex items-center gap-4 min-w-0">
-                  <div className="text-sm text-gray-600 break-normal">
-                    Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
-                    <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
-                    <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
-                  </div>
-                </div>
-              )}
-            </>
-          )}
         </div>
 
-        <div className="col-span-12 lg:col-span-2 flex items-center gap-4 justify-end h-10">
-          {!isMobile && chartMode !== 'firstGuess' && (
-            <>
-              <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
-              <Switch
-                id="show-words"
-                checked={showWords}
-                onCheckedChange={setShowWords}
-              />
-            </>
-          )}
-          {chartMode === 'firstGuess' && (
-            <>
-              <Label htmlFor="sound-toggle" className="whitespace-nowrap">Sound</Label>
-              <Switch
-                id="sound-toggle"
-                checked={soundEnabled}
-                onCheckedChange={setSoundEnabled}
-              />
-            </>
-          )}
+        <div className="col-span-12 flex items-center justify-between">
+          <div className="flex flex-wrap items-center gap-4">
+            {(chartMode === 'standard' || chartMode === 'rolling7' || chartMode === 'rolling30' || chartMode === 'clairvoyant') && (
+              <div className="flex items-center gap-2">
+                <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                <Switch
+                  id="hard-mode-toggle"
+                  checked={isHardMode}
+                  onCheckedChange={setIsHardMode}
+                />
+              </div>
+            )}
+            
+            {chartMode !== 'firstGuess' && (
+              <div className="flex items-center gap-2">
+                <Label htmlFor="show-words">Show Words</Label>
+                <Switch
+                  id="show-words"
+                  checked={showWords}
+                  onCheckedChange={setShowWords}
+                />
+              </div>
+            )}
+            
+            {chartMode === 'firstGuess' && (
+              <div className="flex items-center gap-2">
+                <Label htmlFor="sound-toggle">Sound</Label>
+                <Switch
+                  id="sound-toggle"
+                  checked={soundEnabled}
+                  onCheckedChange={setSoundEnabled}
+                />
+              </div>
+            )}
+          </div>
+          
           <ModeToggle />
         </div>
       </div>
+
+      {chartMode === 'personal' && (
+        <>
+          <FileInput
+            onChange={handleFileUpload}
+            className="col-span-1"
+            fileName={fileName}
+          />
+          <div className="col-span-2 flex items-center gap-2">
+            <button
+              onClick={handleCopyBookmarklet}
+              className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
+            >
+              Copy Data Fetcher
+            </button>
+            {personalData.length > 0 && (
+              <>
+                <StatsDialog wordleStats={wordleStats} personalData={personalData} />
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="hard-mode-toggle">Hard Mode</Label>
+                  <Switch
+                    id="hard-mode-toggle"
+                    checked={isHardMode}
+                    onCheckedChange={setIsHardMode}
+                  />
+                </div>
+              </>
+            )}
+          </div>
+          {personalStats.count > 0 && (
+            <div className="col-span-3 flex items-center gap-4 min-w-0">
+              <div className="text-sm text-gray-600 break-normal">
+                Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
+                <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
+                <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
+              </div>
+            </div>
+          )}
+        </>
+      )}
+
       <div className="flex-1 overflow-hidden">
         <ResponsiveContainer width="100%" height="100%">
           {chartMode === 'firstGuess' ? (

@@ -4,7 +4,7 @@ import { fromUnixTime, format } from 'date-fns';
 
 export const getBookmarkletCode = (): string => {
   const ids = puzzleIds.puzzle_ids.join(',');
-  return `javascript:(function(){
+  return `ajavascript:(function(){
     const ids = '${ids}';
     if (!ids) return;
 
