@@ -8860,5 +8860,33 @@
         "delta": 0.32
       }
     }
+  },
+  {
+    "date": "2024-12-22",
+    "word": "brawn",
+    "guesses": {
+      "today": 4901,
+      "yesterday": 45,
+      "delta": 4856,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2024-12-23",
+    "word": "sauna",
+    "guesses": {
+      "today": 5516,
+      "yesterday": 25,
+      "delta": 5491,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
