@@ -17,6 +17,7 @@ import {
 import { Switch } from '@/components/ui/switch'
 import { ChevronUpIcon, ChevronDownIcon, CheckIcon } from '@radix-ui/react-icons'
 import { cn } from '@/lib/utils'
+import { startOfDay } from 'date-fns'
 
 export interface DateRangePickerProps {
   /** Click handler for applying the updates from DateRangePicker. */
@@ -548,7 +549,13 @@ export const DateRangePicker: FC<DateRangePickerProps> & {
                 !areRangesEqual(range, openedRangeRef.current) ||
                 !areRangesEqual(rangeCompare, openedRangeCompareRef.current)
               ) {
-                onUpdate?.({ range, rangeCompare })
+                // Create new date objects set to midnight for URL parameters
+                const urlRange = {
+                  ...range,
+                  from: startOfDay(range.from),
+                  to: range.to ? startOfDay(range.to) : undefined
+                };
+                onUpdate?.({ range: urlRange, rangeCompare })
               }
             }}
           >
