@@ -127,12 +127,11 @@ const WordleChart = () => {
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioElements] = useState(() => {
-    const basePath = '/is_wordle_harder_or_am_I_just_stupid';
     return [
-      new Audio(`${basePath}/sounds/chord1.mp3`),
-      new Audio(`${basePath}/sounds/chord2.mp3`),
-      new Audio(`${basePath}/sounds/chord3.mp3`),
-      new Audio(`${basePath}/sounds/chord4.mp3`)
+      new Audio('/sounds/chord1.mp3'),
+      new Audio('/sounds/chord2.mp3'),
+      new Audio('/sounds/chord3.mp3'),
+      new Audio('/sounds/chord4.mp3')
     ];
   });
 
