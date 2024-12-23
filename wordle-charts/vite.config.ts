@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
-  base: '/is_wordle_harder_or_am_i_just_stupid/',
+  base: '/',
   plugins: [react(), visualizer()],
   resolve: {
     alias: {
