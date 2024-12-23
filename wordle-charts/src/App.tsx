@@ -444,10 +444,10 @@ const WordleChart = () => {
 
         {chartMode === 'personal' && personalStats.count > 0 && (
           <div className="col-span-12">
-            <div className="text-sm text-gray-600 break-normal">
+            <div className="text-sm text-gray-600 dark:text-gray-300 break-normal">
               Comparing <span className="font-bold">{personalStats.count}</span> wordles against {isHardMode ? 'hard' : 'normal'} mode:
-              <span className="text-red-600 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
-              <span className="text-green-600 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
+              <span className="text-red-600 dark:text-red-400 font-bold"> {isHardMode ? personalStats.hard.aboveAverage : personalStats.normal.aboveAverage}</span> above average,
+              <span className="text-green-600 dark:text-green-400 font-bold"> {isHardMode ? personalStats.hard.belowAverage : personalStats.normal.belowAverage}</span> below average
             </div>
           </div>
         )}
