@@ -81,7 +81,7 @@ const WordleChart = () => {
   const [showInstructions, setShowInstructions] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
-  const [fileName, setFileName] = useState<string>("Upload your .json ! 🙂");
+  const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
 
   // Date States
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(() => {
