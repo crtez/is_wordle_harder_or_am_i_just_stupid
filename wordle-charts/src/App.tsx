@@ -43,6 +43,7 @@ import { ModeToggle } from '@/components/mode-toggle';
 import { ThemeProvider } from '@/components/theme-provider';
 import { FileInput } from '@/components/FileInput';
 import { useCheatingData } from '@/utils/useCheatingData';
+import { useSearchParams } from 'react-router-dom';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -62,6 +63,9 @@ const CHART_CONFIG = {
 };
 
 const WordleChart = () => {
+  // Add searchParams
+  const [searchParams, setSearchParams] = useSearchParams();
+
   // Data and Loading States
   const { data, loading, error } = useWordleData();
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
@@ -71,15 +75,24 @@ const WordleChart = () => {
   // UI Control States
   const [showWords, setShowWords] = useState(false);
   const [isHardMode, setIsHardMode] = useState(false);
-  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant'>('standard');
+  const [chartMode, setChartMode] = useState<'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant'>(
+    (searchParams.get('chart') as any) || 'standard'
+  );
   const [showInstructions, setShowInstructions] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
   const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
 
   // Date States
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(undefined);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(() => {
+    const fromDate = searchParams.get('from');
+    return fromDate ? startOfDay(parseISO(fromDate)) : undefined;
+  });
+
+  const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>(() => {
+    const toDate = searchParams.get('to');
+    return toDate ? endOfDay(parseISO(toDate)) : undefined;
+  });
   const minDate = useMemo(() => 
     data?.length ? parseISO(data[0].date) : subMonths(new Date(), 12), 
     [data]
@@ -114,7 +127,7 @@ const WordleChart = () => {
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [audioIndex, setAudioIndex] = useState(0);
   const [audioElements] = useState(() => {
-    const basePath = '/is_wordle_harder_or_am_i_just_stupid';
+    const basePath = '/is_wordle_harder_or_am_I_just_stupid';
     return [
       new Audio(`${basePath}/sounds/chord1.mp3`),
       new Audio(`${basePath}/sounds/chord2.mp3`),
@@ -131,10 +144,13 @@ const WordleChart = () => {
 
   React.useEffect(() => {
     if (data?.length) {
-      setSelectedDate(parseISO(data[0].date));
-      setSelectedEndDate(parseISO(data[data.length - 1].date));
+      // Only set default dates if URL params don't exist
+      if (!searchParams.get('from') && !searchParams.get('to')) {
+        setSelectedDate(parseISO(data[0].date));
+        setSelectedEndDate(parseISO(data[data.length - 1].date));
+      }
     }
-  }, [data]);
+  }, [data, searchParams]);
 
   React.useEffect(() => {
     if (data?.length) {
@@ -218,8 +234,12 @@ const WordleChart = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleModeChange = (newMode: 'standard' | 'difference' | 'personal' | 'rolling7' | 'rolling30' | 'firstGuess' | 'clairvoyant') => {
+  const handleModeChange = (newMode: typeof chartMode) => {
     setChartMode(newMode);
+    setSearchParams(params => {
+      params.set('chart', newMode);
+      return params;
+    });
     if (newMode !== 'firstGuess') {
       setChartState(prev => ({
         ...prev,
@@ -366,6 +386,21 @@ const WordleChart = () => {
               onUpdate={({ range }) => {
                 setSelectedDate(range.from);
                 setSelectedEndDate(range.to || range.from);
+                
+                // Update URL params
+                setSearchParams(params => {
+                  if (range.from) {
+                    params.set('from', range.from.toISOString().split('T')[0]);
+                  } else {
+                    params.delete('from');
+                  }
+                  if (range.to) {
+                    params.set('to', range.to.toISOString().split('T')[0]);
+                  } else {
+                    params.delete('to');
+                  }
+                  return params;
+                });
               }}
               showCompare={false}
             />
