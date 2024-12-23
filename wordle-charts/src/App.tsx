@@ -81,7 +81,7 @@ const WordleChart = () => {
   const [showInstructions, setShowInstructions] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
-  const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
+  const [fileName, setFileName] = useState<string>("Upload your .json ! 🙂");
 
   // Date States
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(() => {
@@ -323,7 +323,7 @@ const WordleChart = () => {
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
       {isMobile && showMobileBanner && (
-        <div className="bg-yellow-300 text-black text-center p-2 font-bold relative">
+        <div className="bg-yellow-300 text-black text-center p-2 font-bold relative mb-4">
           This site is best viewed on desktop. 
           <button 
             onClick={() => setShowMobileBanner(false)}
