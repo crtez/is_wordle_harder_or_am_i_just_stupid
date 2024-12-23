@@ -15,7 +15,7 @@ import {
   SelectValue
 } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
-import { ChevronUpIcon, ChevronDownIcon, CheckIcon, CalendarIcon } from '@radix-ui/react-icons'
+import { ChevronUpIcon, ChevronDownIcon, CheckIcon } from '@radix-ui/react-icons'
 import { cn } from '@/lib/utils'
 
 export interface DateRangePickerProps {
@@ -344,37 +344,26 @@ export const DateRangePicker: FC<DateRangePickerProps> & {
     >
       <PopoverTrigger asChild>
         <Button size={'lg'} variant="outline">
-          {isSmallScreen ? (
-            <div className="flex items-center gap-1">
-              <CalendarIcon className="h-5 w-5" />
-              <div className="opacity-60">
-                {isOpen ? (<ChevronUpIcon width={24} />) : (<ChevronDownIcon width={24} />)}
-              </div>
+          <div className="text-right">
+            <div className="py-1">
+              <div>{`${formatDate(range.from, locale)}${
+                range.to != null ? ' - ' + formatDate(range.to, locale) : ''
+              }`}</div>
             </div>
-          ) : (
-            <>
-              <div className="text-right">
-                <div className="py-1">
-                  <div>{`${formatDate(range.from, locale)}${
-                    range.to != null ? ' - ' + formatDate(range.to, locale) : ''
-                  }`}</div>
-                </div>
-                {rangeCompare != null && (
-                  <div className="opacity-60 text-xs -mt-1">
-                    <>
-                      vs. {formatDate(rangeCompare.from, locale)}
-                      {rangeCompare.to != null
-                        ? ` - ${formatDate(rangeCompare.to, locale)}`
-                        : ''}
-                    </>
-                  </div>
-                )}
+            {rangeCompare != null && (
+              <div className="opacity-60 text-xs -mt-1">
+                <>
+                  vs. {formatDate(rangeCompare.from, locale)}
+                  {rangeCompare.to != null
+                    ? ` - ${formatDate(rangeCompare.to, locale)}`
+                    : ''}
+                </>
               </div>
-              <div className="pl-1 opacity-60 -mr-2 scale-125">
-                {isOpen ? (<ChevronUpIcon width={24} />) : (<ChevronDownIcon width={24} />)}
-              </div>
-            </>
-          )}
+            )}
+          </div>
+          <div className="pl-1 opacity-60 -mr-2 scale-125">
+            {isOpen ? (<ChevronUpIcon width={24} />) : (<ChevronDownIcon width={24} />)}
+          </div>
         </Button>
       </PopoverTrigger>
       <PopoverContent align={align} className="w-auto">

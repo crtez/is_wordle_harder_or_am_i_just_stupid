@@ -316,7 +316,7 @@ const WordleChart = () => {
       )}
       
       <div className="grid grid-cols-12 gap-3 mb-4">
-        <div className="col-span-10 grid grid-cols-6 gap-3 items-center">
+        <div className="col-span-12 lg:col-span-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 items-center">
           <DropdownMenu>
             <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
               {chartMode === 'standard' ? 'Wordle Average' : 
@@ -423,8 +423,8 @@ const WordleChart = () => {
           )}
         </div>
 
-        <div className="col-span-2 flex items-center gap-4 justify-end h-10">
-          {chartMode !== 'firstGuess' ? (
+        <div className="col-span-12 lg:col-span-2 flex items-center gap-4 justify-end h-10">
+          {!isMobile && chartMode !== 'firstGuess' && (
             <>
               <Label htmlFor="show-words" className="whitespace-nowrap">Show Words</Label>
               <Switch
@@ -433,7 +433,8 @@ const WordleChart = () => {
                 onCheckedChange={setShowWords}
               />
             </>
-          ) : (
+          )}
+          {chartMode === 'firstGuess' && (
             <>
               <Label htmlFor="sound-toggle" className="whitespace-nowrap">Sound</Label>
               <Switch
