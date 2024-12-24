@@ -67,10 +67,10 @@ const WordleChart = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // Data and Loading States
-  const { data, loading, error } = useWordleData();
+  const { data, error } = useWordleData();
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
-  const { data: cheatingData, loading: cheatingLoading } = useCheatingData();
+  const { data: cheatingData } = useCheatingData();
   
   // UI Control States
   const [showWords, setShowWords] = useState(false);
@@ -315,8 +315,13 @@ const WordleChart = () => {
     }
   };
 
-  if (loading || cheatingLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
+  if (error) return (
+    <div className="h-screen flex items-center justify-center">
+      <div className="text-lg text-red-600">
+        Error loading Wordle data. Please try refreshing the page.
+      </div>
+    </div>
+  );
   if (!data?.length) return null;
 
   return (

@@ -13,11 +13,6 @@ export const useCheatingData = () => {
 
   useEffect(() => {
     try {
-      console.log('Loading cheating data:', {
-        normal: normalData.slice(0, 2),
-        hard: hardData.slice(0, 2)
-      });
-
       setData({
         normal: normalData,
         hard: hardData
