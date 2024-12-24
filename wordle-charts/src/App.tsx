@@ -315,8 +315,13 @@ const WordleChart = () => {
     }
   };
 
-  if (loading || cheatingLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading data</div>;
+  if (error) return (
+    <div className="h-screen flex items-center justify-center">
+      <div className="text-lg text-red-600">
+        Error loading Wordle data. Please try refreshing the page.
+      </div>
+    </div>
+  );
   if (!data?.length) return null;
 
   return (
