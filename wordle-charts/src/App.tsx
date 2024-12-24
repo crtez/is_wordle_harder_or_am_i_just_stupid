@@ -67,10 +67,10 @@ const WordleChart = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // Data and Loading States
-  const { data, loading, error } = useWordleData();
+  const { data, error } = useWordleData();
   const [personalData, setPersonalData] = useState<PersonalData[]>([]);
   const [firstGuessData, setFirstGuessData] = useState<FirstGuessData[]>([]);
-  const { data: cheatingData, loading: cheatingLoading } = useCheatingData();
+  const { data: cheatingData } = useCheatingData();
   
   // UI Control States
   const [showWords, setShowWords] = useState(false);
