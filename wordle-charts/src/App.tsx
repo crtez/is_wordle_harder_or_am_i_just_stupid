@@ -413,7 +413,7 @@ const WordleChart = () => {
                 showCompare={false}
               />
               <Button
-                variant="ghost"
+                variant="outline"
                 size="icon"
                 onClick={() => {
                   setSelectedDate(minDate);
