@@ -22,7 +22,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, RotateCcw } from "lucide-react"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
 import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
@@ -44,6 +44,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { FileInput } from '@/components/FileInput';
 import { useCheatingData } from '@/utils/useCheatingData';
 import { useSearchParams } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -331,6 +332,7 @@ const WordleChart = () => {
           This site is best viewed on desktop. 
           <button 
             onClick={() => setShowMobileBanner(false)}
+            onMouseDown={(e) => e.stopPropagation()}
             className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
             aria-label="Dismiss banner"
           >
@@ -383,31 +385,50 @@ const WordleChart = () => {
           </DropdownMenu>
           
           {chartMode !== 'firstGuess' && (
-            <DateRangePicker
-              align="start"
-              initialDateFrom={selectedDate || minDate}
-              initialDateTo={selectedEndDate || maxDate}
-              onUpdate={({ range }) => {
-                setSelectedDate(range.from);
-                setSelectedEndDate(range.to || range.from);
-                
-                // Update URL params
-                setSearchParams(params => {
-                  if (range.from) {
-                    params.set('from', range.from.toISOString().split('T')[0]);
-                  } else {
+            <div className="flex items-center gap-2">
+              <DateRangePicker
+                key={`${selectedDate?.toISOString()}-${selectedEndDate?.toISOString()}`}
+                align="start"
+                initialDateFrom={selectedDate || minDate}
+                initialDateTo={selectedEndDate || maxDate}
+                onUpdate={({ range }) => {
+                  setSelectedDate(range.from);
+                  setSelectedEndDate(range.to || range.from);
+                  
+                  // Update URL params
+                  setSearchParams(params => {
+                    if (range.from) {
+                      params.set('from', range.from.toISOString().split('T')[0]);
+                    } else {
+                      params.delete('from');
+                    }
+                    if (range.to) {
+                      params.set('to', range.to.toISOString().split('T')[0]);
+                    } else {
+                      params.delete('to');
+                    }
+                    return params;
+                  });
+                }}
+                showCompare={false}
+              />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => {
+                  setSelectedDate(minDate);
+                  setSelectedEndDate(maxDate);
+                  setSearchParams(params => {
                     params.delete('from');
-                  }
-                  if (range.to) {
-                    params.set('to', range.to.toISOString().split('T')[0]);
-                  } else {
                     params.delete('to');
-                  }
-                  return params;
-                });
-              }}
-              showCompare={false}
-            />
+                    return params;
+                  });
+                }}
+                title="Reset date range"
+              >
+                <RotateCcw className="h-4 w-4" />
+              </Button>
+            </div>
           )}
         </div>
 
