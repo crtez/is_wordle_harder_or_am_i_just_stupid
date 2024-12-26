@@ -22,7 +22,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, RotateCcw } from "lucide-react"
 import { InstructionsDialog } from '@/components/InstructionsDialog';
 import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
@@ -44,6 +44,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { FileInput } from '@/components/FileInput';
 import { useCheatingData } from '@/utils/useCheatingData';
 import { useSearchParams } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -180,6 +181,10 @@ const WordleChart = () => {
         
         return {
           ...d,
+          guessesNumber: normalCheating?.guesses.today || null,
+          guessesNumberYesterday: normalCheating?.guesses.yesterday || null,
+          hardGuessesNumber: hardCheating?.guesses.today || null,
+          hardGuessesNumberYesterday: hardCheating?.guesses.yesterday || null,
           proportionDelta: normalCheating?.guesses.proportion.delta || null,
           hardProportionDelta: hardCheating?.guesses.proportion.delta || null,
           proportion: normalCheating?.guesses.proportion || null,
@@ -331,6 +336,7 @@ const WordleChart = () => {
           This site is best viewed on desktop. 
           <button 
             onClick={() => setShowMobileBanner(false)}
+            onMouseDown={(e) => e.stopPropagation()}
             className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
             aria-label="Dismiss banner"
           >
@@ -340,7 +346,7 @@ const WordleChart = () => {
       )}
       
       <div className="grid grid-cols-12 gap-3 mb-4">
-        <div className="col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-3 items-center">
+        <div className="col-span-12 grid grid-cols-1 sm:grid-cols-[278.517px_1fr] gap-3 items-center">
           <DropdownMenu>
             <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
               {chartMode === 'standard' ? 'Wordle Average' : 
@@ -383,37 +389,57 @@ const WordleChart = () => {
           </DropdownMenu>
           
           {chartMode !== 'firstGuess' && (
-            <DateRangePicker
-              align="start"
-              initialDateFrom={selectedDate || minDate}
-              initialDateTo={selectedEndDate || maxDate}
-              onUpdate={({ range }) => {
-                setSelectedDate(range.from);
-                setSelectedEndDate(range.to || range.from);
-                
-                // Update URL params
-                setSearchParams(params => {
-                  if (range.from) {
-                    params.set('from', range.from.toISOString().split('T')[0]);
-                  } else {
+            <div className="flex items-center gap-2">
+              <DateRangePicker
+                key={`${selectedDate?.toISOString()}-${selectedEndDate?.toISOString()}`}
+                align="start"
+                initialDateFrom={selectedDate || minDate}
+                initialDateTo={selectedEndDate || maxDate}
+                onUpdate={({ range }) => {
+                  setSelectedDate(range.from);
+                  setSelectedEndDate(range.to || range.from);
+                  
+                  // Update URL params
+                  setSearchParams(params => {
+                    if (range.from) {
+                      params.set('from', range.from.toISOString().split('T')[0]);
+                    } else {
+                      params.delete('from');
+                    }
+                    if (range.to) {
+                      params.set('to', range.to.toISOString().split('T')[0]);
+                    } else {
+                      params.delete('to');
+                    }
+                    return params;
+                  });
+                }}
+                showCompare={false}
+              />
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => {
+                  setSelectedDate(minDate);
+                  setSelectedEndDate(maxDate);
+                  setSearchParams(params => {
                     params.delete('from');
-                  }
-                  if (range.to) {
-                    params.set('to', range.to.toISOString().split('T')[0]);
-                  } else {
                     params.delete('to');
-                  }
-                  return params;
-                });
-              }}
-              showCompare={false}
-            />
+                    return params;
+                  });
+                }}
+                title="Reset date range"
+              >
+                <RotateCcw className="h-4 w-4" />
+              </Button>
+              <ModeToggle />
+            </div>
           )}
         </div>
 
         {chartMode === 'personal' && (
           <div className="col-span-12 flex items-center gap-3">
-            <div className="flex-grow">
+            <div className="sm:w-[calc(278.517px_+_88px)]">
               <FileInput
                 onChange={handleFileUpload}
                 fileName={fileName}
@@ -478,7 +504,6 @@ const WordleChart = () => {
             )}
           </div>
           
-          <ModeToggle />
         </div>
 
         {chartMode === 'personal' && personalStats.count > 0 && (
@@ -517,7 +542,7 @@ const WordleChart = () => {
             </Treemap>
           ) : (
             <ScatterChart 
-              margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
+              margin={{ top: 5, right: 30, left: 20, bottom: 30 }}
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
