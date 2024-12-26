@@ -181,6 +181,10 @@ const WordleChart = () => {
         
         return {
           ...d,
+          guessesNumber: normalCheating?.guesses.today || null,
+          guessesNumberYesterday: normalCheating?.guesses.yesterday || null,
+          hardGuessesNumber: hardCheating?.guesses.today || null,
+          hardGuessesNumberYesterday: hardCheating?.guesses.yesterday || null,
           proportionDelta: normalCheating?.guesses.proportion.delta || null,
           hardProportionDelta: hardCheating?.guesses.proportion.delta || null,
           proportion: normalCheating?.guesses.proportion || null,
@@ -435,7 +439,7 @@ const WordleChart = () => {
 
         {chartMode === 'personal' && (
           <div className="col-span-12 flex items-center gap-3">
-            <div className="flex-grow">
+            <div className="sm:w-[calc(278.517px_+_88px)]">
               <FileInput
                 onChange={handleFileUpload}
                 fileName={fileName}

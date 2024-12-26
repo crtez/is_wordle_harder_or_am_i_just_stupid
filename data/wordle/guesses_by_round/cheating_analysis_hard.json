@@ -8888,5 +8888,47 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2024-12-24",
+    "word": "eagle",
+    "guesses": {
+      "today": 419,
+      "yesterday": 13,
+      "delta": 406,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2024-12-25",
+    "word": "share",
+    "guesses": {
+      "today": 2369,
+      "yesterday": 1310,
+      "delta": 1059,
+      "proportion": {
+        "today": 1.05,
+        "yesterday": 0.59,
+        "delta": 0.45
+      }
+    }
+  },
+  {
+    "date": "2024-12-26",
+    "word": "affix",
+    "guesses": {
+      "today": 339,
+      "yesterday": 0,
+      "delta": 339,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
