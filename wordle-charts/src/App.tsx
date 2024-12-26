@@ -342,7 +342,7 @@ const WordleChart = () => {
       )}
       
       <div className="grid grid-cols-12 gap-3 mb-4">
-        <div className="col-span-12 grid grid-cols-1 sm:grid-cols-[278.517px_1fr_auto] gap-3 items-center">
+        <div className="col-span-12 grid grid-cols-1 sm:grid-cols-[278.517px_1fr] gap-3 items-center">
           <DropdownMenu>
             <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
               {chartMode === 'standard' ? 'Wordle Average' : 
@@ -428,15 +428,9 @@ const WordleChart = () => {
               >
                 <RotateCcw className="h-4 w-4" />
               </Button>
-              <div className="block sm:hidden ml-auto">
-                <ModeToggle />
-              </div>
+              <ModeToggle />
             </div>
           )}
-
-          <div className="hidden sm:block">
-            <ModeToggle />
-          </div>
         </div>
 
         {chartMode === 'personal' && (
