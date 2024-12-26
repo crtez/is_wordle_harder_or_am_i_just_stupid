@@ -542,7 +542,7 @@ const WordleChart = () => {
             </Treemap>
           ) : (
             <ScatterChart 
-              margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
+              margin={{ top: 5, right: 30, left: 20, bottom: 30 }}
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
