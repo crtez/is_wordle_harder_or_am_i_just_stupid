@@ -14,16 +14,6 @@ export interface PersonalData {
   timestamp: number;
 }
   
-export interface WordleStats {
-  gamesPlayed: number;
-  gamesWon: number;
-  currentStreak: number;
-  maxStreak: number;
-  guessDistribution: Record<string, number>;
-  winRate: number;
-  averageGuesses: number;
-}
-  
 export interface ChartState {
   allData: {
     normal: any[];

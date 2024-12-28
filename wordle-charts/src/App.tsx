@@ -28,13 +28,11 @@ import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
-import { ChartState, WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
-import { StatsDialog } from '@/components/StatsDialog';
+import { ChartState, PersonalData, PersonalStats } from '@/types/wordle_types';
 import {
   processWordleData,
   calculatePersonalStats,
   calculateRollingAverage,
-  calculateWordleStats,
   getBookmarkletCode,
   calculateFirstGuessFrequency,
   FirstGuessData,
@@ -122,7 +120,6 @@ const WordleChart = () => {
     normal: { aboveAverage: 0, belowAverage: 0 },
     hard: { aboveAverage: 0, belowAverage: 0 }
   });
-  const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
 
   // Audio States
   const [soundEnabled, setSoundEnabled] = useState(false);
@@ -265,7 +262,6 @@ const WordleChart = () => {
           }
           setPersonalData(json);
           setPersonalStats(calculatePersonalStats(data, json));
-          setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
           alert('Error parsing file. Please make sure you uploaded a valid JSON file with Wordle data.');
@@ -402,9 +398,6 @@ const WordleChart = () => {
               >
                 Copy Data Fetcher
               </button>
-              {personalData.length > 0 && (
-                <StatsDialog wordleStats={wordleStats} personalData={personalData} />
-              )}
             </div>
           ) : (
             <div className="flex items-center gap-2">
@@ -469,9 +462,6 @@ const WordleChart = () => {
             >
               Copy Data Fetcher
             </button>
-            {personalData.length > 0 && (
-              <StatsDialog wordleStats={wordleStats} personalData={personalData} />
-            )}
           </div>
         )}
 
