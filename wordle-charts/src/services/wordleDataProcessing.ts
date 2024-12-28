@@ -267,19 +267,32 @@ export const calculateMostActiveHour = (data: PersonalData[]): { hour: string; c
 export interface FirstGuessData {
   name: string;
   size: number;
+  firstUsed: string;
 }
 
 export const calculateFirstGuessFrequency = (data: PersonalData[]): FirstGuessData[] => {
-  const firstGuesses: { [key: string]: number } = {};
+  const firstGuesses: { [key: string]: { count: number; firstUsed: number } } = {};
   
   data.forEach(entry => {
     if (entry.game_data.boardState.length > 0 && entry.game_data.boardState[0]) {
       const firstGuess = entry.game_data.boardState[0].toUpperCase();
-      firstGuesses[firstGuess] = (firstGuesses[firstGuess] || 0) + 1;
+      if (!firstGuesses[firstGuess]) {
+        firstGuesses[firstGuess] = {
+          count: 1,
+          firstUsed: entry.timestamp
+        };
+      } else {
+        firstGuesses[firstGuess].count += 1;
+        firstGuesses[firstGuess].firstUsed = Math.min(firstGuesses[firstGuess].firstUsed, entry.timestamp);
+      }
     }
   });
 
   return Object.entries(firstGuesses)
-    .map(([name, size]) => ({ name, size }))
+    .map(([name, data]) => ({ 
+      name, 
+      size: data.count,
+      firstUsed: new Date(data.firstUsed * 1000).toISOString().split('T')[0]
+    }))
     .sort((a, b) => b.size - a.size);
 };
