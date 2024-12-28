@@ -8930,5 +8930,33 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2024-12-27",
+    "word": "grain",
+    "guesses": {
+      "today": 8216,
+      "yesterday": 1902,
+      "delta": 6314,
+      "proportion": {
+        "today": 0.46,
+        "yesterday": 0.11,
+        "delta": 0.36
+      }
+    }
+  },
+  {
+    "date": "2024-12-28",
+    "word": "decry",
+    "guesses": {
+      "today": 4951,
+      "yesterday": 10,
+      "delta": 4941,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.0,
+        "delta": 0.28
+      }
+    }
   }
 ]
