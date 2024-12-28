@@ -388,7 +388,25 @@ const WordleChart = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          {chartMode !== 'firstGuess' && (
+          {chartMode === 'firstGuess' ? (
+            <div className="flex items-center gap-3">
+              <div className="sm:w-[calc(278.517px_+_88px)]">
+                <FileInput
+                  onChange={handleFileUpload}
+                  fileName={fileName}
+                />
+              </div>
+              <button
+                onClick={handleCopyBookmarklet}
+                className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
+              >
+                Copy Data Fetcher
+              </button>
+              {personalData.length > 0 && (
+                <StatsDialog wordleStats={wordleStats} personalData={personalData} />
+              )}
+            </div>
+          ) : (
             <div className="flex items-center gap-2">
               <DateRangePicker
                 key={`${selectedDate?.toISOString()}-${selectedEndDate?.toISOString()}`}
