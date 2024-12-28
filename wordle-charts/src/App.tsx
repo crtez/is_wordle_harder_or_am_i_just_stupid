@@ -81,6 +81,7 @@ const WordleChart = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
   const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
+  const [showToday, setShowToday] = useState(false);
 
   // Date States
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(() => {
@@ -159,17 +160,22 @@ const WordleChart = () => {
       const rolling30Data = calculateRollingAverage(processedData, 30)
         .filter(d => d.rollingAverage !== null);
 
-      // Apply date filtering to all datasets
-      const filterByDate = (d: any) => {
+      // Filter out today's data if showToday is false
+      const filterData = (d: any) => {
         const date = parseISO(d.date);
+        const today = startOfDay(new Date());
+        const isToday = date.getTime() === today.getTime();
+        
+        if (!showToday && isToday) return false;
+        
         const isAfterStart = !selectedDate || date >= startOfDay(selectedDate);
         const isBeforeEnd = !selectedEndDate || date <= endOfDay(selectedEndDate);
         return isAfterStart && isBeforeEnd;
       };
 
-      const filteredData = processedData.filter(filterByDate);
-      const filtered7Data = rolling7Data.filter(filterByDate);
-      const filtered30Data = rolling30Data.filter(filterByDate);
+      const filteredData = processedData.filter(filterData);
+      const filtered7Data = rolling7Data.filter(filterData);
+      const filtered30Data = rolling30Data.filter(filterData);
 
       // Process cheating analysis data
       const cheatingProcessedData = data.map(d => {
@@ -187,7 +193,7 @@ const WordleChart = () => {
           proportion: normalCheating?.guesses.proportion || null,
           hardProportion: hardCheating?.guesses.proportion || null
         };
-      }).filter(filterByDate);
+      }).filter(filterData);
 
       setChartState({
         allData: {
@@ -210,7 +216,7 @@ const WordleChart = () => {
                 : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate, cheatingData]);
+  }, [data, personalData, selectedDate, selectedEndDate, cheatingData, showToday]);
 
   React.useEffect(() => {
     if (data?.length && personalData.length) {
@@ -479,14 +485,24 @@ const WordleChart = () => {
             )}
             
             {chartMode !== 'firstGuess' && (
-              <div className="flex items-center gap-2">
-                <Label htmlFor="show-words">Show Words</Label>
-                <Switch
-                  id="show-words"
-                  checked={showWords}
-                  onCheckedChange={setShowWords}
-                />
-              </div>
+              <>
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="show-words">Show Words</Label>
+                  <Switch
+                    id="show-words"
+                    checked={showWords}
+                    onCheckedChange={setShowWords}
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="show-today">Show Today's</Label>
+                  <Switch
+                    id="show-today"
+                    checked={showToday}
+                    onCheckedChange={setShowToday}
+                  />
+                </div>
+              </>
             )}
             
             {chartMode === 'firstGuess' && (
