@@ -40,7 +40,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
             Guessed First (Day Before): {dataPoint.hardProportion?.yesterday}%
           </p>
           <p className="text-foreground">
-          {dataPoint.hardGuessesNumberYesterday} -&gt; {dataPoint.hardGuessesNumber} guesses
+            {dataPoint.hardGuessesNumberYesterday.toLocaleString()} -&gt; {dataPoint.hardGuessesNumber.toLocaleString()} guesses
           </p>
         </>
       ) : (
@@ -55,7 +55,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
             Guessed First (Day Before): {dataPoint.proportion?.yesterday}%
           </p>
           <p className="text-foreground">
-          {dataPoint.guessesNumberYesterday} -&gt; {dataPoint.guessesNumber} guesses
+          {dataPoint.guessesNumberYesterday.toLocaleString()} -&gt; {dataPoint.guessesNumber.toLocaleString()} guesses
           </p>
         </>
       )}

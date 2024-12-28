@@ -495,7 +495,7 @@ const WordleChart = () => {
                   />
                 </div>
                 <div className="flex items-center gap-2">
-                  <Label htmlFor="show-today">Show Today's</Label>
+                  <Label htmlFor="show-today">Show Today</Label>
                   <Switch
                     id="show-today"
                     checked={showToday}
