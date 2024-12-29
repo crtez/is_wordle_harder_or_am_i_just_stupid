@@ -333,6 +333,20 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
+      <div className="absolute top-4 right-4">
+        <a
+          href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition-opacity"
+        >
+          <img 
+            src="/github-mark.svg" 
+            alt="GitHub"
+            className="h-6 w-6"
+          />
+        </a>
+      </div>
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative mb-4">
           This site is best viewed on desktop. 
