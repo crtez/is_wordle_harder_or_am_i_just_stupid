@@ -333,20 +333,6 @@ const WordleChart = () => {
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
-      <div className="absolute top-4 right-4">
-        <a
-          href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-75 transition-opacity"
-        >
-          <img 
-            src="/github-mark.svg" 
-            alt="GitHub"
-            className="h-6 w-6"
-          />
-        </a>
-      </div>
       {isMobile && showMobileBanner && (
         <div className="bg-yellow-300 text-black text-center p-2 font-bold relative mb-4">
           This site is best viewed on desktop. 
@@ -363,46 +349,60 @@ const WordleChart = () => {
       
       <div className="grid grid-cols-12 gap-3 mb-4">
         <div className="col-span-12 grid grid-cols-1 sm:grid-cols-[278.517px_1fr] gap-3 items-center">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
-              {chartMode === 'standard' ? 'Wordle Average' : 
-               chartMode === 'difference' ? 'Normal vs. Hard' : 
-               chartMode === 'personal' ? 'Personal vs. Average' :
-               chartMode === 'rolling7' ? '7-Day Rolling Average' :
-               chartMode === 'rolling30' ? '30-Day Rolling Average' :
-               chartMode === 'clairvoyant' ? 'Clairvoyant Guesses' :
-               'First Guess Frequency'}
-              <ChevronDown className="ml-2 h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem onSelect={() => handleModeChange('standard')}>
-                Wordle Average
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('rolling7')}>
-                7-Day Rolling Average
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('rolling30')}>
-                30-Day Rolling Average
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
-                Normal vs. Hard
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('clairvoyant')}>
-                Clairvoyant Guesses
-              </DropdownMenuItem>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
-                  <DropdownMenuItem onSelect={() => handleModeChange('personal')}>
-                    Personal vs. Average
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onSelect={() => handleModeChange('firstGuess')}>
-                    First Guess Frequency
-                  </DropdownMenuItem>
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div className="flex items-center gap-3">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+                {chartMode === 'standard' ? 'Wordle Average' : 
+                 chartMode === 'difference' ? 'Normal vs. Hard' : 
+                 chartMode === 'personal' ? 'Personal vs. Average' :
+                 chartMode === 'rolling7' ? '7-Day Rolling Average' :
+                 chartMode === 'rolling30' ? '30-Day Rolling Average' :
+                 chartMode === 'clairvoyant' ? 'Clairvoyant Guesses' :
+                 'First Guess Frequency'}
+                <ChevronDown className="ml-2 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem onSelect={() => handleModeChange('standard')}>
+                  Wordle Average
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('rolling7')}>
+                  7-Day Rolling Average
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('rolling30')}>
+                  30-Day Rolling Average
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
+                  Normal vs. Hard
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('clairvoyant')}>
+                  Clairvoyant Guesses
+                </DropdownMenuItem>
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent>
+                    <DropdownMenuItem onSelect={() => handleModeChange('personal')}>
+                      Personal vs. Average
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onSelect={() => handleModeChange('firstGuess')}>
+                      First Guess Frequency
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <a
+              href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-75 transition-opacity sm:hidden"
+            >
+              <img 
+                src="/github-mark.svg" 
+                alt="GitHub"
+                className="h-6 w-6"
+              />
+            </a>
+          </div>
           
           {chartMode === 'firstGuess' ? (
             <div className="flex items-center gap-3">
@@ -466,6 +466,22 @@ const WordleChart = () => {
               <ModeToggle />
             </div>
           )}
+        </div>
+
+        {/* Add the desktop version of the GitHub link */}
+        <div className="hidden sm:block absolute top-4 right-4">
+          <a
+            href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-75 transition-opacity"
+          >
+            <img 
+              src="/github-mark.svg" 
+              alt="GitHub"
+              className="h-6 w-6"
+            />
+          </a>
         </div>
 
         {chartMode === 'personal' && (
