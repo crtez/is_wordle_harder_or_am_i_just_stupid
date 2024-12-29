@@ -20,6 +20,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
     <div className="bg-background p-3 border rounded-lg shadow-lg">
       <p className="font-bold text-foreground">{dataPoint.name}</p>
       <p className="text-foreground">Used {dataPoint.size} times ({((dataPoint.size / firstGuessData.reduce((sum, item) => sum + item.size, 0)) * 100).toFixed(1)}%)</p>
+      <p className="text-foreground text-sm">First used: {format(parseISO(dataPoint.firstUsed), 'M/d/yyyy')}</p>
     </div>
   ) : chartMode === 'clairvoyant' ? (
     <div className="bg-background p-2 border border-border rounded shadow-sm">
@@ -39,7 +40,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
             Guessed First (Day Before): {dataPoint.hardProportion?.yesterday}%
           </p>
           <p className="text-foreground">
-          {dataPoint.hardGuessesNumberYesterday} -&gt; {dataPoint.hardGuessesNumber} guesses
+            {dataPoint.hardGuessesNumberYesterday.toLocaleString()} -&gt; {dataPoint.hardGuessesNumber.toLocaleString()} guesses
           </p>
         </>
       ) : (
@@ -54,7 +55,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
             Guessed First (Day Before): {dataPoint.proportion?.yesterday}%
           </p>
           <p className="text-foreground">
-          {dataPoint.guessesNumberYesterday} -&gt; {dataPoint.guessesNumber} guesses
+          {dataPoint.guessesNumberYesterday.toLocaleString()} -&gt; {dataPoint.guessesNumber.toLocaleString()} guesses
           </p>
         </>
       )}

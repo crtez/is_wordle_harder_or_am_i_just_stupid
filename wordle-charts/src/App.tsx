@@ -28,13 +28,11 @@ import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
-import { ChartState, WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
-import { StatsDialog } from '@/components/StatsDialog';
+import { ChartState, PersonalData, PersonalStats } from '@/types/wordle_types';
 import {
   processWordleData,
   calculatePersonalStats,
   calculateRollingAverage,
-  calculateWordleStats,
   getBookmarkletCode,
   calculateFirstGuessFrequency,
   FirstGuessData,
@@ -83,6 +81,7 @@ const WordleChart = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
   const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
+  const [showToday, setShowToday] = useState(false);
 
   // Date States
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(() => {
@@ -122,7 +121,6 @@ const WordleChart = () => {
     normal: { aboveAverage: 0, belowAverage: 0 },
     hard: { aboveAverage: 0, belowAverage: 0 }
   });
-  const [wordleStats, setWordleStats] = useState<WordleStats>({} as WordleStats);
 
   // Audio States
   const [soundEnabled, setSoundEnabled] = useState(false);
@@ -162,17 +160,22 @@ const WordleChart = () => {
       const rolling30Data = calculateRollingAverage(processedData, 30)
         .filter(d => d.rollingAverage !== null);
 
-      // Apply date filtering to all datasets
-      const filterByDate = (d: any) => {
+      // Filter out today's data if showToday is false
+      const filterData = (d: any) => {
         const date = parseISO(d.date);
+        const today = startOfDay(new Date());
+        const isToday = date.getTime() === today.getTime();
+        
+        if (!showToday && isToday) return false;
+        
         const isAfterStart = !selectedDate || date >= startOfDay(selectedDate);
         const isBeforeEnd = !selectedEndDate || date <= endOfDay(selectedEndDate);
         return isAfterStart && isBeforeEnd;
       };
 
-      const filteredData = processedData.filter(filterByDate);
-      const filtered7Data = rolling7Data.filter(filterByDate);
-      const filtered30Data = rolling30Data.filter(filterByDate);
+      const filteredData = processedData.filter(filterData);
+      const filtered7Data = rolling7Data.filter(filterData);
+      const filtered30Data = rolling30Data.filter(filterData);
 
       // Process cheating analysis data
       const cheatingProcessedData = data.map(d => {
@@ -190,7 +193,7 @@ const WordleChart = () => {
           proportion: normalCheating?.guesses.proportion || null,
           hardProportion: hardCheating?.guesses.proportion || null
         };
-      }).filter(filterByDate);
+      }).filter(filterData);
 
       setChartState({
         allData: {
@@ -213,7 +216,7 @@ const WordleChart = () => {
                 : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate, cheatingData]);
+  }, [data, personalData, selectedDate, selectedEndDate, cheatingData, showToday]);
 
   React.useEffect(() => {
     if (data?.length && personalData.length) {
@@ -265,7 +268,6 @@ const WordleChart = () => {
           }
           setPersonalData(json);
           setPersonalStats(calculatePersonalStats(data, json));
-          setWordleStats(calculateWordleStats(json));
         } catch (error) {
           console.error('Error parsing JSON:', error);
           alert('Error parsing file. Please make sure you uploaded a valid JSON file with Wordle data.');
@@ -347,48 +349,77 @@ const WordleChart = () => {
       
       <div className="grid grid-cols-12 gap-3 mb-4">
         <div className="col-span-12 grid grid-cols-1 sm:grid-cols-[278.517px_1fr] gap-3 items-center">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
-              {chartMode === 'standard' ? 'Wordle Average' : 
-               chartMode === 'difference' ? 'Normal vs. Hard' : 
-               chartMode === 'personal' ? 'Personal vs. Average' :
-               chartMode === 'rolling7' ? '7-Day Rolling Average' :
-               chartMode === 'rolling30' ? '30-Day Rolling Average' :
-               chartMode === 'clairvoyant' ? 'Clairvoyant Guesses' :
-               'First Guess Frequency'}
-              <ChevronDown className="ml-2 h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem onSelect={() => handleModeChange('standard')}>
-                Wordle Average
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('rolling7')}>
-                7-Day Rolling Average
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('rolling30')}>
-                30-Day Rolling Average
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
-                Normal vs. Hard
-              </DropdownMenuItem>
-              <DropdownMenuItem onSelect={() => handleModeChange('clairvoyant')}>
-                Clairvoyant Guesses
-              </DropdownMenuItem>
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
-                  <DropdownMenuItem onSelect={() => handleModeChange('personal')}>
-                    Personal vs. Average
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onSelect={() => handleModeChange('firstGuess')}>
-                    First Guess Frequency
-                  </DropdownMenuItem>
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div className="flex items-center gap-3">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex-1 inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+                {chartMode === 'standard' ? 'Wordle Average' : 
+                 chartMode === 'difference' ? 'Normal vs. Hard' : 
+                 chartMode === 'personal' ? 'Personal vs. Average' :
+                 chartMode === 'rolling7' ? '7-Day Rolling Average' :
+                 chartMode === 'rolling30' ? '30-Day Rolling Average' :
+                 chartMode === 'clairvoyant' ? 'Clairvoyant Guesses' :
+                 'First Guess Frequency'}
+                <ChevronDown className="ml-2 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem onSelect={() => handleModeChange('standard')}>
+                  Wordle Average
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('rolling7')}>
+                  7-Day Rolling Average
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('rolling30')}>
+                  30-Day Rolling Average
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('difference')}>
+                  Normal vs. Hard
+                </DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => handleModeChange('clairvoyant')}>
+                  Clairvoyant Guesses
+                </DropdownMenuItem>
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger>Personal Charts</DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent>
+                    <DropdownMenuItem onSelect={() => handleModeChange('personal')}>
+                      Personal vs. Average
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onSelect={() => handleModeChange('firstGuess')}>
+                      First Guess Frequency
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <a
+              href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-75 transition-opacity sm:hidden flex-shrink-0"
+            >
+              <img 
+                src="/github-mark.svg" 
+                alt="GitHub"
+                className="h-6 w-6"
+              />
+            </a>
+          </div>
           
-          {chartMode !== 'firstGuess' && (
+          {chartMode === 'firstGuess' ? (
+            <div className="flex items-center gap-3">
+              <div className="sm:w-[calc(278.517px_+_88px)]">
+                <FileInput
+                  onChange={handleFileUpload}
+                  fileName={fileName}
+                />
+              </div>
+              <button
+                onClick={handleCopyBookmarklet}
+                className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 whitespace-nowrap"
+              >
+                Copy Data Fetcher
+              </button>
+            </div>
+          ) : (
             <div className="flex items-center gap-2">
               <DateRangePicker
                 key={`${selectedDate?.toISOString()}-${selectedEndDate?.toISOString()}`}
@@ -437,6 +468,22 @@ const WordleChart = () => {
           )}
         </div>
 
+        {/* Add the desktop version of the GitHub link */}
+        <div className="hidden sm:block absolute top-4 right-4">
+          <a
+            href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-75 transition-opacity"
+          >
+            <img 
+              src="/github-mark.svg" 
+              alt="GitHub"
+              className="h-6 w-6"
+            />
+          </a>
+        </div>
+
         {chartMode === 'personal' && (
           <div className="col-span-12 flex items-center gap-3">
             <div className="sm:w-[calc(278.517px_+_88px)]">
@@ -451,9 +498,6 @@ const WordleChart = () => {
             >
               Copy Data Fetcher
             </button>
-            {personalData.length > 0 && (
-              <StatsDialog wordleStats={wordleStats} personalData={personalData} />
-            )}
           </div>
         )}
 
@@ -471,14 +515,24 @@ const WordleChart = () => {
             )}
             
             {chartMode !== 'firstGuess' && (
-              <div className="flex items-center gap-2">
-                <Label htmlFor="show-words">Show Words</Label>
-                <Switch
-                  id="show-words"
-                  checked={showWords}
-                  onCheckedChange={setShowWords}
-                />
-              </div>
+              <>
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="show-words">Show Words</Label>
+                  <Switch
+                    id="show-words"
+                    checked={showWords}
+                    onCheckedChange={setShowWords}
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Label htmlFor="show-today">Show Today</Label>
+                  <Switch
+                    id="show-today"
+                    checked={showToday}
+                    onCheckedChange={setShowToday}
+                  />
+                </div>
+              </>
             )}
             
             {chartMode === 'firstGuess' && (

@@ -1,6 +1,5 @@
-import { WordleStats, PersonalData, PersonalStats } from '@/types/wordle_types';
+import { PersonalData, PersonalStats } from '@/types/wordle_types';
 import puzzleIds from '@/data/archive/relevant_puzzle_ids.json';
-import { fromUnixTime, format } from 'date-fns';
 
 export const getBookmarkletCode = (): string => {
   const ids = puzzleIds.puzzle_ids.join(',');
@@ -144,142 +143,35 @@ export const calculateRollingAverage = (data: any[], days: number) => {
   });
 };
 
-export const calculateWordleStats = (data: PersonalData[]): WordleStats => {
-  if (!data.length) return {} as WordleStats;
-
-  const latestGameData = data.reduce((latest, current) => 
-    current.timestamp > latest.timestamp ? current : latest
-  );
-
-  const stats = latestGameData?.game_data?.setLegacyStats;
-  if (!stats) return {} as WordleStats;
-
-  const totalGuesses = Object.entries(stats.guesses)
-    .filter(([key]) => key !== 'fail')
-    .reduce((sum, [key, value]) => sum + (Number(key) * value), 0);
-  
-  return {
-    gamesPlayed: stats.gamesPlayed,
-    gamesWon: stats.gamesWon,
-    currentStreak: stats.currentStreak,
-    maxStreak: stats.maxStreak,
-    guessDistribution: stats.guesses,
-    winRate: (stats.gamesWon / stats.gamesPlayed) * 100,
-    averageGuesses: totalGuesses / stats.gamesWon
-  };
-};
-
-export const calculateCumulativeAverage = (data: any[], isHardMode: boolean): number => {
-  if (!data?.length) return 0;
-  const sum = data.reduce((acc, curr) => acc + (isHardMode ? curr.hardAverage : curr.average), 0);
-  return sum / data.length;
-};
-
-interface CompletionTimes {
-  average: string;
-  earliest: {
-    time: string;
-    date: string;
-  };
-  latest: {
-    time: string;
-    date: string;
-  };
-}
-
-export const calculateCompletionTimes = (data: PersonalData[]): CompletionTimes => {
-  if (!data.length) return { 
-    average: 'N/A', 
-    earliest: { time: 'N/A', date: 'N/A' }, 
-    latest: { time: 'N/A', date: 'N/A' } 
-  };
-
-  const wins = data.filter(entry => entry.game_data.status === "WIN");
-  if (!wins.length) return { 
-    average: 'N/A', 
-    earliest: { time: 'N/A', date: 'N/A' }, 
-    latest: { time: 'N/A', date: 'N/A' } 
-  };
-
-  // Calculate average
-  const totalMinutes = wins.reduce((sum, entry) => {
-    const date = fromUnixTime(entry.timestamp);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    return sum + (hours * 60) + minutes;
-  }, 0);
-
-  const averageMinutes = totalMinutes / wins.length;
-  const averageHours = Math.floor(averageMinutes / 60);
-  const averageMins = Math.round(averageMinutes % 60);
-
-  // Find earliest and latest
-  const [earliest, latest] = wins.reduce(([earliest, latest], entry) => {
-    const date = fromUnixTime(entry.timestamp);
-    const minutes = date.getHours() * 60 + date.getMinutes();
-    
-    if (!earliest || minutes < (earliest.getHours() * 60 + earliest.getMinutes())) {
-      earliest = date;
-    }
-    if (!latest || minutes > (latest.getHours() * 60 + latest.getMinutes())) {
-      latest = date;
-    }
-    
-    return [earliest, latest];
-  }, [null, null] as [Date | null, Date | null]);
-
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const timeFormat = 'h:mm a';
-  const dateFormat = 'MMM d, yyyy';
-
-  return {
-    average: `${format(new Date(0, 0, 0, averageHours, averageMins), timeFormat)} ${timezone}`,
-    earliest: {
-      time: format(earliest!, timeFormat),
-      date: format(earliest!, dateFormat)
-    },
-    latest: {
-      time: format(latest!, timeFormat),
-      date: format(latest!, dateFormat)
-    }
-  };
-}; 
-
-export const calculateMostActiveHour = (data: PersonalData[]): { hour: string; count: number } => {
-  const hourCount: { [key: string]: number } = {};
-
-  data.forEach(entry => {
-    if (entry.game_data.status === "WIN") {
-      const date = fromUnixTime(entry.timestamp);
-      const hour = date.getHours();
-      const hourKey = `${hour % 12 || 12}:00 ${hour < 12 ? 'AM' : 'PM'} - ${((hour + 1) % 12) || 12}:00 ${hour + 1 < 12 ? 'AM' : 'PM'}`;
-      hourCount[hourKey] = (hourCount[hourKey] || 0) + 1;
-    }
-  });
-
-  const mostActiveHour = Object.entries(hourCount).reduce((prev, curr) => 
-    curr[1] > prev[1] ? curr : prev
-  );
-
-  return { hour: mostActiveHour[0], count: mostActiveHour[1] || 0 };
-}; 
-
 export interface FirstGuessData {
   name: string;
   size: number;
+  firstUsed: string;
 }
 
 export const calculateFirstGuessFrequency = (data: PersonalData[]): FirstGuessData[] => {
-  const firstGuesses: { [key: string]: number } = {};
+  const firstGuesses: { [key: string]: { count: number; firstUsed: number } } = {};
   
   data.forEach(entry => {
     if (entry.game_data.boardState.length > 0 && entry.game_data.boardState[0]) {
       const firstGuess = entry.game_data.boardState[0].toUpperCase();
-      firstGuesses[firstGuess] = (firstGuesses[firstGuess] || 0) + 1;
+      if (!firstGuesses[firstGuess]) {
+        firstGuesses[firstGuess] = {
+          count: 1,
+          firstUsed: entry.timestamp
+        };
+      } else {
+        firstGuesses[firstGuess].count += 1;
+        firstGuesses[firstGuess].firstUsed = Math.min(firstGuesses[firstGuess].firstUsed, entry.timestamp);
+      }
     }
   });
 
   return Object.entries(firstGuesses)
-    .map(([name, size]) => ({ name, size }))
+    .map(([name, data]) => ({ 
+      name, 
+      size: data.count,
+      firstUsed: new Date(data.firstUsed * 1000).toISOString().split('T')[0]
+    }))
     .sort((a, b) => b.size - a.size);
 };
