@@ -351,7 +351,7 @@ const WordleChart = () => {
         <div className="col-span-12 grid grid-cols-1 sm:grid-cols-[278.517px_1fr] gap-3 items-center">
           <div className="flex items-center gap-3">
             <DropdownMenu>
-              <DropdownMenuTrigger className="w-full inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+              <DropdownMenuTrigger className="flex-1 inline-flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
                 {chartMode === 'standard' ? 'Wordle Average' : 
                  chartMode === 'difference' ? 'Normal vs. Hard' : 
                  chartMode === 'personal' ? 'Personal vs. Average' :
@@ -394,7 +394,7 @@ const WordleChart = () => {
               href="https://github.com/crtez/is_wordle_harder_or_am_i_just_stupid"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-75 transition-opacity sm:hidden"
+              className="hover:opacity-75 transition-opacity sm:hidden flex-shrink-0"
             >
               <img 
                 src="/github-mark.svg" 
