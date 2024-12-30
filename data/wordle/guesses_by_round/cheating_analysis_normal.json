@@ -8958,5 +8958,33 @@
         "delta": 0.28
       }
     }
+  },
+  {
+    "date": "2024-12-29",
+    "word": "mambo",
+    "guesses": {
+      "today": 5553,
+      "yesterday": 5,
+      "delta": 5548,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
+  },
+  {
+    "date": "2024-12-30",
+    "word": "stare",
+    "guesses": {
+      "today": 104053,
+      "yesterday": 86583,
+      "delta": 17470,
+      "proportion": {
+        "today": 5.85,
+        "yesterday": 4.85,
+        "delta": 1.0
+      }
+    }
   }
 ]
