@@ -8986,5 +8986,47 @@
         "delta": 1.03
       }
     }
+  },
+  {
+    "date": "2024-12-31",
+    "word": "lemur",
+    "guesses": {
+      "today": 375,
+      "yesterday": 6,
+      "delta": 369,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "word": "nerve",
+    "guesses": {
+      "today": 349,
+      "yesterday": 4,
+      "delta": 345,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2025-01-02",
+    "word": "chose",
+    "guesses": {
+      "today": 511,
+      "yesterday": 68,
+      "delta": 443,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.03,
+        "delta": 0.2
+      }
+    }
   }
 ]
