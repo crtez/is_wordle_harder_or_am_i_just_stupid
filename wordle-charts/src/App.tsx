@@ -707,6 +707,7 @@ const WordleChart = () => {
               {/* Add the word pointer */}
               {foundWordIndex !== null && (
                 <ReferenceLine
+                  key={`${chartMode}-${selectedDate?.toISOString()}-${selectedEndDate?.toISOString()}-${foundWordIndex}`}
                   x={chartState.displayData[foundWordIndex]?.[showWords ? 'word' : 'date']}
                   stroke="red"
                   strokeWidth={2}
