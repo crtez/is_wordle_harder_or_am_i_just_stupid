@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
   ReferenceLine,
   Treemap,
+  ReferenceArea,
 } from 'recharts';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -43,6 +44,7 @@ import { FileInput } from '@/components/FileInput';
 import { useCheatingData } from '@/utils/useCheatingData';
 import { useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { Input } from "@/components/ui/input";
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -133,6 +135,10 @@ const WordleChart = () => {
       new Audio('/sounds/chord4.mp3')
     ];
   });
+
+  // Add new state for search
+  const [searchWord, setSearchWord] = useState('');
+  const [foundWordIndex, setFoundWordIndex] = useState<number | null>(null);
 
   const cumulativeAverage = useMemo(() => {
     if (!data?.length) return 0;
@@ -321,6 +327,18 @@ const WordleChart = () => {
       playNextChord();
     }
   };
+
+  // Modify the search effect to only trigger on 5 letters
+  useEffect(() => {
+    if (searchWord.length === 5 && chartState.displayData.length) {
+      const index = chartState.displayData.findIndex(
+        d => d.word?.toLowerCase() === searchWord.toLowerCase()
+      );
+      setFoundWordIndex(index !== -1 ? index : null);
+    } else {
+      setFoundWordIndex(null);
+    }
+  }, [searchWord, chartState.displayData]);
 
   if (error) return (
     <div className="h-screen flex items-center justify-center">
@@ -556,6 +574,21 @@ const WordleChart = () => {
                 />
               </div>
             )}
+
+            {/* Add search input after other controls */}
+            {chartMode !== 'firstGuess' && (
+              <div className="flex items-center gap-2">
+                <Label htmlFor="word-search">Find Word:</Label>
+                <Input
+                  id="word-search"
+                  value={searchWord}
+                  onChange={(e) => setSearchWord(e.target.value.toUpperCase())}
+                  className="w-24"
+                  placeholder="AUDIO"
+                  maxLength={5}
+                />
+              </div>
+            )}
           </div>
           
         </div>
@@ -669,6 +702,31 @@ const WordleChart = () => {
                   isHardMode ? 'hardAverage' : 'average'
                 }
               />
+
+              {/* Add the word pointer */}
+              {foundWordIndex !== null && (
+                <ReferenceArea
+                  x1={chartState.displayData[foundWordIndex]?.[showWords ? 'word' : 'date']} 
+                  x2={chartState.displayData[foundWordIndex]?.[showWords ? 'word' : 'date']}
+                  y1={chartState.displayData[foundWordIndex]?.[
+                    chartMode === 'clairvoyant' ? (isHardMode ? 'hardProportionDelta' : 'proportionDelta') :
+                    chartMode === 'difference' ? 'difference' : 
+                    chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
+                    chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :
+                    isHardMode ? 'hardAverage' : 'average'
+                  ] - 0.1}
+                  y2={chartState.displayData[foundWordIndex]?.[
+                    chartMode === 'clairvoyant' ? (isHardMode ? 'hardProportionDelta' : 'proportionDelta') :
+                    chartMode === 'difference' ? 'difference' : 
+                    chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
+                    chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :
+                    isHardMode ? 'hardAverage' : 'average'
+                  ] + 0.1}
+                  fill="none"
+                  stroke="red"
+                  strokeWidth={1}
+                />
+              )}
             </ScatterChart>
           )}
         </ResponsiveContainer>
