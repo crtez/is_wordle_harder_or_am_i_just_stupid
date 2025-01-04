@@ -9,9 +9,7 @@ import {
   Tooltip, 
   ResponsiveContainer,
   ReferenceLine,
-  Treemap,
-  ReferenceArea,
-} from 'recharts';
+  Treemap} from 'recharts';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import {
@@ -689,7 +687,10 @@ const WordleChart = () => {
               )}
               <Scatter 
                 name="Wordle Data"
-                data={chartState.displayData}
+                data={chartState.displayData.map((entry, index) => ({
+                  ...entry,
+                  fill: index === foundWordIndex ? "#ff0000" : "#2563eb"
+                }))}
                 fill="#2563eb"
                 line={chartMode === 'rolling7' || chartMode === 'rolling30'}
                 shape="circle"
@@ -705,26 +706,12 @@ const WordleChart = () => {
 
               {/* Add the word pointer */}
               {foundWordIndex !== null && (
-                <ReferenceArea
-                  x1={chartState.displayData[foundWordIndex]?.[showWords ? 'word' : 'date']} 
-                  x2={chartState.displayData[foundWordIndex]?.[showWords ? 'word' : 'date']}
-                  y1={chartState.displayData[foundWordIndex]?.[
-                    chartMode === 'clairvoyant' ? (isHardMode ? 'hardProportionDelta' : 'proportionDelta') :
-                    chartMode === 'difference' ? 'difference' : 
-                    chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
-                    chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :
-                    isHardMode ? 'hardAverage' : 'average'
-                  ] - 0.1}
-                  y2={chartState.displayData[foundWordIndex]?.[
-                    chartMode === 'clairvoyant' ? (isHardMode ? 'hardProportionDelta' : 'proportionDelta') :
-                    chartMode === 'difference' ? 'difference' : 
-                    chartMode === 'personal' ? (isHardMode ? 'personalDifferenceHard' : 'personalDifference') :
-                    chartMode.startsWith('rolling') ? (isHardMode ? 'rollingAverageHard' : 'rollingAverage') :
-                    isHardMode ? 'hardAverage' : 'average'
-                  ] + 0.1}
-                  fill="none"
+                <ReferenceLine
+                  x={chartState.displayData[foundWordIndex]?.[showWords ? 'word' : 'date']}
                   stroke="red"
-                  strokeWidth={1}
+                  strokeWidth={2}
+                  className="animate-flash"
+                  isFront={true}
                 />
               )}
             </ScatterChart>

@@ -74,3 +74,12 @@
     @apply bg-background text-foreground;
   }
 } 
+
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-flash {
+  animation: flash 1s ease-out forwards;
+}
