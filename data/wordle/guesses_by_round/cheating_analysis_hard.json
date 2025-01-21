@@ -9028,5 +9028,271 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-01-03",
+    "word": "cheap",
+    "guesses": {
+      "today": 610,
+      "yesterday": 117,
+      "delta": 493,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.05,
+        "delta": 0.23
+      }
+    }
+  },
+  {
+    "date": "2025-01-04",
+    "word": "relax",
+    "guesses": {
+      "today": 456,
+      "yesterday": 41,
+      "delta": 415,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.02,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2025-01-05",
+    "word": "cyber",
+    "guesses": {
+      "today": 319,
+      "yesterday": 9,
+      "delta": 310,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
+  },
+  {
+    "date": "2025-01-06",
+    "word": "sprig",
+    "guesses": {
+      "today": 278,
+      "yesterday": 16,
+      "delta": 262,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.01,
+        "delta": 0.12
+      }
+    }
+  },
+  {
+    "date": "2025-01-07",
+    "word": "atlas",
+    "guesses": {
+      "today": 473,
+      "yesterday": 0,
+      "delta": 473,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
+  },
+  {
+    "date": "2025-01-08",
+    "word": "draft",
+    "guesses": {
+      "today": 576,
+      "yesterday": 142,
+      "delta": 434,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.07,
+        "delta": 0.2
+      }
+    }
+  },
+  {
+    "date": "2025-01-09",
+    "word": "wafer",
+    "guesses": {
+      "today": 398,
+      "yesterday": 7,
+      "delta": 391,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2025-01-10",
+    "word": "crawl",
+    "guesses": {
+      "today": 440,
+      "yesterday": 24,
+      "delta": 416,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2025-01-11",
+    "word": "dingy",
+    "guesses": {
+      "today": 292,
+      "yesterday": 9,
+      "delta": 283,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
+  },
+  {
+    "date": "2025-01-12",
+    "word": "total",
+    "guesses": {
+      "today": 367,
+      "yesterday": 8,
+      "delta": 359,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2025-01-13",
+    "word": "cloak",
+    "guesses": {
+      "today": 420,
+      "yesterday": 32,
+      "delta": 388,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2025-01-14",
+    "word": "fancy",
+    "guesses": {
+      "today": 403,
+      "yesterday": 39,
+      "delta": 364,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2025-01-15",
+    "word": "knack",
+    "guesses": {
+      "today": 572,
+      "yesterday": 4,
+      "delta": 568,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
+  },
+  {
+    "date": "2025-01-16",
+    "word": "flint",
+    "guesses": {
+      "today": 492,
+      "yesterday": 31,
+      "delta": 461,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
+  },
+  {
+    "date": "2025-01-17",
+    "word": "prose",
+    "guesses": {
+      "today": 608,
+      "yesterday": 84,
+      "delta": 524,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.04,
+        "delta": 0.24
+      }
+    }
+  },
+  {
+    "date": "2025-01-18",
+    "word": "silly",
+    "guesses": {
+      "today": 406,
+      "yesterday": 3,
+      "delta": 403,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2025-01-19",
+    "word": "rower",
+    "guesses": {
+      "today": 335,
+      "yesterday": 0,
+      "delta": 335,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
+  },
+  {
+    "date": "2025-01-20",
+    "word": "squid",
+    "guesses": {
+      "today": 467,
+      "yesterday": 42,
+      "delta": 425,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.02,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2025-01-21",
+    "word": "icing",
+    "guesses": {
+      "today": 380,
+      "yesterday": 0,
+      "delta": 380,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
