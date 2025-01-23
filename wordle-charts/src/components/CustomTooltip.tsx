@@ -31,7 +31,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
       {isHardMode ? (
         <>
           <p className="text-foreground">
-            Delta: {dataPoint.hardProportionDelta}%
+            Delta: +{dataPoint.hardProportionDelta}%
           </p>
           <p className="text-foreground">
             Guessed First: {dataPoint.hardProportion?.today}%
@@ -46,7 +46,7 @@ export const CustomTooltip = ({ active, payload, chartMode, personalData, isHard
       ) : (
         <>
           <p className="text-foreground">
-          Delta: {dataPoint.proportionDelta}%
+          Delta: +{dataPoint.proportionDelta}%
           </p>
           <p className="text-foreground">
             Guessed First: {dataPoint.proportion?.today}%
