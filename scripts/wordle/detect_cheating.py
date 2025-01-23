@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 import glob
 
@@ -92,8 +92,8 @@ if __name__ == "__main__":
             pass
     
     # Create date range from 2023-03-30 to present
-    start_date = datetime(2023, 3, 30)
-    end_date = datetime.now()
+    start_date = datetime(2023, 3, 30).date()
+    end_date = (datetime.now(timezone.utc) - timedelta(hours=12)).date()
     dates = [(start_date + timedelta(days=x)).strftime('%Y-%m-%d')
              for x in range((end_date - start_date).days + 1)]
     
