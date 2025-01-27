@@ -9294,5 +9294,75 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-01-22",
+    "word": "reach",
+    "guesses": {
+      "today": 16737,
+      "yesterday": 6018,
+      "delta": 10719,
+      "proportion": {
+        "today": 0.94,
+        "yesterday": 0.34,
+        "delta": 0.6
+      }
+    }
+  },
+  {
+    "date": "2025-01-23",
+    "word": "upper",
+    "guesses": {
+      "today": 7686,
+      "yesterday": 17,
+      "delta": 7669,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.0,
+        "delta": 0.43
+      }
+    }
+  },
+  {
+    "date": "2025-01-24",
+    "word": "crepe",
+    "guesses": {
+      "today": 8102,
+      "yesterday": 53,
+      "delta": 8049,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.0,
+        "delta": 0.45
+      }
+    }
+  },
+  {
+    "date": "2025-01-25",
+    "word": "crisp",
+    "guesses": {
+      "today": 6635,
+      "yesterday": 677,
+      "delta": 5958,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.04,
+        "delta": 0.33
+      }
+    }
+  },
+  {
+    "date": "2025-01-26",
+    "word": "sunny",
+    "guesses": {
+      "today": 6273,
+      "yesterday": 128,
+      "delta": 6145,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.01,
+        "delta": 0.34
+      }
+    }
   }
 ]
