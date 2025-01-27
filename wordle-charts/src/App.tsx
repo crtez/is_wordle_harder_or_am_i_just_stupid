@@ -81,7 +81,6 @@ const WordleChart = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showMobileBanner, setShowMobileBanner] = useState(true);
   const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
-  const [showToday, setShowToday] = useState(false);
 
   // Date States
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(() => {
@@ -164,14 +163,9 @@ const WordleChart = () => {
       const rolling30Data = calculateRollingAverage(processedData, 30)
         .filter(d => d.rollingAverage !== null);
 
-      // Filter out today's data if showToday is false
+      // Filter data based on date range only
       const filterData = (d: any) => {
         const date = parseISO(d.date);
-        const today = startOfDay(new Date());
-        const isToday = date.getTime() === today.getTime();
-        
-        if (!showToday && isToday) return false;
-        
         const isAfterStart = !selectedDate || date >= startOfDay(selectedDate);
         const isBeforeEnd = !selectedEndDate || date <= endOfDay(selectedEndDate);
         return isAfterStart && isBeforeEnd;
@@ -188,14 +182,14 @@ const WordleChart = () => {
         
         return {
           ...d,
-          guessesNumber: normalCheating?.guesses.today ?? null,
-          guessesNumberYesterday: normalCheating?.guesses.yesterday ?? null,
-          hardGuessesNumber: hardCheating?.guesses.today ?? null,
-          hardGuessesNumberYesterday: hardCheating?.guesses.yesterday ?? null,
-          proportionDelta: normalCheating?.guesses.proportion.delta ?? null,
-          hardProportionDelta: hardCheating?.guesses.proportion.delta ?? null,
-          proportion: normalCheating?.guesses.proportion ?? null,
-          hardProportion: hardCheating?.guesses.proportion ?? null
+          guessesNumber: normalCheating?.guesses.today || null,
+          guessesNumberYesterday: normalCheating?.guesses.yesterday || null,
+          hardGuessesNumber: hardCheating?.guesses.today || null,
+          hardGuessesNumberYesterday: hardCheating?.guesses.yesterday || null,
+          proportionDelta: normalCheating?.guesses.proportion.delta || null,
+          hardProportionDelta: hardCheating?.guesses.proportion.delta || null,
+          proportion: normalCheating?.guesses.proportion || null,
+          hardProportion: hardCheating?.guesses.proportion || null
         };
       }).filter(filterData);
 
@@ -220,7 +214,7 @@ const WordleChart = () => {
                 : filteredData
       });
     }
-  }, [data, personalData, selectedDate, selectedEndDate, cheatingData, showToday]);
+  }, [data, personalData, selectedDate, selectedEndDate, cheatingData]);
 
   React.useEffect(() => {
     if (data?.length && personalData.length) {
@@ -531,26 +525,16 @@ const WordleChart = () => {
             )}
             
             {chartMode !== 'firstGuess' && (
-              <>
-                <div className="flex items-center gap-2">
-                  <Label htmlFor="show-words">Show Words</Label>
-                  <Switch
-                    id="show-words"
-                    checked={showWords}
-                    onCheckedChange={setShowWords}
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <Label htmlFor="show-today">Show Today</Label>
-                  <Switch
-                    id="show-today"
-                    checked={showToday}
-                    onCheckedChange={setShowToday}
-                  />
-                </div>
-              </>
+              <div className="flex items-center gap-2">
+                <Label htmlFor="show-words">Show Words</Label>
+                <Switch
+                  id="show-words"
+                  checked={showWords}
+                  onCheckedChange={setShowWords}
+                />
+              </div>
             )}
-            
+
             {chartMode === 'firstGuess' && (
               <div className="flex items-center gap-2">
                 <Label htmlFor="sound-toggle">Sound</Label>
