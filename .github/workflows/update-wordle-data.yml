@@ -32,7 +32,7 @@ jobs:
           python scripts/wordle/update_summaries.py
           python scripts/wordle/update_archive.py
           python scripts/wordle/update_guesses_by_round.py
-          python scripts/wordle/update_archive.py
+          python scripts/wordle/detect_cheating.py
           
       - name: Commit and push changes
         run: |
