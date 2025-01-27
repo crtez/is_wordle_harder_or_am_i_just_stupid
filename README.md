@@ -4,6 +4,9 @@
 
 An interactive visualization tool for exploring Wordle statistics. Track global averages, compare normal vs. hard mode performance, and analyze your personal Wordle journey through various charts and metrics.
 
+*Note: the chart is always one day behind, to prevent spoilers.
+
+
 ## Features
 
 - 📊 Multiple chart views including rolling averages and personal performance
@@ -11,6 +14,7 @@ An interactive visualization tool for exploring Wordle statistics. Track global 
 - 🔄 Normal vs. Hard mode comparisons
 - 📅 Date range filtering
 - 🌓 Dark/Light mode support
-- 📱 Responsive design
-
+  
 Built with React, TypeScript, Recharts, Python, and Claude.
+
+*<sub>(Unless you live in UTC-12)</sub>
