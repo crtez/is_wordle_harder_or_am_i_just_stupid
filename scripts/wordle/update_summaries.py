@@ -1,15 +1,15 @@
 import os
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Path to the folder containing the JSON files
 folder_path = 'data/wordle/summaries'
 
 # Extract dates directly from filenames and find the latest date
-dates = [datetime.strptime(filename.split(',')[-1].replace('.json', ''), '%Y-%m-%d')
+dates = [datetime.strptime(filename.split(',')[-1].replace('.json', ''), '%Y-%m-%d').date()
          for filename in os.listdir(folder_path)]
 latest_date = max(dates)
-today = datetime.now()
+today = (datetime.now(timezone.utc) - timedelta(hours=12)).date()
 
 # Initialize an empty list to store the missing dates
 missing_dates = []
@@ -40,9 +40,6 @@ for date_obj in missing_dates:
     solution = data['solution']
     days_since_launch = data['days_since_launch']
 
-    print(f"Solution for {date_str}: {solution}")
-    print(f"Days Since Launch: {days_since_launch}")
-
     # Step 2: Fetch the summary data
     summary_url = f"https://static01.nyt.com/newsgraphics/2022/2022-01-25-wordle-solver/{solution}/summary.json"
     summary_response = requests.get(summary_url)
@@ -55,4 +52,4 @@ for date_obj in missing_dates:
     with open(os.path.join(folder_path, filename), 'w') as f:
         f.write(summary_response.text)
 
-    print(f"Summary saved as {filename}")
+    print(f"Saved summary for {date_str}")

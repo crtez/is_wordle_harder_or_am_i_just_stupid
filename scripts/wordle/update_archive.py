@@ -1,7 +1,7 @@
 import os
 import json
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Path to the folder containing the JSON files
 folder_path = 'data/wordle/archive/json'
@@ -14,11 +14,11 @@ if not os.listdir(folder_path):
     latest_date = datetime(2021, 6, 18)
 else:
     # Extract dates from existing files and find the latest date
-    dates = [datetime.strptime(filename.replace('.json', ''), '%Y-%m-%d')
+    dates = [datetime.strptime(filename.replace('.json', ''), '%Y-%m-%d').date()
              for filename in os.listdir(folder_path)]
     latest_date = max(dates)
 
-today = datetime.now()
+today = (datetime.now(timezone.utc) - timedelta(hours=12)).date()
 
 # Initialize an empty list to store the missing dates
 missing_dates = []

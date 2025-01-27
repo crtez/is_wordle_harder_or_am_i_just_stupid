@@ -1,6 +1,6 @@
 import os
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Paths to the folders containing the JSON files
 normal_folder_path = 'data/wordle/guesses_by_round/normal'
@@ -21,7 +21,7 @@ def get_latest_file_date(folder_path):
         # Extract date from filename format: guesses-by-round-mode-YYYY-MM-DD-solution.json
         try:
             date_str = file.split('-')[4:7]  # ['YYYY', 'MM', 'DD']
-            dates.append(datetime.strptime('-'.join(date_str), '%Y-%m-%d'))
+            dates.append(datetime.strptime('-'.join(date_str), '%Y-%m-%d').date())
         except (IndexError, ValueError):
             continue
     
@@ -38,7 +38,7 @@ start_date = max(filter(None, [latest_normal, latest_hard])) + timedelta(days=1)
 dates_to_process = []
 
 # Continue until we reach today's date
-while start_date <= datetime.now():
+while start_date <= (datetime.now(timezone.utc) - timedelta(hours=12)).date():
     # Add the current date to the list of dates
     dates_to_process.append(start_date)
     # Move to the next day
