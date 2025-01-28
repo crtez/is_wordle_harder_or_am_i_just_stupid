@@ -9364,5 +9364,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-01-27",
+    "word": "shunt",
+    "guesses": {
+      "today": 353,
+      "yesterday": 31,
+      "delta": 322,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.01,
+        "delta": 0.15
+      }
+    }
   }
 ]
