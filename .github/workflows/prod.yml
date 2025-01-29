@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Copy data folder
         run: |
-          mkdir -p wordle-charts/src/data
-          cp -r data/wordle/archive wordle-charts/src/data/
+          mkdir -p wordle-charts/src/data/archive
+          cp data/wordle/archive/relevant_puzzle_ids.json wordle-charts/src/data/archive/
           cp -r data/wordle/summaries wordle-charts/src/data/
           cp -r data/wordle/guesses_by_round/cheating_analysis_normal.json wordle-charts/src/data/
           cp -r data/wordle/guesses_by_round/cheating_analysis_hard.json wordle-charts/src/data/
