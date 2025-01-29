@@ -43,6 +43,7 @@ import { useCheatingData } from '@/utils/useCheatingData';
 import { useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from "@/components/ui/input";
+import Oneko from '@/components/Oneko';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -713,10 +714,32 @@ const WordleChart = () => {
 };
 
 function App() {
+  const [showOneko, setShowOneko] = useState(false);
+
+  useEffect(() => {
+    let typedKeys = '';
+    const handleKeyDown = (e: KeyboardEvent) => {
+      typedKeys += e.key.toLowerCase();
+      // Only keep the last 7 characters (length of "tongpoo")
+      typedKeys = typedKeys.slice(-7);
+      
+      if (typedKeys === 'tongpoo') {
+        setShowOneko(prev => !prev);
+        typedKeys = '';
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
-    <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
-      <WordleChart />
-    </ThemeProvider>
+    <>
+      {showOneko && <Oneko />}
+      <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
+        <WordleChart />
+      </ThemeProvider>
+    </>
   );
 }
 
