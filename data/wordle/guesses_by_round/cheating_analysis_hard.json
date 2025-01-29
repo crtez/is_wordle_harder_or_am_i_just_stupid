@@ -9378,5 +9378,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-01-28",
+    "word": "fever",
+    "guesses": {
+      "today": 453,
+      "yesterday": 8,
+      "delta": 445,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
