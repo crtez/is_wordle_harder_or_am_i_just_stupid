@@ -68,7 +68,7 @@ for filename in os.listdir(folder_path):
 
 data = {
     "last_updated": datetime.now().isoformat(),
-    "puzzle_ids": ids[227:] # from the rough acquisition of wordle by NYT
+    "puzzle_ids": sorted(ids)[227:] # from the rough acquisition of wordle by NYT
 }
 
 # Write to a JSON file
