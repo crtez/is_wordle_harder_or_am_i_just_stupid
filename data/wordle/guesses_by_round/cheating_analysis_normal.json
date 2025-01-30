@@ -9392,5 +9392,19 @@
         "delta": 0.47
       }
     }
+  },
+  {
+    "date": "2025-01-29",
+    "word": "udder",
+    "guesses": {
+      "today": 8742,
+      "yesterday": 10,
+      "delta": 8732,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.0,
+        "delta": 0.49
+      }
+    }
   }
 ]
