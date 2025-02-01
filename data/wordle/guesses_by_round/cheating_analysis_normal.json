@@ -9420,5 +9420,19 @@
         "delta": 0.5
       }
     }
+  },
+  {
+    "date": "2025-01-31",
+    "word": "toast",
+    "guesses": {
+      "today": 10818,
+      "yesterday": 260,
+      "delta": 10558,
+      "proportion": {
+        "today": 0.61,
+        "yesterday": 0.01,
+        "delta": 0.59
+      }
+    }
   }
 ]
