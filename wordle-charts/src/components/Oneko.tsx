@@ -7,10 +7,12 @@ type SpriteSets = {
 
 const Oneko = ({ 
   catImage = '/oneko.gif',
-  initialPosition
+  initialPosition,
+  targetPosition = null
 }: { 
   catImage?: string;
   initialPosition: { x: number; y: number };
+  targetPosition?: { x: number; y: number } | null;
 }) => {
   const nekoRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef(0);
@@ -105,11 +107,16 @@ const Oneko = ({
     if (!nekoRef.current) return;
     
     frameRef.current += 1;
-    const diffX = nekoPosRef.current.x - mousePosRef.current.x;
-    const diffY = nekoPosRef.current.y - mousePosRef.current.y;
+    
+    // Use targetPosition if available, otherwise use mouse position
+    const targetX = targetPosition?.x ?? mousePosRef.current.x;
+    const targetY = targetPosition?.y ?? mousePosRef.current.y;
+    
+    const diffX = nekoPosRef.current.x - targetX;
+    const diffY = nekoPosRef.current.y - targetY;
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
 
-    const nekoSpeed = 10;
+    const nekoSpeed = 10; // Slower speed when moving to target
 
     if (distance < nekoSpeed || distance < 48) {
       idle();
@@ -150,10 +157,13 @@ const Oneko = ({
     if (isReducedMotion) return;
 
     const handleMouseMove = (event: MouseEvent) => {
-      mousePosRef.current = {
-        x: event.clientX,
-        y: event.clientY,
-      };
+      // Only update mouse position if there's no target
+      if (!targetPosition) {
+        mousePosRef.current = {
+          x: event.clientX,
+          y: event.clientY,
+        };
+      }
     };
 
     const onAnimationFrame = (timestamp: number) => {
@@ -177,7 +187,18 @@ const Oneko = ({
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [targetPosition]);
+
+  // Update mousePosRef when targetPosition changes
+  useEffect(() => {
+    if (targetPosition) {
+      console.log('Oneko received target position:', targetPosition);
+      mousePosRef.current = {
+        x: targetPosition.x,
+        y: targetPosition.y,
+      };
+    }
+  }, [targetPosition]);
 
   return (
     <div
