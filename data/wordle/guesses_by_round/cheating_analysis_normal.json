@@ -9434,5 +9434,19 @@
         "delta": 0.59
       }
     }
+  },
+  {
+    "date": "2025-02-01",
+    "word": "rivet",
+    "guesses": {
+      "today": 4728,
+      "yesterday": 97,
+      "delta": 4631,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.01,
+        "delta": 0.26
+      }
+    }
   }
 ]
