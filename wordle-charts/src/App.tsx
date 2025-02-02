@@ -27,7 +27,7 @@ import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
-import { ChartState, PersonalData, PersonalStats } from '@/types/wordle_types';
+import { ChartState, PersonalData, PersonalStats , Window} from '@/types/wordle_types';
 import {
   processWordleData,
   calculatePersonalStats,
@@ -715,27 +715,40 @@ const WordleChart = () => {
 
 function App() {
   const [showOneko, setShowOneko] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     let typedKeys = '';
     const handleKeyDown = (e: KeyboardEvent) => {
       typedKeys += e.key.toLowerCase();
-      // Only keep the last 7 characters (length of "tongpoo")
       typedKeys = typedKeys.slice(-7);
       
       if (typedKeys === 'tongpoo') {
+        // Update cursor position when activating Oneko
+        setCursorPos({ x: window.mouseX || window.innerWidth / 2, y: window.mouseY || window.innerHeight / 2 });
         setShowOneko(prev => !prev);
         typedKeys = '';
       }
     };
 
+    // Track mouse position globally
+    const handleMouseMove = (e: MouseEvent) => {
+      window.mouseX = e.clientX;
+      window.mouseY = e.clientY;
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
     <>
-      {showOneko && <Oneko />}
+      {showOneko && <Oneko initialPosition={cursorPos} />}
       <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
         <WordleChart />
       </ThemeProvider>

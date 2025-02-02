@@ -5,12 +5,18 @@ type SpriteSets = {
   [key: string]: SpritePosition[];
 };
 
-const Oneko = ({ catImage = '/oneko.gif' }: { catImage?: string }) => {
+const Oneko = ({ 
+  catImage = '/oneko.gif',
+  initialPosition
+}: { 
+  catImage?: string;
+  initialPosition: { x: number; y: number };
+}) => {
   const nekoRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef(0);
   const lastFrameTimestampRef = useRef<number>();
-  const nekoPosRef = useRef({ x: 32, y: 32 });
-  const mousePosRef = useRef({ x: 0, y: 0 });
+  const nekoPosRef = useRef({ x: initialPosition.x, y: initialPosition.y });
+  const mousePosRef = useRef({ x: initialPosition.x, y: initialPosition.y });
   const idleRef = useRef({
     time: 0,
     animation: null as string | null,
