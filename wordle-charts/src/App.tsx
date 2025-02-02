@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { useWordleData } from '@/utils/processWordleData';
 import { 
   ScatterChart, 
@@ -43,6 +43,7 @@ import { useCheatingData } from '@/utils/useCheatingData';
 import { useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from "@/components/ui/input";
+import Oneko from '@/components/Oneko';
 
 const CHART_CONFIG = {
   yAxisDomains: {
@@ -61,7 +62,7 @@ const CHART_CONFIG = {
   }
 };
 
-const WordleChart = () => {
+const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: number, y: number } | null) => void }) => {
   // Add searchParams
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -136,6 +137,7 @@ const WordleChart = () => {
   // Add new state for search
   const [searchWord, setSearchWord] = useState('');
   const [foundWordIndex, setFoundWordIndex] = useState<number | null>(null);
+  const chartRef = useRef<HTMLDivElement>(null);
 
   const cumulativeAverage = useMemo(() => {
     if (!data?.length) return 0;
@@ -331,6 +333,26 @@ const WordleChart = () => {
       setFoundWordIndex(null);
     }
   }, [searchWord, chartState.displayData]);
+
+  // Modify the effect that calculates point position
+  useEffect(() => {
+    if (foundWordIndex !== null && chartRef.current) {
+      const scatterElements = chartRef.current.getElementsByClassName('recharts-scatter-symbol');
+      
+      if (scatterElements[foundWordIndex]) {
+        const element = scatterElements[foundWordIndex] as SVGElement;
+        const bounds = element.getBoundingClientRect();
+        const point = {
+          x: bounds.left + (bounds.width / 2),
+          y: bounds.top + (bounds.height / 2)
+        };
+        
+        onHighlightPoint(point);
+      }
+    } else {
+      onHighlightPoint(null);
+    }
+  }, [foundWordIndex, onHighlightPoint]);
 
   if (error) return (
     <div className="h-screen flex items-center justify-center">
@@ -586,7 +608,7 @@ const WordleChart = () => {
         )}
       </div>
 
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 overflow-hidden" ref={chartRef}>
         <ResponsiveContainer width="100%" height="100%">
           {chartMode === 'firstGuess' ? (
             <Treemap
@@ -713,10 +735,56 @@ const WordleChart = () => {
 };
 
 function App() {
+  const [showOneko, setShowOneko] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [highlightedPoint, setHighlightedPoint] = useState<{ x: number, y: number } | null>(null);
+
+  // Add memoized callback to prevent unnecessary re-renders
+  const handleHighlightPoint = useCallback((point: { x: number, y: number } | null) => {
+    setHighlightedPoint(point);
+  }, []);
+
+  useEffect(() => {
+    let typedKeys = '';
+    const handleKeyDown = (e: KeyboardEvent) => {
+      typedKeys += e.key.toLowerCase();
+      typedKeys = typedKeys.slice(-3);
+      
+      if (typedKeys === 'cat') {
+        // Update cursor position when activating Oneko
+        setCursorPos({ x: window.mouseX || window.innerWidth / 2, y: window.mouseY || window.innerHeight / 2 });
+        setShowOneko(prev => !prev);
+        typedKeys = '';
+      }
+    };
+
+    // Track mouse position globally
+    const handleMouseMove = (e: MouseEvent) => {
+      window.mouseX = e.clientX;
+      window.mouseY = e.clientY;
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
-      <WordleChart />
-    </ThemeProvider>
+    <>
+      {showOneko && (
+        <Oneko 
+          initialPosition={cursorPos} 
+          targetPosition={highlightedPoint}
+        />
+      )}
+      <ThemeProvider defaultTheme="system" storageKey="wordle-charts-theme">
+        <WordleChart onHighlightPoint={handleHighlightPoint} />
+      </ThemeProvider>
+    </>
   );
 }
 
