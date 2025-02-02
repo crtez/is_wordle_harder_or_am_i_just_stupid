@@ -27,7 +27,7 @@ import { DateRangePicker } from '@/components/date-range-picker';
 import { subMonths, startOfDay, endOfDay } from 'date-fns';
 import { format, parseISO } from 'date-fns';
 import { CustomTooltip } from '@/components/CustomTooltip';
-import { ChartState, PersonalData, PersonalStats , Window} from '@/types/wordle_types';
+import { ChartState, PersonalData, PersonalStats } from '@/types/wordle_types';
 import {
   processWordleData,
   calculatePersonalStats,
