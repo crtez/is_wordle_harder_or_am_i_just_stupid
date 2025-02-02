@@ -748,7 +748,7 @@ function App() {
     let typedKeys = '';
     const handleKeyDown = (e: KeyboardEvent) => {
       typedKeys += e.key.toLowerCase();
-      typedKeys = typedKeys.slice(-7);
+      typedKeys = typedKeys.slice(-3);
       
       if (typedKeys === 'cat') {
         // Update cursor position when activating Oneko
