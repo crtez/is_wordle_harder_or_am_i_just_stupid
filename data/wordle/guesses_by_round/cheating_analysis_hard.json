@@ -9448,5 +9448,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-02-02",
+    "word": "chore",
+    "guesses": {
+      "today": 704,
+      "yesterday": 202,
+      "delta": 502,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.09,
+        "delta": 0.23
+      }
+    }
   }
 ]
