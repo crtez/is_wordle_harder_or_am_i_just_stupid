@@ -9462,5 +9462,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2025-02-03",
+    "word": "revue",
+    "guesses": {
+      "today": 347,
+      "yesterday": 0,
+      "delta": 347,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
