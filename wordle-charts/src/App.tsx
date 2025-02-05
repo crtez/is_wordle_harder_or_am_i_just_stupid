@@ -79,8 +79,9 @@ const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: numb
     (searchParams.get('chart') as any) || 'standard'
   );
   const [showInstructions, setShowInstructions] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [showMobileBanner, setShowMobileBanner] = useState(true);
+  const [showMobileBanner, setShowMobileBanner] = useState(() => {
+    return localStorage.getItem('hideMobileBanner') !== 'true';
+  });
   const [fileName, setFileName] = useState<string>("Upload your .json file here! 🙂");
 
   // Date States
@@ -230,17 +231,6 @@ const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: numb
     }
   }, [personalData]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust the width as needed
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Check on mount
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   const handleModeChange = (newMode: typeof chartMode) => {
     setChartMode(newMode);
     setSearchParams(params => {
@@ -354,6 +344,11 @@ const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: numb
     }
   }, [foundWordIndex, onHighlightPoint]);
 
+  const dismissBanner = () => {
+    setShowMobileBanner(false);
+    localStorage.setItem('hideMobileBanner', 'true');
+  };
+
   if (error) return (
     <div className="h-screen flex items-center justify-center">
       <div className="text-lg text-red-600">
@@ -365,11 +360,11 @@ const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: numb
 
   return (
     <div className="h-[100dvh] p-4 flex flex-col overflow-hidden">
-      {isMobile && showMobileBanner && (
-        <div className="bg-yellow-300 text-black text-center p-2 font-bold relative mb-4">
-          This site is best viewed on desktop. 
+      {showMobileBanner && (
+        <div className="md:hidden bg-yellow-300 text-black text-center p-2 font-bold relative mb-4">
+          This site is best viewed on desktop.
           <button 
-            onClick={() => setShowMobileBanner(false)}
+            onClick={dismissBanner}
             onMouseDown={(e) => e.stopPropagation()}
             className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
             aria-label="Dismiss banner"
