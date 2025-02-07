@@ -9504,5 +9504,19 @@
         "delta": 0.48
       }
     }
+  },
+  {
+    "date": "2025-02-06",
+    "word": "pupil",
+    "guesses": {
+      "today": 8429,
+      "yesterday": 36,
+      "delta": 8393,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.47
+      }
+    }
   }
 ]
