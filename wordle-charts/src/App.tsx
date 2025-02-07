@@ -185,14 +185,14 @@ const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: numb
         
         return {
           ...d,
-          guessesNumber: normalCheating?.guesses.today || null,
-          guessesNumberYesterday: normalCheating?.guesses.yesterday || null,
-          hardGuessesNumber: hardCheating?.guesses.today || null,
-          hardGuessesNumberYesterday: hardCheating?.guesses.yesterday || null,
-          proportionDelta: normalCheating?.guesses.proportion.delta || null,
-          hardProportionDelta: hardCheating?.guesses.proportion.delta || null,
-          proportion: normalCheating?.guesses.proportion || null,
-          hardProportion: hardCheating?.guesses.proportion || null
+          guessesNumber: normalCheating?.guesses.today ?? null,
+          guessesNumberYesterday: normalCheating?.guesses.yesterday ?? null,
+          hardGuessesNumber: hardCheating?.guesses.today ?? null,
+          hardGuessesNumberYesterday: hardCheating?.guesses.yesterday ?? null,
+          proportionDelta: normalCheating?.guesses.proportion.delta ?? null,
+          hardProportionDelta: hardCheating?.guesses.proportion.delta ?? null,
+          proportion: normalCheating?.guesses.proportion ?? null,
+          hardProportion: hardCheating?.guesses.proportion ?? null
         };
       }).filter(filterData);
 
