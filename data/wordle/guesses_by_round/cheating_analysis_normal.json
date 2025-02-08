@@ -9518,5 +9518,19 @@
         "delta": 0.47
       }
     }
+  },
+  {
+    "date": "2025-02-07",
+    "word": "swath",
+    "guesses": {
+      "today": 7392,
+      "yesterday": 49,
+      "delta": 7343,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.0,
+        "delta": 0.41
+      }
+    }
   }
 ]
