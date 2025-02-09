@@ -9532,5 +9532,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-02-08",
+    "word": "steep",
+    "guesses": {
+      "today": 358,
+      "yesterday": 3,
+      "delta": 355,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
