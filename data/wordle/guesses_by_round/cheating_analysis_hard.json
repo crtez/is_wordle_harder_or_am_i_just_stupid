@@ -9560,5 +9560,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-02-10",
+    "word": "goody",
+    "guesses": {
+      "today": 356,
+      "yesterday": 0,
+      "delta": 356,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
