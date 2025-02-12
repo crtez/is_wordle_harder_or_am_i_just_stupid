@@ -7,6 +7,11 @@ An interactive visualization tool for exploring Wordle statistics. Track global 
 *Note: the chart is always one day behind, to prevent spoilers.
 
 
+Try typing `cat`:
+
+![Demo of Wordle Charts](assets/cat.gif)
+
+
 ## Features
 
 - 📊 Multiple chart views including rolling averages and personal performance
