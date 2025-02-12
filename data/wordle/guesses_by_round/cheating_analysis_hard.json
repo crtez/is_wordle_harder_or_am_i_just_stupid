@@ -9490,5 +9490,89 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-02-05",
+    "word": "pedal",
+    "guesses": {
+      "today": 421,
+      "yesterday": 15,
+      "delta": 406,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2025-02-06",
+    "word": "pupil",
+    "guesses": {
+      "today": 388,
+      "yesterday": 3,
+      "delta": 385,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
+  },
+  {
+    "date": "2025-02-07",
+    "word": "swath",
+    "guesses": {
+      "today": 421,
+      "yesterday": 9,
+      "delta": 412,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
+  },
+  {
+    "date": "2025-02-08",
+    "word": "steep",
+    "guesses": {
+      "today": 358,
+      "yesterday": 3,
+      "delta": 355,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2025-02-09",
+    "word": "bonus",
+    "guesses": {
+      "today": 388,
+      "yesterday": 41,
+      "delta": 347,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.16
+      }
+    }
+  },
+  {
+    "date": "2025-02-10",
+    "word": "goody",
+    "guesses": {
+      "today": 356,
+      "yesterday": 0,
+      "delta": 356,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
