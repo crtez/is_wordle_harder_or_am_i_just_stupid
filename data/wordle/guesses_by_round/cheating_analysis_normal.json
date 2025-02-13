@@ -9588,5 +9588,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-02-12",
+    "word": "rapid",
+    "guesses": {
+      "today": 8795,
+      "yesterday": 225,
+      "delta": 8570,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.01,
+        "delta": 0.48
+      }
+    }
   }
 ]
