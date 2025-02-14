@@ -9602,5 +9602,19 @@
         "delta": 0.48
       }
     }
+  },
+  {
+    "date": "2025-02-13",
+    "word": "rumba",
+    "guesses": {
+      "today": 8342,
+      "yesterday": 17,
+      "delta": 8325,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.46
+      }
+    }
   }
 ]
