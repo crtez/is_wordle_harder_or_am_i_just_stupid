@@ -9616,5 +9616,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-02-14",
+    "word": "ditty",
+    "guesses": {
+      "today": 436,
+      "yesterday": 0,
+      "delta": 436,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
