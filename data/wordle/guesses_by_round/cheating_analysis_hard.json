@@ -9630,5 +9630,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-02-15",
+    "word": "crook",
+    "guesses": {
+      "today": 304,
+      "yesterday": 1,
+      "delta": 303,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
   }
 ]
