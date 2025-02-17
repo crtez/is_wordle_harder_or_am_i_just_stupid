@@ -9644,5 +9644,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-02-16",
+    "word": "suave",
+    "guesses": {
+      "today": 450,
+      "yesterday": 64,
+      "delta": 386,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.03,
+        "delta": 0.18
+      }
+    }
   }
 ]
