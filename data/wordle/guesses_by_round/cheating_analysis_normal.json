@@ -9616,5 +9616,47 @@
         "delta": 0.46
       }
     }
+  },
+  {
+    "date": "2025-02-14",
+    "word": "ditty",
+    "guesses": {
+      "today": 9231,
+      "yesterday": 8,
+      "delta": 9223,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.0,
+        "delta": 0.52
+      }
+    }
+  },
+  {
+    "date": "2025-02-15",
+    "word": "crook",
+    "guesses": {
+      "today": 5263,
+      "yesterday": 9,
+      "delta": 5254,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.0,
+        "delta": 0.29
+      }
+    }
+  },
+  {
+    "date": "2025-02-16",
+    "word": "suave",
+    "guesses": {
+      "today": 6203,
+      "yesterday": 461,
+      "delta": 5742,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.03,
+        "delta": 0.32
+      }
+    }
   }
 ]
