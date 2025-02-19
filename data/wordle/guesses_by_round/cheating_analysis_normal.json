@@ -9672,5 +9672,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-02-18",
+    "word": "indie",
+    "guesses": {
+      "today": 7542,
+      "yesterday": 8,
+      "delta": 7534,
+      "proportion": {
+        "today": 0.42,
+        "yesterday": 0.0,
+        "delta": 0.42
+      }
+    }
   }
 ]
