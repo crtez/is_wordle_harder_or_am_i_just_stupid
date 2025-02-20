@@ -9686,5 +9686,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-02-19",
+    "word": "madly",
+    "guesses": {
+      "today": 357,
+      "yesterday": 5,
+      "delta": 352,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
