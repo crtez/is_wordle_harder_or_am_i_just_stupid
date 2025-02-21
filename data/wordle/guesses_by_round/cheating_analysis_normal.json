@@ -9700,5 +9700,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-02-20",
+    "word": "roach",
+    "guesses": {
+      "today": 9683,
+      "yesterday": 226,
+      "delta": 9457,
+      "proportion": {
+        "today": 0.54,
+        "yesterday": 0.01,
+        "delta": 0.53
+      }
+    }
   }
 ]
