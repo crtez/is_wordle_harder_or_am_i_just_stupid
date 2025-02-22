@@ -9714,5 +9714,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-02-21",
+    "word": "clove",
+    "guesses": {
+      "today": 8272,
+      "yesterday": 192,
+      "delta": 8080,
+      "proportion": {
+        "today": 0.46,
+        "yesterday": 0.01,
+        "delta": 0.45
+      }
+    }
   }
 ]
