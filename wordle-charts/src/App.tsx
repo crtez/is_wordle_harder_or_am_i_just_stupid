@@ -634,7 +634,7 @@ const WordleChart = ({ onHighlightPoint }: { onHighlightPoint: (point: { x: numb
               <XAxis
                 dataKey={showWords ? "word" : "date"}
                 angle={-45}
-                interval="preserveStartEnd"
+                interval="preserveStart"
                 textAnchor="end"
                 tick={{ fontSize: 12 }}
                 tickFormatter={(value) => showWords ? value : format(parseISO(value), 'M/d/yyyy')}
