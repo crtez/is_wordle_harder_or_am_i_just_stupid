@@ -9728,5 +9728,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-02-22",
+    "word": "cream",
+    "guesses": {
+      "today": 1176,
+      "yesterday": 578,
+      "delta": 598,
+      "proportion": {
+        "today": 0.54,
+        "yesterday": 0.27,
+        "delta": 0.27
+      }
+    }
   }
 ]
