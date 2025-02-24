@@ -9742,5 +9742,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-02-23",
+    "word": "otter",
+    "guesses": {
+      "today": 6258,
+      "yesterday": 18,
+      "delta": 6240,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.0,
+        "delta": 0.35
+      }
+    }
   }
 ]
