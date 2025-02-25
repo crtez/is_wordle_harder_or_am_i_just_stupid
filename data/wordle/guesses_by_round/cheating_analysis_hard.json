@@ -9756,5 +9756,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-02-24",
+    "word": "gland",
+    "guesses": {
+      "today": 382,
+      "yesterday": 43,
+      "delta": 339,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.16
+      }
+    }
   }
 ]
