@@ -9770,5 +9770,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-02-25",
+    "word": "dryer",
+    "guesses": {
+      "today": 8332,
+      "yesterday": 32,
+      "delta": 8300,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.46
+      }
+    }
   }
 ]
