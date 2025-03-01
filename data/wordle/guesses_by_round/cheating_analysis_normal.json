@@ -9812,5 +9812,19 @@
         "delta": 0.51
       }
     }
+  },
+  {
+    "date": "2025-02-28",
+    "word": "fuzzy",
+    "guesses": {
+      "today": 10413,
+      "yesterday": 8,
+      "delta": 10405,
+      "proportion": {
+        "today": 0.58,
+        "yesterday": 0.0,
+        "delta": 0.58
+      }
+    }
   }
 ]
