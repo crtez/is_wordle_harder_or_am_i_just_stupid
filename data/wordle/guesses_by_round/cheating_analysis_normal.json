@@ -9826,5 +9826,19 @@
         "delta": 0.58
       }
     }
+  },
+  {
+    "date": "2025-03-01",
+    "word": "hover",
+    "guesses": {
+      "today": 5523,
+      "yesterday": 144,
+      "delta": 5379,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.01,
+        "delta": 0.3
+      }
+    }
   }
 ]
