@@ -9854,5 +9854,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-03-03",
+    "word": "spear",
+    "guesses": {
+      "today": 912,
+      "yesterday": 411,
+      "delta": 501,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.19,
+        "delta": 0.24
+      }
+    }
   }
 ]
