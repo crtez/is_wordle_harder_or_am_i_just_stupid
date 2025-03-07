@@ -9896,5 +9896,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-03-06",
+    "word": "alert",
+    "guesses": {
+      "today": 1123,
+      "yesterday": 432,
+      "delta": 691,
+      "proportion": {
+        "today": 0.53,
+        "yesterday": 0.2,
+        "delta": 0.32
+      }
+    }
   }
 ]
