@@ -9938,5 +9938,19 @@
         "delta": 0.13
       }
     }
+  },
+  {
+    "date": "2025-03-09",
+    "word": "greed",
+    "guesses": {
+      "today": 348,
+      "yesterday": 2,
+      "delta": 346,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
