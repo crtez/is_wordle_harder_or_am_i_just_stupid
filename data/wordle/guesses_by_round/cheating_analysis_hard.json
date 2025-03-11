@@ -9952,5 +9952,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-03-10",
+    "word": "spite",
+    "guesses": {
+      "today": 646,
+      "yesterday": 166,
+      "delta": 480,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.08,
+        "delta": 0.23
+      }
+    }
   }
 ]
