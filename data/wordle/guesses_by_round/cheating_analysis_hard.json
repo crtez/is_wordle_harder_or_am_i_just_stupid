@@ -9980,5 +9980,19 @@
         "delta": 0.27
       }
     }
+  },
+  {
+    "date": "2025-03-12",
+    "word": "mango",
+    "guesses": {
+      "today": 499,
+      "yesterday": 61,
+      "delta": 438,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.21
+      }
+    }
   }
 ]
