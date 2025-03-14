@@ -9994,5 +9994,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-03-13",
+    "word": "chase",
+    "guesses": {
+      "today": 1399,
+      "yesterday": 575,
+      "delta": 824,
+      "proportion": {
+        "today": 0.66,
+        "yesterday": 0.27,
+        "delta": 0.39
+      }
+    }
   }
 ]
