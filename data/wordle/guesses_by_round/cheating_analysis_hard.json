@@ -10008,5 +10008,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-03-14",
+    "word": "piece",
+    "guesses": {
+      "today": 518,
+      "yesterday": 25,
+      "delta": 493,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.01,
+        "delta": 0.23
+      }
+    }
   }
 ]
