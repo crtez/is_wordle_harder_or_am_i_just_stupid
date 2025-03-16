@@ -10022,5 +10022,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2025-03-15",
+    "word": "ladle",
+    "guesses": {
+      "today": 338,
+      "yesterday": 2,
+      "delta": 336,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
