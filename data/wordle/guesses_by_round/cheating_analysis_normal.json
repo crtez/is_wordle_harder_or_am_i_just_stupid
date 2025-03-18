@@ -10050,5 +10050,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-03-17",
+    "word": "lasso",
+    "guesses": {
+      "today": 9455,
+      "yesterday": 12,
+      "delta": 9443,
+      "proportion": {
+        "today": 0.53,
+        "yesterday": 0.0,
+        "delta": 0.53
+      }
+    }
   }
 ]
