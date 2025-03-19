@@ -10064,5 +10064,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-03-18",
+    "word": "timer",
+    "guesses": {
+      "today": 444,
+      "yesterday": 43,
+      "delta": 401,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.02,
+        "delta": 0.19
+      }
+    }
   }
 ]
