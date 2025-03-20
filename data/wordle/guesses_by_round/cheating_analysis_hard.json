@@ -10078,5 +10078,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-03-19",
+    "word": "spark",
+    "guesses": {
+      "today": 670,
+      "yesterday": 152,
+      "delta": 518,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.07,
+        "delta": 0.24
+      }
+    }
   }
 ]
