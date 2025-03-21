@@ -10092,5 +10092,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-03-20",
+    "word": "baste",
+    "guesses": {
+      "today": 8698,
+      "yesterday": 337,
+      "delta": 8361,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.02,
+        "delta": 0.47
+      }
+    }
   }
 ]
