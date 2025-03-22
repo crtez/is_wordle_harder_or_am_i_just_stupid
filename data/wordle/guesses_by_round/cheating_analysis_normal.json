@@ -10106,5 +10106,19 @@
         "delta": 0.47
       }
     }
+  },
+  {
+    "date": "2025-03-21",
+    "word": "nudge",
+    "guesses": {
+      "today": 8445,
+      "yesterday": 55,
+      "delta": 8390,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.47
+      }
+    }
   }
 ]
