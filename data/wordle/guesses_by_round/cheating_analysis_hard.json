@@ -10120,5 +10120,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-03-22",
+    "word": "amble",
+    "guesses": {
+      "today": 325,
+      "yesterday": 15,
+      "delta": 310,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
   }
 ]
