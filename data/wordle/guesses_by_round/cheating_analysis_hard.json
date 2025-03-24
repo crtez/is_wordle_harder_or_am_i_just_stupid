@@ -10134,5 +10134,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-03-23",
+    "word": "dopey",
+    "guesses": {
+      "today": 316,
+      "yesterday": 2,
+      "delta": 314,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
   }
 ]
