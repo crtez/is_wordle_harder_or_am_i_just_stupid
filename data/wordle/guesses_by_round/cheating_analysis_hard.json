@@ -10148,5 +10148,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-03-24",
+    "word": "angle",
+    "guesses": {
+      "today": 475,
+      "yesterday": 53,
+      "delta": 422,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.02,
+        "delta": 0.2
+      }
+    }
   }
 ]
