@@ -22,4 +22,4 @@ Try typing `cat`:
   
 Built with React, TypeScript, Recharts, Python, and Claude.
 
-*<sub>(Unless you live in UTC-12)</sub>
+*<sub>(Unless you live in UTC-11)</sub>
