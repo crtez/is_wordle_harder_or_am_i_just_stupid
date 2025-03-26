@@ -10162,5 +10162,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-03-25",
+    "word": "shelf",
+    "guesses": {
+      "today": 470,
+      "yesterday": 24,
+      "delta": 446,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
   }
 ]
