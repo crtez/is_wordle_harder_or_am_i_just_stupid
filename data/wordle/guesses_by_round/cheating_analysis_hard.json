@@ -10176,5 +10176,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-03-26",
+    "word": "elbow",
+    "guesses": {
+      "today": 506,
+      "yesterday": 26,
+      "delta": 480,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.01,
+        "delta": 0.23
+      }
+    }
   }
 ]
