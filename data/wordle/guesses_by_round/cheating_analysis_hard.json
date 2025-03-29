@@ -10204,5 +10204,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-03-28",
+    "word": "verse",
+    "guesses": {
+      "today": 393,
+      "yesterday": 3,
+      "delta": 390,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
