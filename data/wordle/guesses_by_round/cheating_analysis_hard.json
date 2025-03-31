@@ -10232,5 +10232,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-03-30",
+    "word": "quota",
+    "guesses": {
+      "today": 359,
+      "yesterday": 26,
+      "delta": 333,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.16
+      }
+    }
   }
 ]
