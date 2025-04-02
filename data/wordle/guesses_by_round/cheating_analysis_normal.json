@@ -10260,5 +10260,19 @@
         "delta": 0.6
       }
     }
+  },
+  {
+    "date": "2025-04-01",
+    "word": "jewel",
+    "guesses": {
+      "today": 9755,
+      "yesterday": 34,
+      "delta": 9721,
+      "proportion": {
+        "today": 0.55,
+        "yesterday": 0.0,
+        "delta": 0.54
+      }
+    }
   }
 ]
