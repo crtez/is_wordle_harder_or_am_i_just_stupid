@@ -10274,5 +10274,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2025-04-02",
+    "word": "curse",
+    "guesses": {
+      "today": 479,
+      "yesterday": 29,
+      "delta": 450,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
   }
 ]
