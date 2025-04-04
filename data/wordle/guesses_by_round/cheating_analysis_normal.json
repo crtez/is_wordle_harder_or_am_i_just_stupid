@@ -10288,5 +10288,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-04-03",
+    "word": "shear",
+    "guesses": {
+      "today": 11334,
+      "yesterday": 1726,
+      "delta": 9608,
+      "proportion": {
+        "today": 0.63,
+        "yesterday": 0.1,
+        "delta": 0.54
+      }
+    }
   }
 ]
