@@ -10302,5 +10302,19 @@
         "delta": 0.28
       }
     }
+  },
+  {
+    "date": "2025-04-04",
+    "word": "krill",
+    "guesses": {
+      "today": 423,
+      "yesterday": 1,
+      "delta": 422,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
