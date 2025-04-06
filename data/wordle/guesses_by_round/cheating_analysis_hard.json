@@ -10316,5 +10316,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-04-05",
+    "word": "foamy",
+    "guesses": {
+      "today": 354,
+      "yesterday": 9,
+      "delta": 345,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
