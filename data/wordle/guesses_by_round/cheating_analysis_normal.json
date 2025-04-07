@@ -10330,5 +10330,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-04-06",
+    "word": "villa",
+    "guesses": {
+      "today": 5563,
+      "yesterday": 9,
+      "delta": 5554,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
