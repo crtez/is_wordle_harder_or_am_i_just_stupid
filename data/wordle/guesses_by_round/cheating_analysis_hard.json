@@ -10344,5 +10344,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-04-07",
+    "word": "hazel",
+    "guesses": {
+      "today": 452,
+      "yesterday": 13,
+      "delta": 439,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.01,
+        "delta": 0.21
+      }
+    }
   }
 ]
