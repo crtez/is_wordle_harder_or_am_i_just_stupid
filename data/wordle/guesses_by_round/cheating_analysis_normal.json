@@ -10358,5 +10358,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-04-08",
+    "word": "spare",
+    "guesses": {
+      "today": 15892,
+      "yesterday": 5640,
+      "delta": 10252,
+      "proportion": {
+        "today": 0.89,
+        "yesterday": 0.32,
+        "delta": 0.57
+      }
+    }
   }
 ]
