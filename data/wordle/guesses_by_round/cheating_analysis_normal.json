@@ -10372,5 +10372,19 @@
         "delta": 0.57
       }
     }
+  },
+  {
+    "date": "2025-04-09",
+    "word": "wheat",
+    "guesses": {
+      "today": 10741,
+      "yesterday": 897,
+      "delta": 9844,
+      "proportion": {
+        "today": 0.6,
+        "yesterday": 0.05,
+        "delta": 0.55
+      }
+    }
   }
 ]
