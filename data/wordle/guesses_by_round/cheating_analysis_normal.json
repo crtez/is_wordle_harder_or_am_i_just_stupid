@@ -10400,5 +10400,19 @@
         "delta": 0.51
       }
     }
+  },
+  {
+    "date": "2025-04-11",
+    "word": "arrow",
+    "guesses": {
+      "today": 10783,
+      "yesterday": 43,
+      "delta": 10740,
+      "proportion": {
+        "today": 0.6,
+        "yesterday": 0.0,
+        "delta": 0.6
+      }
+    }
   }
 ]
