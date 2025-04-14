@@ -10428,5 +10428,33 @@
         "delta": 0.4
       }
     }
+  },
+  {
+    "date": "2025-04-13",
+    "word": "laugh",
+    "guesses": {
+      "today": 9006,
+      "yesterday": 1463,
+      "delta": 7543,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.08,
+        "delta": 0.42
+      }
+    }
+  },
+  {
+    "date": "2025-04-14",
+    "word": "crest",
+    "guesses": {
+      "today": 9385,
+      "yesterday": 2399,
+      "delta": 6986,
+      "proportion": {
+        "today": 0.53,
+        "yesterday": 0.13,
+        "delta": 0.39
+      }
+    }
   }
 ]
