@@ -10456,5 +10456,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-04-15",
+    "word": "ashen",
+    "guesses": {
+      "today": 7721,
+      "yesterday": 75,
+      "delta": 7646,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.0,
+        "delta": 0.43
+      }
+    }
   }
 ]
