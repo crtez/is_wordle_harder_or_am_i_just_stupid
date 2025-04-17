@@ -10470,5 +10470,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-04-16",
+    "word": "moral",
+    "guesses": {
+      "today": 7942,
+      "yesterday": 167,
+      "delta": 7775,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.01,
+        "delta": 0.43
+      }
+    }
   }
 ]
