@@ -10484,5 +10484,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-04-17",
+    "word": "stood",
+    "guesses": {
+      "today": 7894,
+      "yesterday": 14,
+      "delta": 7880,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.0,
+        "delta": 0.44
+      }
+    }
   }
 ]
