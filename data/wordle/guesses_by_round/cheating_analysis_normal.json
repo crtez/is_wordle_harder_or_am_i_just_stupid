@@ -10498,5 +10498,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-04-18",
+    "word": "dirge",
+    "guesses": {
+      "today": 5719,
+      "yesterday": 27,
+      "delta": 5692,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
