@@ -10526,5 +10526,19 @@
         "delta": 0.33
       }
     }
+  },
+  {
+    "date": "2025-04-20",
+    "word": "patch",
+    "guesses": {
+      "today": 6613,
+      "yesterday": 311,
+      "delta": 6302,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.02,
+        "delta": 0.35
+      }
+    }
   }
 ]
