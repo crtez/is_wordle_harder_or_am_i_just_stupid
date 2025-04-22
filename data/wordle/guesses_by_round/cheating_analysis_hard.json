@@ -10540,5 +10540,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-04-21",
+    "word": "spate",
+    "guesses": {
+      "today": 630,
+      "yesterday": 189,
+      "delta": 441,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.09,
+        "delta": 0.21
+      }
+    }
   }
 ]
