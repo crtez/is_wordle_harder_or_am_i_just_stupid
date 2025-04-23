@@ -10554,5 +10554,19 @@
         "delta": 0.37
       }
     }
+  },
+  {
+    "date": "2025-04-22",
+    "word": "artsy",
+    "guesses": {
+      "today": 9738,
+      "yesterday": 200,
+      "delta": 9538,
+      "proportion": {
+        "today": 0.54,
+        "yesterday": 0.01,
+        "delta": 0.53
+      }
+    }
   }
 ]
