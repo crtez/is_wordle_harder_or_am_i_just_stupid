@@ -10568,5 +10568,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-04-23",
+    "word": "ozone",
+    "guesses": {
+      "today": 9230,
+      "yesterday": 9,
+      "delta": 9221,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.0,
+        "delta": 0.52
+      }
+    }
   }
 ]
