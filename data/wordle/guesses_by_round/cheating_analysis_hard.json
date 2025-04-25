@@ -10582,5 +10582,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-04-24",
+    "word": "genie",
+    "guesses": {
+      "today": 422,
+      "yesterday": 3,
+      "delta": 419,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
