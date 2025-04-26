@@ -10596,5 +10596,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-04-25",
+    "word": "known",
+    "guesses": {
+      "today": 9372,
+      "yesterday": 50,
+      "delta": 9322,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.0,
+        "delta": 0.52
+      }
+    }
   }
 ]
