@@ -10610,5 +10610,19 @@
         "delta": 0.52
       }
     }
+  },
+  {
+    "date": "2025-04-26",
+    "word": "clash",
+    "guesses": {
+      "today": 5803,
+      "yesterday": 429,
+      "delta": 5374,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.02,
+        "delta": 0.3
+      }
+    }
   }
 ]
