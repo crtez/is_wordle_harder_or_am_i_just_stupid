@@ -10652,5 +10652,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-04-29",
+    "word": "bliss",
+    "guesses": {
+      "today": 433,
+      "yesterday": 6,
+      "delta": 427,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
