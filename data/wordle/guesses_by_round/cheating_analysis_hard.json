@@ -10666,5 +10666,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-04-30",
+    "word": "idler",
+    "guesses": {
+      "today": 359,
+      "yesterday": 3,
+      "delta": 356,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
