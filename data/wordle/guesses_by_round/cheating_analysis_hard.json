@@ -10680,5 +10680,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-05-01",
+    "word": "adept",
+    "guesses": {
+      "today": 618,
+      "yesterday": 75,
+      "delta": 543,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.04,
+        "delta": 0.26
+      }
+    }
   }
 ]
