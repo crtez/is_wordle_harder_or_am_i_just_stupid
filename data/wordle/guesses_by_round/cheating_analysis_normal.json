@@ -10694,5 +10694,19 @@
         "delta": 0.52
       }
     }
+  },
+  {
+    "date": "2025-05-02",
+    "word": "whose",
+    "guesses": {
+      "today": 8491,
+      "yesterday": 94,
+      "delta": 8397,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.01,
+        "delta": 0.47
+      }
+    }
   }
 ]
