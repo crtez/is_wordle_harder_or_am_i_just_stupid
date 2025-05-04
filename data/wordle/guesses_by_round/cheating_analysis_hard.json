@@ -10708,5 +10708,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-05-03",
+    "word": "patsy",
+    "guesses": {
+      "today": 303,
+      "yesterday": 3,
+      "delta": 300,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
   }
 ]
