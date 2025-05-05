@@ -10722,5 +10722,19 @@
         "delta": 0.27
       }
     }
+  },
+  {
+    "date": "2025-05-04",
+    "word": "trout",
+    "guesses": {
+      "today": 6990,
+      "yesterday": 309,
+      "delta": 6681,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.02,
+        "delta": 0.38
+      }
+    }
   }
 ]
