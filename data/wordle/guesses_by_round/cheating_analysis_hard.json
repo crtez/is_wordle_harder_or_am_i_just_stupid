@@ -10736,5 +10736,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-05-05",
+    "word": "shush",
+    "guesses": {
+      "today": 389,
+      "yesterday": 0,
+      "delta": 389,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
