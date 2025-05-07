@@ -10750,5 +10750,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-05-06",
+    "word": "suite",
+    "guesses": {
+      "today": 991,
+      "yesterday": 456,
+      "delta": 535,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.21,
+        "delta": 0.25
+      }
+    }
   }
 ]
