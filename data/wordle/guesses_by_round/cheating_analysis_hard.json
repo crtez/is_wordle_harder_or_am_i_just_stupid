@@ -10764,5 +10764,19 @@
         "delta": 0.25
       }
     }
+  },
+  {
+    "date": "2025-05-07",
+    "word": "macho",
+    "guesses": {
+      "today": 387,
+      "yesterday": 4,
+      "delta": 383,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
