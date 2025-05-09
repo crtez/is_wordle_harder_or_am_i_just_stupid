@@ -10778,5 +10778,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-05-08",
+    "word": "balmy",
+    "guesses": {
+      "today": 376,
+      "yesterday": 6,
+      "delta": 370,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
