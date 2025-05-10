@@ -10792,5 +10792,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-05-09",
+    "word": "tripe",
+    "guesses": {
+      "today": 9146,
+      "yesterday": 609,
+      "delta": 8537,
+      "proportion": {
+        "today": 0.51,
+        "yesterday": 0.03,
+        "delta": 0.48
+      }
+    }
   }
 ]
