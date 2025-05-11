@@ -10806,5 +10806,19 @@
         "delta": 0.48
       }
     }
+  },
+  {
+    "date": "2025-05-10",
+    "word": "yeast",
+    "guesses": {
+      "today": 10267,
+      "yesterday": 2714,
+      "delta": 7553,
+      "proportion": {
+        "today": 0.58,
+        "yesterday": 0.15,
+        "delta": 0.42
+      }
+    }
   }
 ]
