@@ -10820,5 +10820,19 @@
         "delta": 0.25
       }
     }
+  },
+  {
+    "date": "2025-05-11",
+    "word": "dowel",
+    "guesses": {
+      "today": 276,
+      "yesterday": 4,
+      "delta": 272,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
   }
 ]
