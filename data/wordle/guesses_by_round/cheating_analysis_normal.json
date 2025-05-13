@@ -10834,5 +10834,19 @@
         "delta": 0.27
       }
     }
+  },
+  {
+    "date": "2025-05-12",
+    "word": "bicep",
+    "guesses": {
+      "today": 9992,
+      "yesterday": 35,
+      "delta": 9957,
+      "proportion": {
+        "today": 0.56,
+        "yesterday": 0.0,
+        "delta": 0.56
+      }
+    }
   }
 ]
