@@ -10848,5 +10848,19 @@
         "delta": 0.56
       }
     }
+  },
+  {
+    "date": "2025-05-13",
+    "word": "aware",
+    "guesses": {
+      "today": 9294,
+      "yesterday": 55,
+      "delta": 9239,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.0,
+        "delta": 0.52
+      }
+    }
   }
 ]
