@@ -10876,5 +10876,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-05-15",
+    "word": "eager",
+    "guesses": {
+      "today": 9258,
+      "yesterday": 72,
+      "delta": 9186,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.0,
+        "delta": 0.51
+      }
+    }
   }
 ]
