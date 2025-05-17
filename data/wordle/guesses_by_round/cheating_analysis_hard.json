@@ -10890,5 +10890,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-05-16",
+    "word": "fifth",
+    "guesses": {
+      "today": 432,
+      "yesterday": 1,
+      "delta": 431,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
