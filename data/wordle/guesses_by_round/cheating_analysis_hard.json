@@ -10904,5 +10904,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-05-17",
+    "word": "grown",
+    "guesses": {
+      "today": 497,
+      "yesterday": 81,
+      "delta": 416,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.19
+      }
+    }
   }
 ]
