@@ -10918,5 +10918,19 @@
         "delta": 0.34
       }
     }
+  },
+  {
+    "date": "2025-05-18",
+    "word": "livid",
+    "guesses": {
+      "today": 5741,
+      "yesterday": 13,
+      "delta": 5728,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
