@@ -10932,5 +10932,19 @@
         "delta": 0.32
       }
     }
+  },
+  {
+    "date": "2025-05-19",
+    "word": "pitch",
+    "guesses": {
+      "today": 9302,
+      "yesterday": 316,
+      "delta": 8986,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.02,
+        "delta": 0.5
+      }
+    }
   }
 ]
