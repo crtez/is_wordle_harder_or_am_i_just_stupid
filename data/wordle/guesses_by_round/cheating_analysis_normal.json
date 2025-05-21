@@ -10946,5 +10946,19 @@
         "delta": 0.5
       }
     }
+  },
+  {
+    "date": "2025-05-20",
+    "word": "borne",
+    "guesses": {
+      "today": 8351,
+      "yesterday": 39,
+      "delta": 8312,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.46
+      }
+    }
   }
 ]
