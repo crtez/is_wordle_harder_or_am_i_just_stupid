@@ -10974,5 +10974,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2025-05-22",
+    "word": "folio",
+    "guesses": {
+      "today": 371,
+      "yesterday": 0,
+      "delta": 371,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
