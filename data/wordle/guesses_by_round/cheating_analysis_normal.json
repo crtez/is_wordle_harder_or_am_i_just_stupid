@@ -10988,5 +10988,19 @@
         "delta": 0.47
       }
     }
+  },
+  {
+    "date": "2025-05-23",
+    "word": "shuck",
+    "guesses": {
+      "today": 7850,
+      "yesterday": 60,
+      "delta": 7790,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.0,
+        "delta": 0.44
+      }
+    }
   }
 ]
