@@ -11002,5 +11002,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-05-24",
+    "word": "suede",
+    "guesses": {
+      "today": 430,
+      "yesterday": 3,
+      "delta": 427,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
