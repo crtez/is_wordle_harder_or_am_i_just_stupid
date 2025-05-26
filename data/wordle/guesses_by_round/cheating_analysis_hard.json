@@ -11016,5 +11016,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-05-25",
+    "word": "grift",
+    "guesses": {
+      "today": 382,
+      "yesterday": 41,
+      "delta": 341,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.02,
+        "delta": 0.16
+      }
+    }
   }
 ]
