@@ -11030,5 +11030,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-05-26",
+    "word": "drone",
+    "guesses": {
+      "today": 611,
+      "yesterday": 152,
+      "delta": 459,
+      "proportion": {
+        "today": 0.28,
+        "yesterday": 0.07,
+        "delta": 0.21
+      }
+    }
   }
 ]
