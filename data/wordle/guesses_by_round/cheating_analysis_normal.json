@@ -11044,5 +11044,19 @@
         "delta": 0.42
       }
     }
+  },
+  {
+    "date": "2025-05-27",
+    "word": "sport",
+    "guesses": {
+      "today": 13324,
+      "yesterday": 3187,
+      "delta": 10137,
+      "proportion": {
+        "today": 0.75,
+        "yesterday": 0.18,
+        "delta": 0.57
+      }
+    }
   }
 ]
