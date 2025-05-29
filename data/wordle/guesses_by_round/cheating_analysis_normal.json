@@ -11058,5 +11058,19 @@
         "delta": 0.57
       }
     }
+  },
+  {
+    "date": "2025-05-28",
+    "word": "polar",
+    "guesses": {
+      "today": 9265,
+      "yesterday": 765,
+      "delta": 8500,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.04,
+        "delta": 0.48
+      }
+    }
   }
 ]
