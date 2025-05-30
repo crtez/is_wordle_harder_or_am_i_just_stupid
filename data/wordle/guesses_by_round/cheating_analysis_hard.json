@@ -11072,5 +11072,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-05-29",
+    "word": "quash",
+    "guesses": {
+      "today": 411,
+      "yesterday": 8,
+      "delta": 403,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
   }
 ]
