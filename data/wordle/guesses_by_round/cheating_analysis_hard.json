@@ -11086,5 +11086,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-05-30",
+    "word": "idiom",
+    "guesses": {
+      "today": 440,
+      "yesterday": 2,
+      "delta": 438,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
