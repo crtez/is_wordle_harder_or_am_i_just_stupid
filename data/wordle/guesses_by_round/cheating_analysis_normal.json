@@ -11100,5 +11100,19 @@
         "delta": 0.49
       }
     }
+  },
+  {
+    "date": "2025-05-31",
+    "word": "habit",
+    "guesses": {
+      "today": 7447,
+      "yesterday": 154,
+      "delta": 7293,
+      "proportion": {
+        "today": 0.42,
+        "yesterday": 0.01,
+        "delta": 0.41
+      }
+    }
   }
 ]
