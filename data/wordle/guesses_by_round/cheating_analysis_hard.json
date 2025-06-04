@@ -11142,5 +11142,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-06-03",
+    "word": "admin",
+    "guesses": {
+      "today": 437,
+      "yesterday": 7,
+      "delta": 430,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
