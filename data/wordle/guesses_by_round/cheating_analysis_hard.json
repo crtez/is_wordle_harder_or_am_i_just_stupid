@@ -11170,5 +11170,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2025-06-05",
+    "word": "datum",
+    "guesses": {
+      "today": 415,
+      "yesterday": 2,
+      "delta": 413,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
