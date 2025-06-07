@@ -11184,5 +11184,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-06-06",
+    "word": "edify",
+    "guesses": {
+      "today": 428,
+      "yesterday": 6,
+      "delta": 422,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
