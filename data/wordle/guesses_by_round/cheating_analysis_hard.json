@@ -11198,5 +11198,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-06-07",
+    "word": "reuse",
+    "guesses": {
+      "today": 455,
+      "yesterday": 5,
+      "delta": 450,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
