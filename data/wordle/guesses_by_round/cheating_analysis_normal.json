@@ -11212,5 +11212,19 @@
         "delta": 0.37
       }
     }
+  },
+  {
+    "date": "2025-06-08",
+    "word": "lease",
+    "guesses": {
+      "today": 7500,
+      "yesterday": 253,
+      "delta": 7247,
+      "proportion": {
+        "today": 0.42,
+        "yesterday": 0.01,
+        "delta": 0.41
+      }
+    }
   }
 ]
