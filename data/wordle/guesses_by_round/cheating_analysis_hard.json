@@ -11226,5 +11226,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-06-09",
+    "word": "board",
+    "guesses": {
+      "today": 539,
+      "yesterday": 96,
+      "delta": 443,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.04,
+        "delta": 0.21
+      }
+    }
   }
 ]
