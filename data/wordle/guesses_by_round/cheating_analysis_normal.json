@@ -11240,5 +11240,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-06-10",
+    "word": "taffy",
+    "guesses": {
+      "today": 7951,
+      "yesterday": 5,
+      "delta": 7946,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.0,
+        "delta": 0.45
+      }
+    }
   }
 ]
