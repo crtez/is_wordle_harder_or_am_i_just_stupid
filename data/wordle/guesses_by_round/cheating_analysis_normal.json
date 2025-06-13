@@ -11268,5 +11268,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-06-12",
+    "word": "vixen",
+    "guesses": {
+      "today": 7363,
+      "yesterday": 30,
+      "delta": 7333,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.0,
+        "delta": 0.41
+      }
+    }
   }
 ]
