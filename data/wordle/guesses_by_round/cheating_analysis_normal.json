@@ -11282,5 +11282,19 @@
         "delta": 0.41
       }
     }
+  },
+  {
+    "date": "2025-06-13",
+    "word": "bilge",
+    "guesses": {
+      "today": 6705,
+      "yesterday": 12,
+      "delta": 6693,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.0,
+        "delta": 0.38
+      }
+    }
   }
 ]
