@@ -11296,5 +11296,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-06-14",
+    "word": "ghost",
+    "guesses": {
+      "today": 13670,
+      "yesterday": 4674,
+      "delta": 8996,
+      "proportion": {
+        "today": 0.77,
+        "yesterday": 0.26,
+        "delta": 0.5
+      }
+    }
   }
 ]
