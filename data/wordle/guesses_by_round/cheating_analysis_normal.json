@@ -11310,5 +11310,19 @@
         "delta": 0.5
       }
     }
+  },
+  {
+    "date": "2025-06-15",
+    "word": "quail",
+    "guesses": {
+      "today": 7925,
+      "yesterday": 319,
+      "delta": 7606,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.02,
+        "delta": 0.43
+      }
+    }
   }
 ]
