@@ -11324,5 +11324,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-06-16",
+    "word": "petty",
+    "guesses": {
+      "today": 7189,
+      "yesterday": 20,
+      "delta": 7169,
+      "proportion": {
+        "today": 0.4,
+        "yesterday": 0.0,
+        "delta": 0.4
+      }
+    }
   }
 ]
