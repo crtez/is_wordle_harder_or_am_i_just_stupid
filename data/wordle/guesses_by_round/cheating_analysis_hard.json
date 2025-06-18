@@ -11338,5 +11338,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-06-17",
+    "word": "prank",
+    "guesses": {
+      "today": 503,
+      "yesterday": 79,
+      "delta": 424,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.2
+      }
+    }
   }
 ]
