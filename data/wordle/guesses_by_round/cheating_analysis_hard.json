@@ -11352,5 +11352,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-06-18",
+    "word": "munch",
+    "guesses": {
+      "today": 441,
+      "yesterday": 23,
+      "delta": 418,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
   }
 ]
