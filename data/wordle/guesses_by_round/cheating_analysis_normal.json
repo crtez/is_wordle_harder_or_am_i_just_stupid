@@ -11366,5 +11366,19 @@
         "delta": 0.42
       }
     }
+  },
+  {
+    "date": "2025-06-19",
+    "word": "curio",
+    "guesses": {
+      "today": 7414,
+      "yesterday": 324,
+      "delta": 7090,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.02,
+        "delta": 0.4
+      }
+    }
   }
 ]
