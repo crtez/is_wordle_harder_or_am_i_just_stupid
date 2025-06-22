@@ -11394,5 +11394,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-06-21",
+    "word": "glade",
+    "guesses": {
+      "today": 6036,
+      "yesterday": 304,
+      "delta": 5732,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.02,
+        "delta": 0.32
+      }
+    }
   }
 ]
