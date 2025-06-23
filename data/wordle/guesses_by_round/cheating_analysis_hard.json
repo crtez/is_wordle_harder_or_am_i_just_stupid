@@ -11408,5 +11408,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-06-22",
+    "word": "thrum",
+    "guesses": {
+      "today": 331,
+      "yesterday": 6,
+      "delta": 325,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
   }
 ]
