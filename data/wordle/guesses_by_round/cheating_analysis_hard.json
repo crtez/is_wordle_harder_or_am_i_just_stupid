@@ -11422,5 +11422,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-06-23",
+    "word": "oddly",
+    "guesses": {
+      "today": 450,
+      "yesterday": 0,
+      "delta": 450,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
