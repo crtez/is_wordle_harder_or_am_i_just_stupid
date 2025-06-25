@@ -11436,5 +11436,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-06-24",
+    "word": "elite",
+    "guesses": {
+      "today": 411,
+      "yesterday": 6,
+      "delta": 405,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
   }
 ]
