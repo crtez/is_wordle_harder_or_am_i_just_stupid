@@ -11478,5 +11478,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-06-27",
+    "word": "plain",
+    "guesses": {
+      "today": 961,
+      "yesterday": 411,
+      "delta": 550,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.19,
+        "delta": 0.25
+      }
+    }
   }
 ]
