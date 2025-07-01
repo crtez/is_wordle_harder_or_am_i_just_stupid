@@ -11520,5 +11520,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-06-30",
+    "word": "blink",
+    "guesses": {
+      "today": 490,
+      "yesterday": 109,
+      "delta": 381,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.05,
+        "delta": 0.17
+      }
+    }
   }
 ]
