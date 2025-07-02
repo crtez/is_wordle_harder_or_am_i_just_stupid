@@ -11534,5 +11534,19 @@
         "delta": 0.35
       }
     }
+  },
+  {
+    "date": "2025-07-01",
+    "word": "moldy",
+    "guesses": {
+      "today": 5593,
+      "yesterday": 66,
+      "delta": 5527,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
