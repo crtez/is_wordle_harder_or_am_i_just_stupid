@@ -11548,5 +11548,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-07-02",
+    "word": "incur",
+    "guesses": {
+      "today": 318,
+      "yesterday": 6,
+      "delta": 312,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
   }
 ]
