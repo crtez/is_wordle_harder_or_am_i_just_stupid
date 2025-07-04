@@ -11562,5 +11562,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-07-03",
+    "word": "poppy",
+    "guesses": {
+      "today": 460,
+      "yesterday": 6,
+      "delta": 454,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
