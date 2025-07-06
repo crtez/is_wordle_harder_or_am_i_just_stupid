@@ -11590,5 +11590,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-07-05",
+    "word": "baler",
+    "guesses": {
+      "today": 293,
+      "yesterday": 0,
+      "delta": 293,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
   }
 ]
