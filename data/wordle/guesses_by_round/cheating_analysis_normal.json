@@ -11604,5 +11604,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-07-06",
+    "word": "atria",
+    "guesses": {
+      "today": 5346,
+      "yesterday": 9,
+      "delta": 5337,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.0,
+        "delta": 0.3
+      }
+    }
   }
 ]
