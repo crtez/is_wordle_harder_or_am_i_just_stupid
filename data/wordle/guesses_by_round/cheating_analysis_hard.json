@@ -11618,5 +11618,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-07-07",
+    "word": "stilt",
+    "guesses": {
+      "today": 309,
+      "yesterday": 0,
+      "delta": 309,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
   }
 ]
