@@ -11660,5 +11660,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-07-10",
+    "word": "jumpy",
+    "guesses": {
+      "today": 323,
+      "yesterday": 25,
+      "delta": 298,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
   }
 ]
