@@ -11674,5 +11674,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-07-11",
+    "word": "brand",
+    "guesses": {
+      "today": 441,
+      "yesterday": 56,
+      "delta": 385,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.03,
+        "delta": 0.18
+      }
+    }
   }
 ]
