@@ -11702,5 +11702,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-07-13",
+    "word": "gnome",
+    "guesses": {
+      "today": 406,
+      "yesterday": 55,
+      "delta": 351,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.03,
+        "delta": 0.16
+      }
+    }
   }
 ]
