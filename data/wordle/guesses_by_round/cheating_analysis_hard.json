@@ -11730,5 +11730,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-07-15",
+    "word": "foist",
+    "guesses": {
+      "today": 398,
+      "yesterday": 15,
+      "delta": 383,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.18
+      }
+    }
   }
 ]
