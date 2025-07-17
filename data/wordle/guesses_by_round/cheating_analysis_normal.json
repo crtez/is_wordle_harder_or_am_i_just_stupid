@@ -11744,5 +11744,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-07-16",
+    "word": "nervy",
+    "guesses": {
+      "today": 4894,
+      "yesterday": 15,
+      "delta": 4879,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.0,
+        "delta": 0.27
+      }
+    }
   }
 ]
