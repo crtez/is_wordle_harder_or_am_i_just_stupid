@@ -11758,5 +11758,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-07-17",
+    "word": "modal",
+    "guesses": {
+      "today": 303,
+      "yesterday": 2,
+      "delta": 301,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
   }
 ]
