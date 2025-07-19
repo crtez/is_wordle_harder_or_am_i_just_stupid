@@ -11772,5 +11772,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-07-18",
+    "word": "loris",
+    "guesses": {
+      "today": 330,
+      "yesterday": 3,
+      "delta": 327,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
