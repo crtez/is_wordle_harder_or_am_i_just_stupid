@@ -11786,5 +11786,19 @@
         "delta": 0.3
       }
     }
+  },
+  {
+    "date": "2025-07-19",
+    "word": "sword",
+    "guesses": {
+      "today": 6794,
+      "yesterday": 640,
+      "delta": 6154,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.04,
+        "delta": 0.35
+      }
+    }
   }
 ]
