@@ -11814,5 +11814,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-07-21",
+    "word": "tizzy",
+    "guesses": {
+      "today": 5662,
+      "yesterday": 5,
+      "delta": 5657,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
