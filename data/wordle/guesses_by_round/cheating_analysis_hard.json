@@ -11828,5 +11828,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-07-22",
+    "word": "burnt",
+    "guesses": {
+      "today": 328,
+      "yesterday": 27,
+      "delta": 301,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
   }
 ]
