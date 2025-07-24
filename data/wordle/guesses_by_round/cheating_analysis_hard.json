@@ -11842,5 +11842,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-07-23",
+    "word": "water",
+    "guesses": {
+      "today": 953,
+      "yesterday": 406,
+      "delta": 547,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.19,
+        "delta": 0.25
+      }
+    }
   }
 ]
