@@ -11856,5 +11856,19 @@
         "delta": 0.49
       }
     }
+  },
+  {
+    "date": "2025-07-24",
+    "word": "quake",
+    "guesses": {
+      "today": 6699,
+      "yesterday": 187,
+      "delta": 6512,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.01,
+        "delta": 0.37
+      }
+    }
   }
 ]
