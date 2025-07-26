@@ -11870,5 +11870,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-07-25",
+    "word": "gofer",
+    "guesses": {
+      "today": 348,
+      "yesterday": 0,
+      "delta": 348,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
