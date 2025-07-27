@@ -11884,5 +11884,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2025-07-26",
+    "word": "haunt",
+    "guesses": {
+      "today": 419,
+      "yesterday": 48,
+      "delta": 371,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.17
+      }
+    }
   }
 ]
