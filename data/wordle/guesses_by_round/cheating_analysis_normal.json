@@ -11912,5 +11912,19 @@
         "delta": 0.35
       }
     }
+  },
+  {
+    "date": "2025-07-28",
+    "word": "savvy",
+    "guesses": {
+      "today": 5530,
+      "yesterday": 7,
+      "delta": 5523,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
