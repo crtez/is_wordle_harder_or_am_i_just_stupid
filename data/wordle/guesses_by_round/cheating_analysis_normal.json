@@ -11926,5 +11926,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-07-29",
+    "word": "omega",
+    "guesses": {
+      "today": 8065,
+      "yesterday": 338,
+      "delta": 7727,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.02,
+        "delta": 0.43
+      }
+    }
   }
 ]
