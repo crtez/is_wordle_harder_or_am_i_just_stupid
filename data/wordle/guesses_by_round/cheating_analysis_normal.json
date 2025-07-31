@@ -11940,5 +11940,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-07-30",
+    "word": "assay",
+    "guesses": {
+      "today": 6038,
+      "yesterday": 2,
+      "delta": 6036,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.0,
+        "delta": 0.34
+      }
+    }
   }
 ]
