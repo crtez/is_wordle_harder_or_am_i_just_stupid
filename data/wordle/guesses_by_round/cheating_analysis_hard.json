@@ -11954,5 +11954,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-07-31",
+    "word": "frill",
+    "guesses": {
+      "today": 310,
+      "yesterday": 1,
+      "delta": 309,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.0,
+        "delta": 0.14
+      }
+    }
   }
 ]
