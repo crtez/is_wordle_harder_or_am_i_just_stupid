@@ -11968,5 +11968,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-08-01",
+    "word": "banjo",
+    "guesses": {
+      "today": 428,
+      "yesterday": 14,
+      "delta": 414,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.01,
+        "delta": 0.19
+      }
+    }
   }
 ]
