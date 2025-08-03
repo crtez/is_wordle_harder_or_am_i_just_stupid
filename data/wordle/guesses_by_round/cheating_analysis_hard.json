@@ -11982,5 +11982,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-08-02",
+    "word": "daunt",
+    "guesses": {
+      "today": 382,
+      "yesterday": 8,
+      "delta": 374,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
