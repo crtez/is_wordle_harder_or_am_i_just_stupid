@@ -12010,5 +12010,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-08-04",
+    "word": "rigid",
+    "guesses": {
+      "today": 5750,
+      "yesterday": 13,
+      "delta": 5737,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
