@@ -12024,5 +12024,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-08-05",
+    "word": "stork",
+    "guesses": {
+      "today": 419,
+      "yesterday": 36,
+      "delta": 383,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.18
+      }
+    }
   }
 ]
