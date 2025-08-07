@@ -12038,5 +12038,19 @@
         "delta": 0.35
       }
     }
+  },
+  {
+    "date": "2025-08-06",
+    "word": "groan",
+    "guesses": {
+      "today": 6694,
+      "yesterday": 550,
+      "delta": 6144,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.03,
+        "delta": 0.34
+      }
+    }
   }
 ]
