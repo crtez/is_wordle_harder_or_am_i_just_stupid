@@ -12052,5 +12052,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-08-07",
+    "word": "coral",
+    "guesses": {
+      "today": 437,
+      "yesterday": 63,
+      "delta": 374,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.03,
+        "delta": 0.17
+      }
+    }
   }
 ]
