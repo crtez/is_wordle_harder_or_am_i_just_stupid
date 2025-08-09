@@ -12066,5 +12066,19 @@
         "delta": 0.34
       }
     }
+  },
+  {
+    "date": "2025-08-08",
+    "word": "imbue",
+    "guesses": {
+      "today": 5830,
+      "yesterday": 79,
+      "delta": 5751,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
