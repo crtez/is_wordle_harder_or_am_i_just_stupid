@@ -12094,5 +12094,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-08-10",
+    "word": "minty",
+    "guesses": {
+      "today": 301,
+      "yesterday": 19,
+      "delta": 282,
+      "proportion": {
+        "today": 0.14,
+        "yesterday": 0.01,
+        "delta": 0.13
+      }
+    }
   }
 ]
