@@ -12108,5 +12108,19 @@
         "delta": 0.13
       }
     }
+  },
+  {
+    "date": "2025-08-11",
+    "word": "south",
+    "guesses": {
+      "today": 539,
+      "yesterday": 107,
+      "delta": 432,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.2
+      }
+    }
   }
 ]
