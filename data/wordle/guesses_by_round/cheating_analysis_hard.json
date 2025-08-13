@@ -12122,5 +12122,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-08-12",
+    "word": "nomad",
+    "guesses": {
+      "today": 318,
+      "yesterday": 17,
+      "delta": 301,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.01,
+        "delta": 0.14
+      }
+    }
   }
 ]
