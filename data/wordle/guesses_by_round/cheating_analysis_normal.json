@@ -12136,5 +12136,19 @@
         "delta": 0.33
       }
     }
+  },
+  {
+    "date": "2025-08-13",
+    "word": "kefir",
+    "guesses": {
+      "today": 6284,
+      "yesterday": 2,
+      "delta": 6282,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.0,
+        "delta": 0.35
+      }
+    }
   }
 ]
