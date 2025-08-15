@@ -12150,5 +12150,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-08-14",
+    "word": "knell",
+    "guesses": {
+      "today": 346,
+      "yesterday": 0,
+      "delta": 346,
+      "proportion": {
+        "today": 0.16,
+        "yesterday": 0.0,
+        "delta": 0.16
+      }
+    }
   }
 ]
