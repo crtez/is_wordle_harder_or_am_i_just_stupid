@@ -12178,5 +12178,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-08-16",
+    "word": "matte",
+    "guesses": {
+      "today": 319,
+      "yesterday": 0,
+      "delta": 319,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
   }
 ]
