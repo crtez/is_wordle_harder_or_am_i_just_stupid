@@ -12192,5 +12192,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-08-17",
+    "word": "lousy",
+    "guesses": {
+      "today": 458,
+      "yesterday": 78,
+      "delta": 380,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
   }
 ]
