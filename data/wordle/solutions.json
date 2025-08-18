@@ -1,0 +1,8553 @@
+{
+  "2021-06-19": {
+    "id": 1,
+    "solution": "cigar",
+    "print_date": "2021-06-19"
+  },
+  "2021-06-20": {
+    "id": 2,
+    "solution": "rebut",
+    "print_date": "2021-06-20",
+    "days_since_launch": 1
+  },
+  "2021-06-21": {
+    "id": 3,
+    "solution": "sissy",
+    "print_date": "2021-06-21",
+    "days_since_launch": 2
+  },
+  "2021-06-22": {
+    "id": 4,
+    "solution": "humph",
+    "print_date": "2021-06-22",
+    "days_since_launch": 3
+  },
+  "2021-06-23": {
+    "id": 5,
+    "solution": "awake",
+    "print_date": "2021-06-23",
+    "days_since_launch": 4
+  },
+  "2021-06-24": {
+    "id": 6,
+    "solution": "blush",
+    "print_date": "2021-06-24",
+    "days_since_launch": 5
+  },
+  "2021-06-25": {
+    "id": 7,
+    "solution": "focal",
+    "print_date": "2021-06-25",
+    "days_since_launch": 6
+  },
+  "2021-06-26": {
+    "id": 8,
+    "solution": "evade",
+    "print_date": "2021-06-26",
+    "days_since_launch": 7
+  },
+  "2021-06-27": {
+    "id": 9,
+    "solution": "naval",
+    "print_date": "2021-06-27",
+    "days_since_launch": 8
+  },
+  "2021-06-28": {
+    "id": 10,
+    "solution": "serve",
+    "print_date": "2021-06-28",
+    "days_since_launch": 9
+  },
+  "2021-06-29": {
+    "id": 11,
+    "solution": "heath",
+    "print_date": "2021-06-29",
+    "days_since_launch": 10
+  },
+  "2021-06-30": {
+    "id": 12,
+    "solution": "dwarf",
+    "print_date": "2021-06-30",
+    "days_since_launch": 11
+  },
+  "2021-07-01": {
+    "id": 13,
+    "solution": "model",
+    "print_date": "2021-07-01",
+    "days_since_launch": 12
+  },
+  "2021-07-02": {
+    "id": 14,
+    "solution": "karma",
+    "print_date": "2021-07-02",
+    "days_since_launch": 13
+  },
+  "2021-07-03": {
+    "id": 15,
+    "solution": "stink",
+    "print_date": "2021-07-03",
+    "days_since_launch": 14
+  },
+  "2021-07-04": {
+    "id": 16,
+    "solution": "grade",
+    "print_date": "2021-07-04",
+    "days_since_launch": 15
+  },
+  "2021-07-05": {
+    "id": 17,
+    "solution": "quiet",
+    "print_date": "2021-07-05",
+    "days_since_launch": 16
+  },
+  "2021-07-06": {
+    "id": 18,
+    "solution": "bench",
+    "print_date": "2021-07-06",
+    "days_since_launch": 17
+  },
+  "2021-07-07": {
+    "id": 19,
+    "solution": "abate",
+    "print_date": "2021-07-07",
+    "days_since_launch": 18
+  },
+  "2021-07-08": {
+    "id": 20,
+    "solution": "feign",
+    "print_date": "2021-07-08",
+    "days_since_launch": 19
+  },
+  "2021-07-09": {
+    "id": 21,
+    "solution": "major",
+    "print_date": "2021-07-09",
+    "days_since_launch": 20
+  },
+  "2021-07-10": {
+    "id": 22,
+    "solution": "death",
+    "print_date": "2021-07-10",
+    "days_since_launch": 21
+  },
+  "2021-07-11": {
+    "id": 23,
+    "solution": "fresh",
+    "print_date": "2021-07-11",
+    "days_since_launch": 22
+  },
+  "2021-07-12": {
+    "id": 24,
+    "solution": "crust",
+    "print_date": "2021-07-12",
+    "days_since_launch": 23
+  },
+  "2021-07-13": {
+    "id": 25,
+    "solution": "stool",
+    "print_date": "2021-07-13",
+    "days_since_launch": 24
+  },
+  "2021-07-14": {
+    "id": 26,
+    "solution": "colon",
+    "print_date": "2021-07-14",
+    "days_since_launch": 25
+  },
+  "2021-07-15": {
+    "id": 27,
+    "solution": "abase",
+    "print_date": "2021-07-15",
+    "days_since_launch": 26
+  },
+  "2021-07-16": {
+    "id": 28,
+    "solution": "marry",
+    "print_date": "2021-07-16",
+    "days_since_launch": 27
+  },
+  "2021-07-17": {
+    "id": 29,
+    "solution": "react",
+    "print_date": "2021-07-17",
+    "days_since_launch": 28
+  },
+  "2021-07-18": {
+    "id": 30,
+    "solution": "batty",
+    "print_date": "2021-07-18",
+    "days_since_launch": 29
+  },
+  "2021-07-19": {
+    "id": 31,
+    "solution": "pride",
+    "print_date": "2021-07-19",
+    "days_since_launch": 30
+  },
+  "2021-07-20": {
+    "id": 32,
+    "solution": "floss",
+    "print_date": "2021-07-20",
+    "days_since_launch": 31
+  },
+  "2021-07-21": {
+    "id": 33,
+    "solution": "helix",
+    "print_date": "2021-07-21",
+    "days_since_launch": 32
+  },
+  "2021-07-22": {
+    "id": 34,
+    "solution": "croak",
+    "print_date": "2021-07-22",
+    "days_since_launch": 33
+  },
+  "2021-07-23": {
+    "id": 35,
+    "solution": "staff",
+    "print_date": "2021-07-23",
+    "days_since_launch": 34
+  },
+  "2021-07-24": {
+    "id": 36,
+    "solution": "paper",
+    "print_date": "2021-07-24",
+    "days_since_launch": 35
+  },
+  "2021-07-25": {
+    "id": 37,
+    "solution": "unfed",
+    "print_date": "2021-07-25",
+    "days_since_launch": 36
+  },
+  "2021-07-26": {
+    "id": 38,
+    "solution": "whelp",
+    "print_date": "2021-07-26",
+    "days_since_launch": 37
+  },
+  "2021-07-27": {
+    "id": 39,
+    "solution": "trawl",
+    "print_date": "2021-07-27",
+    "days_since_launch": 38
+  },
+  "2021-07-28": {
+    "id": 40,
+    "solution": "outdo",
+    "print_date": "2021-07-28",
+    "days_since_launch": 39
+  },
+  "2021-07-29": {
+    "id": 41,
+    "solution": "adobe",
+    "print_date": "2021-07-29",
+    "days_since_launch": 40
+  },
+  "2021-07-30": {
+    "id": 42,
+    "solution": "crazy",
+    "print_date": "2021-07-30",
+    "days_since_launch": 41
+  },
+  "2021-07-31": {
+    "id": 43,
+    "solution": "sower",
+    "print_date": "2021-07-31",
+    "days_since_launch": 42
+  },
+  "2021-08-01": {
+    "id": 44,
+    "solution": "repay",
+    "print_date": "2021-08-01",
+    "days_since_launch": 43
+  },
+  "2021-08-02": {
+    "id": 45,
+    "solution": "digit",
+    "print_date": "2021-08-02",
+    "days_since_launch": 44
+  },
+  "2021-08-03": {
+    "id": 46,
+    "solution": "crate",
+    "print_date": "2021-08-03",
+    "days_since_launch": 45
+  },
+  "2021-08-04": {
+    "id": 47,
+    "solution": "cluck",
+    "print_date": "2021-08-04",
+    "days_since_launch": 46
+  },
+  "2021-08-05": {
+    "id": 48,
+    "solution": "spike",
+    "print_date": "2021-08-05",
+    "days_since_launch": 47
+  },
+  "2021-08-06": {
+    "id": 49,
+    "solution": "mimic",
+    "print_date": "2021-08-06",
+    "days_since_launch": 48
+  },
+  "2021-08-07": {
+    "id": 50,
+    "solution": "pound",
+    "print_date": "2021-08-07",
+    "days_since_launch": 49
+  },
+  "2021-08-08": {
+    "id": 51,
+    "solution": "maxim",
+    "print_date": "2021-08-08",
+    "days_since_launch": 50
+  },
+  "2021-08-09": {
+    "id": 52,
+    "solution": "linen",
+    "print_date": "2021-08-09",
+    "days_since_launch": 51
+  },
+  "2021-08-10": {
+    "id": 53,
+    "solution": "unmet",
+    "print_date": "2021-08-10",
+    "days_since_launch": 52
+  },
+  "2021-08-11": {
+    "id": 54,
+    "solution": "flesh",
+    "print_date": "2021-08-11",
+    "days_since_launch": 53
+  },
+  "2021-08-12": {
+    "id": 55,
+    "solution": "booby",
+    "print_date": "2021-08-12",
+    "days_since_launch": 54
+  },
+  "2021-08-13": {
+    "id": 56,
+    "solution": "forth",
+    "print_date": "2021-08-13",
+    "days_since_launch": 55
+  },
+  "2021-08-14": {
+    "id": 57,
+    "solution": "first",
+    "print_date": "2021-08-14",
+    "days_since_launch": 56
+  },
+  "2021-08-15": {
+    "id": 58,
+    "solution": "stand",
+    "print_date": "2021-08-15",
+    "days_since_launch": 57
+  },
+  "2021-08-16": {
+    "id": 59,
+    "solution": "belly",
+    "print_date": "2021-08-16",
+    "days_since_launch": 58
+  },
+  "2021-08-17": {
+    "id": 60,
+    "solution": "ivory",
+    "print_date": "2021-08-17",
+    "days_since_launch": 59
+  },
+  "2021-08-18": {
+    "id": 61,
+    "solution": "seedy",
+    "print_date": "2021-08-18",
+    "days_since_launch": 60
+  },
+  "2021-08-19": {
+    "id": 62,
+    "solution": "print",
+    "print_date": "2021-08-19",
+    "days_since_launch": 61
+  },
+  "2021-08-20": {
+    "id": 63,
+    "solution": "yearn",
+    "print_date": "2021-08-20",
+    "days_since_launch": 62
+  },
+  "2021-08-21": {
+    "id": 64,
+    "solution": "drain",
+    "print_date": "2021-08-21",
+    "days_since_launch": 63
+  },
+  "2021-08-22": {
+    "id": 65,
+    "solution": "bribe",
+    "print_date": "2021-08-22",
+    "days_since_launch": 64
+  },
+  "2021-08-23": {
+    "id": 66,
+    "solution": "stout",
+    "print_date": "2021-08-23",
+    "days_since_launch": 65
+  },
+  "2021-08-24": {
+    "id": 67,
+    "solution": "panel",
+    "print_date": "2021-08-24",
+    "days_since_launch": 66
+  },
+  "2021-08-25": {
+    "id": 68,
+    "solution": "crass",
+    "print_date": "2021-08-25",
+    "days_since_launch": 67
+  },
+  "2021-08-26": {
+    "id": 69,
+    "solution": "flume",
+    "print_date": "2021-08-26",
+    "days_since_launch": 68
+  },
+  "2021-08-27": {
+    "id": 70,
+    "solution": "offal",
+    "print_date": "2021-08-27",
+    "days_since_launch": 69
+  },
+  "2021-08-28": {
+    "id": 71,
+    "solution": "agree",
+    "print_date": "2021-08-28",
+    "days_since_launch": 70
+  },
+  "2021-08-29": {
+    "id": 72,
+    "solution": "error",
+    "print_date": "2021-08-29",
+    "days_since_launch": 71
+  },
+  "2021-08-30": {
+    "id": 73,
+    "solution": "swirl",
+    "print_date": "2021-08-30",
+    "days_since_launch": 72
+  },
+  "2021-08-31": {
+    "id": 74,
+    "solution": "argue",
+    "print_date": "2021-08-31",
+    "days_since_launch": 73
+  },
+  "2021-09-01": {
+    "id": 75,
+    "solution": "bleed",
+    "print_date": "2021-09-01",
+    "days_since_launch": 74
+  },
+  "2021-09-02": {
+    "id": 76,
+    "solution": "delta",
+    "print_date": "2021-09-02",
+    "days_since_launch": 75
+  },
+  "2021-09-03": {
+    "id": 77,
+    "solution": "flick",
+    "print_date": "2021-09-03",
+    "days_since_launch": 76
+  },
+  "2021-09-04": {
+    "id": 78,
+    "solution": "totem",
+    "print_date": "2021-09-04",
+    "days_since_launch": 77
+  },
+  "2021-09-05": {
+    "id": 79,
+    "solution": "wooer",
+    "print_date": "2021-09-05",
+    "days_since_launch": 78
+  },
+  "2021-09-06": {
+    "id": 80,
+    "solution": "front",
+    "print_date": "2021-09-06",
+    "days_since_launch": 79
+  },
+  "2021-09-07": {
+    "id": 81,
+    "solution": "shrub",
+    "print_date": "2021-09-07",
+    "days_since_launch": 80
+  },
+  "2021-09-08": {
+    "id": 82,
+    "solution": "parry",
+    "print_date": "2021-09-08",
+    "days_since_launch": 81
+  },
+  "2021-09-09": {
+    "id": 83,
+    "solution": "biome",
+    "print_date": "2021-09-09",
+    "days_since_launch": 82
+  },
+  "2021-09-10": {
+    "id": 84,
+    "solution": "lapel",
+    "print_date": "2021-09-10",
+    "days_since_launch": 83
+  },
+  "2021-09-11": {
+    "id": 85,
+    "solution": "start",
+    "print_date": "2021-09-11",
+    "days_since_launch": 84
+  },
+  "2021-09-12": {
+    "id": 86,
+    "solution": "greet",
+    "print_date": "2021-09-12",
+    "days_since_launch": 85
+  },
+  "2021-09-13": {
+    "id": 87,
+    "solution": "goner",
+    "print_date": "2021-09-13",
+    "days_since_launch": 86
+  },
+  "2021-09-14": {
+    "id": 88,
+    "solution": "golem",
+    "print_date": "2021-09-14",
+    "days_since_launch": 87
+  },
+  "2021-09-15": {
+    "id": 89,
+    "solution": "lusty",
+    "print_date": "2021-09-15",
+    "days_since_launch": 88
+  },
+  "2021-09-16": {
+    "id": 90,
+    "solution": "loopy",
+    "print_date": "2021-09-16",
+    "days_since_launch": 89
+  },
+  "2021-09-17": {
+    "id": 91,
+    "solution": "round",
+    "print_date": "2021-09-17",
+    "days_since_launch": 90
+  },
+  "2021-09-18": {
+    "id": 92,
+    "solution": "audit",
+    "print_date": "2021-09-18",
+    "days_since_launch": 91
+  },
+  "2021-09-19": {
+    "id": 93,
+    "solution": "lying",
+    "print_date": "2021-09-19",
+    "days_since_launch": 92
+  },
+  "2021-09-20": {
+    "id": 94,
+    "solution": "gamma",
+    "print_date": "2021-09-20",
+    "days_since_launch": 93
+  },
+  "2021-09-21": {
+    "id": 95,
+    "solution": "labor",
+    "print_date": "2021-09-21",
+    "days_since_launch": 94
+  },
+  "2021-09-22": {
+    "id": 96,
+    "solution": "islet",
+    "print_date": "2021-09-22",
+    "days_since_launch": 95
+  },
+  "2021-09-23": {
+    "id": 97,
+    "solution": "civic",
+    "print_date": "2021-09-23",
+    "days_since_launch": 96
+  },
+  "2021-09-24": {
+    "id": 98,
+    "solution": "forge",
+    "print_date": "2021-09-24",
+    "days_since_launch": 97
+  },
+  "2021-09-25": {
+    "id": 99,
+    "solution": "corny",
+    "print_date": "2021-09-25",
+    "days_since_launch": 98
+  },
+  "2021-09-26": {
+    "id": 100,
+    "solution": "moult",
+    "print_date": "2021-09-26",
+    "days_since_launch": 99
+  },
+  "2021-09-27": {
+    "id": 101,
+    "solution": "basic",
+    "print_date": "2021-09-27",
+    "days_since_launch": 100
+  },
+  "2021-09-28": {
+    "id": 102,
+    "solution": "salad",
+    "print_date": "2021-09-28",
+    "days_since_launch": 101
+  },
+  "2021-09-29": {
+    "id": 103,
+    "solution": "agate",
+    "print_date": "2021-09-29",
+    "days_since_launch": 102
+  },
+  "2021-09-30": {
+    "id": 104,
+    "solution": "spicy",
+    "print_date": "2021-09-30",
+    "days_since_launch": 103
+  },
+  "2021-10-01": {
+    "id": 105,
+    "solution": "spray",
+    "print_date": "2021-10-01",
+    "days_since_launch": 104
+  },
+  "2021-10-02": {
+    "id": 106,
+    "solution": "essay",
+    "print_date": "2021-10-02",
+    "days_since_launch": 105
+  },
+  "2021-10-03": {
+    "id": 107,
+    "solution": "fjord",
+    "print_date": "2021-10-03",
+    "days_since_launch": 106
+  },
+  "2021-10-04": {
+    "id": 108,
+    "solution": "spend",
+    "print_date": "2021-10-04",
+    "days_since_launch": 107
+  },
+  "2021-10-05": {
+    "id": 109,
+    "solution": "kebab",
+    "print_date": "2021-10-05",
+    "days_since_launch": 108
+  },
+  "2021-10-06": {
+    "id": 110,
+    "solution": "guild",
+    "print_date": "2021-10-06",
+    "days_since_launch": 109
+  },
+  "2021-10-07": {
+    "id": 111,
+    "solution": "aback",
+    "print_date": "2021-10-07",
+    "days_since_launch": 110
+  },
+  "2021-10-08": {
+    "id": 112,
+    "solution": "motor",
+    "print_date": "2021-10-08",
+    "days_since_launch": 111
+  },
+  "2021-10-09": {
+    "id": 113,
+    "solution": "alone",
+    "print_date": "2021-10-09",
+    "days_since_launch": 112
+  },
+  "2021-10-10": {
+    "id": 114,
+    "solution": "hatch",
+    "print_date": "2021-10-10",
+    "days_since_launch": 113
+  },
+  "2021-10-11": {
+    "id": 115,
+    "solution": "hyper",
+    "print_date": "2021-10-11",
+    "days_since_launch": 114
+  },
+  "2021-10-12": {
+    "id": 116,
+    "solution": "thumb",
+    "print_date": "2021-10-12",
+    "days_since_launch": 115
+  },
+  "2021-10-13": {
+    "id": 117,
+    "solution": "dowry",
+    "print_date": "2021-10-13",
+    "days_since_launch": 116
+  },
+  "2021-10-14": {
+    "id": 118,
+    "solution": "ought",
+    "print_date": "2021-10-14",
+    "days_since_launch": 117
+  },
+  "2021-10-15": {
+    "id": 119,
+    "solution": "belch",
+    "print_date": "2021-10-15",
+    "days_since_launch": 118
+  },
+  "2021-10-16": {
+    "id": 120,
+    "solution": "dutch",
+    "print_date": "2021-10-16",
+    "days_since_launch": 119
+  },
+  "2021-10-17": {
+    "id": 121,
+    "solution": "pilot",
+    "print_date": "2021-10-17",
+    "days_since_launch": 120
+  },
+  "2021-10-18": {
+    "id": 122,
+    "solution": "tweed",
+    "print_date": "2021-10-18",
+    "days_since_launch": 121
+  },
+  "2021-10-19": {
+    "id": 123,
+    "solution": "comet",
+    "print_date": "2021-10-19",
+    "days_since_launch": 122
+  },
+  "2021-10-20": {
+    "id": 124,
+    "solution": "jaunt",
+    "print_date": "2021-10-20",
+    "days_since_launch": 123
+  },
+  "2021-10-21": {
+    "id": 125,
+    "solution": "enema",
+    "print_date": "2021-10-21",
+    "days_since_launch": 124
+  },
+  "2021-10-22": {
+    "id": 126,
+    "solution": "steed",
+    "print_date": "2021-10-22",
+    "days_since_launch": 125
+  },
+  "2021-10-23": {
+    "id": 127,
+    "solution": "abyss",
+    "print_date": "2021-10-23",
+    "days_since_launch": 126
+  },
+  "2021-10-24": {
+    "id": 128,
+    "solution": "growl",
+    "print_date": "2021-10-24",
+    "days_since_launch": 127
+  },
+  "2021-10-25": {
+    "id": 129,
+    "solution": "fling",
+    "print_date": "2021-10-25",
+    "days_since_launch": 128
+  },
+  "2021-10-26": {
+    "id": 130,
+    "solution": "dozen",
+    "print_date": "2021-10-26",
+    "days_since_launch": 129
+  },
+  "2021-10-27": {
+    "id": 131,
+    "solution": "boozy",
+    "print_date": "2021-10-27",
+    "days_since_launch": 130
+  },
+  "2021-10-28": {
+    "id": 132,
+    "solution": "erode",
+    "print_date": "2021-10-28",
+    "days_since_launch": 131
+  },
+  "2021-10-29": {
+    "id": 133,
+    "solution": "world",
+    "print_date": "2021-10-29",
+    "days_since_launch": 132
+  },
+  "2021-10-30": {
+    "id": 134,
+    "solution": "gouge",
+    "print_date": "2021-10-30",
+    "days_since_launch": 133
+  },
+  "2021-10-31": {
+    "id": 135,
+    "solution": "click",
+    "print_date": "2021-10-31",
+    "days_since_launch": 134
+  },
+  "2021-11-01": {
+    "id": 136,
+    "solution": "briar",
+    "print_date": "2021-11-01",
+    "days_since_launch": 135
+  },
+  "2021-11-02": {
+    "id": 137,
+    "solution": "great",
+    "print_date": "2021-11-02",
+    "days_since_launch": 136
+  },
+  "2021-11-03": {
+    "id": 138,
+    "solution": "altar",
+    "print_date": "2021-11-03",
+    "days_since_launch": 137
+  },
+  "2021-11-04": {
+    "id": 139,
+    "solution": "pulpy",
+    "print_date": "2021-11-04",
+    "days_since_launch": 138
+  },
+  "2021-11-05": {
+    "id": 140,
+    "solution": "blurt",
+    "print_date": "2021-11-05",
+    "days_since_launch": 139
+  },
+  "2021-11-06": {
+    "id": 141,
+    "solution": "coast",
+    "print_date": "2021-11-06",
+    "days_since_launch": 140
+  },
+  "2021-11-07": {
+    "id": 142,
+    "solution": "duchy",
+    "print_date": "2021-11-07",
+    "days_since_launch": 141
+  },
+  "2021-11-08": {
+    "id": 143,
+    "solution": "groin",
+    "print_date": "2021-11-08",
+    "days_since_launch": 142
+  },
+  "2021-11-09": {
+    "id": 144,
+    "solution": "fixer",
+    "print_date": "2021-11-09",
+    "days_since_launch": 143
+  },
+  "2021-11-10": {
+    "id": 145,
+    "solution": "group",
+    "print_date": "2021-11-10",
+    "days_since_launch": 144
+  },
+  "2021-11-11": {
+    "id": 146,
+    "solution": "rogue",
+    "print_date": "2021-11-11",
+    "days_since_launch": 145
+  },
+  "2021-11-12": {
+    "id": 147,
+    "solution": "badly",
+    "print_date": "2021-11-12",
+    "days_since_launch": 146
+  },
+  "2021-11-13": {
+    "id": 148,
+    "solution": "smart",
+    "print_date": "2021-11-13",
+    "days_since_launch": 147
+  },
+  "2021-11-14": {
+    "id": 149,
+    "solution": "pithy",
+    "print_date": "2021-11-14",
+    "days_since_launch": 148
+  },
+  "2021-11-15": {
+    "id": 150,
+    "solution": "gaudy",
+    "print_date": "2021-11-15",
+    "days_since_launch": 149
+  },
+  "2021-11-16": {
+    "id": 151,
+    "solution": "chill",
+    "print_date": "2021-11-16",
+    "days_since_launch": 150
+  },
+  "2021-11-17": {
+    "id": 152,
+    "solution": "heron",
+    "print_date": "2021-11-17",
+    "days_since_launch": 151
+  },
+  "2021-11-18": {
+    "id": 153,
+    "solution": "vodka",
+    "print_date": "2021-11-18",
+    "days_since_launch": 152
+  },
+  "2021-11-19": {
+    "id": 154,
+    "solution": "finer",
+    "print_date": "2021-11-19",
+    "days_since_launch": 153
+  },
+  "2021-11-20": {
+    "id": 155,
+    "solution": "surer",
+    "print_date": "2021-11-20",
+    "days_since_launch": 154
+  },
+  "2021-11-21": {
+    "id": 156,
+    "solution": "radio",
+    "print_date": "2021-11-21",
+    "days_since_launch": 155
+  },
+  "2021-11-22": {
+    "id": 157,
+    "solution": "rouge",
+    "print_date": "2021-11-22",
+    "days_since_launch": 156
+  },
+  "2021-11-23": {
+    "id": 158,
+    "solution": "perch",
+    "print_date": "2021-11-23",
+    "days_since_launch": 157
+  },
+  "2021-11-24": {
+    "id": 159,
+    "solution": "retch",
+    "print_date": "2021-11-24",
+    "days_since_launch": 158
+  },
+  "2021-11-25": {
+    "id": 160,
+    "solution": "wrote",
+    "print_date": "2021-11-25",
+    "days_since_launch": 159
+  },
+  "2021-11-26": {
+    "id": 161,
+    "solution": "clock",
+    "print_date": "2021-11-26",
+    "days_since_launch": 160
+  },
+  "2021-11-27": {
+    "id": 162,
+    "solution": "tilde",
+    "print_date": "2021-11-27",
+    "days_since_launch": 161
+  },
+  "2021-11-28": {
+    "id": 163,
+    "solution": "store",
+    "print_date": "2021-11-28",
+    "days_since_launch": 162
+  },
+  "2021-11-29": {
+    "id": 164,
+    "solution": "prove",
+    "print_date": "2021-11-29",
+    "days_since_launch": 163
+  },
+  "2021-11-30": {
+    "id": 165,
+    "solution": "bring",
+    "print_date": "2021-11-30",
+    "days_since_launch": 164
+  },
+  "2021-12-01": {
+    "id": 166,
+    "solution": "solve",
+    "print_date": "2021-12-01",
+    "days_since_launch": 165
+  },
+  "2021-12-02": {
+    "id": 167,
+    "solution": "cheat",
+    "print_date": "2021-12-02",
+    "days_since_launch": 166
+  },
+  "2021-12-03": {
+    "id": 168,
+    "solution": "grime",
+    "print_date": "2021-12-03",
+    "days_since_launch": 167
+  },
+  "2021-12-04": {
+    "id": 169,
+    "solution": "exult",
+    "print_date": "2021-12-04",
+    "days_since_launch": 168
+  },
+  "2021-12-05": {
+    "id": 170,
+    "solution": "usher",
+    "print_date": "2021-12-05",
+    "days_since_launch": 169
+  },
+  "2021-12-06": {
+    "id": 171,
+    "solution": "epoch",
+    "print_date": "2021-12-06",
+    "days_since_launch": 170
+  },
+  "2021-12-07": {
+    "id": 172,
+    "solution": "triad",
+    "print_date": "2021-12-07",
+    "days_since_launch": 171
+  },
+  "2021-12-08": {
+    "id": 173,
+    "solution": "break",
+    "print_date": "2021-12-08",
+    "days_since_launch": 172
+  },
+  "2021-12-09": {
+    "id": 174,
+    "solution": "rhino",
+    "print_date": "2021-12-09",
+    "days_since_launch": 173
+  },
+  "2021-12-10": {
+    "id": 175,
+    "solution": "viral",
+    "print_date": "2021-12-10",
+    "days_since_launch": 174
+  },
+  "2021-12-11": {
+    "id": 176,
+    "solution": "conic",
+    "print_date": "2021-12-11",
+    "days_since_launch": 175
+  },
+  "2021-12-12": {
+    "id": 177,
+    "solution": "masse",
+    "print_date": "2021-12-12",
+    "days_since_launch": 176
+  },
+  "2021-12-13": {
+    "id": 178,
+    "solution": "sonic",
+    "print_date": "2021-12-13",
+    "days_since_launch": 177
+  },
+  "2021-12-14": {
+    "id": 179,
+    "solution": "vital",
+    "print_date": "2021-12-14",
+    "days_since_launch": 178
+  },
+  "2021-12-15": {
+    "id": 180,
+    "solution": "trace",
+    "print_date": "2021-12-15",
+    "days_since_launch": 179
+  },
+  "2021-12-16": {
+    "id": 181,
+    "solution": "using",
+    "print_date": "2021-12-16",
+    "days_since_launch": 180
+  },
+  "2021-12-17": {
+    "id": 182,
+    "solution": "peach",
+    "print_date": "2021-12-17",
+    "days_since_launch": 181
+  },
+  "2021-12-18": {
+    "id": 183,
+    "solution": "champ",
+    "print_date": "2021-12-18",
+    "days_since_launch": 182
+  },
+  "2021-12-19": {
+    "id": 184,
+    "solution": "baton",
+    "print_date": "2021-12-19",
+    "days_since_launch": 183
+  },
+  "2021-12-20": {
+    "id": 185,
+    "solution": "brake",
+    "print_date": "2021-12-20",
+    "days_since_launch": 184
+  },
+  "2021-12-21": {
+    "id": 186,
+    "solution": "pluck",
+    "print_date": "2021-12-21",
+    "days_since_launch": 185
+  },
+  "2021-12-22": {
+    "id": 187,
+    "solution": "craze",
+    "print_date": "2021-12-22",
+    "days_since_launch": 186
+  },
+  "2021-12-23": {
+    "id": 188,
+    "solution": "gripe",
+    "print_date": "2021-12-23",
+    "days_since_launch": 187
+  },
+  "2021-12-24": {
+    "id": 189,
+    "solution": "weary",
+    "print_date": "2021-12-24",
+    "days_since_launch": 188
+  },
+  "2021-12-25": {
+    "id": 190,
+    "solution": "picky",
+    "print_date": "2021-12-25",
+    "days_since_launch": 189
+  },
+  "2021-12-26": {
+    "id": 191,
+    "solution": "acute",
+    "print_date": "2021-12-26",
+    "days_since_launch": 190
+  },
+  "2021-12-27": {
+    "id": 192,
+    "solution": "ferry",
+    "print_date": "2021-12-27",
+    "days_since_launch": 191
+  },
+  "2021-12-28": {
+    "id": 193,
+    "solution": "aside",
+    "print_date": "2021-12-28",
+    "days_since_launch": 192
+  },
+  "2021-12-29": {
+    "id": 194,
+    "solution": "tapir",
+    "print_date": "2021-12-29",
+    "days_since_launch": 193
+  },
+  "2021-12-30": {
+    "id": 195,
+    "solution": "troll",
+    "print_date": "2021-12-30",
+    "days_since_launch": 194
+  },
+  "2021-12-31": {
+    "id": 196,
+    "solution": "unify",
+    "print_date": "2021-12-31",
+    "days_since_launch": 195
+  },
+  "2022-01-01": {
+    "id": 197,
+    "solution": "rebus",
+    "print_date": "2022-01-01",
+    "days_since_launch": 196
+  },
+  "2022-01-02": {
+    "id": 198,
+    "solution": "boost",
+    "print_date": "2022-01-02",
+    "days_since_launch": 197
+  },
+  "2022-01-03": {
+    "id": 199,
+    "solution": "truss",
+    "print_date": "2022-01-03",
+    "days_since_launch": 198
+  },
+  "2022-01-04": {
+    "id": 200,
+    "solution": "siege",
+    "print_date": "2022-01-04",
+    "days_since_launch": 199
+  },
+  "2022-01-05": {
+    "id": 201,
+    "solution": "tiger",
+    "print_date": "2022-01-05",
+    "days_since_launch": 200
+  },
+  "2022-01-06": {
+    "id": 202,
+    "solution": "banal",
+    "print_date": "2022-01-06",
+    "days_since_launch": 201
+  },
+  "2022-01-07": {
+    "id": 203,
+    "solution": "slump",
+    "print_date": "2022-01-07",
+    "days_since_launch": 202
+  },
+  "2022-01-08": {
+    "id": 204,
+    "solution": "crank",
+    "print_date": "2022-01-08",
+    "days_since_launch": 203
+  },
+  "2022-01-09": {
+    "id": 205,
+    "solution": "gorge",
+    "print_date": "2022-01-09",
+    "days_since_launch": 204
+  },
+  "2022-01-10": {
+    "id": 206,
+    "solution": "query",
+    "print_date": "2022-01-10",
+    "days_since_launch": 205
+  },
+  "2022-01-11": {
+    "id": 207,
+    "solution": "drink",
+    "print_date": "2022-01-11",
+    "days_since_launch": 206
+  },
+  "2022-01-12": {
+    "id": 208,
+    "solution": "favor",
+    "print_date": "2022-01-12",
+    "days_since_launch": 207
+  },
+  "2022-01-13": {
+    "id": 209,
+    "solution": "abbey",
+    "print_date": "2022-01-13",
+    "days_since_launch": 208
+  },
+  "2022-01-14": {
+    "id": 210,
+    "solution": "tangy",
+    "print_date": "2022-01-14",
+    "days_since_launch": 209
+  },
+  "2022-01-15": {
+    "id": 211,
+    "solution": "panic",
+    "print_date": "2022-01-15",
+    "days_since_launch": 210
+  },
+  "2022-01-16": {
+    "id": 212,
+    "solution": "solar",
+    "print_date": "2022-01-16",
+    "days_since_launch": 211
+  },
+  "2022-01-17": {
+    "id": 213,
+    "solution": "shire",
+    "print_date": "2022-01-17",
+    "days_since_launch": 212
+  },
+  "2022-01-18": {
+    "id": 214,
+    "solution": "proxy",
+    "print_date": "2022-01-18",
+    "days_since_launch": 213
+  },
+  "2022-01-19": {
+    "id": 215,
+    "solution": "point",
+    "print_date": "2022-01-19",
+    "days_since_launch": 214
+  },
+  "2022-01-20": {
+    "id": 216,
+    "solution": "robot",
+    "print_date": "2022-01-20",
+    "days_since_launch": 215
+  },
+  "2022-01-21": {
+    "id": 217,
+    "solution": "prick",
+    "print_date": "2022-01-21",
+    "days_since_launch": 216
+  },
+  "2022-01-22": {
+    "id": 218,
+    "solution": "wince",
+    "print_date": "2022-01-22",
+    "days_since_launch": 217
+  },
+  "2022-01-23": {
+    "id": 219,
+    "solution": "crimp",
+    "print_date": "2022-01-23",
+    "days_since_launch": 218
+  },
+  "2022-01-24": {
+    "id": 220,
+    "solution": "knoll",
+    "print_date": "2022-01-24",
+    "days_since_launch": 219
+  },
+  "2022-01-25": {
+    "id": 221,
+    "solution": "sugar",
+    "print_date": "2022-01-25",
+    "days_since_launch": 220
+  },
+  "2022-01-26": {
+    "id": 222,
+    "solution": "whack",
+    "print_date": "2022-01-26",
+    "days_since_launch": 221
+  },
+  "2022-01-27": {
+    "id": 223,
+    "solution": "mount",
+    "print_date": "2022-01-27",
+    "days_since_launch": 222
+  },
+  "2022-01-28": {
+    "id": 224,
+    "solution": "perky",
+    "print_date": "2022-01-28",
+    "days_since_launch": 223
+  },
+  "2022-01-29": {
+    "id": 225,
+    "solution": "could",
+    "print_date": "2022-01-29",
+    "days_since_launch": 224
+  },
+  "2022-01-30": {
+    "id": 226,
+    "solution": "wrung",
+    "print_date": "2022-01-30",
+    "days_since_launch": 225
+  },
+  "2022-01-31": {
+    "id": 227,
+    "solution": "light",
+    "print_date": "2022-01-31",
+    "days_since_launch": 226
+  },
+  "2022-02-01": {
+    "id": 228,
+    "solution": "those",
+    "print_date": "2022-02-01",
+    "days_since_launch": 227
+  },
+  "2022-02-02": {
+    "id": 229,
+    "solution": "moist",
+    "print_date": "2022-02-02",
+    "days_since_launch": 228
+  },
+  "2022-02-03": {
+    "id": 230,
+    "solution": "shard",
+    "print_date": "2022-02-03",
+    "days_since_launch": 229
+  },
+  "2022-02-04": {
+    "id": 231,
+    "solution": "pleat",
+    "print_date": "2022-02-04",
+    "days_since_launch": 230
+  },
+  "2022-02-05": {
+    "id": 232,
+    "solution": "aloft",
+    "print_date": "2022-02-05",
+    "days_since_launch": 231
+  },
+  "2022-02-06": {
+    "id": 233,
+    "solution": "skill",
+    "print_date": "2022-02-06",
+    "days_since_launch": 232
+  },
+  "2022-02-07": {
+    "id": 234,
+    "solution": "elder",
+    "print_date": "2022-02-07",
+    "days_since_launch": 233
+  },
+  "2022-02-08": {
+    "id": 235,
+    "solution": "frame",
+    "print_date": "2022-02-08",
+    "days_since_launch": 234
+  },
+  "2022-02-09": {
+    "id": 236,
+    "solution": "humor",
+    "print_date": "2022-02-09",
+    "days_since_launch": 235
+  },
+  "2022-02-10": {
+    "id": 237,
+    "solution": "pause",
+    "print_date": "2022-02-10",
+    "days_since_launch": 236
+  },
+  "2022-02-11": {
+    "id": 238,
+    "solution": "ulcer",
+    "print_date": "2022-02-11",
+    "days_since_launch": 237
+  },
+  "2022-02-12": {
+    "id": 239,
+    "solution": "ultra",
+    "print_date": "2022-02-12",
+    "days_since_launch": 238
+  },
+  "2022-02-13": {
+    "id": 240,
+    "solution": "robin",
+    "print_date": "2022-02-13",
+    "days_since_launch": 239
+  },
+  "2022-02-14": {
+    "id": 241,
+    "solution": "cynic",
+    "print_date": "2022-02-14",
+    "days_since_launch": 240
+  },
+  "2022-02-15": {
+    "id": 242,
+    "solution": "aroma",
+    "print_date": "2022-02-15",
+    "days_since_launch": 241
+  },
+  "2022-02-16": {
+    "id": 243,
+    "solution": "caulk",
+    "print_date": "2022-02-16",
+    "days_since_launch": 242
+  },
+  "2022-02-17": {
+    "id": 244,
+    "solution": "shake",
+    "print_date": "2022-02-17",
+    "days_since_launch": 243
+  },
+  "2022-02-18": {
+    "id": 245,
+    "solution": "dodge",
+    "print_date": "2022-02-18",
+    "days_since_launch": 244
+  },
+  "2022-02-19": {
+    "id": 246,
+    "solution": "swill",
+    "print_date": "2022-02-19",
+    "days_since_launch": 245
+  },
+  "2022-02-20": {
+    "id": 247,
+    "solution": "tacit",
+    "print_date": "2022-02-20",
+    "days_since_launch": 246
+  },
+  "2022-02-21": {
+    "id": 248,
+    "solution": "other",
+    "print_date": "2022-02-21",
+    "days_since_launch": 247
+  },
+  "2022-02-22": {
+    "id": 249,
+    "solution": "thorn",
+    "print_date": "2022-02-22",
+    "days_since_launch": 248
+  },
+  "2022-02-23": {
+    "id": 250,
+    "solution": "trove",
+    "print_date": "2022-02-23",
+    "days_since_launch": 249
+  },
+  "2022-02-24": {
+    "id": 251,
+    "solution": "bloke",
+    "print_date": "2022-02-24",
+    "days_since_launch": 250
+  },
+  "2022-02-25": {
+    "id": 252,
+    "solution": "vivid",
+    "print_date": "2022-02-25",
+    "days_since_launch": 251
+  },
+  "2022-02-26": {
+    "id": 253,
+    "solution": "spill",
+    "print_date": "2022-02-26",
+    "days_since_launch": 252
+  },
+  "2022-02-27": {
+    "id": 254,
+    "solution": "chant",
+    "print_date": "2022-02-27",
+    "days_since_launch": 253
+  },
+  "2022-02-28": {
+    "id": 255,
+    "solution": "choke",
+    "print_date": "2022-02-28",
+    "days_since_launch": 254
+  },
+  "2022-03-01": {
+    "id": 256,
+    "solution": "rupee",
+    "print_date": "2022-03-01",
+    "days_since_launch": 255
+  },
+  "2022-03-02": {
+    "id": 257,
+    "solution": "nasty",
+    "print_date": "2022-03-02",
+    "days_since_launch": 256
+  },
+  "2022-03-03": {
+    "id": 258,
+    "solution": "mourn",
+    "print_date": "2022-03-03",
+    "days_since_launch": 257
+  },
+  "2022-03-04": {
+    "id": 259,
+    "solution": "ahead",
+    "print_date": "2022-03-04",
+    "days_since_launch": 258
+  },
+  "2022-03-05": {
+    "id": 260,
+    "solution": "brine",
+    "print_date": "2022-03-05",
+    "days_since_launch": 259
+  },
+  "2022-03-06": {
+    "id": 261,
+    "solution": "cloth",
+    "print_date": "2022-03-06",
+    "days_since_launch": 260
+  },
+  "2022-03-07": {
+    "id": 262,
+    "solution": "hoard",
+    "print_date": "2022-03-07",
+    "days_since_launch": 261
+  },
+  "2022-03-08": {
+    "id": 263,
+    "solution": "sweet",
+    "print_date": "2022-03-08",
+    "days_since_launch": 262
+  },
+  "2022-03-09": {
+    "id": 264,
+    "solution": "month",
+    "print_date": "2022-03-09",
+    "days_since_launch": 263
+  },
+  "2022-03-10": {
+    "id": 265,
+    "solution": "lapse",
+    "print_date": "2022-03-10",
+    "days_since_launch": 264
+  },
+  "2022-03-11": {
+    "id": 266,
+    "solution": "watch",
+    "print_date": "2022-03-11",
+    "days_since_launch": 265
+  },
+  "2022-03-12": {
+    "id": 267,
+    "solution": "today",
+    "print_date": "2022-03-12",
+    "days_since_launch": 266
+  },
+  "2022-03-13": {
+    "id": 268,
+    "solution": "focus",
+    "print_date": "2022-03-13",
+    "days_since_launch": 267
+  },
+  "2022-03-14": {
+    "id": 269,
+    "solution": "smelt",
+    "print_date": "2022-03-14",
+    "days_since_launch": 268
+  },
+  "2022-03-15": {
+    "id": 270,
+    "solution": "tease",
+    "print_date": "2022-03-15",
+    "days_since_launch": 269
+  },
+  "2022-03-16": {
+    "id": 271,
+    "solution": "cater",
+    "print_date": "2022-03-16",
+    "days_since_launch": 270
+  },
+  "2022-03-17": {
+    "id": 272,
+    "solution": "movie",
+    "print_date": "2022-03-17",
+    "days_since_launch": 271
+  },
+  "2022-03-18": {
+    "id": 273,
+    "solution": "saute",
+    "print_date": "2022-03-18",
+    "days_since_launch": 272
+  },
+  "2022-03-19": {
+    "id": 274,
+    "solution": "allow",
+    "print_date": "2022-03-19",
+    "days_since_launch": 273
+  },
+  "2022-03-20": {
+    "id": 275,
+    "solution": "renew",
+    "print_date": "2022-03-20",
+    "days_since_launch": 274
+  },
+  "2022-03-21": {
+    "id": 276,
+    "solution": "their",
+    "print_date": "2022-03-21",
+    "days_since_launch": 275
+  },
+  "2022-03-22": {
+    "id": 277,
+    "solution": "slosh",
+    "print_date": "2022-03-22",
+    "days_since_launch": 276
+  },
+  "2022-03-23": {
+    "id": 278,
+    "solution": "purge",
+    "print_date": "2022-03-23",
+    "days_since_launch": 277
+  },
+  "2022-03-24": {
+    "id": 279,
+    "solution": "chest",
+    "print_date": "2022-03-24",
+    "days_since_launch": 278
+  },
+  "2022-03-25": {
+    "id": 280,
+    "solution": "depot",
+    "print_date": "2022-03-25",
+    "days_since_launch": 279
+  },
+  "2022-03-26": {
+    "id": 281,
+    "solution": "epoxy",
+    "print_date": "2022-03-26",
+    "days_since_launch": 280
+  },
+  "2022-03-27": {
+    "id": 282,
+    "solution": "nymph",
+    "print_date": "2022-03-27",
+    "days_since_launch": 281
+  },
+  "2022-03-28": {
+    "id": 283,
+    "solution": "found",
+    "print_date": "2022-03-28",
+    "days_since_launch": 282
+  },
+  "2022-03-29": {
+    "id": 284,
+    "solution": "shall",
+    "print_date": "2022-03-29",
+    "days_since_launch": 283
+  },
+  "2022-03-30": {
+    "id": 285,
+    "solution": "stove",
+    "print_date": "2022-03-30",
+    "days_since_launch": 284
+  },
+  "2022-03-31": {
+    "id": 286,
+    "solution": "lowly",
+    "print_date": "2022-03-31",
+    "days_since_launch": 285
+  },
+  "2022-04-01": {
+    "id": 287,
+    "solution": "snout",
+    "print_date": "2022-04-01",
+    "days_since_launch": 286
+  },
+  "2022-04-02": {
+    "id": 288,
+    "solution": "trope",
+    "print_date": "2022-04-02",
+    "days_since_launch": 287
+  },
+  "2022-04-03": {
+    "id": 289,
+    "solution": "fewer",
+    "print_date": "2022-04-03",
+    "days_since_launch": 288
+  },
+  "2022-04-04": {
+    "id": 290,
+    "solution": "shawl",
+    "print_date": "2022-04-04",
+    "days_since_launch": 289
+  },
+  "2022-04-05": {
+    "id": 291,
+    "solution": "natal",
+    "print_date": "2022-04-05",
+    "days_since_launch": 290
+  },
+  "2022-04-06": {
+    "id": 292,
+    "solution": "comma",
+    "print_date": "2022-04-06",
+    "days_since_launch": 291
+  },
+  "2022-04-07": {
+    "id": 293,
+    "solution": "foray",
+    "print_date": "2022-04-07",
+    "days_since_launch": 292
+  },
+  "2022-04-08": {
+    "id": 294,
+    "solution": "scare",
+    "print_date": "2022-04-08",
+    "days_since_launch": 293
+  },
+  "2022-04-09": {
+    "id": 295,
+    "solution": "stair",
+    "print_date": "2022-04-09",
+    "days_since_launch": 294
+  },
+  "2022-04-10": {
+    "id": 296,
+    "solution": "black",
+    "print_date": "2022-04-10",
+    "days_since_launch": 295
+  },
+  "2022-04-11": {
+    "id": 297,
+    "solution": "squad",
+    "print_date": "2022-04-11",
+    "days_since_launch": 296
+  },
+  "2022-04-12": {
+    "id": 298,
+    "solution": "royal",
+    "print_date": "2022-04-12",
+    "days_since_launch": 297
+  },
+  "2022-04-13": {
+    "id": 299,
+    "solution": "chunk",
+    "print_date": "2022-04-13",
+    "days_since_launch": 298
+  },
+  "2022-04-14": {
+    "id": 300,
+    "solution": "mince",
+    "print_date": "2022-04-14",
+    "days_since_launch": 299
+  },
+  "2022-04-15": {
+    "id": 301,
+    "solution": "shame",
+    "print_date": "2022-04-15",
+    "days_since_launch": 300
+  },
+  "2022-04-16": {
+    "id": 302,
+    "solution": "cheek",
+    "print_date": "2022-04-16",
+    "days_since_launch": 301
+  },
+  "2022-04-17": {
+    "id": 303,
+    "solution": "ample",
+    "print_date": "2022-04-17",
+    "days_since_launch": 302
+  },
+  "2022-04-18": {
+    "id": 304,
+    "solution": "flair",
+    "print_date": "2022-04-18",
+    "days_since_launch": 303
+  },
+  "2022-04-19": {
+    "id": 305,
+    "solution": "foyer",
+    "print_date": "2022-04-19",
+    "days_since_launch": 304
+  },
+  "2022-04-20": {
+    "id": 306,
+    "solution": "cargo",
+    "print_date": "2022-04-20",
+    "days_since_launch": 305
+  },
+  "2022-04-21": {
+    "id": 307,
+    "solution": "oxide",
+    "print_date": "2022-04-21",
+    "days_since_launch": 306
+  },
+  "2022-04-22": {
+    "id": 308,
+    "solution": "plant",
+    "print_date": "2022-04-22",
+    "days_since_launch": 307
+  },
+  "2022-04-23": {
+    "id": 309,
+    "solution": "olive",
+    "print_date": "2022-04-23",
+    "days_since_launch": 308
+  },
+  "2022-04-24": {
+    "id": 310,
+    "solution": "inert",
+    "print_date": "2022-04-24",
+    "days_since_launch": 309
+  },
+  "2022-04-25": {
+    "id": 311,
+    "solution": "askew",
+    "print_date": "2022-04-25",
+    "days_since_launch": 310
+  },
+  "2022-04-26": {
+    "id": 312,
+    "solution": "heist",
+    "print_date": "2022-04-26",
+    "days_since_launch": 311
+  },
+  "2022-04-27": {
+    "id": 313,
+    "solution": "shown",
+    "print_date": "2022-04-27",
+    "days_since_launch": 312
+  },
+  "2022-04-28": {
+    "id": 314,
+    "solution": "zesty",
+    "print_date": "2022-04-28",
+    "days_since_launch": 313
+  },
+  "2022-04-29": {
+    "id": 315,
+    "solution": "trash",
+    "print_date": "2022-04-29",
+    "days_since_launch": 314
+  },
+  "2022-04-30": {
+    "id": 316,
+    "solution": "larva",
+    "print_date": "2022-04-30",
+    "days_since_launch": 315
+  },
+  "2022-05-01": {
+    "id": 317,
+    "solution": "forgo",
+    "print_date": "2022-05-01",
+    "days_since_launch": 316
+  },
+  "2022-05-02": {
+    "id": 318,
+    "solution": "story",
+    "print_date": "2022-05-02",
+    "days_since_launch": 317
+  },
+  "2022-05-03": {
+    "id": 319,
+    "solution": "hairy",
+    "print_date": "2022-05-03",
+    "days_since_launch": 318
+  },
+  "2022-05-04": {
+    "id": 320,
+    "solution": "train",
+    "print_date": "2022-05-04",
+    "days_since_launch": 319
+  },
+  "2022-05-05": {
+    "id": 321,
+    "solution": "homer",
+    "print_date": "2022-05-05",
+    "days_since_launch": 320
+  },
+  "2022-05-06": {
+    "id": 322,
+    "solution": "badge",
+    "print_date": "2022-05-06",
+    "days_since_launch": 321
+  },
+  "2022-05-07": {
+    "id": 323,
+    "solution": "midst",
+    "print_date": "2022-05-07",
+    "days_since_launch": 322
+  },
+  "2022-05-08": {
+    "id": 324,
+    "solution": "canny",
+    "print_date": "2022-05-08",
+    "days_since_launch": 323
+  },
+  "2022-05-09": {
+    "id": 325,
+    "solution": "shine",
+    "print_date": "2022-05-09",
+    "days_since_launch": 324
+  },
+  "2022-05-10": {
+    "id": 326,
+    "solution": "gecko",
+    "print_date": "2022-05-10",
+    "days_since_launch": 325
+  },
+  "2022-05-11": {
+    "id": 327,
+    "solution": "farce",
+    "print_date": "2022-05-11",
+    "days_since_launch": 326
+  },
+  "2022-05-12": {
+    "id": 328,
+    "solution": "slung",
+    "print_date": "2022-05-12",
+    "days_since_launch": 327
+  },
+  "2022-05-13": {
+    "id": 329,
+    "solution": "tipsy",
+    "print_date": "2022-05-13",
+    "days_since_launch": 328
+  },
+  "2022-05-14": {
+    "id": 330,
+    "solution": "metal",
+    "print_date": "2022-05-14",
+    "days_since_launch": 329
+  },
+  "2022-05-15": {
+    "id": 331,
+    "solution": "yield",
+    "print_date": "2022-05-15",
+    "days_since_launch": 330
+  },
+  "2022-05-16": {
+    "id": 332,
+    "solution": "delve",
+    "print_date": "2022-05-16",
+    "days_since_launch": 331
+  },
+  "2022-05-17": {
+    "id": 333,
+    "solution": "being",
+    "print_date": "2022-05-17",
+    "days_since_launch": 332
+  },
+  "2022-05-18": {
+    "id": 334,
+    "solution": "scour",
+    "print_date": "2022-05-18",
+    "days_since_launch": 333
+  },
+  "2022-05-19": {
+    "id": 335,
+    "solution": "glass",
+    "print_date": "2022-05-19",
+    "days_since_launch": 334
+  },
+  "2022-05-20": {
+    "id": 336,
+    "solution": "gamer",
+    "print_date": "2022-05-20",
+    "days_since_launch": 335
+  },
+  "2022-05-21": {
+    "id": 337,
+    "solution": "scrap",
+    "print_date": "2022-05-21",
+    "days_since_launch": 336
+  },
+  "2022-05-22": {
+    "id": 338,
+    "solution": "money",
+    "print_date": "2022-05-22",
+    "days_since_launch": 337
+  },
+  "2022-05-23": {
+    "id": 339,
+    "solution": "hinge",
+    "print_date": "2022-05-23",
+    "days_since_launch": 338
+  },
+  "2022-05-24": {
+    "id": 340,
+    "solution": "album",
+    "print_date": "2022-05-24",
+    "days_since_launch": 339
+  },
+  "2022-05-25": {
+    "id": 341,
+    "solution": "vouch",
+    "print_date": "2022-05-25",
+    "days_since_launch": 340
+  },
+  "2022-05-26": {
+    "id": 342,
+    "solution": "asset",
+    "print_date": "2022-05-26",
+    "days_since_launch": 341
+  },
+  "2022-05-27": {
+    "id": 343,
+    "solution": "tiara",
+    "print_date": "2022-05-27",
+    "days_since_launch": 342
+  },
+  "2022-05-28": {
+    "id": 344,
+    "solution": "crept",
+    "print_date": "2022-05-28",
+    "days_since_launch": 343
+  },
+  "2022-05-29": {
+    "id": 345,
+    "solution": "bayou",
+    "print_date": "2022-05-29",
+    "days_since_launch": 344
+  },
+  "2022-05-30": {
+    "id": 346,
+    "solution": "atoll",
+    "print_date": "2022-05-30",
+    "days_since_launch": 345
+  },
+  "2022-05-31": {
+    "id": 347,
+    "solution": "manor",
+    "print_date": "2022-05-31",
+    "days_since_launch": 346
+  },
+  "2022-06-01": {
+    "id": 348,
+    "solution": "creak",
+    "print_date": "2022-06-01",
+    "days_since_launch": 347
+  },
+  "2022-06-02": {
+    "id": 349,
+    "solution": "showy",
+    "print_date": "2022-06-02",
+    "days_since_launch": 348
+  },
+  "2022-06-03": {
+    "id": 350,
+    "solution": "phase",
+    "print_date": "2022-06-03",
+    "days_since_launch": 349
+  },
+  "2022-06-04": {
+    "id": 351,
+    "solution": "froth",
+    "print_date": "2022-06-04",
+    "days_since_launch": 350
+  },
+  "2022-06-05": {
+    "id": 352,
+    "solution": "depth",
+    "print_date": "2022-06-05",
+    "days_since_launch": 351
+  },
+  "2022-06-06": {
+    "id": 353,
+    "solution": "gloom",
+    "print_date": "2022-06-06",
+    "days_since_launch": 352
+  },
+  "2022-06-07": {
+    "id": 354,
+    "solution": "flood",
+    "print_date": "2022-06-07",
+    "days_since_launch": 353
+  },
+  "2022-06-08": {
+    "id": 355,
+    "solution": "trait",
+    "print_date": "2022-06-08",
+    "days_since_launch": 354
+  },
+  "2022-06-09": {
+    "id": 356,
+    "solution": "girth",
+    "print_date": "2022-06-09",
+    "days_since_launch": 355
+  },
+  "2022-06-10": {
+    "id": 357,
+    "solution": "piety",
+    "print_date": "2022-06-10",
+    "days_since_launch": 356
+  },
+  "2022-06-11": {
+    "id": 358,
+    "solution": "goose",
+    "print_date": "2022-06-11",
+    "days_since_launch": 357
+  },
+  "2022-06-12": {
+    "id": 359,
+    "solution": "float",
+    "print_date": "2022-06-12",
+    "days_since_launch": 358
+  },
+  "2022-06-13": {
+    "id": 360,
+    "solution": "donor",
+    "print_date": "2022-06-13",
+    "days_since_launch": 359
+  },
+  "2022-06-14": {
+    "id": 361,
+    "solution": "atone",
+    "print_date": "2022-06-14",
+    "days_since_launch": 360
+  },
+  "2022-06-15": {
+    "id": 362,
+    "solution": "primo",
+    "print_date": "2022-06-15",
+    "days_since_launch": 361
+  },
+  "2022-06-16": {
+    "id": 363,
+    "solution": "apron",
+    "print_date": "2022-06-16",
+    "days_since_launch": 362
+  },
+  "2022-06-17": {
+    "id": 364,
+    "solution": "blown",
+    "print_date": "2022-06-17",
+    "days_since_launch": 363
+  },
+  "2022-06-18": {
+    "id": 365,
+    "solution": "cacao",
+    "print_date": "2022-06-18",
+    "days_since_launch": 364
+  },
+  "2022-06-19": {
+    "id": 366,
+    "solution": "loser",
+    "print_date": "2022-06-19",
+    "days_since_launch": 365
+  },
+  "2022-06-20": {
+    "id": 367,
+    "solution": "input",
+    "print_date": "2022-06-20",
+    "days_since_launch": 366
+  },
+  "2022-06-21": {
+    "id": 368,
+    "solution": "gloat",
+    "print_date": "2022-06-21",
+    "days_since_launch": 367
+  },
+  "2022-06-22": {
+    "id": 369,
+    "solution": "awful",
+    "print_date": "2022-06-22",
+    "days_since_launch": 368
+  },
+  "2022-06-23": {
+    "id": 370,
+    "solution": "brink",
+    "print_date": "2022-06-23",
+    "days_since_launch": 369
+  },
+  "2022-06-24": {
+    "id": 371,
+    "solution": "smite",
+    "print_date": "2022-06-24",
+    "days_since_launch": 370
+  },
+  "2022-06-25": {
+    "id": 372,
+    "solution": "beady",
+    "print_date": "2022-06-25",
+    "days_since_launch": 371
+  },
+  "2022-06-26": {
+    "id": 373,
+    "solution": "rusty",
+    "print_date": "2022-06-26",
+    "days_since_launch": 372
+  },
+  "2022-06-27": {
+    "id": 374,
+    "solution": "retro",
+    "print_date": "2022-06-27",
+    "days_since_launch": 373
+  },
+  "2022-06-28": {
+    "id": 375,
+    "solution": "droll",
+    "print_date": "2022-06-28",
+    "days_since_launch": 374
+  },
+  "2022-06-29": {
+    "id": 376,
+    "solution": "gawky",
+    "print_date": "2022-06-29",
+    "days_since_launch": 375
+  },
+  "2022-06-30": {
+    "id": 377,
+    "solution": "hutch",
+    "print_date": "2022-06-30",
+    "days_since_launch": 376
+  },
+  "2022-07-01": {
+    "id": 378,
+    "solution": "pinto",
+    "print_date": "2022-07-01",
+    "days_since_launch": 377
+  },
+  "2022-07-02": {
+    "id": 379,
+    "solution": "egret",
+    "print_date": "2022-07-02",
+    "days_since_launch": 378
+  },
+  "2022-07-03": {
+    "id": 380,
+    "solution": "lilac",
+    "print_date": "2022-07-03",
+    "days_since_launch": 379
+  },
+  "2022-07-04": {
+    "id": 381,
+    "solution": "sever",
+    "print_date": "2022-07-04",
+    "days_since_launch": 380
+  },
+  "2022-07-05": {
+    "id": 382,
+    "solution": "field",
+    "print_date": "2022-07-05",
+    "days_since_launch": 381
+  },
+  "2022-07-06": {
+    "id": 383,
+    "solution": "fluff",
+    "print_date": "2022-07-06",
+    "days_since_launch": 382
+  },
+  "2022-07-07": {
+    "id": 384,
+    "solution": "agape",
+    "print_date": "2022-07-07",
+    "days_since_launch": 383
+  },
+  "2022-07-08": {
+    "id": 385,
+    "solution": "voice",
+    "print_date": "2022-07-08",
+    "days_since_launch": 384
+  },
+  "2022-07-09": {
+    "id": 386,
+    "solution": "stead",
+    "print_date": "2022-07-09",
+    "days_since_launch": 385
+  },
+  "2022-07-10": {
+    "id": 387,
+    "solution": "berth",
+    "print_date": "2022-07-10",
+    "days_since_launch": 386
+  },
+  "2022-07-11": {
+    "id": 388,
+    "solution": "madam",
+    "print_date": "2022-07-11",
+    "days_since_launch": 387
+  },
+  "2022-07-12": {
+    "id": 389,
+    "solution": "night",
+    "print_date": "2022-07-12",
+    "days_since_launch": 388
+  },
+  "2022-07-13": {
+    "id": 390,
+    "solution": "bland",
+    "print_date": "2022-07-13",
+    "days_since_launch": 389
+  },
+  "2022-07-14": {
+    "id": 391,
+    "solution": "liver",
+    "print_date": "2022-07-14",
+    "days_since_launch": 390
+  },
+  "2022-07-15": {
+    "id": 392,
+    "solution": "wedge",
+    "print_date": "2022-07-15",
+    "days_since_launch": 391
+  },
+  "2022-07-16": {
+    "id": 393,
+    "solution": "roomy",
+    "print_date": "2022-07-16",
+    "days_since_launch": 392
+  },
+  "2022-07-17": {
+    "id": 394,
+    "solution": "wacky",
+    "print_date": "2022-07-17",
+    "days_since_launch": 393
+  },
+  "2022-07-18": {
+    "id": 395,
+    "solution": "flock",
+    "print_date": "2022-07-18",
+    "days_since_launch": 394
+  },
+  "2022-07-19": {
+    "id": 396,
+    "solution": "angry",
+    "print_date": "2022-07-19",
+    "days_since_launch": 395
+  },
+  "2022-07-20": {
+    "id": 397,
+    "solution": "trite",
+    "print_date": "2022-07-20",
+    "days_since_launch": 396
+  },
+  "2022-07-21": {
+    "id": 398,
+    "solution": "aphid",
+    "print_date": "2022-07-21",
+    "days_since_launch": 397
+  },
+  "2022-07-22": {
+    "id": 399,
+    "solution": "tryst",
+    "print_date": "2022-07-22",
+    "days_since_launch": 398
+  },
+  "2022-07-23": {
+    "id": 400,
+    "solution": "midge",
+    "print_date": "2022-07-23",
+    "days_since_launch": 399
+  },
+  "2022-07-24": {
+    "id": 401,
+    "solution": "power",
+    "print_date": "2022-07-24",
+    "days_since_launch": 400
+  },
+  "2022-07-25": {
+    "id": 402,
+    "solution": "elope",
+    "print_date": "2022-07-25",
+    "days_since_launch": 401
+  },
+  "2022-07-26": {
+    "id": 403,
+    "solution": "cinch",
+    "print_date": "2022-07-26",
+    "days_since_launch": 402
+  },
+  "2022-07-27": {
+    "id": 404,
+    "solution": "motto",
+    "print_date": "2022-07-27",
+    "days_since_launch": 403
+  },
+  "2022-07-28": {
+    "id": 405,
+    "solution": "stomp",
+    "print_date": "2022-07-28",
+    "days_since_launch": 404
+  },
+  "2022-07-29": {
+    "id": 406,
+    "solution": "upset",
+    "print_date": "2022-07-29",
+    "days_since_launch": 405
+  },
+  "2022-07-30": {
+    "id": 407,
+    "solution": "bluff",
+    "print_date": "2022-07-30",
+    "days_since_launch": 406
+  },
+  "2022-07-31": {
+    "id": 408,
+    "solution": "cramp",
+    "print_date": "2022-07-31",
+    "days_since_launch": 407
+  },
+  "2022-08-01": {
+    "id": 409,
+    "solution": "quart",
+    "print_date": "2022-08-01",
+    "days_since_launch": 408
+  },
+  "2022-08-02": {
+    "id": 410,
+    "solution": "coyly",
+    "print_date": "2022-08-02",
+    "days_since_launch": 409
+  },
+  "2022-08-03": {
+    "id": 411,
+    "solution": "youth",
+    "print_date": "2022-08-03",
+    "days_since_launch": 410
+  },
+  "2022-08-04": {
+    "id": 412,
+    "solution": "rhyme",
+    "print_date": "2022-08-04",
+    "days_since_launch": 411
+  },
+  "2022-08-05": {
+    "id": 413,
+    "solution": "buggy",
+    "print_date": "2022-08-05",
+    "days_since_launch": 412
+  },
+  "2022-08-06": {
+    "id": 414,
+    "solution": "alien",
+    "print_date": "2022-08-06",
+    "days_since_launch": 413
+  },
+  "2022-08-07": {
+    "id": 415,
+    "solution": "smear",
+    "print_date": "2022-08-07",
+    "days_since_launch": 414
+  },
+  "2022-08-08": {
+    "id": 416,
+    "solution": "unfit",
+    "print_date": "2022-08-08",
+    "days_since_launch": 415
+  },
+  "2022-08-09": {
+    "id": 417,
+    "solution": "patty",
+    "print_date": "2022-08-09",
+    "days_since_launch": 416
+  },
+  "2022-08-10": {
+    "id": 418,
+    "solution": "cling",
+    "print_date": "2022-08-10",
+    "days_since_launch": 417
+  },
+  "2022-08-11": {
+    "id": 419,
+    "solution": "glean",
+    "print_date": "2022-08-11",
+    "days_since_launch": 418
+  },
+  "2022-08-12": {
+    "id": 420,
+    "solution": "label",
+    "print_date": "2022-08-12",
+    "days_since_launch": 419
+  },
+  "2022-08-13": {
+    "id": 421,
+    "solution": "hunky",
+    "print_date": "2022-08-13",
+    "days_since_launch": 420
+  },
+  "2022-08-14": {
+    "id": 422,
+    "solution": "khaki",
+    "print_date": "2022-08-14",
+    "days_since_launch": 421
+  },
+  "2022-08-15": {
+    "id": 423,
+    "solution": "poker",
+    "print_date": "2022-08-15",
+    "days_since_launch": 422
+  },
+  "2022-08-16": {
+    "id": 424,
+    "solution": "gruel",
+    "print_date": "2022-08-16",
+    "days_since_launch": 423
+  },
+  "2022-08-17": {
+    "id": 425,
+    "solution": "twice",
+    "print_date": "2022-08-17",
+    "days_since_launch": 424
+  },
+  "2022-08-18": {
+    "id": 426,
+    "solution": "twang",
+    "print_date": "2022-08-18",
+    "days_since_launch": 425
+  },
+  "2022-08-19": {
+    "id": 427,
+    "solution": "shrug",
+    "print_date": "2022-08-19",
+    "days_since_launch": 426
+  },
+  "2022-08-20": {
+    "id": 428,
+    "solution": "treat",
+    "print_date": "2022-08-20",
+    "days_since_launch": 427
+  },
+  "2022-08-21": {
+    "id": 429,
+    "solution": "waste",
+    "print_date": "2022-08-21",
+    "days_since_launch": 428
+  },
+  "2022-08-22": {
+    "id": 430,
+    "solution": "merit",
+    "print_date": "2022-08-22",
+    "days_since_launch": 429
+  },
+  "2022-08-23": {
+    "id": 431,
+    "solution": "woven",
+    "print_date": "2022-08-23",
+    "days_since_launch": 430
+  },
+  "2022-08-24": {
+    "id": 432,
+    "solution": "needy",
+    "print_date": "2022-08-24",
+    "days_since_launch": 431
+  },
+  "2022-08-25": {
+    "id": 433,
+    "solution": "clown",
+    "print_date": "2022-08-25",
+    "days_since_launch": 432
+  },
+  "2022-08-26": {
+    "id": 434,
+    "solution": "irony",
+    "print_date": "2022-08-26",
+    "days_since_launch": 433
+  },
+  "2022-08-27": {
+    "id": 435,
+    "solution": "ruder",
+    "print_date": "2022-08-27",
+    "days_since_launch": 434
+  },
+  "2022-08-28": {
+    "id": 436,
+    "solution": "gauze",
+    "print_date": "2022-08-28",
+    "days_since_launch": 435
+  },
+  "2022-08-29": {
+    "id": 437,
+    "solution": "chief",
+    "print_date": "2022-08-29",
+    "days_since_launch": 436
+  },
+  "2022-08-30": {
+    "id": 438,
+    "solution": "onset",
+    "print_date": "2022-08-30",
+    "days_since_launch": 437
+  },
+  "2022-08-31": {
+    "id": 439,
+    "solution": "prize",
+    "print_date": "2022-08-31",
+    "days_since_launch": 438
+  },
+  "2022-09-01": {
+    "id": 440,
+    "solution": "fungi",
+    "print_date": "2022-09-01",
+    "days_since_launch": 439
+  },
+  "2022-09-02": {
+    "id": 441,
+    "solution": "charm",
+    "print_date": "2022-09-02",
+    "days_since_launch": 440
+  },
+  "2022-09-03": {
+    "id": 442,
+    "solution": "gully",
+    "print_date": "2022-09-03",
+    "days_since_launch": 441
+  },
+  "2022-09-04": {
+    "id": 443,
+    "solution": "inter",
+    "print_date": "2022-09-04",
+    "days_since_launch": 442
+  },
+  "2022-09-05": {
+    "id": 444,
+    "solution": "whoop",
+    "print_date": "2022-09-05",
+    "days_since_launch": 443
+  },
+  "2022-09-06": {
+    "id": 445,
+    "solution": "taunt",
+    "print_date": "2022-09-06",
+    "days_since_launch": 444
+  },
+  "2022-09-07": {
+    "id": 446,
+    "solution": "leery",
+    "print_date": "2022-09-07",
+    "days_since_launch": 445
+  },
+  "2022-09-08": {
+    "id": 447,
+    "solution": "class",
+    "print_date": "2022-09-08",
+    "days_since_launch": 446
+  },
+  "2022-09-09": {
+    "id": 448,
+    "solution": "theme",
+    "print_date": "2022-09-09",
+    "days_since_launch": 447
+  },
+  "2022-09-10": {
+    "id": 449,
+    "solution": "lofty",
+    "print_date": "2022-09-10",
+    "days_since_launch": 448
+  },
+  "2022-09-11": {
+    "id": 450,
+    "solution": "tibia",
+    "print_date": "2022-09-11",
+    "days_since_launch": 449
+  },
+  "2022-09-12": {
+    "id": 451,
+    "solution": "booze",
+    "print_date": "2022-09-12",
+    "days_since_launch": 450
+  },
+  "2022-09-13": {
+    "id": 452,
+    "solution": "alpha",
+    "print_date": "2022-09-13",
+    "days_since_launch": 451
+  },
+  "2022-09-14": {
+    "id": 453,
+    "solution": "thyme",
+    "print_date": "2022-09-14",
+    "days_since_launch": 452
+  },
+  "2022-09-15": {
+    "id": 454,
+    "solution": "doubt",
+    "print_date": "2022-09-15",
+    "days_since_launch": 453
+  },
+  "2022-09-16": {
+    "id": 455,
+    "solution": "parer",
+    "print_date": "2022-09-16",
+    "days_since_launch": 454
+  },
+  "2022-09-17": {
+    "id": 456,
+    "solution": "chute",
+    "print_date": "2022-09-17",
+    "days_since_launch": 455
+  },
+  "2022-09-18": {
+    "id": 457,
+    "solution": "stick",
+    "print_date": "2022-09-18",
+    "days_since_launch": 456
+  },
+  "2022-09-19": {
+    "id": 458,
+    "solution": "trice",
+    "print_date": "2022-09-19",
+    "days_since_launch": 457
+  },
+  "2022-09-20": {
+    "id": 459,
+    "solution": "alike",
+    "print_date": "2022-09-20",
+    "days_since_launch": 458
+  },
+  "2022-09-21": {
+    "id": 460,
+    "solution": "recap",
+    "print_date": "2022-09-21",
+    "days_since_launch": 459
+  },
+  "2022-09-22": {
+    "id": 461,
+    "solution": "saint",
+    "print_date": "2022-09-22",
+    "days_since_launch": 460
+  },
+  "2022-09-23": {
+    "id": 462,
+    "solution": "glory",
+    "print_date": "2022-09-23",
+    "days_since_launch": 461
+  },
+  "2022-09-24": {
+    "id": 463,
+    "solution": "grate",
+    "print_date": "2022-09-24",
+    "days_since_launch": 462
+  },
+  "2022-09-25": {
+    "id": 464,
+    "solution": "admit",
+    "print_date": "2022-09-25",
+    "days_since_launch": 463
+  },
+  "2022-09-26": {
+    "id": 465,
+    "solution": "brisk",
+    "print_date": "2022-09-26",
+    "days_since_launch": 464
+  },
+  "2022-09-27": {
+    "id": 466,
+    "solution": "soggy",
+    "print_date": "2022-09-27",
+    "days_since_launch": 465
+  },
+  "2022-09-28": {
+    "id": 467,
+    "solution": "usurp",
+    "print_date": "2022-09-28",
+    "days_since_launch": 466
+  },
+  "2022-09-29": {
+    "id": 468,
+    "solution": "scald",
+    "print_date": "2022-09-29",
+    "days_since_launch": 467
+  },
+  "2022-09-30": {
+    "id": 469,
+    "solution": "scorn",
+    "print_date": "2022-09-30",
+    "days_since_launch": 468
+  },
+  "2022-10-01": {
+    "id": 470,
+    "solution": "leave",
+    "print_date": "2022-10-01",
+    "days_since_launch": 469
+  },
+  "2022-10-02": {
+    "id": 471,
+    "solution": "twine",
+    "print_date": "2022-10-02",
+    "days_since_launch": 470
+  },
+  "2022-10-03": {
+    "id": 472,
+    "solution": "sting",
+    "print_date": "2022-10-03",
+    "days_since_launch": 471
+  },
+  "2022-10-04": {
+    "id": 473,
+    "solution": "bough",
+    "print_date": "2022-10-04",
+    "days_since_launch": 472
+  },
+  "2022-10-05": {
+    "id": 474,
+    "solution": "marsh",
+    "print_date": "2022-10-05",
+    "days_since_launch": 473
+  },
+  "2022-10-06": {
+    "id": 475,
+    "solution": "sloth",
+    "print_date": "2022-10-06",
+    "days_since_launch": 474
+  },
+  "2022-10-07": {
+    "id": 476,
+    "solution": "dandy",
+    "print_date": "2022-10-07",
+    "days_since_launch": 475
+  },
+  "2022-10-08": {
+    "id": 477,
+    "solution": "vigor",
+    "print_date": "2022-10-08",
+    "days_since_launch": 476
+  },
+  "2022-10-09": {
+    "id": 478,
+    "solution": "howdy",
+    "print_date": "2022-10-09",
+    "days_since_launch": 477
+  },
+  "2022-10-10": {
+    "id": 479,
+    "solution": "enjoy",
+    "print_date": "2022-10-10",
+    "days_since_launch": 478
+  },
+  "2022-10-11": {
+    "id": 480,
+    "solution": "valid",
+    "print_date": "2022-10-11",
+    "days_since_launch": 479
+  },
+  "2022-10-12": {
+    "id": 481,
+    "solution": "ionic",
+    "print_date": "2022-10-12",
+    "days_since_launch": 480
+  },
+  "2022-10-13": {
+    "id": 482,
+    "solution": "equal",
+    "print_date": "2022-10-13",
+    "days_since_launch": 481
+  },
+  "2022-10-14": {
+    "id": 483,
+    "solution": "floor",
+    "print_date": "2022-10-14",
+    "days_since_launch": 482
+  },
+  "2022-10-15": {
+    "id": 484,
+    "solution": "catch",
+    "print_date": "2022-10-15",
+    "days_since_launch": 483
+  },
+  "2022-10-16": {
+    "id": 485,
+    "solution": "spade",
+    "print_date": "2022-10-16",
+    "days_since_launch": 484
+  },
+  "2022-10-17": {
+    "id": 486,
+    "solution": "stein",
+    "print_date": "2022-10-17",
+    "days_since_launch": 485
+  },
+  "2022-10-18": {
+    "id": 487,
+    "solution": "exist",
+    "print_date": "2022-10-18",
+    "days_since_launch": 486
+  },
+  "2022-10-19": {
+    "id": 488,
+    "solution": "quirk",
+    "print_date": "2022-10-19",
+    "days_since_launch": 487
+  },
+  "2022-10-20": {
+    "id": 489,
+    "solution": "denim",
+    "print_date": "2022-10-20",
+    "days_since_launch": 488
+  },
+  "2022-10-21": {
+    "id": 490,
+    "solution": "grove",
+    "print_date": "2022-10-21",
+    "days_since_launch": 489
+  },
+  "2022-10-22": {
+    "id": 491,
+    "solution": "spiel",
+    "print_date": "2022-10-22",
+    "days_since_launch": 490
+  },
+  "2022-10-23": {
+    "id": 492,
+    "solution": "mummy",
+    "print_date": "2022-10-23",
+    "days_since_launch": 491
+  },
+  "2022-10-24": {
+    "id": 493,
+    "solution": "fault",
+    "print_date": "2022-10-24",
+    "days_since_launch": 492
+  },
+  "2022-10-25": {
+    "id": 494,
+    "solution": "foggy",
+    "print_date": "2022-10-25",
+    "days_since_launch": 493
+  },
+  "2022-10-26": {
+    "id": 495,
+    "solution": "flout",
+    "print_date": "2022-10-26",
+    "days_since_launch": 494
+  },
+  "2022-10-27": {
+    "id": 496,
+    "solution": "carry",
+    "print_date": "2022-10-27",
+    "days_since_launch": 495
+  },
+  "2022-10-28": {
+    "id": 497,
+    "solution": "sneak",
+    "print_date": "2022-10-28",
+    "days_since_launch": 496
+  },
+  "2022-10-29": {
+    "id": 498,
+    "solution": "libel",
+    "print_date": "2022-10-29",
+    "days_since_launch": 497
+  },
+  "2022-10-30": {
+    "id": 499,
+    "solution": "waltz",
+    "print_date": "2022-10-30",
+    "days_since_launch": 498
+  },
+  "2022-10-31": {
+    "id": 500,
+    "solution": "aptly",
+    "print_date": "2022-10-31",
+    "days_since_launch": 499
+  },
+  "2022-11-01": {
+    "id": 501,
+    "solution": "piney",
+    "print_date": "2022-11-01",
+    "days_since_launch": 500
+  },
+  "2022-11-02": {
+    "id": 502,
+    "solution": "inept",
+    "print_date": "2022-11-02",
+    "days_since_launch": 501
+  },
+  "2022-11-03": {
+    "id": 503,
+    "solution": "aloud",
+    "print_date": "2022-11-03",
+    "days_since_launch": 502
+  },
+  "2022-11-04": {
+    "id": 504,
+    "solution": "photo",
+    "print_date": "2022-11-04",
+    "days_since_launch": 503
+  },
+  "2022-11-05": {
+    "id": 505,
+    "solution": "dream",
+    "print_date": "2022-11-05",
+    "days_since_launch": 504
+  },
+  "2022-11-06": {
+    "id": 506,
+    "solution": "stale",
+    "print_date": "2022-11-06",
+    "days_since_launch": 505
+  },
+  "2022-11-07": {
+    "id": 1623,
+    "solution": "begin",
+    "print_date": "2022-11-07",
+    "days_since_launch": 506,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-08": {
+    "id": 514,
+    "solution": "spell",
+    "print_date": "2022-11-08",
+    "days_since_launch": 507,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-09": {
+    "id": 530,
+    "solution": "rainy",
+    "print_date": "2022-11-09",
+    "days_since_launch": 508,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-10": {
+    "id": 507,
+    "solution": "unite",
+    "print_date": "2022-11-10",
+    "days_since_launch": 509,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-11": {
+    "id": 1249,
+    "solution": "medal",
+    "print_date": "2022-11-11",
+    "days_since_launch": 510,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-12": {
+    "id": 537,
+    "solution": "valet",
+    "print_date": "2022-11-12",
+    "days_since_launch": 511,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-13": {
+    "id": 523,
+    "solution": "inane",
+    "print_date": "2022-11-13",
+    "days_since_launch": 512,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-14": {
+    "id": 1255,
+    "solution": "maple",
+    "print_date": "2022-11-14",
+    "days_since_launch": 513,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-15": {
+    "id": 508,
+    "solution": "snarl",
+    "print_date": "2022-11-15",
+    "days_since_launch": 514,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-16": {
+    "id": 509,
+    "solution": "baker",
+    "print_date": "2022-11-16",
+    "days_since_launch": 515,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-17": {
+    "id": 510,
+    "solution": "there",
+    "print_date": "2022-11-17",
+    "days_since_launch": 516,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-18": {
+    "id": 511,
+    "solution": "glyph",
+    "print_date": "2022-11-18",
+    "days_since_launch": 517,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-19": {
+    "id": 539,
+    "solution": "avert",
+    "print_date": "2022-11-19",
+    "days_since_launch": 518,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-20": {
+    "id": 969,
+    "solution": "brave",
+    "print_date": "2022-11-20",
+    "days_since_launch": 519,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-21": {
+    "id": 1685,
+    "solution": "axiom",
+    "print_date": "2022-11-21",
+    "days_since_launch": 520,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-22": {
+    "id": 929,
+    "solution": "prime",
+    "print_date": "2022-11-22",
+    "days_since_launch": 521,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-23": {
+    "id": 2166,
+    "solution": "drive",
+    "print_date": "2022-11-23",
+    "days_since_launch": 522,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-24": {
+    "id": 1438,
+    "solution": "feast",
+    "print_date": "2022-11-24",
+    "days_since_launch": 523,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-25": {
+    "id": 1680,
+    "solution": "itchy",
+    "print_date": "2022-11-25",
+    "days_since_launch": 524,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-26": {
+    "id": 736,
+    "solution": "clean",
+    "print_date": "2022-11-26",
+    "days_since_launch": 525,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-27": {
+    "id": 2180,
+    "solution": "happy",
+    "print_date": "2022-11-27",
+    "days_since_launch": 526,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-28": {
+    "id": 2268,
+    "solution": "tepid",
+    "print_date": "2022-11-28",
+    "days_since_launch": 527,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-29": {
+    "id": 559,
+    "solution": "undue",
+    "print_date": "2022-11-29",
+    "days_since_launch": 528,
+    "editor": "Tracy Bennett"
+  },
+  "2022-11-30": {
+    "id": 552,
+    "solution": "study",
+    "print_date": "2022-11-30",
+    "days_since_launch": 529,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-01": {
+    "id": 2276,
+    "solution": "eject",
+    "print_date": "2022-12-01",
+    "days_since_launch": 530,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-02": {
+    "id": 1311,
+    "solution": "chafe",
+    "print_date": "2022-12-02",
+    "days_since_launch": 531,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-03": {
+    "id": 2265,
+    "solution": "torso",
+    "print_date": "2022-12-03",
+    "days_since_launch": 532,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-04": {
+    "id": 1106,
+    "solution": "adore",
+    "print_date": "2022-12-04",
+    "days_since_launch": 533,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-05": {
+    "id": 849,
+    "solution": "woken",
+    "print_date": "2022-12-05",
+    "days_since_launch": 534,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-06": {
+    "id": 2008,
+    "solution": "amber",
+    "print_date": "2022-12-06",
+    "days_since_launch": 535,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-07": {
+    "id": 1246,
+    "solution": "joust",
+    "print_date": "2022-12-07",
+    "days_since_launch": 536,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-08": {
+    "id": 1149,
+    "solution": "infer",
+    "print_date": "2022-12-08",
+    "days_since_launch": 537,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-09": {
+    "id": 840,
+    "solution": "braid",
+    "print_date": "2022-12-09",
+    "days_since_launch": 538,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-10": {
+    "id": 2256,
+    "solution": "knock",
+    "print_date": "2022-12-10",
+    "days_since_launch": 539,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-11": {
+    "id": 923,
+    "solution": "naive",
+    "print_date": "2022-12-11",
+    "days_since_launch": 540,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-12": {
+    "id": 1168,
+    "solution": "apply",
+    "print_date": "2022-12-12",
+    "days_since_launch": 541,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-13": {
+    "id": 895,
+    "solution": "spoke",
+    "print_date": "2022-12-13",
+    "days_since_launch": 542,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-14": {
+    "id": 621,
+    "solution": "usual",
+    "print_date": "2022-12-14",
+    "days_since_launch": 543,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-15": {
+    "id": 2278,
+    "solution": "rival",
+    "print_date": "2022-12-15",
+    "days_since_launch": 544,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-16": {
+    "id": 1591,
+    "solution": "probe",
+    "print_date": "2022-12-16",
+    "days_since_launch": 545,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-17": {
+    "id": 801,
+    "solution": "chord",
+    "print_date": "2022-12-17",
+    "days_since_launch": 546,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-18": {
+    "id": 962,
+    "solution": "taper",
+    "print_date": "2022-12-18",
+    "days_since_launch": 547,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-19": {
+    "id": 853,
+    "solution": "slate",
+    "print_date": "2022-12-19",
+    "days_since_launch": 548,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-20": {
+    "id": 1045,
+    "solution": "third",
+    "print_date": "2022-12-20",
+    "days_since_launch": 549,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-21": {
+    "id": 694,
+    "solution": "lunar",
+    "print_date": "2022-12-21",
+    "days_since_launch": 550,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-22": {
+    "id": 952,
+    "solution": "excel",
+    "print_date": "2022-12-22",
+    "days_since_launch": 551,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-23": {
+    "id": 2281,
+    "solution": "aorta",
+    "print_date": "2022-12-23",
+    "days_since_launch": 552,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-24": {
+    "id": 1155,
+    "solution": "poise",
+    "print_date": "2022-12-24",
+    "days_since_launch": 553,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-25": {
+    "id": 2257,
+    "solution": "extra",
+    "print_date": "2022-12-25",
+    "days_since_launch": 554,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-26": {
+    "id": 2283,
+    "solution": "judge",
+    "print_date": "2022-12-26",
+    "days_since_launch": 555,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-27": {
+    "id": 2258,
+    "solution": "condo",
+    "print_date": "2022-12-27",
+    "days_since_launch": 556,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-28": {
+    "id": 2208,
+    "solution": "impel",
+    "print_date": "2022-12-28",
+    "days_since_launch": 557,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-29": {
+    "id": 1279,
+    "solution": "havoc",
+    "print_date": "2022-12-29",
+    "days_since_launch": 558,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-30": {
+    "id": 771,
+    "solution": "molar",
+    "print_date": "2022-12-30",
+    "days_since_launch": 559,
+    "editor": "Tracy Bennett"
+  },
+  "2022-12-31": {
+    "id": 2251,
+    "solution": "manly",
+    "print_date": "2022-12-31",
+    "days_since_launch": 560,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-01": {
+    "id": 2191,
+    "solution": "whine",
+    "print_date": "2023-01-01",
+    "days_since_launch": 561,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-02": {
+    "id": 2263,
+    "solution": "skirt",
+    "print_date": "2023-01-02",
+    "days_since_launch": 562,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-03": {
+    "id": 2117,
+    "solution": "antic",
+    "print_date": "2023-01-03",
+    "days_since_launch": 563,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-04": {
+    "id": 818,
+    "solution": "layer",
+    "print_date": "2023-01-04",
+    "days_since_launch": 564,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-05": {
+    "id": 2269,
+    "solution": "sleek",
+    "print_date": "2023-01-05",
+    "days_since_launch": 565,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-06": {
+    "id": 1847,
+    "solution": "belie",
+    "print_date": "2023-01-06",
+    "days_since_launch": 566,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-07": {
+    "id": 2110,
+    "solution": "lemon",
+    "print_date": "2023-01-07",
+    "days_since_launch": 567,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-08": {
+    "id": 1969,
+    "solution": "opera",
+    "print_date": "2023-01-08",
+    "days_since_launch": 568,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-09": {
+    "id": 1132,
+    "solution": "pixie",
+    "print_date": "2023-01-09",
+    "days_since_launch": 569,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-10": {
+    "id": 2026,
+    "solution": "grimy",
+    "print_date": "2023-01-10",
+    "days_since_launch": 570,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-11": {
+    "id": 560,
+    "solution": "sedan",
+    "print_date": "2023-01-11",
+    "days_since_launch": 571,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-12": {
+    "id": 1836,
+    "solution": "leapt",
+    "print_date": "2023-01-12",
+    "days_since_launch": 572,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-13": {
+    "id": 570,
+    "solution": "human",
+    "print_date": "2023-01-13",
+    "days_since_launch": 573,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-14": {
+    "id": 1343,
+    "solution": "koala",
+    "print_date": "2023-01-14",
+    "days_since_launch": 574,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-15": {
+    "id": 1277,
+    "solution": "spire",
+    "print_date": "2023-01-15",
+    "days_since_launch": 575,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-16": {
+    "id": 1062,
+    "solution": "frock",
+    "print_date": "2023-01-16",
+    "days_since_launch": 576,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-17": {
+    "id": 965,
+    "solution": "adopt",
+    "print_date": "2023-01-17",
+    "days_since_launch": 577,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-18": {
+    "id": 1686,
+    "solution": "chard",
+    "print_date": "2023-01-18",
+    "days_since_launch": 578,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-19": {
+    "id": 1332,
+    "solution": "mucky",
+    "print_date": "2023-01-19",
+    "days_since_launch": 579,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-20": {
+    "id": 1483,
+    "solution": "alter",
+    "print_date": "2023-01-20",
+    "days_since_launch": 580,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-21": {
+    "id": 1049,
+    "solution": "blurb",
+    "print_date": "2023-01-21",
+    "days_since_launch": 581,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-22": {
+    "id": 825,
+    "solution": "matey",
+    "print_date": "2023-01-22",
+    "days_since_launch": 582,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-23": {
+    "id": 713,
+    "solution": "elude",
+    "print_date": "2023-01-23",
+    "days_since_launch": 583,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-24": {
+    "id": 546,
+    "solution": "count",
+    "print_date": "2023-01-24",
+    "days_since_launch": 584,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-25": {
+    "id": 1517,
+    "solution": "maize",
+    "print_date": "2023-01-25",
+    "days_since_launch": 585,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-26": {
+    "id": 1384,
+    "solution": "beefy",
+    "print_date": "2023-01-26",
+    "days_since_launch": 586,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-27": {
+    "id": 1074,
+    "solution": "worry",
+    "print_date": "2023-01-27",
+    "days_since_launch": 587,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-28": {
+    "id": 1211,
+    "solution": "flirt",
+    "print_date": "2023-01-28",
+    "days_since_launch": 588,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-29": {
+    "id": 1159,
+    "solution": "fishy",
+    "print_date": "2023-01-29",
+    "days_since_launch": 589,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-30": {
+    "id": 525,
+    "solution": "crave",
+    "print_date": "2023-01-30",
+    "days_since_launch": 590,
+    "editor": "Tracy Bennett"
+  },
+  "2023-01-31": {
+    "id": 1007,
+    "solution": "cross",
+    "print_date": "2023-01-31",
+    "days_since_launch": 591,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-01": {
+    "id": 1502,
+    "solution": "scold",
+    "print_date": "2023-02-01",
+    "days_since_launch": 592,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-02": {
+    "id": 1182,
+    "solution": "shirk",
+    "print_date": "2023-02-02",
+    "days_since_launch": 593,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-03": {
+    "id": 1075,
+    "solution": "tasty",
+    "print_date": "2023-02-03",
+    "days_since_launch": 594,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-04": {
+    "id": 2301,
+    "solution": "unlit",
+    "print_date": "2023-02-04",
+    "days_since_launch": 595,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-05": {
+    "id": 1556,
+    "solution": "dance",
+    "print_date": "2023-02-05",
+    "days_since_launch": 596,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-06": {
+    "id": 1245,
+    "solution": "ninth",
+    "print_date": "2023-02-06",
+    "days_since_launch": 597,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-07": {
+    "id": 590,
+    "solution": "apple",
+    "print_date": "2023-02-07",
+    "days_since_launch": 598,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-08": {
+    "id": 1927,
+    "solution": "flail",
+    "print_date": "2023-02-08",
+    "days_since_launch": 599,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-09": {
+    "id": 730,
+    "solution": "stage",
+    "print_date": "2023-02-09",
+    "days_since_launch": 600,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-10": {
+    "id": 1129,
+    "solution": "heady",
+    "print_date": "2023-02-10",
+    "days_since_launch": 601,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-11": {
+    "id": 1873,
+    "solution": "debug",
+    "print_date": "2023-02-11",
+    "days_since_launch": 602,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-12": {
+    "id": 1717,
+    "solution": "giant",
+    "print_date": "2023-02-12",
+    "days_since_launch": 603,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-13": {
+    "id": 1154,
+    "solution": "usage",
+    "print_date": "2023-02-13",
+    "days_since_launch": 604,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-14": {
+    "id": 838,
+    "solution": "sound",
+    "print_date": "2023-02-14",
+    "days_since_launch": 605,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-15": {
+    "id": 1584,
+    "solution": "salsa",
+    "print_date": "2023-02-15",
+    "days_since_launch": 606,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-16": {
+    "id": 776,
+    "solution": "magic",
+    "print_date": "2023-02-16",
+    "days_since_launch": 607,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-17": {
+    "id": 1312,
+    "solution": "cache",
+    "print_date": "2023-02-17",
+    "days_since_launch": 608,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-18": {
+    "id": 1207,
+    "solution": "avail",
+    "print_date": "2023-02-18",
+    "days_since_launch": 609,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-19": {
+    "id": 815,
+    "solution": "kiosk",
+    "print_date": "2023-02-19",
+    "days_since_launch": 610,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-20": {
+    "id": 1104,
+    "solution": "sweat",
+    "print_date": "2023-02-20",
+    "days_since_launch": 611,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-21": {
+    "id": 1439,
+    "solution": "ruddy",
+    "print_date": "2023-02-21",
+    "days_since_launch": 612,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-22": {
+    "id": 1528,
+    "solution": "riper",
+    "print_date": "2023-02-22",
+    "days_since_launch": 613,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-23": {
+    "id": 1881,
+    "solution": "vague",
+    "print_date": "2023-02-23",
+    "days_since_launch": 614,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-24": {
+    "id": 805,
+    "solution": "arbor",
+    "print_date": "2023-02-24",
+    "days_since_launch": 615,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-25": {
+    "id": 1715,
+    "solution": "fifty",
+    "print_date": "2023-02-25",
+    "days_since_launch": 616,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-26": {
+    "id": 1462,
+    "solution": "syrup",
+    "print_date": "2023-02-26",
+    "days_since_launch": 617,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-27": {
+    "id": 1805,
+    "solution": "worse",
+    "print_date": "2023-02-27",
+    "days_since_launch": 618,
+    "editor": "Tracy Bennett"
+  },
+  "2023-02-28": {
+    "id": 2261,
+    "solution": "polka",
+    "print_date": "2023-02-28",
+    "days_since_launch": 619,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-01": {
+    "id": 2116,
+    "solution": "moose",
+    "print_date": "2023-03-01",
+    "days_since_launch": 620,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-02": {
+    "id": 1852,
+    "solution": "above",
+    "print_date": "2023-03-02",
+    "days_since_launch": 621,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-03": {
+    "id": 1240,
+    "solution": "squat",
+    "print_date": "2023-03-03",
+    "days_since_launch": 622,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-04": {
+    "id": 1834,
+    "solution": "trend",
+    "print_date": "2023-03-04",
+    "days_since_launch": 623,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-05": {
+    "id": 1795,
+    "solution": "toxic",
+    "print_date": "2023-03-05",
+    "days_since_launch": 624,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-06": {
+    "id": 1879,
+    "solution": "pinky",
+    "print_date": "2023-03-06",
+    "days_since_launch": 625,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-07": {
+    "id": 1977,
+    "solution": "horse",
+    "print_date": "2023-03-07",
+    "days_since_launch": 626,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-08": {
+    "id": 975,
+    "solution": "regal",
+    "print_date": "2023-03-08",
+    "days_since_launch": 627,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-09": {
+    "id": 1052,
+    "solution": "where",
+    "print_date": "2023-03-09",
+    "days_since_launch": 628,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-10": {
+    "id": 1867,
+    "solution": "revel",
+    "print_date": "2023-03-10",
+    "days_since_launch": 629,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-11": {
+    "id": 2168,
+    "solution": "email",
+    "print_date": "2023-03-11",
+    "days_since_launch": 630,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-12": {
+    "id": 1754,
+    "solution": "birth",
+    "print_date": "2023-03-12",
+    "days_since_launch": 631,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-13": {
+    "id": 2239,
+    "solution": "blame",
+    "print_date": "2023-03-13",
+    "days_since_launch": 632,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-14": {
+    "id": 1718,
+    "solution": "surly",
+    "print_date": "2023-03-14",
+    "days_since_launch": 633,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-15": {
+    "id": 883,
+    "solution": "sweep",
+    "print_date": "2023-03-15",
+    "days_since_launch": 634,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-16": {
+    "id": 1342,
+    "solution": "cider",
+    "print_date": "2023-03-16",
+    "days_since_launch": 635,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-17": {
+    "id": 1922,
+    "solution": "mealy",
+    "print_date": "2023-03-17",
+    "days_since_launch": 636,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-18": {
+    "id": 2022,
+    "solution": "yacht",
+    "print_date": "2023-03-18",
+    "days_since_launch": 637,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-19": {
+    "id": 1172,
+    "solution": "credo",
+    "print_date": "2023-03-19",
+    "days_since_launch": 638,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-20": {
+    "id": 839,
+    "solution": "glove",
+    "print_date": "2023-03-20",
+    "days_since_launch": 639,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-21": {
+    "id": 566,
+    "solution": "tough",
+    "print_date": "2023-03-21",
+    "days_since_launch": 640,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-22": {
+    "id": 1344,
+    "solution": "duvet",
+    "print_date": "2023-03-22",
+    "days_since_launch": 641,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-23": {
+    "id": 2221,
+    "solution": "staid",
+    "print_date": "2023-03-23",
+    "days_since_launch": 642,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-24": {
+    "id": 1471,
+    "solution": "grout",
+    "print_date": "2023-03-24",
+    "days_since_launch": 643,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-25": {
+    "id": 1738,
+    "solution": "voter",
+    "print_date": "2023-03-25",
+    "days_since_launch": 644,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-26": {
+    "id": 2279,
+    "solution": "untie",
+    "print_date": "2023-03-26",
+    "days_since_launch": 645,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-27": {
+    "id": 2312,
+    "solution": "guano",
+    "print_date": "2023-03-27",
+    "days_since_launch": 646,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-28": {
+    "id": 2104,
+    "solution": "hurry",
+    "print_date": "2023-03-28",
+    "days_since_launch": 647,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-29": {
+    "id": 773,
+    "solution": "beset",
+    "print_date": "2023-03-29",
+    "days_since_launch": 648,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-30": {
+    "id": 1002,
+    "solution": "bread",
+    "print_date": "2023-03-30",
+    "days_since_launch": 649,
+    "editor": "Tracy Bennett"
+  },
+  "2023-03-31": {
+    "id": 977,
+    "solution": "every",
+    "print_date": "2023-03-31",
+    "days_since_launch": 650,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-01": {
+    "id": 803,
+    "solution": "march",
+    "print_date": "2023-04-01",
+    "days_since_launch": 651,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-02": {
+    "id": 1305,
+    "solution": "stock",
+    "print_date": "2023-04-02",
+    "days_since_launch": 652,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-03": {
+    "id": 1412,
+    "solution": "flora",
+    "print_date": "2023-04-03",
+    "days_since_launch": 653,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-04": {
+    "id": 1809,
+    "solution": "ratio",
+    "print_date": "2023-04-04",
+    "days_since_launch": 654,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-05": {
+    "id": 1229,
+    "solution": "smash",
+    "print_date": "2023-04-05",
+    "days_since_launch": 655,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-06": {
+    "id": 887,
+    "solution": "leafy",
+    "print_date": "2023-04-06",
+    "days_since_launch": 656,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-07": {
+    "id": 1307,
+    "solution": "locus",
+    "print_date": "2023-04-07",
+    "days_since_launch": 657,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-08": {
+    "id": 1895,
+    "solution": "ledge",
+    "print_date": "2023-04-08",
+    "days_since_launch": 658,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-09": {
+    "id": 2317,
+    "solution": "snafu",
+    "print_date": "2023-04-09",
+    "days_since_launch": 659,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-10": {
+    "id": 1648,
+    "solution": "under",
+    "print_date": "2023-04-10",
+    "days_since_launch": 660,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-11": {
+    "id": 726,
+    "solution": "qualm",
+    "print_date": "2023-04-11",
+    "days_since_launch": 661,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-12": {
+    "id": 699,
+    "solution": "borax",
+    "print_date": "2023-04-12",
+    "days_since_launch": 662,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-13": {
+    "id": 2010,
+    "solution": "carat",
+    "print_date": "2023-04-13",
+    "days_since_launch": 663,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-14": {
+    "id": 1271,
+    "solution": "thief",
+    "print_date": "2023-04-14",
+    "days_since_launch": 664,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-15": {
+    "id": 1025,
+    "solution": "agony",
+    "print_date": "2023-04-15",
+    "days_since_launch": 665,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-16": {
+    "id": 852,
+    "solution": "dwelt",
+    "print_date": "2023-04-16",
+    "days_since_launch": 666,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-17": {
+    "id": 1522,
+    "solution": "whiff",
+    "print_date": "2023-04-17",
+    "days_since_launch": 667,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-18": {
+    "id": 2233,
+    "solution": "hound",
+    "print_date": "2023-04-18",
+    "days_since_launch": 668,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-19": {
+    "id": 798,
+    "solution": "thump",
+    "print_date": "2023-04-19",
+    "days_since_launch": 669,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-20": {
+    "id": 1216,
+    "solution": "plate",
+    "print_date": "2023-04-20",
+    "days_since_launch": 670,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-21": {
+    "id": 2075,
+    "solution": "kayak",
+    "print_date": "2023-04-21",
+    "days_since_launch": 671,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-22": {
+    "id": 1782,
+    "solution": "broke",
+    "print_date": "2023-04-22",
+    "days_since_launch": 672,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-23": {
+    "id": 955,
+    "solution": "unzip",
+    "print_date": "2023-04-23",
+    "days_since_launch": 673,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-24": {
+    "id": 618,
+    "solution": "ditto",
+    "print_date": "2023-04-24",
+    "days_since_launch": 674,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-25": {
+    "id": 875,
+    "solution": "joker",
+    "print_date": "2023-04-25",
+    "days_since_launch": 675,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-26": {
+    "id": 2081,
+    "solution": "metro",
+    "print_date": "2023-04-26",
+    "days_since_launch": 676,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-27": {
+    "id": 1316,
+    "solution": "logic",
+    "print_date": "2023-04-27",
+    "days_since_launch": 677,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-28": {
+    "id": 1978,
+    "solution": "circa",
+    "print_date": "2023-04-28",
+    "days_since_launch": 678,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-29": {
+    "id": 1297,
+    "solution": "cedar",
+    "print_date": "2023-04-29",
+    "days_since_launch": 679,
+    "editor": "Tracy Bennett"
+  },
+  "2023-04-30": {
+    "id": 1894,
+    "solution": "plaza",
+    "print_date": "2023-04-30",
+    "days_since_launch": 680,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-01": {
+    "id": 785,
+    "solution": "range",
+    "print_date": "2023-05-01",
+    "days_since_launch": 681,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-02": {
+    "id": 1333,
+    "solution": "sulky",
+    "print_date": "2023-05-02",
+    "days_since_launch": 682,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-03": {
+    "id": 1300,
+    "solution": "horde",
+    "print_date": "2023-05-03",
+    "days_since_launch": 683,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-04": {
+    "id": 2121,
+    "solution": "guppy",
+    "print_date": "2023-05-04",
+    "days_since_launch": 684,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-05": {
+    "id": 1389,
+    "solution": "below",
+    "print_date": "2023-05-05",
+    "days_since_launch": 685,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-06": {
+    "id": 2165,
+    "solution": "anger",
+    "print_date": "2023-05-06",
+    "days_since_launch": 686,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-07": {
+    "id": 1663,
+    "solution": "ghoul",
+    "print_date": "2023-05-07",
+    "days_since_launch": 687,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-08": {
+    "id": 1265,
+    "solution": "aglow",
+    "print_date": "2023-05-08",
+    "days_since_launch": 688,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-09": {
+    "id": 1530,
+    "solution": "cocoa",
+    "print_date": "2023-05-09",
+    "days_since_launch": 689,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-10": {
+    "id": 1660,
+    "solution": "ethic",
+    "print_date": "2023-05-10",
+    "days_since_launch": 690,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-11": {
+    "id": 1476,
+    "solution": "broom",
+    "print_date": "2023-05-11",
+    "days_since_launch": 691,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-12": {
+    "id": 1858,
+    "solution": "snack",
+    "print_date": "2023-05-12",
+    "days_since_launch": 692,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-13": {
+    "id": 1128,
+    "solution": "acrid",
+    "print_date": "2023-05-13",
+    "days_since_launch": 693,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-14": {
+    "id": 1441,
+    "solution": "scarf",
+    "print_date": "2023-05-14",
+    "days_since_launch": 694,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-15": {
+    "id": 567,
+    "solution": "canoe",
+    "print_date": "2023-05-15",
+    "days_since_launch": 695,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-16": {
+    "id": 2142,
+    "solution": "latte",
+    "print_date": "2023-05-16",
+    "days_since_launch": 696,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-17": {
+    "id": 1636,
+    "solution": "plank",
+    "print_date": "2023-05-17",
+    "days_since_launch": 697,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-18": {
+    "id": 2106,
+    "solution": "shorn",
+    "print_date": "2023-05-18",
+    "days_since_launch": 698,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-19": {
+    "id": 1050,
+    "solution": "grief",
+    "print_date": "2023-05-19",
+    "days_since_launch": 699,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-20": {
+    "id": 2038,
+    "solution": "flask",
+    "print_date": "2023-05-20",
+    "days_since_launch": 700,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-21": {
+    "id": 1392,
+    "solution": "brash",
+    "print_date": "2023-05-21",
+    "days_since_launch": 701,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-22": {
+    "id": 1450,
+    "solution": "igloo",
+    "print_date": "2023-05-22",
+    "days_since_launch": 702,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-23": {
+    "id": 1657,
+    "solution": "clerk",
+    "print_date": "2023-05-23",
+    "days_since_launch": 703,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-24": {
+    "id": 1493,
+    "solution": "utter",
+    "print_date": "2023-05-24",
+    "days_since_launch": 704,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-25": {
+    "id": 1682,
+    "solution": "bagel",
+    "print_date": "2023-05-25",
+    "days_since_launch": 705,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-26": {
+    "id": 562,
+    "solution": "swine",
+    "print_date": "2023-05-26",
+    "days_since_launch": 706,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-27": {
+    "id": 1146,
+    "solution": "ramen",
+    "print_date": "2023-05-27",
+    "days_since_launch": 707,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-28": {
+    "id": 528,
+    "solution": "skimp",
+    "print_date": "2023-05-28",
+    "days_since_launch": 708,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-29": {
+    "id": 1331,
+    "solution": "mouse",
+    "print_date": "2023-05-29",
+    "days_since_launch": 709,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-30": {
+    "id": 755,
+    "solution": "kneel",
+    "print_date": "2023-05-30",
+    "days_since_launch": 710,
+    "editor": "Tracy Bennett"
+  },
+  "2023-05-31": {
+    "id": 1222,
+    "solution": "agile",
+    "print_date": "2023-05-31",
+    "days_since_launch": 711,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-01": {
+    "id": 1714,
+    "solution": "jazzy",
+    "print_date": "2023-06-01",
+    "days_since_launch": 712,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-02": {
+    "id": 657,
+    "solution": "humid",
+    "print_date": "2023-06-02",
+    "days_since_launch": 713,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-03": {
+    "id": 613,
+    "solution": "nanny",
+    "print_date": "2023-06-03",
+    "days_since_launch": 714,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-04": {
+    "id": 1491,
+    "solution": "beast",
+    "print_date": "2023-06-04",
+    "days_since_launch": 715,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-05": {
+    "id": 817,
+    "solution": "ennui",
+    "print_date": "2023-06-05",
+    "days_since_launch": 716,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-06": {
+    "id": 1877,
+    "solution": "scout",
+    "print_date": "2023-06-06",
+    "days_since_launch": 717,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-07": {
+    "id": 682,
+    "solution": "hater",
+    "print_date": "2023-06-07",
+    "days_since_launch": 718,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-08": {
+    "id": 1459,
+    "solution": "crumb",
+    "print_date": "2023-06-08",
+    "days_since_launch": 719,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-09": {
+    "id": 2310,
+    "solution": "balsa",
+    "print_date": "2023-06-09",
+    "days_since_launch": 720,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-10": {
+    "id": 1480,
+    "solution": "again",
+    "print_date": "2023-06-10",
+    "days_since_launch": 721,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-11": {
+    "id": 2246,
+    "solution": "guard",
+    "print_date": "2023-06-11",
+    "days_since_launch": 722,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-12": {
+    "id": 1536,
+    "solution": "wrong",
+    "print_date": "2023-06-12",
+    "days_since_launch": 723,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-13": {
+    "id": 1218,
+    "solution": "plunk",
+    "print_date": "2023-06-13",
+    "days_since_launch": 724,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-14": {
+    "id": 1875,
+    "solution": "crime",
+    "print_date": "2023-06-14",
+    "days_since_launch": 725,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-15": {
+    "id": 1823,
+    "solution": "maybe",
+    "print_date": "2023-06-15",
+    "days_since_launch": 726,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-16": {
+    "id": 1117,
+    "solution": "strap",
+    "print_date": "2023-06-16",
+    "days_since_launch": 727,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-17": {
+    "id": 2108,
+    "solution": "ranch",
+    "print_date": "2023-06-17",
+    "days_since_launch": 728,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-18": {
+    "id": 1268,
+    "solution": "shyly",
+    "print_date": "2023-06-18",
+    "days_since_launch": 729,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-19": {
+    "id": 2313,
+    "solution": "kazoo",
+    "print_date": "2023-06-19",
+    "days_since_launch": 730,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-20": {
+    "id": 1888,
+    "solution": "frost",
+    "print_date": "2023-06-20",
+    "days_since_launch": 731,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-21": {
+    "id": 1704,
+    "solution": "crane",
+    "print_date": "2023-06-21",
+    "days_since_launch": 732,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-22": {
+    "id": 1694,
+    "solution": "taste",
+    "print_date": "2023-06-22",
+    "days_since_launch": 733,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-23": {
+    "id": 569,
+    "solution": "covet",
+    "print_date": "2023-06-23",
+    "days_since_launch": 734,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-24": {
+    "id": 2083,
+    "solution": "grand",
+    "print_date": "2023-06-24",
+    "days_since_launch": 735,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-25": {
+    "id": 2245,
+    "solution": "rodeo",
+    "print_date": "2023-06-25",
+    "days_since_launch": 736,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-26": {
+    "id": 976,
+    "solution": "guest",
+    "print_date": "2023-06-26",
+    "days_since_launch": 737,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-27": {
+    "id": 703,
+    "solution": "about",
+    "print_date": "2023-06-27",
+    "days_since_launch": 738,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-28": {
+    "id": 1992,
+    "solution": "tract",
+    "print_date": "2023-06-28",
+    "days_since_launch": 739,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-29": {
+    "id": 633,
+    "solution": "diner",
+    "print_date": "2023-06-29",
+    "days_since_launch": 740,
+    "editor": "Tracy Bennett"
+  },
+  "2023-06-30": {
+    "id": 1041,
+    "solution": "straw",
+    "print_date": "2023-06-30",
+    "days_since_launch": 741,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-01": {
+    "id": 2171,
+    "solution": "bleep",
+    "print_date": "2023-07-01",
+    "days_since_launch": 742,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-02": {
+    "id": 2220,
+    "solution": "mossy",
+    "print_date": "2023-07-02",
+    "days_since_launch": 743,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-03": {
+    "id": 1546,
+    "solution": "hotel",
+    "print_date": "2023-07-03",
+    "days_since_launch": 744,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-04": {
+    "id": 847,
+    "solution": "irate",
+    "print_date": "2023-07-04",
+    "days_since_launch": 745,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-05": {
+    "id": 674,
+    "solution": "venom",
+    "print_date": "2023-07-05",
+    "days_since_launch": 746,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-06": {
+    "id": 1447,
+    "solution": "windy",
+    "print_date": "2023-07-06",
+    "days_since_launch": 747,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-07": {
+    "id": 988,
+    "solution": "donut",
+    "print_date": "2023-07-07",
+    "days_since_launch": 748,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-08": {
+    "id": 1931,
+    "solution": "cower",
+    "print_date": "2023-07-08",
+    "days_since_launch": 749,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-09": {
+    "id": 963,
+    "solution": "enter",
+    "print_date": "2023-07-09",
+    "days_since_launch": 750,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-10": {
+    "id": 515,
+    "solution": "folly",
+    "print_date": "2023-07-10",
+    "days_since_launch": 751,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-11": {
+    "id": 959,
+    "solution": "earth",
+    "print_date": "2023-07-11",
+    "days_since_launch": 752,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-12": {
+    "id": 2162,
+    "solution": "whirl",
+    "print_date": "2023-07-12",
+    "days_since_launch": 753,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-13": {
+    "id": 824,
+    "solution": "barge",
+    "print_date": "2023-07-13",
+    "days_since_launch": 754,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-14": {
+    "id": 1315,
+    "solution": "fiend",
+    "print_date": "2023-07-14",
+    "days_since_launch": 755,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-15": {
+    "id": 2218,
+    "solution": "crone",
+    "print_date": "2023-07-15",
+    "days_since_launch": 756,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-16": {
+    "id": 1194,
+    "solution": "topaz",
+    "print_date": "2023-07-16",
+    "days_since_launch": 757,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-17": {
+    "id": 1215,
+    "solution": "droop",
+    "print_date": "2023-07-17",
+    "days_since_launch": 758,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-18": {
+    "id": 765,
+    "solution": "flyer",
+    "print_date": "2023-07-18",
+    "days_since_launch": 759,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-19": {
+    "id": 1948,
+    "solution": "tonic",
+    "print_date": "2023-07-19",
+    "days_since_launch": 760,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-20": {
+    "id": 1252,
+    "solution": "flank",
+    "print_date": "2023-07-20",
+    "days_since_launch": 761,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-21": {
+    "id": 1378,
+    "solution": "burly",
+    "print_date": "2023-07-21",
+    "days_since_launch": 762,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-22": {
+    "id": 2113,
+    "solution": "froze",
+    "print_date": "2023-07-22",
+    "days_since_launch": 763,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-23": {
+    "id": 1454,
+    "solution": "whale",
+    "print_date": "2023-07-23",
+    "days_since_launch": 764,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-24": {
+    "id": 1490,
+    "solution": "hobby",
+    "print_date": "2023-07-24",
+    "days_since_launch": 765,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-25": {
+    "id": 1190,
+    "solution": "wheel",
+    "print_date": "2023-07-25",
+    "days_since_launch": 766,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-26": {
+    "id": 631,
+    "solution": "heart",
+    "print_date": "2023-07-26",
+    "days_since_launch": 767,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-27": {
+    "id": 1051,
+    "solution": "disco",
+    "print_date": "2023-07-27",
+    "days_since_launch": 768,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-28": {
+    "id": 1486,
+    "solution": "ethos",
+    "print_date": "2023-07-28",
+    "days_since_launch": 769,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-29": {
+    "id": 1296,
+    "solution": "curly",
+    "print_date": "2023-07-29",
+    "days_since_launch": 770,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-30": {
+    "id": 926,
+    "solution": "bathe",
+    "print_date": "2023-07-30",
+    "days_since_launch": 771,
+    "editor": "Tracy Bennett"
+  },
+  "2023-07-31": {
+    "id": 2115,
+    "solution": "style",
+    "print_date": "2023-07-31",
+    "days_since_launch": 772,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-01": {
+    "id": 2056,
+    "solution": "tenth",
+    "print_date": "2023-08-01",
+    "days_since_launch": 773,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-02": {
+    "id": 1189,
+    "solution": "beget",
+    "print_date": "2023-08-02",
+    "days_since_launch": 774,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-03": {
+    "id": 1091,
+    "solution": "party",
+    "print_date": "2023-08-03",
+    "days_since_launch": 775,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-04": {
+    "id": 1784,
+    "solution": "chart",
+    "print_date": "2023-08-04",
+    "days_since_launch": 776,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-05": {
+    "id": 1874,
+    "solution": "anode",
+    "print_date": "2023-08-05",
+    "days_since_launch": 777,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-06": {
+    "id": 958,
+    "solution": "polyp",
+    "print_date": "2023-08-06",
+    "days_since_launch": 778,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-07": {
+    "id": 1713,
+    "solution": "brook",
+    "print_date": "2023-08-07",
+    "days_since_launch": 779,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-08": {
+    "id": 1199,
+    "solution": "bully",
+    "print_date": "2023-08-08",
+    "days_since_launch": 780,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-09": {
+    "id": 553,
+    "solution": "lover",
+    "print_date": "2023-08-09",
+    "days_since_launch": 781,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-10": {
+    "id": 1354,
+    "solution": "empty",
+    "print_date": "2023-08-10",
+    "days_since_launch": 782,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-11": {
+    "id": 2252,
+    "solution": "hello",
+    "print_date": "2023-08-11",
+    "days_since_launch": 783,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-12": {
+    "id": 578,
+    "solution": "quick",
+    "print_date": "2023-08-12",
+    "days_since_launch": 784,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-13": {
+    "id": 1914,
+    "solution": "wrath",
+    "print_date": "2023-08-13",
+    "days_since_launch": 785,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-14": {
+    "id": 1241,
+    "solution": "snaky",
+    "print_date": "2023-08-14",
+    "days_since_launch": 786,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-15": {
+    "id": 723,
+    "solution": "index",
+    "print_date": "2023-08-15",
+    "days_since_launch": 787,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-16": {
+    "id": 992,
+    "solution": "scrub",
+    "print_date": "2023-08-16",
+    "days_since_launch": 788,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-17": {
+    "id": 1837,
+    "solution": "amiss",
+    "print_date": "2023-08-17",
+    "days_since_launch": 789,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-18": {
+    "id": 2128,
+    "solution": "exact",
+    "print_date": "2023-08-18",
+    "days_since_launch": 790,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-19": {
+    "id": 2154,
+    "solution": "magma",
+    "print_date": "2023-08-19",
+    "days_since_launch": 791,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-20": {
+    "id": 1674,
+    "solution": "quest",
+    "print_date": "2023-08-20",
+    "days_since_launch": 792,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-21": {
+    "id": 1054,
+    "solution": "beach",
+    "print_date": "2023-08-21",
+    "days_since_launch": 793,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-22": {
+    "id": 1398,
+    "solution": "spice",
+    "print_date": "2023-08-22",
+    "days_since_launch": 794,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-23": {
+    "id": 792,
+    "solution": "verve",
+    "print_date": "2023-08-23",
+    "days_since_launch": 795,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-24": {
+    "id": 1786,
+    "solution": "wordy",
+    "print_date": "2023-08-24",
+    "days_since_launch": 796,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-25": {
+    "id": 845,
+    "solution": "ocean",
+    "print_date": "2023-08-25",
+    "days_since_launch": 797,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-26": {
+    "id": 893,
+    "solution": "choir",
+    "print_date": "2023-08-26",
+    "days_since_launch": 798,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-27": {
+    "id": 2272,
+    "solution": "peace",
+    "print_date": "2023-08-27",
+    "days_since_launch": 799,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-28": {
+    "id": 668,
+    "solution": "write",
+    "print_date": "2023-08-28",
+    "days_since_launch": 800,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-29": {
+    "id": 1201,
+    "solution": "caper",
+    "print_date": "2023-08-29",
+    "days_since_launch": 801,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-30": {
+    "id": 1564,
+    "solution": "audio",
+    "print_date": "2023-08-30",
+    "days_since_launch": 802,
+    "editor": "Tracy Bennett"
+  },
+  "2023-08-31": {
+    "id": 1487,
+    "solution": "bride",
+    "print_date": "2023-08-31",
+    "days_since_launch": 803,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-01": {
+    "id": 1206,
+    "solution": "space",
+    "print_date": "2023-09-01",
+    "days_since_launch": 804,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-02": {
+    "id": 635,
+    "solution": "onion",
+    "print_date": "2023-09-02",
+    "days_since_launch": 805,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-03": {
+    "id": 2209,
+    "solution": "await",
+    "print_date": "2023-09-03",
+    "days_since_launch": 806,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-04": {
+    "id": 1954,
+    "solution": "giddy",
+    "print_date": "2023-09-04",
+    "days_since_launch": 807,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-05": {
+    "id": 688,
+    "solution": "birch",
+    "print_date": "2023-09-05",
+    "days_since_launch": 808,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-06": {
+    "id": 2097,
+    "solution": "gnash",
+    "print_date": "2023-09-06",
+    "days_since_launch": 809,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-07": {
+    "id": 1224,
+    "solution": "dwell",
+    "print_date": "2023-09-07",
+    "days_since_launch": 810,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-08": {
+    "id": 862,
+    "solution": "rouse",
+    "print_date": "2023-09-08",
+    "days_since_launch": 811,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-09": {
+    "id": 689,
+    "solution": "lucky",
+    "print_date": "2023-09-09",
+    "days_since_launch": 812,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-10": {
+    "id": 1958,
+    "solution": "quote",
+    "print_date": "2023-09-10",
+    "days_since_launch": 813,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-11": {
+    "id": 1668,
+    "solution": "older",
+    "print_date": "2023-09-11",
+    "days_since_launch": 814,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-12": {
+    "id": 786,
+    "solution": "whisk",
+    "print_date": "2023-09-12",
+    "days_since_launch": 815,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-13": {
+    "id": 1338,
+    "solution": "clear",
+    "print_date": "2023-09-13",
+    "days_since_launch": 816,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-14": {
+    "id": 2262,
+    "solution": "rayon",
+    "print_date": "2023-09-14",
+    "days_since_launch": 817,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-15": {
+    "id": 1983,
+    "solution": "exert",
+    "print_date": "2023-09-15",
+    "days_since_launch": 818,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-16": {
+    "id": 1819,
+    "solution": "angel",
+    "print_date": "2023-09-16",
+    "days_since_launch": 819,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-17": {
+    "id": 2169,
+    "solution": "music",
+    "print_date": "2023-09-17",
+    "days_since_launch": 820,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-18": {
+    "id": 1995,
+    "solution": "frank",
+    "print_date": "2023-09-18",
+    "days_since_launch": 821,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-19": {
+    "id": 2055,
+    "solution": "close",
+    "print_date": "2023-09-19",
+    "days_since_launch": 822,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-20": {
+    "id": 696,
+    "solution": "snare",
+    "print_date": "2023-09-20",
+    "days_since_launch": 823,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-21": {
+    "id": 1885,
+    "solution": "stone",
+    "print_date": "2023-09-21",
+    "days_since_launch": 824,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-22": {
+    "id": 1703,
+    "solution": "brush",
+    "print_date": "2023-09-22",
+    "days_since_launch": 825,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-23": {
+    "id": 1366,
+    "solution": "carol",
+    "print_date": "2023-09-23",
+    "days_since_launch": 826,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-24": {
+    "id": 2001,
+    "solution": "right",
+    "print_date": "2023-09-24",
+    "days_since_launch": 827,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-25": {
+    "id": 1274,
+    "solution": "rocky",
+    "print_date": "2023-09-25",
+    "days_since_launch": 828,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-26": {
+    "id": 1210,
+    "solution": "loyal",
+    "print_date": "2023-09-26",
+    "days_since_launch": 829,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-27": {
+    "id": 641,
+    "solution": "smile",
+    "print_date": "2023-09-27",
+    "days_since_launch": 830,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-28": {
+    "id": 601,
+    "solution": "coach",
+    "print_date": "2023-09-28",
+    "days_since_launch": 831,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-29": {
+    "id": 835,
+    "solution": "azure",
+    "print_date": "2023-09-29",
+    "days_since_launch": 832,
+    "editor": "Tracy Bennett"
+  },
+  "2023-09-30": {
+    "id": 533,
+    "solution": "daddy",
+    "print_date": "2023-09-30",
+    "days_since_launch": 833,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-01": {
+    "id": 1963,
+    "solution": "beret",
+    "print_date": "2023-10-01",
+    "days_since_launch": 834,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-02": {
+    "id": 1926,
+    "solution": "merry",
+    "print_date": "2023-10-02",
+    "days_since_launch": 835,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-03": {
+    "id": 1166,
+    "solution": "while",
+    "print_date": "2023-10-03",
+    "days_since_launch": 836,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-04": {
+    "id": 1569,
+    "solution": "spurt",
+    "print_date": "2023-10-04",
+    "days_since_launch": 837,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-05": {
+    "id": 2144,
+    "solution": "bunch",
+    "print_date": "2023-10-05",
+    "days_since_launch": 838,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-06": {
+    "id": 2133,
+    "solution": "chime",
+    "print_date": "2023-10-06",
+    "days_since_launch": 839,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-07": {
+    "id": 1039,
+    "solution": "viola",
+    "print_date": "2023-10-07",
+    "days_since_launch": 840,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-08": {
+    "id": 1833,
+    "solution": "binge",
+    "print_date": "2023-10-08",
+    "days_since_launch": 841,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-09": {
+    "id": 2129,
+    "solution": "truth",
+    "print_date": "2023-10-09",
+    "days_since_launch": 842,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-10": {
+    "id": 745,
+    "solution": "snail",
+    "print_date": "2023-10-10",
+    "days_since_launch": 843,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-11": {
+    "id": 1339,
+    "solution": "skunk",
+    "print_date": "2023-10-11",
+    "days_since_launch": 844,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-12": {
+    "id": 1870,
+    "solution": "knelt",
+    "print_date": "2023-10-12",
+    "days_since_launch": 845,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-13": {
+    "id": 1284,
+    "solution": "uncle",
+    "print_date": "2023-10-13",
+    "days_since_launch": 846,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-14": {
+    "id": 1599,
+    "solution": "agent",
+    "print_date": "2023-10-14",
+    "days_since_launch": 847,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-15": {
+    "id": 584,
+    "solution": "leaky",
+    "print_date": "2023-10-15",
+    "days_since_launch": 848,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-16": {
+    "id": 1755,
+    "solution": "graph",
+    "print_date": "2023-10-16",
+    "days_since_launch": 849,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-17": {
+    "id": 2282,
+    "solution": "adult",
+    "print_date": "2023-10-17",
+    "days_since_launch": 850,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-18": {
+    "id": 2267,
+    "solution": "mercy",
+    "print_date": "2023-10-18",
+    "days_since_launch": 851,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-19": {
+    "id": 764,
+    "solution": "splat",
+    "print_date": "2023-10-19",
+    "days_since_launch": 852,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-20": {
+    "id": 2087,
+    "solution": "occur",
+    "print_date": "2023-10-20",
+    "days_since_launch": 853,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-21": {
+    "id": 1535,
+    "solution": "smirk",
+    "print_date": "2023-10-21",
+    "days_since_launch": 854,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-22": {
+    "id": 580,
+    "solution": "given",
+    "print_date": "2023-10-22",
+    "days_since_launch": 855,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-23": {
+    "id": 1214,
+    "solution": "tempo",
+    "print_date": "2023-10-23",
+    "days_since_launch": 856,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-24": {
+    "id": 1263,
+    "solution": "cause",
+    "print_date": "2023-10-24",
+    "days_since_launch": 857,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-25": {
+    "id": 1417,
+    "solution": "retry",
+    "print_date": "2023-10-25",
+    "days_since_launch": 858,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-26": {
+    "id": 532,
+    "solution": "pique",
+    "print_date": "2023-10-26",
+    "days_since_launch": 859,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-27": {
+    "id": 1485,
+    "solution": "noble",
+    "print_date": "2023-10-27",
+    "days_since_launch": 860,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-28": {
+    "id": 767,
+    "solution": "mason",
+    "print_date": "2023-10-28",
+    "days_since_launch": 861,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-29": {
+    "id": 1405,
+    "solution": "phony",
+    "print_date": "2023-10-29",
+    "days_since_launch": 862,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-30": {
+    "id": 2059,
+    "solution": "grail",
+    "print_date": "2023-10-30",
+    "days_since_launch": 863,
+    "editor": "Tracy Bennett"
+  },
+  "2023-10-31": {
+    "id": 1294,
+    "solution": "bleak",
+    "print_date": "2023-10-31",
+    "days_since_launch": 864,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-01": {
+    "id": 1964,
+    "solution": "noise",
+    "print_date": "2023-11-01",
+    "days_since_launch": 865,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-02": {
+    "id": 961,
+    "solution": "until",
+    "print_date": "2023-11-02",
+    "days_since_launch": 866,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-03": {
+    "id": 612,
+    "solution": "ardor",
+    "print_date": "2023-11-03",
+    "days_since_launch": 867,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-04": {
+    "id": 683,
+    "solution": "mania",
+    "print_date": "2023-11-04",
+    "days_since_launch": 868,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-05": {
+    "id": 1972,
+    "solution": "flare",
+    "print_date": "2023-11-05",
+    "days_since_launch": 869,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-06": {
+    "id": 1077,
+    "solution": "trade",
+    "print_date": "2023-11-06",
+    "days_since_launch": 870,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-07": {
+    "id": 1630,
+    "solution": "limit",
+    "print_date": "2023-11-07",
+    "days_since_launch": 871,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-08": {
+    "id": 625,
+    "solution": "ninja",
+    "print_date": "2023-11-08",
+    "days_since_launch": 872,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-09": {
+    "id": 2072,
+    "solution": "glaze",
+    "print_date": "2023-11-09",
+    "days_since_launch": 873,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-10": {
+    "id": 1554,
+    "solution": "leash",
+    "print_date": "2023-11-10",
+    "days_since_launch": 874,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-11": {
+    "id": 1649,
+    "solution": "actor",
+    "print_date": "2023-11-11",
+    "days_since_launch": 875,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-12": {
+    "id": 906,
+    "solution": "meant",
+    "print_date": "2023-11-12",
+    "days_since_launch": 876,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-13": {
+    "id": 1698,
+    "solution": "green",
+    "print_date": "2023-11-13",
+    "days_since_launch": 877,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-14": {
+    "id": 1053,
+    "solution": "sassy",
+    "print_date": "2023-11-14",
+    "days_since_launch": 878,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-15": {
+    "id": 1781,
+    "solution": "sight",
+    "print_date": "2023-11-15",
+    "days_since_launch": 879,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-16": {
+    "id": 2003,
+    "solution": "trust",
+    "print_date": "2023-11-16",
+    "days_since_launch": 880,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-17": {
+    "id": 1107,
+    "solution": "tardy",
+    "print_date": "2023-11-17",
+    "days_since_launch": 881,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-18": {
+    "id": 1808,
+    "solution": "think",
+    "print_date": "2023-11-18",
+    "days_since_launch": 882,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-19": {
+    "id": 774,
+    "solution": "queue",
+    "print_date": "2023-11-19",
+    "days_since_launch": 883,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-20": {
+    "id": 800,
+    "solution": "candy",
+    "print_date": "2023-11-20",
+    "days_since_launch": 884,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-21": {
+    "id": 1140,
+    "solution": "piano",
+    "print_date": "2023-11-21",
+    "days_since_launch": 885,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-22": {
+    "id": 1544,
+    "solution": "pixel",
+    "print_date": "2023-11-22",
+    "days_since_launch": 886,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-23": {
+    "id": 956,
+    "solution": "queen",
+    "print_date": "2023-11-23",
+    "days_since_launch": 887,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-24": {
+    "id": 1608,
+    "solution": "throw",
+    "print_date": "2023-11-24",
+    "days_since_launch": 888,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-25": {
+    "id": 1645,
+    "solution": "guide",
+    "print_date": "2023-11-25",
+    "days_since_launch": 889,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-26": {
+    "id": 855,
+    "solution": "solid",
+    "print_date": "2023-11-26",
+    "days_since_launch": 890,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-27": {
+    "id": 1436,
+    "solution": "tawny",
+    "print_date": "2023-11-27",
+    "days_since_launch": 891,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-28": {
+    "id": 841,
+    "solution": "scope",
+    "print_date": "2023-11-28",
+    "days_since_launch": 892,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-29": {
+    "id": 793,
+    "solution": "sushi",
+    "print_date": "2023-11-29",
+    "days_since_launch": 893,
+    "editor": "Tracy Bennett"
+  },
+  "2023-11-30": {
+    "id": 1541,
+    "solution": "resin",
+    "print_date": "2023-11-30",
+    "days_since_launch": 894,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-01": {
+    "id": 1731,
+    "solution": "taken",
+    "print_date": "2023-12-01",
+    "days_since_launch": 895,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-02": {
+    "id": 543,
+    "solution": "genre",
+    "print_date": "2023-12-02",
+    "days_since_launch": 896,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-03": {
+    "id": 2259,
+    "solution": "adapt",
+    "print_date": "2023-12-03",
+    "days_since_launch": 897,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-04": {
+    "id": 882,
+    "solution": "worst",
+    "print_date": "2023-12-04",
+    "days_since_launch": 898,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-05": {
+    "id": 1113,
+    "solution": "young",
+    "print_date": "2023-12-05",
+    "days_since_launch": 899,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-06": {
+    "id": 2156,
+    "solution": "woman",
+    "print_date": "2023-12-06",
+    "days_since_launch": 900,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-07": {
+    "id": 611,
+    "solution": "sleep",
+    "print_date": "2023-12-07",
+    "days_since_launch": 901,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-08": {
+    "id": 1401,
+    "solution": "sharp",
+    "print_date": "2023-12-08",
+    "days_since_launch": 902,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-09": {
+    "id": 1175,
+    "solution": "shift",
+    "print_date": "2023-12-09",
+    "days_since_launch": 903,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-10": {
+    "id": 2088,
+    "solution": "chain",
+    "print_date": "2023-12-10",
+    "days_since_launch": 904,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-11": {
+    "id": 698,
+    "solution": "house",
+    "print_date": "2023-12-11",
+    "days_since_launch": 905,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-12": {
+    "id": 1494,
+    "solution": "these",
+    "print_date": "2023-12-12",
+    "days_since_launch": 906,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-13": {
+    "id": 1525,
+    "solution": "spent",
+    "print_date": "2023-12-13",
+    "days_since_launch": 907,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-14": {
+    "id": 1021,
+    "solution": "would",
+    "print_date": "2023-12-14",
+    "days_since_launch": 908,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-15": {
+    "id": 1701,
+    "solution": "topic",
+    "print_date": "2023-12-15",
+    "days_since_launch": 909,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-16": {
+    "id": 860,
+    "solution": "globe",
+    "print_date": "2023-12-16",
+    "days_since_launch": 910,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-17": {
+    "id": 1900,
+    "solution": "bacon",
+    "print_date": "2023-12-17",
+    "days_since_launch": 911,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-18": {
+    "id": 556,
+    "solution": "funny",
+    "print_date": "2023-12-18",
+    "days_since_launch": 912,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-19": {
+    "id": 1534,
+    "solution": "table",
+    "print_date": "2023-12-19",
+    "days_since_launch": 913,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-20": {
+    "id": 1724,
+    "solution": "small",
+    "print_date": "2023-12-20",
+    "days_since_launch": 914,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-21": {
+    "id": 648,
+    "solution": "built",
+    "print_date": "2023-12-21",
+    "days_since_launch": 915,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-22": {
+    "id": 1092,
+    "solution": "touch",
+    "print_date": "2023-12-22",
+    "days_since_launch": 916,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-23": {
+    "id": 1291,
+    "solution": "slope",
+    "print_date": "2023-12-23",
+    "days_since_launch": 917,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-24": {
+    "id": 617,
+    "solution": "grace",
+    "print_date": "2023-12-24",
+    "days_since_launch": 918,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-25": {
+    "id": 642,
+    "solution": "evoke",
+    "print_date": "2023-12-25",
+    "days_since_launch": 919,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-26": {
+    "id": 1814,
+    "solution": "phone",
+    "print_date": "2023-12-26",
+    "days_since_launch": 920,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-27": {
+    "id": 912,
+    "solution": "daisy",
+    "print_date": "2023-12-27",
+    "days_since_launch": 921,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-28": {
+    "id": 1253,
+    "solution": "learn",
+    "print_date": "2023-12-28",
+    "days_since_launch": 922,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-29": {
+    "id": 964,
+    "solution": "child",
+    "print_date": "2023-12-29",
+    "days_since_launch": 923,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-30": {
+    "id": 1179,
+    "solution": "three",
+    "print_date": "2023-12-30",
+    "days_since_launch": 924,
+    "editor": "Tracy Bennett"
+  },
+  "2023-12-31": {
+    "id": 1563,
+    "solution": "salty",
+    "print_date": "2023-12-31",
+    "days_since_launch": 925,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-01": {
+    "id": 1705,
+    "solution": "mural",
+    "print_date": "2024-01-01",
+    "days_since_launch": 926,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-02": {
+    "id": 536,
+    "solution": "aging",
+    "print_date": "2024-01-02",
+    "days_since_launch": 927,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-03": {
+    "id": 781,
+    "solution": "twirl",
+    "print_date": "2024-01-03",
+    "days_since_launch": 928,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-04": {
+    "id": 1855,
+    "solution": "scant",
+    "print_date": "2024-01-04",
+    "days_since_launch": 929,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-05": {
+    "id": 1205,
+    "solution": "lunge",
+    "print_date": "2024-01-05",
+    "days_since_launch": 930,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-06": {
+    "id": 1901,
+    "solution": "cable",
+    "print_date": "2024-01-06",
+    "days_since_launch": 931,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-07": {
+    "id": 953,
+    "solution": "stony",
+    "print_date": "2024-01-07",
+    "days_since_launch": 932,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-08": {
+    "id": 593,
+    "solution": "final",
+    "print_date": "2024-01-08",
+    "days_since_launch": 933,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-09": {
+    "id": 1561,
+    "solution": "liner",
+    "print_date": "2024-01-09",
+    "days_since_launch": 934,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-10": {
+    "id": 520,
+    "solution": "threw",
+    "print_date": "2024-01-10",
+    "days_since_launch": 935,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-11": {
+    "id": 1328,
+    "solution": "brief",
+    "print_date": "2024-01-11",
+    "days_since_launch": 936,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-12": {
+    "id": 1400,
+    "solution": "route",
+    "print_date": "2024-01-12",
+    "days_since_launch": 937,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-13": {
+    "id": 1818,
+    "solution": "heard",
+    "print_date": "2024-01-13",
+    "days_since_launch": 938,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-14": {
+    "id": 768,
+    "solution": "doing",
+    "print_date": "2024-01-14",
+    "days_since_launch": 939,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-15": {
+    "id": 572,
+    "solution": "lunch",
+    "print_date": "2024-01-15",
+    "days_since_launch": 940,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-16": {
+    "id": 816,
+    "solution": "blond",
+    "print_date": "2024-01-16",
+    "days_since_launch": 941,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-17": {
+    "id": 1815,
+    "solution": "court",
+    "print_date": "2024-01-17",
+    "days_since_launch": 942,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-18": {
+    "id": 1193,
+    "solution": "stole",
+    "print_date": "2024-01-18",
+    "days_since_launch": 943,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-19": {
+    "id": 2102,
+    "solution": "thing",
+    "print_date": "2024-01-19",
+    "days_since_launch": 944,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-20": {
+    "id": 1023,
+    "solution": "large",
+    "print_date": "2024-01-20",
+    "days_since_launch": 945,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-21": {
+    "id": 1853,
+    "solution": "north",
+    "print_date": "2024-01-21",
+    "days_since_launch": 946,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-22": {
+    "id": 1896,
+    "solution": "tweak",
+    "print_date": "2024-01-22",
+    "days_since_launch": 947,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-23": {
+    "id": 677,
+    "solution": "still",
+    "print_date": "2024-01-23",
+    "days_since_launch": 948,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-24": {
+    "id": 2183,
+    "solution": "relic",
+    "print_date": "2024-01-24",
+    "days_since_launch": 949,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-25": {
+    "id": 905,
+    "solution": "block",
+    "print_date": "2024-01-25",
+    "days_since_launch": 950,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-26": {
+    "id": 1780,
+    "solution": "aloof",
+    "print_date": "2024-01-26",
+    "days_since_launch": 951,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-27": {
+    "id": 1565,
+    "solution": "snake",
+    "print_date": "2024-01-27",
+    "days_since_launch": 952,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-28": {
+    "id": 1351,
+    "solution": "ember",
+    "print_date": "2024-01-28",
+    "days_since_launch": 953,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-29": {
+    "id": 1934,
+    "solution": "leggy",
+    "print_date": "2024-01-29",
+    "days_since_launch": 954,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-30": {
+    "id": 1849,
+    "solution": "expel",
+    "print_date": "2024-01-30",
+    "days_since_launch": 955,
+    "editor": "Tracy Bennett"
+  },
+  "2024-01-31": {
+    "id": 1975,
+    "solution": "bulky",
+    "print_date": "2024-01-31",
+    "days_since_launch": 956,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-01": {
+    "id": 867,
+    "solution": "alive",
+    "print_date": "2024-02-01",
+    "days_since_launch": 957,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-02": {
+    "id": 1887,
+    "solution": "cleft",
+    "print_date": "2024-02-02",
+    "days_since_launch": 958,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-03": {
+    "id": 1250,
+    "solution": "micro",
+    "print_date": "2024-02-03",
+    "days_since_launch": 959,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-04": {
+    "id": 1637,
+    "solution": "verge",
+    "print_date": "2024-02-04",
+    "days_since_launch": 960,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-05": {
+    "id": 2145,
+    "solution": "repel",
+    "print_date": "2024-02-05",
+    "days_since_launch": 961,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-06": {
+    "id": 1017,
+    "solution": "which",
+    "print_date": "2024-02-06",
+    "days_since_launch": 962,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-07": {
+    "id": 1349,
+    "solution": "after",
+    "print_date": "2024-02-07",
+    "days_since_launch": 963,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-08": {
+    "id": 719,
+    "solution": "place",
+    "print_date": "2024-02-08",
+    "days_since_launch": 964,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-09": {
+    "id": 1893,
+    "solution": "stiff",
+    "print_date": "2024-02-09",
+    "days_since_launch": 965,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-10": {
+    "id": 2023,
+    "solution": "fried",
+    "print_date": "2024-02-10",
+    "days_since_launch": 966,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-11": {
+    "id": 1329,
+    "solution": "never",
+    "print_date": "2024-02-11",
+    "days_since_launch": 967,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-12": {
+    "id": 1776,
+    "solution": "pasta",
+    "print_date": "2024-02-12",
+    "days_since_launch": 968,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-13": {
+    "id": 2250,
+    "solution": "scram",
+    "print_date": "2024-02-13",
+    "days_since_launch": 969,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-14": {
+    "id": 1868,
+    "solution": "talon",
+    "print_date": "2024-02-14",
+    "days_since_launch": 970,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-15": {
+    "id": 1032,
+    "solution": "ascot",
+    "print_date": "2024-02-15",
+    "days_since_launch": 971,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-16": {
+    "id": 2201,
+    "solution": "stash",
+    "print_date": "2024-02-16",
+    "days_since_launch": 972,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-17": {
+    "id": 1148,
+    "solution": "psalm",
+    "print_date": "2024-02-17",
+    "days_since_launch": 973,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-18": {
+    "id": 738,
+    "solution": "ridge",
+    "print_date": "2024-02-18",
+    "days_since_launch": 974,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-19": {
+    "id": 604,
+    "solution": "price",
+    "print_date": "2024-02-19",
+    "days_since_launch": 975,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-20": {
+    "id": 2266,
+    "solution": "match",
+    "print_date": "2024-02-20",
+    "days_since_launch": 976,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-21": {
+    "id": 1139,
+    "solution": "build",
+    "print_date": "2024-02-21",
+    "days_since_launch": 977,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-22": {
+    "id": 1513,
+    "solution": "heavy",
+    "print_date": "2024-02-22",
+    "days_since_launch": 978,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-23": {
+    "id": 1666,
+    "solution": "apart",
+    "print_date": "2024-02-23",
+    "days_since_launch": 979,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-24": {
+    "id": 1500,
+    "solution": "piper",
+    "print_date": "2024-02-24",
+    "days_since_launch": 980,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-25": {
+    "id": 2065,
+    "solution": "smith",
+    "print_date": "2024-02-25",
+    "days_since_launch": 981,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-26": {
+    "id": 872,
+    "solution": "often",
+    "print_date": "2024-02-26",
+    "days_since_launch": 982,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-27": {
+    "id": 1716,
+    "solution": "sense",
+    "print_date": "2024-02-27",
+    "days_since_launch": 983,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-28": {
+    "id": 1959,
+    "solution": "devil",
+    "print_date": "2024-02-28",
+    "days_since_launch": 984,
+    "editor": "Tracy Bennett"
+  },
+  "2024-02-29": {
+    "id": 2125,
+    "solution": "image",
+    "print_date": "2024-02-29",
+    "days_since_launch": 985,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-01": {
+    "id": 1282,
+    "solution": "forty",
+    "print_date": "2024-03-01",
+    "days_since_launch": 986,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-02": {
+    "id": 1035,
+    "solution": "urban",
+    "print_date": "2024-03-02",
+    "days_since_launch": 987,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-03": {
+    "id": 2031,
+    "solution": "state",
+    "print_date": "2024-03-03",
+    "days_since_launch": 988,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-04": {
+    "id": 1778,
+    "solution": "flame",
+    "print_date": "2024-03-04",
+    "days_since_launch": 989,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-05": {
+    "id": 1543,
+    "solution": "hunch",
+    "print_date": "2024-03-05",
+    "days_since_launch": 990,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-06": {
+    "id": 1783,
+    "solution": "teary",
+    "print_date": "2024-03-06",
+    "days_since_launch": 991,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-07": {
+    "id": 2060,
+    "solution": "clone",
+    "print_date": "2024-03-07",
+    "days_since_launch": 992,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-08": {
+    "id": 1574,
+    "solution": "early",
+    "print_date": "2024-03-08",
+    "days_since_launch": 993,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-09": {
+    "id": 1681,
+    "solution": "cheer",
+    "print_date": "2024-03-09",
+    "days_since_launch": 994,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-10": {
+    "id": 2032,
+    "solution": "grasp",
+    "print_date": "2024-03-10",
+    "days_since_launch": 995,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-11": {
+    "id": 1482,
+    "solution": "pesky",
+    "print_date": "2024-03-11",
+    "days_since_launch": 996,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-12": {
+    "id": 1999,
+    "solution": "heave",
+    "print_date": "2024-03-12",
+    "days_since_launch": 997,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-13": {
+    "id": 1076,
+    "solution": "local",
+    "print_date": "2024-03-13",
+    "days_since_launch": 998,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-14": {
+    "id": 876,
+    "solution": "since",
+    "print_date": "2024-03-14",
+    "days_since_launch": 999,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-15": {
+    "id": 602,
+    "solution": "erupt",
+    "print_date": "2024-03-15",
+    "days_since_launch": 1000,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-16": {
+    "id": 705,
+    "solution": "toxin",
+    "print_date": "2024-03-16",
+    "days_since_launch": 1001,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-17": {
+    "id": 1367,
+    "solution": "snort",
+    "print_date": "2024-03-17",
+    "days_since_launch": 1002,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-18": {
+    "id": 600,
+    "solution": "spelt",
+    "print_date": "2024-03-18",
+    "days_since_launch": 1003,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-19": {
+    "id": 1038,
+    "solution": "abide",
+    "print_date": "2024-03-19",
+    "days_since_launch": 1004,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-20": {
+    "id": 1293,
+    "solution": "lingo",
+    "print_date": "2024-03-20",
+    "days_since_launch": 1005,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-21": {
+    "id": 632,
+    "solution": "shade",
+    "print_date": "2024-03-21",
+    "days_since_launch": 1006,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-22": {
+    "id": 731,
+    "solution": "decay",
+    "print_date": "2024-03-22",
+    "days_since_launch": 1007,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-23": {
+    "id": 582,
+    "solution": "risen",
+    "print_date": "2024-03-23",
+    "days_since_launch": 1008,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-24": {
+    "id": 1387,
+    "solution": "towel",
+    "print_date": "2024-03-24",
+    "days_since_launch": 1009,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-25": {
+    "id": 1449,
+    "solution": "sally",
+    "print_date": "2024-03-25",
+    "days_since_launch": 1010,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-26": {
+    "id": 1151,
+    "solution": "mayor",
+    "print_date": "2024-03-26",
+    "days_since_launch": 1011,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-27": {
+    "id": 812,
+    "solution": "stung",
+    "print_date": "2024-03-27",
+    "days_since_launch": 1012,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-28": {
+    "id": 2214,
+    "solution": "speak",
+    "print_date": "2024-03-28",
+    "days_since_launch": 1013,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-29": {
+    "id": 1119,
+    "solution": "realm",
+    "print_date": "2024-03-29",
+    "days_since_launch": 1014,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-30": {
+    "id": 1594,
+    "solution": "force",
+    "print_date": "2024-03-30",
+    "days_since_launch": 1015,
+    "editor": "Tracy Bennett"
+  },
+  "2024-03-31": {
+    "id": 1956,
+    "solution": "taboo",
+    "print_date": "2024-03-31",
+    "days_since_launch": 1016,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-01": {
+    "id": 1116,
+    "solution": "frond",
+    "print_date": "2024-04-01",
+    "days_since_launch": 1017,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-02": {
+    "id": 1178,
+    "solution": "serum",
+    "print_date": "2024-04-02",
+    "days_since_launch": 1018,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-03": {
+    "id": 2194,
+    "solution": "plait",
+    "print_date": "2024-04-03",
+    "days_since_launch": 1019,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-04": {
+    "id": 1654,
+    "solution": "climb",
+    "print_date": "2024-04-04",
+    "days_since_launch": 1020,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-05": {
+    "id": 858,
+    "solution": "wrist",
+    "print_date": "2024-04-05",
+    "days_since_launch": 1021,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-06": {
+    "id": 1078,
+    "solution": "finch",
+    "print_date": "2024-04-06",
+    "days_since_launch": 1022,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-07": {
+    "id": 1747,
+    "solution": "voila",
+    "print_date": "2024-04-07",
+    "days_since_launch": 1023,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-08": {
+    "id": 1309,
+    "solution": "breed",
+    "print_date": "2024-04-08",
+    "days_since_launch": 1024,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-09": {
+    "id": 1360,
+    "solution": "merge",
+    "print_date": "2024-04-09",
+    "days_since_launch": 1025,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-10": {
+    "id": 2149,
+    "solution": "broth",
+    "print_date": "2024-04-10",
+    "days_since_launch": 1026,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-11": {
+    "id": 516,
+    "solution": "louse",
+    "print_date": "2024-04-11",
+    "days_since_launch": 1027,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-12": {
+    "id": 1507,
+    "solution": "whiny",
+    "print_date": "2024-04-12",
+    "days_since_launch": 1028,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-13": {
+    "id": 1067,
+    "solution": "steel",
+    "print_date": "2024-04-13",
+    "days_since_launch": 1029,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-14": {
+    "id": 1313,
+    "solution": "blimp",
+    "print_date": "2024-04-14",
+    "days_since_launch": 1030,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-15": {
+    "id": 565,
+    "solution": "equip",
+    "print_date": "2024-04-15",
+    "days_since_launch": 1031,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-16": {
+    "id": 1014,
+    "solution": "shank",
+    "print_date": "2024-04-16",
+    "days_since_launch": 1032,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-17": {
+    "id": 1473,
+    "solution": "tithe",
+    "print_date": "2024-04-17",
+    "days_since_launch": 1033,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-18": {
+    "id": 1558,
+    "solution": "facet",
+    "print_date": "2024-04-18",
+    "days_since_launch": 1034,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-19": {
+    "id": 1643,
+    "solution": "raise",
+    "print_date": "2024-04-19",
+    "days_since_launch": 1035,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-20": {
+    "id": 1771,
+    "solution": "lucid",
+    "print_date": "2024-04-20",
+    "days_since_launch": 1036,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-21": {
+    "id": 859,
+    "solution": "jolly",
+    "print_date": "2024-04-21",
+    "days_since_launch": 1037,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-22": {
+    "id": 2321,
+    "solution": "laser",
+    "print_date": "2024-04-22",
+    "days_since_launch": 1038,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-23": {
+    "id": 843,
+    "solution": "rover",
+    "print_date": "2024-04-23",
+    "days_since_launch": 1039,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-24": {
+    "id": 1150,
+    "solution": "overt",
+    "print_date": "2024-04-24",
+    "days_since_launch": 1040,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-25": {
+    "id": 2243,
+    "solution": "intro",
+    "print_date": "2024-04-25",
+    "days_since_launch": 1041,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-26": {
+    "id": 1097,
+    "solution": "vapid",
+    "print_date": "2024-04-26",
+    "days_since_launch": 1042,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-27": {
+    "id": 1985,
+    "solution": "gleam",
+    "print_date": "2024-04-27",
+    "days_since_launch": 1043,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-28": {
+    "id": 1723,
+    "solution": "prune",
+    "print_date": "2024-04-28",
+    "days_since_launch": 1044,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-29": {
+    "id": 1767,
+    "solution": "craft",
+    "print_date": "2024-04-29",
+    "days_since_launch": 1045,
+    "editor": "Tracy Bennett"
+  },
+  "2024-04-30": {
+    "id": 1270,
+    "solution": "prowl",
+    "print_date": "2024-04-30",
+    "days_since_launch": 1046,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-01": {
+    "id": 1125,
+    "solution": "diary",
+    "print_date": "2024-05-01",
+    "days_since_launch": 1047,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-02": {
+    "id": 1602,
+    "solution": "slice",
+    "print_date": "2024-05-02",
+    "days_since_launch": 1048,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-03": {
+    "id": 1741,
+    "solution": "ebony",
+    "print_date": "2024-05-03",
+    "days_since_launch": 1049,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-04": {
+    "id": 1397,
+    "solution": "value",
+    "print_date": "2024-05-04",
+    "days_since_launch": 1050,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-05": {
+    "id": 1419,
+    "solution": "decal",
+    "print_date": "2024-05-05",
+    "days_since_launch": 1051,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-06": {
+    "id": 2287,
+    "solution": "shave",
+    "print_date": "2024-05-06",
+    "days_since_launch": 1052,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-07": {
+    "id": 531,
+    "solution": "musty",
+    "print_date": "2024-05-07",
+    "days_since_launch": 1053,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-08": {
+    "id": 2325,
+    "solution": "pious",
+    "print_date": "2024-05-08",
+    "days_since_launch": 1054,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-09": {
+    "id": 1382,
+    "solution": "jerky",
+    "print_date": "2024-05-09",
+    "days_since_launch": 1055,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-10": {
+    "id": 1335,
+    "solution": "media",
+    "print_date": "2024-05-10",
+    "days_since_launch": 1056,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-11": {
+    "id": 1444,
+    "solution": "tidal",
+    "print_date": "2024-05-11",
+    "days_since_launch": 1057,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-12": {
+    "id": 931,
+    "solution": "outer",
+    "print_date": "2024-05-12",
+    "days_since_launch": 1058,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-13": {
+    "id": 1304,
+    "solution": "cumin",
+    "print_date": "2024-05-13",
+    "days_since_launch": 1059,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-14": {
+    "id": 1044,
+    "solution": "amass",
+    "print_date": "2024-05-14",
+    "days_since_launch": 1060,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-15": {
+    "id": 2223,
+    "solution": "pinch",
+    "print_date": "2024-05-15",
+    "days_since_launch": 1061,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-16": {
+    "id": 1915,
+    "solution": "stall",
+    "print_date": "2024-05-16",
+    "days_since_launch": 1062,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-17": {
+    "id": 1047,
+    "solution": "tutor",
+    "print_date": "2024-05-17",
+    "days_since_launch": 1063,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-18": {
+    "id": 1671,
+    "solution": "briny",
+    "print_date": "2024-05-18",
+    "days_since_launch": 1064,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-19": {
+    "id": 1112,
+    "solution": "hitch",
+    "print_date": "2024-05-19",
+    "days_since_launch": 1065,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-20": {
+    "id": 700,
+    "solution": "nicer",
+    "print_date": "2024-05-20",
+    "days_since_launch": 1066,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-21": {
+    "id": 998,
+    "solution": "dingo",
+    "print_date": "2024-05-21",
+    "days_since_launch": 1067,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-22": {
+    "id": 702,
+    "solution": "exalt",
+    "print_date": "2024-05-22",
+    "days_since_launch": 1068,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-23": {
+    "id": 1285,
+    "solution": "swish",
+    "print_date": "2024-05-23",
+    "days_since_launch": 1069,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-24": {
+    "id": 1153,
+    "solution": "glide",
+    "print_date": "2024-05-24",
+    "days_since_launch": 1070,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-25": {
+    "id": 1770,
+    "solution": "titan",
+    "print_date": "2024-05-25",
+    "days_since_launch": 1071,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-26": {
+    "id": 1288,
+    "solution": "bevel",
+    "print_date": "2024-05-26",
+    "days_since_launch": 1072,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-27": {
+    "id": 1937,
+    "solution": "skier",
+    "print_date": "2024-05-27",
+    "days_since_launch": 1073,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-28": {
+    "id": 1768,
+    "solution": "minus",
+    "print_date": "2024-05-28",
+    "days_since_launch": 1074,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-29": {
+    "id": 1928,
+    "solution": "papal",
+    "print_date": "2024-05-29",
+    "days_since_launch": 1075,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-30": {
+    "id": 2179,
+    "solution": "gummy",
+    "print_date": "2024-05-30",
+    "days_since_launch": 1076,
+    "editor": "Tracy Bennett"
+  },
+  "2024-05-31": {
+    "id": 568,
+    "solution": "chaos",
+    "print_date": "2024-05-31",
+    "days_since_launch": 1077,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-01": {
+    "id": 802,
+    "solution": "basin",
+    "print_date": "2024-06-01",
+    "days_since_launch": 1078,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-02": {
+    "id": 811,
+    "solution": "bravo",
+    "print_date": "2024-06-02",
+    "days_since_launch": 1079,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-03": {
+    "id": 1952,
+    "solution": "stark",
+    "print_date": "2024-06-03",
+    "days_since_launch": 1080,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-04": {
+    "id": 1110,
+    "solution": "groom",
+    "print_date": "2024-06-04",
+    "days_since_launch": 1081,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-05": {
+    "id": 2254,
+    "solution": "organ",
+    "print_date": "2024-06-05",
+    "days_since_launch": 1082,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-06": {
+    "id": 1161,
+    "solution": "ether",
+    "print_date": "2024-06-06",
+    "days_since_launch": 1083,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-07": {
+    "id": 1744,
+    "solution": "melon",
+    "print_date": "2024-06-07",
+    "days_since_launch": 1084,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-08": {
+    "id": 2222,
+    "solution": "hence",
+    "print_date": "2024-06-08",
+    "days_since_launch": 1085,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-09": {
+    "id": 804,
+    "solution": "crowd",
+    "print_date": "2024-06-09",
+    "days_since_launch": 1086,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-10": {
+    "id": 575,
+    "solution": "manga",
+    "print_date": "2024-06-10",
+    "days_since_launch": 1087,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-11": {
+    "id": 1466,
+    "solution": "swung",
+    "print_date": "2024-06-11",
+    "days_since_launch": 1088,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-12": {
+    "id": 551,
+    "solution": "deter",
+    "print_date": "2024-06-12",
+    "days_since_launch": 1089,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-13": {
+    "id": 1100,
+    "solution": "angst",
+    "print_date": "2024-06-13",
+    "days_since_launch": 1090,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-14": {
+    "id": 518,
+    "solution": "vault",
+    "print_date": "2024-06-14",
+    "days_since_launch": 1091,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-15": {
+    "id": 1691,
+    "solution": "proud",
+    "print_date": "2024-06-15",
+    "days_since_launch": 1092,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-16": {
+    "id": 585,
+    "solution": "grind",
+    "print_date": "2024-06-16",
+    "days_since_launch": 1093,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-17": {
+    "id": 1869,
+    "solution": "prior",
+    "print_date": "2024-06-17",
+    "days_since_launch": 1094,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-18": {
+    "id": 866,
+    "solution": "cover",
+    "print_date": "2024-06-18",
+    "days_since_launch": 1095,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-19": {
+    "id": 1463,
+    "solution": "terse",
+    "print_date": "2024-06-19",
+    "days_since_launch": 1096,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-20": {
+    "id": 1523,
+    "solution": "scent",
+    "print_date": "2024-06-20",
+    "days_since_launch": 1097,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-21": {
+    "id": 1560,
+    "solution": "paint",
+    "print_date": "2024-06-21",
+    "days_since_launch": 1098,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-22": {
+    "id": 780,
+    "solution": "edict",
+    "print_date": "2024-06-22",
+    "days_since_launch": 1099,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-23": {
+    "id": 1435,
+    "solution": "bugle",
+    "print_date": "2024-06-23",
+    "days_since_launch": 1100,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-24": {
+    "id": 873,
+    "solution": "dolly",
+    "print_date": "2024-06-24",
+    "days_since_launch": 1101,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-25": {
+    "id": 1791,
+    "solution": "savor",
+    "print_date": "2024-06-25",
+    "days_since_launch": 1102,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-26": {
+    "id": 2161,
+    "solution": "knead",
+    "print_date": "2024-06-26",
+    "days_since_launch": 1103,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-27": {
+    "id": 1596,
+    "solution": "order",
+    "print_date": "2024-06-27",
+    "days_since_launch": 1104,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-28": {
+    "id": 1162,
+    "solution": "drove",
+    "print_date": "2024-06-28",
+    "days_since_launch": 1105,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-29": {
+    "id": 823,
+    "solution": "zebra",
+    "print_date": "2024-06-29",
+    "days_since_launch": 1106,
+    "editor": "Tracy Bennett"
+  },
+  "2024-06-30": {
+    "id": 797,
+    "solution": "buddy",
+    "print_date": "2024-06-30",
+    "days_since_launch": 1107,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-01": {
+    "id": 1073,
+    "solution": "adage",
+    "print_date": "2024-07-01",
+    "days_since_launch": 1108,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-02": {
+    "id": 708,
+    "solution": "inlay",
+    "print_date": "2024-07-02",
+    "days_since_launch": 1109,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-03": {
+    "id": 1970,
+    "solution": "thigh",
+    "print_date": "2024-07-03",
+    "days_since_launch": 1110,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-04": {
+    "id": 1595,
+    "solution": "debut",
+    "print_date": "2024-07-04",
+    "days_since_launch": 1111,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-05": {
+    "id": 1988,
+    "solution": "crush",
+    "print_date": "2024-07-05",
+    "days_since_launch": 1112,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-06": {
+    "id": 1726,
+    "solution": "scoff",
+    "print_date": "2024-07-06",
+    "days_since_launch": 1113,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-07": {
+    "id": 1174,
+    "solution": "canon",
+    "print_date": "2024-07-07",
+    "days_since_launch": 1114,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-08": {
+    "id": 1188,
+    "solution": "shape",
+    "print_date": "2024-07-08",
+    "days_since_launch": 1115,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-09": {
+    "id": 1588,
+    "solution": "blare",
+    "print_date": "2024-07-09",
+    "days_since_launch": 1116,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-10": {
+    "id": 1081,
+    "solution": "gaunt",
+    "print_date": "2024-07-10",
+    "days_since_launch": 1117,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-11": {
+    "id": 1647,
+    "solution": "cameo",
+    "print_date": "2024-07-11",
+    "days_since_launch": 1118,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-12": {
+    "id": 607,
+    "solution": "jiffy",
+    "print_date": "2024-07-12",
+    "days_since_launch": 1119,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-13": {
+    "id": 1083,
+    "solution": "enact",
+    "print_date": "2024-07-13",
+    "days_since_launch": 1120,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-14": {
+    "id": 1884,
+    "solution": "video",
+    "print_date": "2024-07-14",
+    "days_since_launch": 1121,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-15": {
+    "id": 1029,
+    "solution": "swoon",
+    "print_date": "2024-07-15",
+    "days_since_launch": 1122,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-16": {
+    "id": 1746,
+    "solution": "decoy",
+    "print_date": "2024-07-16",
+    "days_since_launch": 1123,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-17": {
+    "id": 1310,
+    "solution": "quite",
+    "print_date": "2024-07-17",
+    "days_since_launch": 1124,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-18": {
+    "id": 1451,
+    "solution": "nerdy",
+    "print_date": "2024-07-18",
+    "days_since_launch": 1125,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-19": {
+    "id": 1655,
+    "solution": "refer",
+    "print_date": "2024-07-19",
+    "days_since_launch": 1126,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-20": {
+    "id": 734,
+    "solution": "shaft",
+    "print_date": "2024-07-20",
+    "days_since_launch": 1127,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-21": {
+    "id": 1086,
+    "solution": "speck",
+    "print_date": "2024-07-21",
+    "days_since_launch": 1128,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-22": {
+    "id": 1828,
+    "solution": "cadet",
+    "print_date": "2024-07-22",
+    "days_since_launch": 1129,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-23": {
+    "id": 1065,
+    "solution": "prong",
+    "print_date": "2024-07-23",
+    "days_since_launch": 1130,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-24": {
+    "id": 2189,
+    "solution": "forte",
+    "print_date": "2024-07-24",
+    "days_since_launch": 1131,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-25": {
+    "id": 997,
+    "solution": "porch",
+    "print_date": "2024-07-25",
+    "days_since_launch": 1132,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-26": {
+    "id": 1857,
+    "solution": "awash",
+    "print_date": "2024-07-26",
+    "days_since_launch": 1133,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-27": {
+    "id": 1923,
+    "solution": "juice",
+    "print_date": "2024-07-27",
+    "days_since_launch": 1134,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-28": {
+    "id": 1358,
+    "solution": "smock",
+    "print_date": "2024-07-28",
+    "days_since_launch": 1135,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-29": {
+    "id": 1347,
+    "solution": "super",
+    "print_date": "2024-07-29",
+    "days_since_launch": 1136,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-30": {
+    "id": 2255,
+    "solution": "feral",
+    "print_date": "2024-07-30",
+    "days_since_launch": 1137,
+    "editor": "Tracy Bennett"
+  },
+  "2024-07-31": {
+    "id": 1136,
+    "solution": "penne",
+    "print_date": "2024-07-31",
+    "days_since_launch": 1138,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-01": {
+    "id": 1437,
+    "solution": "chalk",
+    "print_date": "2024-08-01",
+    "days_since_launch": 1139,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-02": {
+    "id": 1872,
+    "solution": "flake",
+    "print_date": "2024-08-02",
+    "days_since_launch": 1140,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-03": {
+    "id": 1667,
+    "solution": "scale",
+    "print_date": "2024-08-03",
+    "days_since_launch": 1141,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-04": {
+    "id": 1102,
+    "solution": "lower",
+    "print_date": "2024-08-04",
+    "days_since_launch": 1142,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-05": {
+    "id": 878,
+    "solution": "ensue",
+    "print_date": "2024-08-05",
+    "days_since_launch": 1143,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-06": {
+    "id": 2146,
+    "solution": "anvil",
+    "print_date": "2024-08-06",
+    "days_since_launch": 1144,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-07": {
+    "id": 789,
+    "solution": "macaw",
+    "print_date": "2024-08-07",
+    "days_since_launch": 1145,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-08": {
+    "id": 1396,
+    "solution": "saucy",
+    "print_date": "2024-08-08",
+    "days_since_launch": 1146,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-09": {
+    "id": 1865,
+    "solution": "ounce",
+    "print_date": "2024-08-09",
+    "days_since_launch": 1147,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-10": {
+    "id": 1899,
+    "solution": "medic",
+    "print_date": "2024-08-10",
+    "days_since_launch": 1148,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-11": {
+    "id": 1393,
+    "solution": "scone",
+    "print_date": "2024-08-11",
+    "days_since_launch": 1149,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-12": {
+    "id": 1634,
+    "solution": "skiff",
+    "print_date": "2024-08-12",
+    "days_since_launch": 1150,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-13": {
+    "id": 1742,
+    "solution": "neigh",
+    "print_date": "2024-08-13",
+    "days_since_launch": 1151,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-14": {
+    "id": 2111,
+    "solution": "shore",
+    "print_date": "2024-08-14",
+    "days_since_launch": 1152,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-15": {
+    "id": 678,
+    "solution": "acorn",
+    "print_date": "2024-08-15",
+    "days_since_launch": 1153,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-16": {
+    "id": 2092,
+    "solution": "brace",
+    "print_date": "2024-08-16",
+    "days_since_launch": 1154,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-17": {
+    "id": 960,
+    "solution": "storm",
+    "print_date": "2024-08-17",
+    "days_since_launch": 1155,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-18": {
+    "id": 710,
+    "solution": "lanky",
+    "print_date": "2024-08-18",
+    "days_since_launch": 1156,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-19": {
+    "id": 2148,
+    "solution": "meter",
+    "print_date": "2024-08-19",
+    "days_since_launch": 1157,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-20": {
+    "id": 897,
+    "solution": "delay",
+    "print_date": "2024-08-20",
+    "days_since_launch": 1158,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-21": {
+    "id": 542,
+    "solution": "mulch",
+    "print_date": "2024-08-21",
+    "days_since_launch": 1159,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-22": {
+    "id": 1933,
+    "solution": "brute",
+    "print_date": "2024-08-22",
+    "days_since_launch": 1160,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-23": {
+    "id": 2054,
+    "solution": "leech",
+    "print_date": "2024-08-23",
+    "days_since_launch": 1161,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-24": {
+    "id": 970,
+    "solution": "filet",
+    "print_date": "2024-08-24",
+    "days_since_launch": 1162,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-25": {
+    "id": 1244,
+    "solution": "skate",
+    "print_date": "2024-08-25",
+    "days_since_launch": 1163,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-26": {
+    "id": 1223,
+    "solution": "stake",
+    "print_date": "2024-08-26",
+    "days_since_launch": 1164,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-27": {
+    "id": 1034,
+    "solution": "crown",
+    "print_date": "2024-08-27",
+    "days_since_launch": 1165,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-28": {
+    "id": 1712,
+    "solution": "lithe",
+    "print_date": "2024-08-28",
+    "days_since_launch": 1166,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-29": {
+    "id": 1721,
+    "solution": "flunk",
+    "print_date": "2024-08-29",
+    "days_since_launch": 1167,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-30": {
+    "id": 1225,
+    "solution": "knave",
+    "print_date": "2024-08-30",
+    "days_since_launch": 1168,
+    "editor": "Tracy Bennett"
+  },
+  "2024-08-31": {
+    "id": 791,
+    "solution": "spout",
+    "print_date": "2024-08-31",
+    "days_since_launch": 1169,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-01": {
+    "id": 1750,
+    "solution": "mushy",
+    "print_date": "2024-09-01",
+    "days_since_launch": 1170,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-02": {
+    "id": 1816,
+    "solution": "camel",
+    "print_date": "2024-09-02",
+    "days_since_launch": 1171,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-03": {
+    "id": 1369,
+    "solution": "faint",
+    "print_date": "2024-09-03",
+    "days_since_launch": 1172,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-04": {
+    "id": 1272,
+    "solution": "stern",
+    "print_date": "2024-09-04",
+    "days_since_launch": 1173,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-05": {
+    "id": 1600,
+    "solution": "widen",
+    "print_date": "2024-09-05",
+    "days_since_launch": 1174,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-06": {
+    "id": 1673,
+    "solution": "rerun",
+    "print_date": "2024-09-06",
+    "days_since_launch": 1175,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-07": {
+    "id": 1350,
+    "solution": "owner",
+    "print_date": "2024-09-07",
+    "days_since_launch": 1176,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-08": {
+    "id": 1678,
+    "solution": "drawn",
+    "print_date": "2024-09-08",
+    "days_since_launch": 1177,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-09": {
+    "id": 1242,
+    "solution": "debit",
+    "print_date": "2024-09-09",
+    "days_since_launch": 1178,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-10": {
+    "id": 1251,
+    "solution": "rebel",
+    "print_date": "2024-09-10",
+    "days_since_launch": 1179,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-11": {
+    "id": 1633,
+    "solution": "aisle",
+    "print_date": "2024-09-11",
+    "days_since_launch": 1180,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-12": {
+    "id": 930,
+    "solution": "brass",
+    "print_date": "2024-09-12",
+    "days_since_launch": 1181,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-13": {
+    "id": 1689,
+    "solution": "harsh",
+    "print_date": "2024-09-13",
+    "days_since_launch": 1182,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-14": {
+    "id": 1684,
+    "solution": "broad",
+    "print_date": "2024-09-14",
+    "days_since_launch": 1183,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-15": {
+    "id": 1357,
+    "solution": "recur",
+    "print_date": "2024-09-15",
+    "days_since_launch": 1184,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-16": {
+    "id": 592,
+    "solution": "honey",
+    "print_date": "2024-09-16",
+    "days_since_launch": 1185,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-17": {
+    "id": 2318,
+    "solution": "beaut",
+    "print_date": "2024-09-17",
+    "days_since_launch": 1186,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-18": {
+    "id": 2079,
+    "solution": "fully",
+    "print_date": "2024-09-18",
+    "days_since_launch": 1187,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-19": {
+    "id": 2210,
+    "solution": "press",
+    "print_date": "2024-09-19",
+    "days_since_launch": 1188,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-20": {
+    "id": 557,
+    "solution": "smoke",
+    "print_date": "2024-09-20",
+    "days_since_launch": 1189,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-21": {
+    "id": 1123,
+    "solution": "seven",
+    "print_date": "2024-09-21",
+    "days_since_launch": 1190,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-22": {
+    "id": 1886,
+    "solution": "teach",
+    "print_date": "2024-09-22",
+    "days_since_launch": 1191,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-23": {
+    "id": 1916,
+    "solution": "steam",
+    "print_date": "2024-09-23",
+    "days_since_launch": 1192,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-24": {
+    "id": 616,
+    "solution": "handy",
+    "print_date": "2024-09-24",
+    "days_since_launch": 1193,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-25": {
+    "id": 1478,
+    "solution": "torch",
+    "print_date": "2024-09-25",
+    "days_since_launch": 1194,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-26": {
+    "id": 749,
+    "solution": "thank",
+    "print_date": "2024-09-26",
+    "days_since_launch": 1195,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-27": {
+    "id": 2264,
+    "solution": "faith",
+    "print_date": "2024-09-27",
+    "days_since_launch": 1196,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-28": {
+    "id": 796,
+    "solution": "brain",
+    "print_date": "2024-09-28",
+    "days_since_launch": 1197,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-29": {
+    "id": 2172,
+    "solution": "rider",
+    "print_date": "2024-09-29",
+    "days_since_launch": 1198,
+    "editor": "Tracy Bennett"
+  },
+  "2024-09-30": {
+    "id": 2052,
+    "solution": "cloud",
+    "print_date": "2024-09-30",
+    "days_since_launch": 1199,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-01": {
+    "id": 1943,
+    "solution": "modem",
+    "print_date": "2024-10-01",
+    "days_since_launch": 1200,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-02": {
+    "id": 1020,
+    "solution": "shell",
+    "print_date": "2024-10-02",
+    "days_since_launch": 1201,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-03": {
+    "id": 945,
+    "solution": "wagon",
+    "print_date": "2024-10-03",
+    "days_since_launch": 1202,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-04": {
+    "id": 813,
+    "solution": "title",
+    "print_date": "2024-10-04",
+    "days_since_launch": 1203,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-05": {
+    "id": 1697,
+    "solution": "miner",
+    "print_date": "2024-10-05",
+    "days_since_launch": 1204,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-06": {
+    "id": 1407,
+    "solution": "lager",
+    "print_date": "2024-10-06",
+    "days_since_launch": 1205,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-07": {
+    "id": 1371,
+    "solution": "flour",
+    "print_date": "2024-10-07",
+    "days_since_launch": 1206,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-08": {
+    "id": 1510,
+    "solution": "joint",
+    "print_date": "2024-10-08",
+    "days_since_launch": 1207,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-09": {
+    "id": 2322,
+    "solution": "mommy",
+    "print_date": "2024-10-09",
+    "days_since_launch": 1208,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-10": {
+    "id": 586,
+    "solution": "carve",
+    "print_date": "2024-10-10",
+    "days_since_launch": 1209,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-11": {
+    "id": 564,
+    "solution": "gusty",
+    "print_date": "2024-10-11",
+    "days_since_launch": 1210,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-12": {
+    "id": 808,
+    "solution": "stain",
+    "print_date": "2024-10-12",
+    "days_since_launch": 1211,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-13": {
+    "id": 629,
+    "solution": "prone",
+    "print_date": "2024-10-13",
+    "days_since_launch": 1212,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-14": {
+    "id": 1465,
+    "solution": "gamut",
+    "print_date": "2024-10-14",
+    "days_since_launch": 1213,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-15": {
+    "id": 2011,
+    "solution": "corer",
+    "print_date": "2024-10-15",
+    "days_since_launch": 1214,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-16": {
+    "id": 1898,
+    "solution": "grant",
+    "print_date": "2024-10-16",
+    "days_since_launch": 1215,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-17": {
+    "id": 1068,
+    "solution": "halve",
+    "print_date": "2024-10-17",
+    "days_since_launch": 1216,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-18": {
+    "id": 1165,
+    "solution": "stint",
+    "print_date": "2024-10-18",
+    "days_since_launch": 1217,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-19": {
+    "id": 752,
+    "solution": "fiber",
+    "print_date": "2024-10-19",
+    "days_since_launch": 1218,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-20": {
+    "id": 1769,
+    "solution": "dicey",
+    "print_date": "2024-10-20",
+    "days_since_launch": 1219,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-21": {
+    "id": 1590,
+    "solution": "spoon",
+    "print_date": "2024-10-21",
+    "days_since_launch": 1220,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-22": {
+    "id": 1827,
+    "solution": "shout",
+    "print_date": "2024-10-22",
+    "days_since_launch": 1221,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-23": {
+    "id": 2167,
+    "solution": "goofy",
+    "print_date": "2024-10-23",
+    "days_since_launch": 1222,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-24": {
+    "id": 1708,
+    "solution": "bossy",
+    "print_date": "2024-10-24",
+    "days_since_launch": 1223,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-25": {
+    "id": 654,
+    "solution": "frown",
+    "print_date": "2024-10-25",
+    "days_since_launch": 1224,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-26": {
+    "id": 1866,
+    "solution": "wreak",
+    "print_date": "2024-10-26",
+    "days_since_launch": 1225,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-27": {
+    "id": 2036,
+    "solution": "sandy",
+    "print_date": "2024-10-27",
+    "days_since_launch": 1226,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-28": {
+    "id": 1402,
+    "solution": "bawdy",
+    "print_date": "2024-10-28",
+    "days_since_launch": 1227,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-29": {
+    "id": 706,
+    "solution": "tunic",
+    "print_date": "2024-10-29",
+    "days_since_launch": 1228,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-30": {
+    "id": 1395,
+    "solution": "easel",
+    "print_date": "2024-10-30",
+    "days_since_launch": 1229,
+    "editor": "Tracy Bennett"
+  },
+  "2024-10-31": {
+    "id": 1758,
+    "solution": "weird",
+    "print_date": "2024-10-31",
+    "days_since_launch": 1230,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-01": {
+    "id": 1495,
+    "solution": "sixth",
+    "print_date": "2024-11-01",
+    "days_since_launch": 1231,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-02": {
+    "id": 1090,
+    "solution": "snoop",
+    "print_date": "2024-11-02",
+    "days_since_launch": 1232,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-03": {
+    "id": 1325,
+    "solution": "blaze",
+    "print_date": "2024-11-03",
+    "days_since_launch": 1233,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-04": {
+    "id": 1070,
+    "solution": "vinyl",
+    "print_date": "2024-11-04",
+    "days_since_launch": 1234,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-05": {
+    "id": 581,
+    "solution": "octet",
+    "print_date": "2024-11-05",
+    "days_since_launch": 1235,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-06": {
+    "id": 1281,
+    "solution": "truly",
+    "print_date": "2024-11-06",
+    "days_since_launch": 1236,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-07": {
+    "id": 877,
+    "solution": "event",
+    "print_date": "2024-11-07",
+    "days_since_launch": 1237,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-08": {
+    "id": 1115,
+    "solution": "ready",
+    "print_date": "2024-11-08",
+    "days_since_launch": 1238,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-09": {
+    "id": 1408,
+    "solution": "swell",
+    "print_date": "2024-11-09",
+    "days_since_launch": 1239,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-10": {
+    "id": 983,
+    "solution": "inner",
+    "print_date": "2024-11-10",
+    "days_since_launch": 1240,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-11": {
+    "id": 1381,
+    "solution": "stoic",
+    "print_date": "2024-11-11",
+    "days_since_launch": 1241,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-12": {
+    "id": 746,
+    "solution": "flown",
+    "print_date": "2024-11-12",
+    "days_since_launch": 1242,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-13": {
+    "id": 2326,
+    "solution": "primp",
+    "print_date": "2024-11-13",
+    "days_since_launch": 1243,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-14": {
+    "id": 2352,
+    "solution": "uvula",
+    "print_date": "2024-11-14",
+    "days_since_launch": 1244,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-15": {
+    "id": 1618,
+    "solution": "tacky",
+    "print_date": "2024-11-15",
+    "days_since_launch": 1245,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-16": {
+    "id": 2205,
+    "solution": "visor",
+    "print_date": "2024-11-16",
+    "days_since_launch": 1246,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-17": {
+    "id": 1659,
+    "solution": "tally",
+    "print_date": "2024-11-17",
+    "days_since_launch": 1247,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-18": {
+    "id": 1860,
+    "solution": "frail",
+    "print_date": "2024-11-18",
+    "days_since_launch": 1248,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-19": {
+    "id": 2230,
+    "solution": "going",
+    "print_date": "2024-11-19",
+    "days_since_launch": 1249,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-20": {
+    "id": 1921,
+    "solution": "niche",
+    "print_date": "2024-11-20",
+    "days_since_launch": 1250,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-21": {
+    "id": 1826,
+    "solution": "spine",
+    "print_date": "2024-11-21",
+    "days_since_launch": 1251,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-22": {
+    "id": 995,
+    "solution": "pearl",
+    "print_date": "2024-11-22",
+    "days_since_launch": 1252,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-23": {
+    "id": 1098,
+    "solution": "jelly",
+    "print_date": "2024-11-23",
+    "days_since_launch": 1253,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-24": {
+    "id": 1891,
+    "solution": "twist",
+    "print_date": "2024-11-24",
+    "days_since_launch": 1254,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-25": {
+    "id": 2198,
+    "solution": "brown",
+    "print_date": "2024-11-25",
+    "days_since_launch": 1255,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-26": {
+    "id": 2143,
+    "solution": "witch",
+    "print_date": "2024-11-26",
+    "days_since_launch": 1256,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-27": {
+    "id": 1169,
+    "solution": "slang",
+    "print_date": "2024-11-27",
+    "days_since_launch": 1257,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-28": {
+    "id": 1882,
+    "solution": "chock",
+    "print_date": "2024-11-28",
+    "days_since_launch": 1258,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-29": {
+    "id": 1431,
+    "solution": "hippo",
+    "print_date": "2024-11-29",
+    "days_since_launch": 1259,
+    "editor": "Tracy Bennett"
+  },
+  "2024-11-30": {
+    "id": 1422,
+    "solution": "dogma",
+    "print_date": "2024-11-30",
+    "days_since_launch": 1260,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-01": {
+    "id": 2020,
+    "solution": "mauve",
+    "print_date": "2024-12-01",
+    "days_since_launch": 1261,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-02": {
+    "id": 563,
+    "solution": "guile",
+    "print_date": "2024-12-02",
+    "days_since_launch": 1262,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-03": {
+    "id": 1364,
+    "solution": "shaky",
+    "print_date": "2024-12-03",
+    "days_since_launch": 1263,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-04": {
+    "id": 1303,
+    "solution": "crypt",
+    "print_date": "2024-12-04",
+    "days_since_launch": 1264,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-05": {
+    "id": 2044,
+    "solution": "endow",
+    "print_date": "2024-12-05",
+    "days_since_launch": 1265,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-06": {
+    "id": 1232,
+    "solution": "shove",
+    "print_date": "2024-12-06",
+    "days_since_launch": 1266,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-07": {
+    "id": 1664,
+    "solution": "hilly",
+    "print_date": "2024-12-07",
+    "days_since_launch": 1267,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-08": {
+    "id": 1807,
+    "solution": "hyena",
+    "print_date": "2024-12-08",
+    "days_since_launch": 1268,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-09": {
+    "id": 2021,
+    "solution": "flung",
+    "print_date": "2024-12-09",
+    "days_since_launch": 1269,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-10": {
+    "id": 655,
+    "solution": "patio",
+    "print_date": "2024-12-10",
+    "days_since_launch": 1270,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-11": {
+    "id": 1797,
+    "solution": "plumb",
+    "print_date": "2024-12-11",
+    "days_since_launch": 1271,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-12": {
+    "id": 1428,
+    "solution": "vying",
+    "print_date": "2024-12-12",
+    "days_since_launch": 1272,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-13": {
+    "id": 1203,
+    "solution": "boxer",
+    "print_date": "2024-12-13",
+    "days_since_launch": 1273,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-14": {
+    "id": 1301,
+    "solution": "drool",
+    "print_date": "2024-12-14",
+    "days_since_launch": 1274,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-15": {
+    "id": 1793,
+    "solution": "funky",
+    "print_date": "2024-12-15",
+    "days_since_launch": 1275,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-16": {
+    "id": 1909,
+    "solution": "boast",
+    "print_date": "2024-12-16",
+    "days_since_launch": 1276,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-17": {
+    "id": 1859,
+    "solution": "scowl",
+    "print_date": "2024-12-17",
+    "days_since_launch": 1277,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-18": {
+    "id": 1503,
+    "solution": "hefty",
+    "print_date": "2024-12-18",
+    "days_since_launch": 1278,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-19": {
+    "id": 574,
+    "solution": "stray",
+    "print_date": "2024-12-19",
+    "days_since_launch": 1279,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-20": {
+    "id": 1572,
+    "solution": "flash",
+    "print_date": "2024-12-20",
+    "days_since_launch": 1280,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-21": {
+    "id": 2047,
+    "solution": "blade",
+    "print_date": "2024-12-21",
+    "days_since_launch": 1281,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-22": {
+    "id": 685,
+    "solution": "brawn",
+    "print_date": "2024-12-22",
+    "days_since_launch": 1282,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-23": {
+    "id": 1055,
+    "solution": "sauna",
+    "print_date": "2024-12-23",
+    "days_since_launch": 1283,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-24": {
+    "id": 645,
+    "solution": "eagle",
+    "print_date": "2024-12-24",
+    "days_since_launch": 1284,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-25": {
+    "id": 979,
+    "solution": "share",
+    "print_date": "2024-12-25",
+    "days_since_launch": 1285,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-26": {
+    "id": 2014,
+    "solution": "affix",
+    "print_date": "2024-12-26",
+    "days_since_launch": 1286,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-27": {
+    "id": 1982,
+    "solution": "grain",
+    "print_date": "2024-12-27",
+    "days_since_launch": 1287,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-28": {
+    "id": 2202,
+    "solution": "decry",
+    "print_date": "2024-12-28",
+    "days_since_launch": 1288,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-29": {
+    "id": 2000,
+    "solution": "mambo",
+    "print_date": "2024-12-29",
+    "days_since_launch": 1289,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-30": {
+    "id": 890,
+    "solution": "stare",
+    "print_date": "2024-12-30",
+    "days_since_launch": 1290,
+    "editor": "Tracy Bennett"
+  },
+  "2024-12-31": {
+    "id": 1289,
+    "solution": "lemur",
+    "print_date": "2024-12-31",
+    "days_since_launch": 1291,
+    "editor": "Tracy Bennett"
+  },
+  "2025-01-01": {
+    "id": 732,
+    "solution": "nerve",
+    "print_date": "2025-01-01",
+    "days_since_launch": 1292,
+    "editor": "Tracy Bennett"
+  },
+  "2025-01-02": {
+    "id": 610,
+    "solution": "chose",
+    "print_date": "2025-01-02",
+    "days_since_launch": 1293,
+    "editor": "Tracy Bennett"
+  }
+}
