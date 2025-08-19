@@ -12206,5 +12206,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-08-18",
+    "word": "issue",
+    "guesses": {
+      "today": 382,
+      "yesterday": 3,
+      "delta": 379,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
