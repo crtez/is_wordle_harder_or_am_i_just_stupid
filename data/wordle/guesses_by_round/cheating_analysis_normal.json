@@ -12220,5 +12220,19 @@
         "delta": 0.36
       }
     }
+  },
+  {
+    "date": "2025-08-19",
+    "word": "rowdy",
+    "guesses": {
+      "today": 5835,
+      "yesterday": 80,
+      "delta": 5755,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
