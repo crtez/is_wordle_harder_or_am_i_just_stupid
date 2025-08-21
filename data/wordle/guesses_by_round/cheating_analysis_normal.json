@@ -12234,5 +12234,19 @@
         "delta": 0.32
       }
     }
+  },
+  {
+    "date": "2025-08-20",
+    "word": "llama",
+    "guesses": {
+      "today": 7945,
+      "yesterday": 17,
+      "delta": 7928,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.0,
+        "delta": 0.44
+      }
+    }
   }
 ]
