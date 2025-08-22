@@ -12248,5 +12248,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-08-21",
+    "word": "extol",
+    "guesses": {
+      "today": 284,
+      "yesterday": 5,
+      "delta": 279,
+      "proportion": {
+        "today": 0.13,
+        "yesterday": 0.0,
+        "delta": 0.13
+      }
+    }
   }
 ]
