@@ -12262,5 +12262,19 @@
         "delta": 0.13
       }
     }
+  },
+  {
+    "date": "2025-08-22",
+    "word": "ratty",
+    "guesses": {
+      "today": 363,
+      "yesterday": 0,
+      "delta": 363,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
