@@ -12290,5 +12290,19 @@
         "delta": 0.34
       }
     }
+  },
+  {
+    "date": "2025-08-24",
+    "word": "spore",
+    "guesses": {
+      "today": 6303,
+      "yesterday": 624,
+      "delta": 5679,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.03,
+        "delta": 0.32
+      }
+    }
   }
 ]
