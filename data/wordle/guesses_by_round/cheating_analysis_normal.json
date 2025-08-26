@@ -12304,5 +12304,19 @@
         "delta": 0.32
       }
     }
+  },
+  {
+    "date": "2025-08-25",
+    "word": "mirth",
+    "guesses": {
+      "today": 6026,
+      "yesterday": 60,
+      "delta": 5966,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.0,
+        "delta": 0.33
+      }
+    }
   }
 ]
