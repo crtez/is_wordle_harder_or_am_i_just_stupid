@@ -12318,5 +12318,19 @@
         "delta": 0.14
       }
     }
+  },
+  {
+    "date": "2025-08-26",
+    "word": "annex",
+    "guesses": {
+      "today": 316,
+      "yesterday": 0,
+      "delta": 316,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
   }
 ]
