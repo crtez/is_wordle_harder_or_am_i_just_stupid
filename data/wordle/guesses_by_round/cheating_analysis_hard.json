@@ -12332,5 +12332,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-08-27",
+    "word": "tower",
+    "guesses": {
+      "today": 498,
+      "yesterday": 63,
+      "delta": 435,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.03,
+        "delta": 0.2
+      }
+    }
   }
 ]
