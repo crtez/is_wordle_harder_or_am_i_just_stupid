@@ -12360,5 +12360,19 @@
         "delta": 0.4
       }
     }
+  },
+  {
+    "date": "2025-08-29",
+    "word": "graft",
+    "guesses": {
+      "today": 6268,
+      "yesterday": 272,
+      "delta": 5996,
+      "proportion": {
+        "today": 0.35,
+        "yesterday": 0.02,
+        "delta": 0.34
+      }
+    }
   }
 ]
