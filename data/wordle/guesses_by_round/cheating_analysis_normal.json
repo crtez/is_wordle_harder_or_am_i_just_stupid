@@ -12374,5 +12374,19 @@
         "delta": 0.34
       }
     }
+  },
+  {
+    "date": "2025-08-30",
+    "word": "elate",
+    "guesses": {
+      "today": 6026,
+      "yesterday": 43,
+      "delta": 5983,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.0,
+        "delta": 0.34
+      }
+    }
   }
 ]
