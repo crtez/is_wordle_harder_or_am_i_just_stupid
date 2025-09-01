@@ -12388,5 +12388,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-08-31",
+    "word": "petal",
+    "guesses": {
+      "today": 540,
+      "yesterday": 107,
+      "delta": 433,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.05,
+        "delta": 0.2
+      }
+    }
   }
 ]
