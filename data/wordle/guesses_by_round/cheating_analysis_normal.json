@@ -12444,5 +12444,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-09-04",
+    "word": "blend",
+    "guesses": {
+      "today": 7364,
+      "yesterday": 407,
+      "delta": 6957,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.02,
+        "delta": 0.39
+      }
+    }
   }
 ]
