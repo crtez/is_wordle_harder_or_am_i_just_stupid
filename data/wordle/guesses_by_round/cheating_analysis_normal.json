@@ -12486,5 +12486,19 @@
         "delta": 0.27
       }
     }
+  },
+  {
+    "date": "2025-09-07",
+    "word": "tenor",
+    "guesses": {
+      "today": 5679,
+      "yesterday": 236,
+      "delta": 5443,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.01,
+        "delta": 0.3
+      }
+    }
   }
 ]
