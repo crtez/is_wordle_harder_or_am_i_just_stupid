@@ -12514,5 +12514,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-09-09",
+    "word": "trick",
+    "guesses": {
+      "today": 9931,
+      "yesterday": 1222,
+      "delta": 8709,
+      "proportion": {
+        "today": 0.55,
+        "yesterday": 0.07,
+        "delta": 0.49
+      }
+    }
   }
 ]
