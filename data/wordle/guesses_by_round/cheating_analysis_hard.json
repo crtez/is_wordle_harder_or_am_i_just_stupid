@@ -12528,5 +12528,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-09-10",
+    "word": "pouty",
+    "guesses": {
+      "today": 479,
+      "yesterday": 93,
+      "delta": 386,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.04,
+        "delta": 0.18
+      }
+    }
   }
 ]
