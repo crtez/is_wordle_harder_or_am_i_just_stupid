@@ -12542,5 +12542,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-09-11",
+    "word": "chair",
+    "guesses": {
+      "today": 13682,
+      "yesterday": 4185,
+      "delta": 9497,
+      "proportion": {
+        "today": 0.77,
+        "yesterday": 0.23,
+        "delta": 0.53
+      }
+    }
   }
 ]
