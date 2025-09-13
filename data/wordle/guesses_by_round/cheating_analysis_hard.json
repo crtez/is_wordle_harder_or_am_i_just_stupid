@@ -12556,5 +12556,19 @@
         "delta": 0.26
       }
     }
+  },
+  {
+    "date": "2025-09-12",
+    "word": "throb",
+    "guesses": {
+      "today": 373,
+      "yesterday": 11,
+      "delta": 362,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
   }
 ]
