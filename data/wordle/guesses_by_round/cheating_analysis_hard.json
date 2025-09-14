@@ -12570,5 +12570,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-09-13",
+    "word": "nadir",
+    "guesses": {
+      "today": 441,
+      "yesterday": 10,
+      "delta": 431,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
