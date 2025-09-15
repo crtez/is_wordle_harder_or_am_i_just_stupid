@@ -12584,5 +12584,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-09-14",
+    "word": "noisy",
+    "guesses": {
+      "today": 432,
+      "yesterday": 75,
+      "delta": 357,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.03,
+        "delta": 0.16
+      }
+    }
   }
 ]
