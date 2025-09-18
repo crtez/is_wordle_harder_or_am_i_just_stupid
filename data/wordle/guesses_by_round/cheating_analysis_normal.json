@@ -12626,5 +12626,19 @@
         "delta": 0.46
       }
     }
+  },
+  {
+    "date": "2025-09-17",
+    "word": "teeth",
+    "guesses": {
+      "today": 8755,
+      "yesterday": 201,
+      "delta": 8554,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.01,
+        "delta": 0.48
+      }
+    }
   }
 ]
