@@ -12668,5 +12668,19 @@
         "delta": 0.29
       }
     }
+  },
+  {
+    "date": "2025-09-20",
+    "word": "defer",
+    "guesses": {
+      "today": 340,
+      "yesterday": 2,
+      "delta": 338,
+      "proportion": {
+        "today": 0.15,
+        "yesterday": 0.0,
+        "delta": 0.15
+      }
+    }
   }
 ]
