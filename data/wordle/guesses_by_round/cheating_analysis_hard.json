@@ -12682,5 +12682,33 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-09-21",
+    "word": "coven",
+    "guesses": {
+      "today": 390,
+      "yesterday": 8,
+      "delta": 382,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
+  },
+  {
+    "date": "2025-09-22",
+    "word": "quill",
+    "guesses": {
+      "today": 382,
+      "yesterday": 4,
+      "delta": 378,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
