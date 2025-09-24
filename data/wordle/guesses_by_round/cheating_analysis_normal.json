@@ -12710,5 +12710,19 @@
         "delta": 0.35
       }
     }
+  },
+  {
+    "date": "2025-09-23",
+    "word": "mouth",
+    "guesses": {
+      "today": 9051,
+      "yesterday": 1080,
+      "delta": 7971,
+      "proportion": {
+        "today": 0.51,
+        "yesterday": 0.06,
+        "delta": 0.45
+      }
+    }
   }
 ]
