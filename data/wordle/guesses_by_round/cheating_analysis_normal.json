@@ -12724,5 +12724,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-09-24",
+    "word": "blunt",
+    "guesses": {
+      "today": 8477,
+      "yesterday": 360,
+      "delta": 8117,
+      "proportion": {
+        "today": 0.48,
+        "yesterday": 0.02,
+        "delta": 0.46
+      }
+    }
   }
 ]
