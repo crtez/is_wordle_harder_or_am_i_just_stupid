@@ -12738,5 +12738,19 @@
         "delta": 0.46
       }
     }
+  },
+  {
+    "date": "2025-09-25",
+    "word": "drape",
+    "guesses": {
+      "today": 7985,
+      "yesterday": 635,
+      "delta": 7350,
+      "proportion": {
+        "today": 0.45,
+        "yesterday": 0.04,
+        "delta": 0.41
+      }
+    }
   }
 ]
