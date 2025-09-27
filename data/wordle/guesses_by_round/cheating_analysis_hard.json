@@ -12752,5 +12752,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-09-26",
+    "word": "dally",
+    "guesses": {
+      "today": 393,
+      "yesterday": 1,
+      "delta": 392,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
