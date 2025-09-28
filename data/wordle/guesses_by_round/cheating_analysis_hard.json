@@ -12766,5 +12766,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-09-27",
+    "word": "fritz",
+    "guesses": {
+      "today": 410,
+      "yesterday": 1,
+      "delta": 409,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
