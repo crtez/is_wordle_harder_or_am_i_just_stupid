@@ -12780,5 +12780,19 @@
         "delta": 0.3
       }
     }
+  },
+  {
+    "date": "2025-09-28",
+    "word": "gooey",
+    "guesses": {
+      "today": 5474,
+      "yesterday": 3,
+      "delta": 5471,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
