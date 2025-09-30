@@ -12794,5 +12794,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-09-29",
+    "word": "civil",
+    "guesses": {
+      "today": 433,
+      "yesterday": 4,
+      "delta": 429,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
   }
 ]
