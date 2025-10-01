@@ -12808,5 +12808,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-09-30",
+    "word": "geese",
+    "guesses": {
+      "today": 8366,
+      "yesterday": 19,
+      "delta": 8347,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.47
+      }
+    }
   }
 ]
