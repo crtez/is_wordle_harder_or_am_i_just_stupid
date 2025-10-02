@@ -12822,5 +12822,19 @@
         "delta": 0.24
       }
     }
+  },
+  {
+    "date": "2025-10-01",
+    "word": "spoil",
+    "guesses": {
+      "today": 759,
+      "yesterday": 204,
+      "delta": 555,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.09,
+        "delta": 0.25
+      }
+    }
   }
 ]
