@@ -12850,5 +12850,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-10-03",
+    "word": "spasm",
+    "guesses": {
+      "today": 6848,
+      "yesterday": 19,
+      "delta": 6829,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.0,
+        "delta": 0.38
+      }
+    }
   }
 ]
