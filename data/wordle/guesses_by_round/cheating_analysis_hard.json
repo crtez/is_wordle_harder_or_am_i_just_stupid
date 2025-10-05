@@ -12864,5 +12864,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-10-04",
+    "word": "relay",
+    "guesses": {
+      "today": 549,
+      "yesterday": 126,
+      "delta": 423,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.06,
+        "delta": 0.18
+      }
+    }
   }
 ]
