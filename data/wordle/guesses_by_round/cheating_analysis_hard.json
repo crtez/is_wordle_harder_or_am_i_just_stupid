@@ -12878,5 +12878,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-10-05",
+    "word": "plane",
+    "guesses": {
+      "today": 1864,
+      "yesterday": 1098,
+      "delta": 766,
+      "proportion": {
+        "today": 0.82,
+        "yesterday": 0.48,
+        "delta": 0.34
+      }
+    }
   }
 ]
