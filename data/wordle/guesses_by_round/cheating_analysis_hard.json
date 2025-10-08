@@ -12906,5 +12906,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-10-07",
+    "word": "nylon",
+    "guesses": {
+      "today": 449,
+      "yesterday": 2,
+      "delta": 447,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
