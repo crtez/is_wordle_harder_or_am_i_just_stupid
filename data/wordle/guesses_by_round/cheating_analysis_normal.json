@@ -12920,5 +12920,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-10-08",
+    "word": "annoy",
+    "guesses": {
+      "today": 8612,
+      "yesterday": 83,
+      "delta": 8529,
+      "proportion": {
+        "today": 0.48,
+        "yesterday": 0.0,
+        "delta": 0.48
+      }
+    }
   }
 ]
