@@ -12934,5 +12934,19 @@
         "delta": 0.48
       }
     }
+  },
+  {
+    "date": "2025-10-09",
+    "word": "hardy",
+    "guesses": {
+      "today": 7804,
+      "yesterday": 116,
+      "delta": 7688,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.01,
+        "delta": 0.43
+      }
+    }
   }
 ]
