@@ -12948,5 +12948,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-10-10",
+    "word": "lever",
+    "guesses": {
+      "today": 6927,
+      "yesterday": 25,
+      "delta": 6902,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.0,
+        "delta": 0.39
+      }
+    }
   }
 ]
