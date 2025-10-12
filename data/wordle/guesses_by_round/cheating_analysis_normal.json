@@ -12962,5 +12962,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-10-11",
+    "word": "stack",
+    "guesses": {
+      "today": 6329,
+      "yesterday": 365,
+      "delta": 5964,
+      "proportion": {
+        "today": 0.36,
+        "yesterday": 0.02,
+        "delta": 0.34
+      }
+    }
   }
 ]
