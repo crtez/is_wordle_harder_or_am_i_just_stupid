@@ -12990,5 +12990,19 @@
         "delta": 0.26
       }
     }
+  },
+  {
+    "date": "2025-10-13",
+    "word": "beard",
+    "guesses": {
+      "today": 722,
+      "yesterday": 190,
+      "delta": 532,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.08,
+        "delta": 0.24
+      }
+    }
   }
 ]
