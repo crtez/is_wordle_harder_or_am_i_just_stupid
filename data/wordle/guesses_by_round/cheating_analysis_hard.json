@@ -13018,5 +13018,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-10-15",
+    "word": "spoof",
+    "guesses": {
+      "today": 423,
+      "yesterday": 1,
+      "delta": 422,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.0,
+        "delta": 0.19
+      }
+    }
   }
 ]
