@@ -13032,5 +13032,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-10-16",
+    "word": "catty",
+    "guesses": {
+      "today": 469,
+      "yesterday": 2,
+      "delta": 467,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.21
+      }
+    }
   }
 ]
