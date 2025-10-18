@@ -13046,5 +13046,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-10-17",
+    "word": "gross",
+    "guesses": {
+      "today": 8120,
+      "yesterday": 103,
+      "delta": 8017,
+      "proportion": {
+        "today": 0.46,
+        "yesterday": 0.01,
+        "delta": 0.45
+      }
+    }
   }
 ]
