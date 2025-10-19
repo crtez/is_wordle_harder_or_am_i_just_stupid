@@ -13060,5 +13060,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-10-18",
+    "word": "haven",
+    "guesses": {
+      "today": 5623,
+      "yesterday": 157,
+      "delta": 5466,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.01,
+        "delta": 0.31
+      }
+    }
   }
 ]
