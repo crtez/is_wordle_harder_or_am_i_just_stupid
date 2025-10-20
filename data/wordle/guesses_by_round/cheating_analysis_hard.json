@@ -13074,5 +13074,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-10-19",
+    "word": "ideal",
+    "guesses": {
+      "today": 1347,
+      "yesterday": 697,
+      "delta": 650,
+      "proportion": {
+        "today": 0.6,
+        "yesterday": 0.3,
+        "delta": 0.29
+      }
+    }
   }
 ]
