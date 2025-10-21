@@ -13088,5 +13088,19 @@
         "delta": 0.29
       }
     }
+  },
+  {
+    "date": "2025-10-20",
+    "word": "limbo",
+    "guesses": {
+      "today": 877,
+      "yesterday": 6,
+      "delta": 871,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.0,
+        "delta": 0.41
+      }
+    }
   }
 ]
