@@ -13116,5 +13116,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-10-22",
+    "word": "stunt",
+    "guesses": {
+      "today": 7819,
+      "yesterday": 29,
+      "delta": 7790,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.0,
+        "delta": 0.44
+      }
+    }
   }
 ]
