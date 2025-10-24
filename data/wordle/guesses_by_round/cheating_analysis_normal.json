@@ -13130,5 +13130,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-10-23",
+    "word": "drill",
+    "guesses": {
+      "today": 8213,
+      "yesterday": 27,
+      "delta": 8186,
+      "proportion": {
+        "today": 0.46,
+        "yesterday": 0.0,
+        "delta": 0.46
+      }
+    }
   }
 ]
