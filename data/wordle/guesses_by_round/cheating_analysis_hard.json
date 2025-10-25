@@ -13144,5 +13144,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-10-24",
+    "word": "tuber",
+    "guesses": {
+      "today": 413,
+      "yesterday": 3,
+      "delta": 410,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
