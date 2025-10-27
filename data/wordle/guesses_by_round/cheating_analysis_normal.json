@@ -13172,5 +13172,19 @@
         "delta": 0.32
       }
     }
+  },
+  {
+    "date": "2025-10-26",
+    "word": "plump",
+    "guesses": {
+      "today": 5657,
+      "yesterday": 72,
+      "delta": 5585,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
