@@ -13200,5 +13200,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-10-28",
+    "word": "holly",
+    "guesses": {
+      "today": 593,
+      "yesterday": 4,
+      "delta": 589,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
   }
 ]
