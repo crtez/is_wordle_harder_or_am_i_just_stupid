@@ -13214,5 +13214,19 @@
         "delta": 0.26
       }
     }
+  },
+  {
+    "date": "2025-10-29",
+    "word": "glare",
+    "guesses": {
+      "today": 649,
+      "yesterday": 115,
+      "delta": 534,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.05,
+        "delta": 0.24
+      }
+    }
   }
 ]
