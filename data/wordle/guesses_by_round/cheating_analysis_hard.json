@@ -13228,5 +13228,19 @@
         "delta": 0.24
       }
     }
+  },
+  {
+    "date": "2025-10-30",
+    "word": "lathe",
+    "guesses": {
+      "today": 548,
+      "yesterday": 60,
+      "delta": 488,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.03,
+        "delta": 0.22
+      }
+    }
   }
 ]
