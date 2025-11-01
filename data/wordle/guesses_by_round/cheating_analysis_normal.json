@@ -13242,5 +13242,19 @@
         "delta": 0.42
       }
     }
+  },
+  {
+    "date": "2025-10-31",
+    "word": "abhor",
+    "guesses": {
+      "today": 7133,
+      "yesterday": 117,
+      "delta": 7016,
+      "proportion": {
+        "today": 0.4,
+        "yesterday": 0.01,
+        "delta": 0.39
+      }
+    }
   }
 ]
