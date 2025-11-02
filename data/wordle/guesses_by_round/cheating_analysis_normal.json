@@ -13256,5 +13256,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-11-01",
+    "word": "motel",
+    "guesses": {
+      "today": 6060,
+      "yesterday": 110,
+      "delta": 5950,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.01,
+        "delta": 0.34
+      }
+    }
   }
 ]
