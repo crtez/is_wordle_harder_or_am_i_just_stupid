@@ -13270,5 +13270,19 @@
         "delta": 0.34
       }
     }
+  },
+  {
+    "date": "2025-11-02",
+    "word": "rabid",
+    "guesses": {
+      "today": 5144,
+      "yesterday": 75,
+      "delta": 5069,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.0,
+        "delta": 0.29
+      }
+    }
   }
 ]
