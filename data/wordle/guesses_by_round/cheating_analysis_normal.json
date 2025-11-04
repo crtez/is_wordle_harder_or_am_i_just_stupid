@@ -13284,5 +13284,19 @@
         "delta": 0.29
       }
     }
+  },
+  {
+    "date": "2025-11-03",
+    "word": "awoke",
+    "guesses": {
+      "today": 6584,
+      "yesterday": 219,
+      "delta": 6365,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.01,
+        "delta": 0.36
+      }
+    }
   }
 ]
