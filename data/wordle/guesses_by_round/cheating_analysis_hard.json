@@ -13298,5 +13298,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-11-04",
+    "word": "venue",
+    "guesses": {
+      "today": 492,
+      "yesterday": 2,
+      "delta": 490,
+      "proportion": {
+        "today": 0.22,
+        "yesterday": 0.0,
+        "delta": 0.22
+      }
+    }
   }
 ]
