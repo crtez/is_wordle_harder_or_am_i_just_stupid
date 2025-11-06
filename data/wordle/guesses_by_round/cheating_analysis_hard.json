@@ -13312,5 +13312,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-11-05",
+    "word": "short",
+    "guesses": {
+      "today": 950,
+      "yesterday": 237,
+      "delta": 713,
+      "proportion": {
+        "today": 0.42,
+        "yesterday": 0.1,
+        "delta": 0.32
+      }
+    }
   }
 ]
