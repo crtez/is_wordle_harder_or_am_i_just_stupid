@@ -13326,5 +13326,19 @@
         "delta": 0.57
       }
     }
+  },
+  {
+    "date": "2025-11-06",
+    "word": "guise",
+    "guesses": {
+      "today": 7867,
+      "yesterday": 424,
+      "delta": 7443,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.02,
+        "delta": 0.42
+      }
+    }
   }
 ]
