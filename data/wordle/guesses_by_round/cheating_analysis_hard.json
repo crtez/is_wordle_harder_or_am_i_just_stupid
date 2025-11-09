@@ -13354,5 +13354,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-11-08",
+    "word": "arise",
+    "guesses": {
+      "today": 6152,
+      "yesterday": 4463,
+      "delta": 1689,
+      "proportion": {
+        "today": 2.64,
+        "yesterday": 1.98,
+        "delta": 0.66
+      }
+    }
   }
 ]
