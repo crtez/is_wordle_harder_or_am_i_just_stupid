@@ -13382,5 +13382,19 @@
         "delta": 0.28
       }
     }
+  },
+  {
+    "date": "2025-11-10",
+    "word": "tabby",
+    "guesses": {
+      "today": 8110,
+      "yesterday": 10,
+      "delta": 8100,
+      "proportion": {
+        "today": 0.46,
+        "yesterday": 0.0,
+        "delta": 0.46
+      }
+    }
   }
 ]
