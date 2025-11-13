@@ -13410,5 +13410,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-11-12",
+    "word": "deuce",
+    "guesses": {
+      "today": 8408,
+      "yesterday": 33,
+      "delta": 8375,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.0,
+        "delta": 0.47
+      }
+    }
   }
 ]
