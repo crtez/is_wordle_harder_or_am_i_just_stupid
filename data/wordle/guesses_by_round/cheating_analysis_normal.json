@@ -13424,5 +13424,19 @@
         "delta": 0.47
       }
     }
+  },
+  {
+    "date": "2025-11-13",
+    "word": "tinge",
+    "guesses": {
+      "today": 7650,
+      "yesterday": 64,
+      "delta": 7586,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.0,
+        "delta": 0.43
+      }
+    }
   }
 ]
