@@ -13438,5 +13438,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-11-14",
+    "word": "lurid",
+    "guesses": {
+      "today": 6836,
+      "yesterday": 69,
+      "delta": 6767,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.0,
+        "delta": 0.38
+      }
+    }
   }
 ]
