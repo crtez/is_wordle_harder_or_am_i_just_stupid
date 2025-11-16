@@ -13452,5 +13452,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-11-15",
+    "word": "clung",
+    "guesses": {
+      "today": 4110,
+      "yesterday": 22,
+      "delta": 4088,
+      "proportion": {
+        "today": 0.23,
+        "yesterday": 0.0,
+        "delta": 0.23
+      }
+    }
   }
 ]
