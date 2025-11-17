@@ -13466,5 +13466,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2025-11-16",
+    "word": "wield",
+    "guesses": {
+      "today": 4667,
+      "yesterday": 54,
+      "delta": 4613,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.0,
+        "delta": 0.26
+      }
+    }
   }
 ]
