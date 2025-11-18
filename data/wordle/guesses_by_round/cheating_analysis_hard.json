@@ -13480,5 +13480,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-11-17",
+    "word": "clamp",
+    "guesses": {
+      "today": 583,
+      "yesterday": 107,
+      "delta": 476,
+      "proportion": {
+        "today": 0.26,
+        "yesterday": 0.05,
+        "delta": 0.21
+      }
+    }
   }
 ]
