@@ -13494,5 +13494,19 @@
         "delta": 0.44
       }
     }
+  },
+  {
+    "date": "2025-11-18",
+    "word": "opine",
+    "guesses": {
+      "today": 8934,
+      "yesterday": 531,
+      "delta": 8403,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.03,
+        "delta": 0.47
+      }
+    }
   }
 ]
