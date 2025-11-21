@@ -13522,5 +13522,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-11-20",
+    "word": "grave",
+    "guesses": {
+      "today": 598,
+      "yesterday": 71,
+      "delta": 527,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.03,
+        "delta": 0.23
+      }
+    }
   }
 ]
