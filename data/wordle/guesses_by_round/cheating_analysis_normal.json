@@ -13536,5 +13536,19 @@
         "delta": 0.53
       }
     }
+  },
+  {
+    "date": "2025-11-21",
+    "word": "vowel",
+    "guesses": {
+      "today": 8677,
+      "yesterday": 86,
+      "delta": 8591,
+      "proportion": {
+        "today": 0.49,
+        "yesterday": 0.0,
+        "delta": 0.48
+      }
+    }
   }
 ]
