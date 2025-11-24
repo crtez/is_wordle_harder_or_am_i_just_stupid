@@ -13564,5 +13564,19 @@
         "delta": 0.33
       }
     }
+  },
+  {
+    "date": "2025-11-23",
+    "word": "bunny",
+    "guesses": {
+      "today": 6936,
+      "yesterday": 25,
+      "delta": 6911,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.0,
+        "delta": 0.39
+      }
+    }
   }
 ]
