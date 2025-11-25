@@ -13578,5 +13578,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-11-24",
+    "word": "dough",
+    "guesses": {
+      "today": 9023,
+      "yesterday": 636,
+      "delta": 8387,
+      "proportion": {
+        "today": 0.51,
+        "yesterday": 0.04,
+        "delta": 0.47
+      }
+    }
   }
 ]
