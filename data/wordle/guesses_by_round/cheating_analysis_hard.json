@@ -13592,5 +13592,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2025-11-25",
+    "word": "plead",
+    "guesses": {
+      "today": 991,
+      "yesterday": 366,
+      "delta": 625,
+      "proportion": {
+        "today": 0.44,
+        "yesterday": 0.16,
+        "delta": 0.27
+      }
+    }
   }
 ]
