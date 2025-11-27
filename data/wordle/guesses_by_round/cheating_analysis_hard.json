@@ -13606,5 +13606,19 @@
         "delta": 0.27
       }
     }
+  },
+  {
+    "date": "2025-11-26",
+    "word": "hovel",
+    "guesses": {
+      "today": 408,
+      "yesterday": 3,
+      "delta": 405,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
