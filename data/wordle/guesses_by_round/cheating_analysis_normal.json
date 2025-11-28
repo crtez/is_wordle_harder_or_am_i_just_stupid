@@ -13620,5 +13620,19 @@
         "delta": 0.32
       }
     }
+  },
+  {
+    "date": "2025-11-27",
+    "word": "remit",
+    "guesses": {
+      "today": 5830,
+      "yesterday": 109,
+      "delta": 5721,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.01,
+        "delta": 0.32
+      }
+    }
   }
 ]
