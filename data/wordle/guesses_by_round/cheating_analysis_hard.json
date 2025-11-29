@@ -13634,5 +13634,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2025-11-28",
+    "word": "colic",
+    "guesses": {
+      "today": 417,
+      "yesterday": 1,
+      "delta": 416,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
