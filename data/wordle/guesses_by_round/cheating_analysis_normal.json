@@ -13648,5 +13648,19 @@
         "delta": 0.34
       }
     }
+  },
+  {
+    "date": "2025-11-29",
+    "word": "gruff",
+    "guesses": {
+      "today": 5458,
+      "yesterday": 12,
+      "delta": 5446,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
