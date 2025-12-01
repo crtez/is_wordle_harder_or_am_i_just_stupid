@@ -13662,5 +13662,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-11-30",
+    "word": "muggy",
+    "guesses": {
+      "today": 5494,
+      "yesterday": 18,
+      "delta": 5476,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
