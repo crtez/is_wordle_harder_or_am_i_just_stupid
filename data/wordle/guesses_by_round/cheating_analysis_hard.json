@@ -13676,5 +13676,19 @@
         "delta": 0.15
       }
     }
+  },
+  {
+    "date": "2025-12-01",
+    "word": "leach",
+    "guesses": {
+      "today": 536,
+      "yesterday": 52,
+      "delta": 484,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.02,
+        "delta": 0.21
+      }
+    }
   }
 ]
