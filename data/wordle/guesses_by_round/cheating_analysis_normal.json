@@ -13690,5 +13690,19 @@
         "delta": 0.43
       }
     }
+  },
+  {
+    "date": "2025-12-02",
+    "word": "cacti",
+    "guesses": {
+      "today": 8866,
+      "yesterday": 19,
+      "delta": 8847,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.0,
+        "delta": 0.5
+      }
+    }
   }
 ]
