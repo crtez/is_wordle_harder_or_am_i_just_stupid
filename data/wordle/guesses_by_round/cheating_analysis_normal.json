@@ -13704,5 +13704,19 @@
         "delta": 0.5
       }
     }
+  },
+  {
+    "date": "2025-12-03",
+    "word": "haste",
+    "guesses": {
+      "today": 10383,
+      "yesterday": 1537,
+      "delta": 8846,
+      "proportion": {
+        "today": 0.59,
+        "yesterday": 0.09,
+        "delta": 0.5
+      }
+    }
   }
 ]
