@@ -13718,5 +13718,19 @@
         "delta": 0.5
       }
     }
+  },
+  {
+    "date": "2025-12-04",
+    "word": "tulip",
+    "guesses": {
+      "today": 10814,
+      "yesterday": 459,
+      "delta": 10355,
+      "proportion": {
+        "today": 0.61,
+        "yesterday": 0.03,
+        "delta": 0.58
+      }
+    }
   }
 ]
