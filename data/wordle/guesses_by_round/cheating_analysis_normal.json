@@ -13732,5 +13732,19 @@
         "delta": 0.58
       }
     }
+  },
+  {
+    "date": "2025-12-05",
+    "word": "among",
+    "guesses": {
+      "today": 8557,
+      "yesterday": 142,
+      "delta": 8415,
+      "proportion": {
+        "today": 0.48,
+        "yesterday": 0.01,
+        "delta": 0.47
+      }
+    }
   }
 ]
