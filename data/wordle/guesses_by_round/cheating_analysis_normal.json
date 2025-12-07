@@ -13746,5 +13746,19 @@
         "delta": 0.47
       }
     }
+  },
+  {
+    "date": "2025-12-06",
+    "word": "waist",
+    "guesses": {
+      "today": 6838,
+      "yesterday": 401,
+      "delta": 6437,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.02,
+        "delta": 0.36
+      }
+    }
   }
 ]
