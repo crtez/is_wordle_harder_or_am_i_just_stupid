@@ -13760,5 +13760,19 @@
         "delta": 0.36
       }
     }
+  },
+  {
+    "date": "2025-12-07",
+    "word": "flute",
+    "guesses": {
+      "today": 7306,
+      "yesterday": 357,
+      "delta": 6949,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.02,
+        "delta": 0.39
+      }
+    }
   }
 ]
