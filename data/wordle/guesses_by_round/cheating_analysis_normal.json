@@ -13774,5 +13774,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2025-12-08",
+    "word": "gravy",
+    "guesses": {
+      "today": 9256,
+      "yesterday": 255,
+      "delta": 9001,
+      "proportion": {
+        "today": 0.52,
+        "yesterday": 0.01,
+        "delta": 0.51
+      }
+    }
   }
 ]
