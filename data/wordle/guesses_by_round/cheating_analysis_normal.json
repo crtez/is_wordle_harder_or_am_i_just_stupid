@@ -13788,5 +13788,19 @@
         "delta": 0.51
       }
     }
+  },
+  {
+    "date": "2025-12-09",
+    "word": "snide",
+    "guesses": {
+      "today": 6701,
+      "yesterday": 64,
+      "delta": 6637,
+      "proportion": {
+        "today": 0.38,
+        "yesterday": 0.0,
+        "delta": 0.37
+      }
+    }
   }
 ]
