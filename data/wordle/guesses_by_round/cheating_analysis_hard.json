@@ -13802,5 +13802,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-12-10",
+    "word": "erase",
+    "guesses": {
+      "today": 646,
+      "yesterday": 34,
+      "delta": 612,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.01,
+        "delta": 0.27
+      }
+    }
   }
 ]
