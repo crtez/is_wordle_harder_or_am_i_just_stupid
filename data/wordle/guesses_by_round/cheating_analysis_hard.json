@@ -13830,5 +13830,19 @@
         "delta": 0.25
       }
     }
+  },
+  {
+    "date": "2025-12-12",
+    "word": "truck",
+    "guesses": {
+      "today": 749,
+      "yesterday": 101,
+      "delta": 648,
+      "proportion": {
+        "today": 0.33,
+        "yesterday": 0.04,
+        "delta": 0.28
+      }
+    }
   }
 ]
