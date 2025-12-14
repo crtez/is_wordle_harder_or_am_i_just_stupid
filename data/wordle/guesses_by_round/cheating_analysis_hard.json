@@ -13844,5 +13844,19 @@
         "delta": 0.28
       }
     }
+  },
+  {
+    "date": "2025-12-13",
+    "word": "miser",
+    "guesses": {
+      "today": 420,
+      "yesterday": 20,
+      "delta": 400,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.01,
+        "delta": 0.17
+      }
+    }
   }
 ]
