@@ -13858,5 +13858,19 @@
         "delta": 0.33
       }
     }
+  },
+  {
+    "date": "2025-12-14",
+    "word": "swing",
+    "guesses": {
+      "today": 5968,
+      "yesterday": 282,
+      "delta": 5686,
+      "proportion": {
+        "today": 0.34,
+        "yesterday": 0.02,
+        "delta": 0.32
+      }
+    }
   }
 ]
