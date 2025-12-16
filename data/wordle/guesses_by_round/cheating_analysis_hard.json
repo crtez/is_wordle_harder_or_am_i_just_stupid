@@ -13872,5 +13872,19 @@
         "delta": 0.19
       }
     }
+  },
+  {
+    "date": "2025-12-15",
+    "word": "dodgy",
+    "guesses": {
+      "today": 383,
+      "yesterday": 0,
+      "delta": 383,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
