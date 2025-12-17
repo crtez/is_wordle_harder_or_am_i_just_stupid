@@ -13886,5 +13886,19 @@
         "delta": 0.38
       }
     }
+  },
+  {
+    "date": "2025-12-16",
+    "word": "segue",
+    "guesses": {
+      "today": 7539,
+      "yesterday": 10,
+      "delta": 7529,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.0,
+        "delta": 0.42
+      }
+    }
   }
 ]
