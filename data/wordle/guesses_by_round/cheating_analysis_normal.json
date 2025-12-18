@@ -13900,5 +13900,19 @@
         "delta": 0.42
       }
     }
+  },
+  {
+    "date": "2025-12-17",
+    "word": "grass",
+    "guesses": {
+      "today": 9741,
+      "yesterday": 93,
+      "delta": 9648,
+      "proportion": {
+        "today": 0.55,
+        "yesterday": 0.01,
+        "delta": 0.54
+      }
+    }
   }
 ]
