@@ -13928,5 +13928,19 @@
         "delta": 0.54
       }
     }
+  },
+  {
+    "date": "2025-12-19",
+    "word": "myrrh",
+    "guesses": {
+      "today": 11369,
+      "yesterday": 23,
+      "delta": 11346,
+      "proportion": {
+        "today": 0.64,
+        "yesterday": 0.0,
+        "delta": 0.64
+      }
+    }
   }
 ]
