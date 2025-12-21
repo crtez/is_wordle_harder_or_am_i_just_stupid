@@ -13942,5 +13942,19 @@
         "delta": 0.36
       }
     }
+  },
+  {
+    "date": "2025-12-20",
+    "word": "white",
+    "guesses": {
+      "today": 706,
+      "yesterday": 100,
+      "delta": 606,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.04,
+        "delta": 0.26
+      }
+    }
   }
 ]
