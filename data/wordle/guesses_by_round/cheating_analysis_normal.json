@@ -13956,5 +13956,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2025-12-21",
+    "word": "quilt",
+    "guesses": {
+      "today": 7118,
+      "yesterday": 195,
+      "delta": 6923,
+      "proportion": {
+        "today": 0.4,
+        "yesterday": 0.01,
+        "delta": 0.39
+      }
+    }
   }
 ]
