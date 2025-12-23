@@ -13970,5 +13970,19 @@
         "delta": 0.22
       }
     }
+  },
+  {
+    "date": "2025-12-22",
+    "word": "conch",
+    "guesses": {
+      "today": 421,
+      "yesterday": 2,
+      "delta": 419,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
