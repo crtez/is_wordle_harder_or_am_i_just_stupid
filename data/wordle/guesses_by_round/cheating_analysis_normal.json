@@ -13998,5 +13998,19 @@
         "delta": 0.31
       }
     }
+  },
+  {
+    "date": "2025-12-24",
+    "word": "spool",
+    "guesses": {
+      "today": 5622,
+      "yesterday": 25,
+      "delta": 5597,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.0,
+        "delta": 0.32
+      }
+    }
   }
 ]
