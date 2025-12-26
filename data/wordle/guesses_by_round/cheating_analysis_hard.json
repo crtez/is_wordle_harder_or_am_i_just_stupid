@@ -14012,5 +14012,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-12-25",
+    "word": "prism",
+    "guesses": {
+      "today": 630,
+      "yesterday": 61,
+      "delta": 569,
+      "proportion": {
+        "today": 0.27,
+        "yesterday": 0.03,
+        "delta": 0.24
+      }
+    }
   }
 ]
