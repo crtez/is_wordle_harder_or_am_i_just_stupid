@@ -14040,5 +14040,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2025-12-27",
+    "word": "batch",
+    "guesses": {
+      "today": 546,
+      "yesterday": 31,
+      "delta": 515,
+      "proportion": {
+        "today": 0.24,
+        "yesterday": 0.01,
+        "delta": 0.22
+      }
+    }
   }
 ]
