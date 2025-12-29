@@ -14054,5 +14054,19 @@
         "delta": 0.35
       }
     }
+  },
+  {
+    "date": "2025-12-28",
+    "word": "abbot",
+    "guesses": {
+      "today": 5581,
+      "yesterday": 9,
+      "delta": 5572,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
