@@ -14068,5 +14068,19 @@
         "delta": 0.17
       }
     }
+  },
+  {
+    "date": "2025-12-29",
+    "word": "fruit",
+    "guesses": {
+      "today": 946,
+      "yesterday": 322,
+      "delta": 624,
+      "proportion": {
+        "today": 0.41,
+        "yesterday": 0.14,
+        "delta": 0.27
+      }
+    }
   }
 ]
