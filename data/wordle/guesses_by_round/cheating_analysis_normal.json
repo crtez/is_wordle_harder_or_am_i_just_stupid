@@ -14096,5 +14096,19 @@
         "delta": 0.3
       }
     }
+  },
+  {
+    "date": "2025-12-31",
+    "word": "siren",
+    "guesses": {
+      "today": 7000,
+      "yesterday": 702,
+      "delta": 6298,
+      "proportion": {
+        "today": 0.4,
+        "yesterday": 0.04,
+        "delta": 0.36
+      }
+    }
   }
 ]
