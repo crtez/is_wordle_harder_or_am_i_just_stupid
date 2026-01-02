@@ -14110,5 +14110,19 @@
         "delta": 0.23
       }
     }
+  },
+  {
+    "date": "2026-01-01",
+    "word": "fable",
+    "guesses": {
+      "today": 465,
+      "yesterday": 43,
+      "delta": 422,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.02,
+        "delta": 0.18
+      }
+    }
   }
 ]
