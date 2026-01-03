@@ -14124,5 +14124,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2026-01-02",
+    "word": "proof",
+    "guesses": {
+      "today": 403,
+      "yesterday": 4,
+      "delta": 399,
+      "proportion": {
+        "today": 0.17,
+        "yesterday": 0.0,
+        "delta": 0.17
+      }
+    }
   }
 ]
