@@ -14152,5 +14152,19 @@
         "delta": 0.39
       }
     }
+  },
+  {
+    "date": "2026-01-04",
+    "word": "posse",
+    "guesses": {
+      "today": 5305,
+      "yesterday": 8,
+      "delta": 5297,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.0,
+        "delta": 0.3
+      }
+    }
   }
 ]
