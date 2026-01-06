@@ -14166,5 +14166,19 @@
         "delta": 0.3
       }
     }
+  },
+  {
+    "date": "2026-01-05",
+    "word": "filly",
+    "guesses": {
+      "today": 6834,
+      "yesterday": 16,
+      "delta": 6818,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.0,
+        "delta": 0.38
+      }
+    }
   }
 ]
