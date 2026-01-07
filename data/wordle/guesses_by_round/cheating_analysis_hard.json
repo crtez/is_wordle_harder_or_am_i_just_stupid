@@ -14180,5 +14180,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2026-01-06",
+    "word": "oomph",
+    "guesses": {
+      "today": 555,
+      "yesterday": 3,
+      "delta": 552,
+      "proportion": {
+        "today": 0.25,
+        "yesterday": 0.0,
+        "delta": 0.25
+      }
+    }
   }
 ]
