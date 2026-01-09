@@ -14208,5 +14208,19 @@
         "delta": 0.26
       }
     }
+  },
+  {
+    "date": "2026-01-08",
+    "word": "blast",
+    "guesses": {
+      "today": 954,
+      "yesterday": 210,
+      "delta": 744,
+      "proportion": {
+        "today": 0.43,
+        "yesterday": 0.09,
+        "delta": 0.33
+      }
+    }
   }
 ]
