@@ -14222,5 +14222,19 @@
         "delta": 0.33
       }
     }
+  },
+  {
+    "date": "2026-01-09",
+    "word": "eight",
+    "guesses": {
+      "today": 642,
+      "yesterday": 113,
+      "delta": 529,
+      "proportion": {
+        "today": 0.29,
+        "yesterday": 0.05,
+        "delta": 0.24
+      }
+    }
   }
 ]
