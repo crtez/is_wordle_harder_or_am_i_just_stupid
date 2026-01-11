@@ -14236,5 +14236,19 @@
         "delta": 0.24
       }
     }
+  },
+  {
+    "date": "2026-01-10",
+    "word": "manic",
+    "guesses": {
+      "today": 445,
+      "yesterday": 38,
+      "delta": 407,
+      "proportion": {
+        "today": 0.19,
+        "yesterday": 0.02,
+        "delta": 0.18
+      }
+    }
   }
 ]
