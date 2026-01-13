@@ -14264,5 +14264,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2026-01-12",
+    "word": "trial",
+    "guesses": {
+      "today": 1109,
+      "yesterday": 492,
+      "delta": 617,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.21,
+        "delta": 0.28
+      }
+    }
   }
 ]
