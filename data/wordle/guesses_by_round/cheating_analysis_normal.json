@@ -14278,5 +14278,19 @@
         "delta": 0.49
       }
     }
+  },
+  {
+    "date": "2026-01-13",
+    "word": "gumbo",
+    "guesses": {
+      "today": 8886,
+      "yesterday": 48,
+      "delta": 8838,
+      "proportion": {
+        "today": 0.5,
+        "yesterday": 0.0,
+        "delta": 0.5
+      }
+    }
   }
 ]
