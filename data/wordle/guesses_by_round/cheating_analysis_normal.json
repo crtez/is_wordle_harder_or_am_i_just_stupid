@@ -14306,5 +14306,19 @@
         "delta": 0.57
       }
     }
+  },
+  {
+    "date": "2026-01-15",
+    "word": "chasm",
+    "guesses": {
+      "today": 8287,
+      "yesterday": 299,
+      "delta": 7988,
+      "proportion": {
+        "today": 0.47,
+        "yesterday": 0.02,
+        "delta": 0.45
+      }
+    }
   }
 ]
