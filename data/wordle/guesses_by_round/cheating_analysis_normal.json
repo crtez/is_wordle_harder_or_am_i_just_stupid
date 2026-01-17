@@ -14320,5 +14320,19 @@
         "delta": 0.45
       }
     }
+  },
+  {
+    "date": "2026-01-16",
+    "word": "racer",
+    "guesses": {
+      "today": 9068,
+      "yesterday": 41,
+      "delta": 9027,
+      "proportion": {
+        "today": 0.51,
+        "yesterday": 0.0,
+        "delta": 0.51
+      }
+    }
   }
 ]
