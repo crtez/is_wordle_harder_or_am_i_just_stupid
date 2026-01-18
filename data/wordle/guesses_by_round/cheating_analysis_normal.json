@@ -14334,5 +14334,19 @@
         "delta": 0.51
       }
     }
+  },
+  {
+    "date": "2026-01-17",
+    "word": "fiery",
+    "guesses": {
+      "today": 5725,
+      "yesterday": 438,
+      "delta": 5287,
+      "proportion": {
+        "today": 0.32,
+        "yesterday": 0.02,
+        "delta": 0.3
+      }
+    }
   }
 ]
