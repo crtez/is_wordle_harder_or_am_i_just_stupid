@@ -14348,5 +14348,19 @@
         "delta": 0.3
       }
     }
+  },
+  {
+    "date": "2026-01-18",
+    "word": "sumac",
+    "guesses": {
+      "today": 5321,
+      "yesterday": 9,
+      "delta": 5312,
+      "proportion": {
+        "today": 0.3,
+        "yesterday": 0.0,
+        "delta": 0.3
+      }
+    }
   }
 ]
