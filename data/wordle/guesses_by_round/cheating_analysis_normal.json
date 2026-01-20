@@ -14362,5 +14362,19 @@
         "delta": 0.3
       }
     }
+  },
+  {
+    "date": "2026-01-19",
+    "word": "waxen",
+    "guesses": {
+      "today": 5434,
+      "yesterday": 6,
+      "delta": 5428,
+      "proportion": {
+        "today": 0.31,
+        "yesterday": 0.0,
+        "delta": 0.31
+      }
+    }
   }
 ]
