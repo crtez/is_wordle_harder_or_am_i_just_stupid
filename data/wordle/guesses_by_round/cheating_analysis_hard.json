@@ -14376,5 +14376,19 @@
         "delta": 0.16
       }
     }
+  },
+  {
+    "date": "2026-01-20",
+    "word": "sully",
+    "guesses": {
+      "today": 453,
+      "yesterday": 2,
+      "delta": 451,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
