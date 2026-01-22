@@ -14390,5 +14390,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2026-01-21",
+    "word": "cubic",
+    "guesses": {
+      "today": 457,
+      "yesterday": 4,
+      "delta": 453,
+      "proportion": {
+        "today": 0.21,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
