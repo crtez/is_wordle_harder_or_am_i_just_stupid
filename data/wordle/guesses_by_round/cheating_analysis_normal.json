@@ -14418,5 +14418,19 @@
         "delta": 0.48
       }
     }
+  },
+  {
+    "date": "2026-01-23",
+    "word": "baron",
+    "guesses": {
+      "today": 8248,
+      "yesterday": 57,
+      "delta": 8191,
+      "proportion": {
+        "today": 0.46,
+        "yesterday": 0.0,
+        "delta": 0.46
+      }
+    }
   }
 ]
