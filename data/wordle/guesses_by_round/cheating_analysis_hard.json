@@ -14432,5 +14432,19 @@
         "delta": 0.21
       }
     }
+  },
+  {
+    "date": "2026-01-24",
+    "word": "cliff",
+    "guesses": {
+      "today": 461,
+      "yesterday": 4,
+      "delta": 457,
+      "proportion": {
+        "today": 0.2,
+        "yesterday": 0.0,
+        "delta": 0.2
+      }
+    }
   }
 ]
