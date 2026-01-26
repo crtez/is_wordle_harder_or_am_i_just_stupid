@@ -14446,5 +14446,19 @@
         "delta": 0.2
       }
     }
+  },
+  {
+    "date": "2026-01-25",
+    "word": "strut",
+    "guesses": {
+      "today": 410,
+      "yesterday": 3,
+      "delta": 407,
+      "proportion": {
+        "today": 0.18,
+        "yesterday": 0.0,
+        "delta": 0.18
+      }
+    }
   }
 ]
