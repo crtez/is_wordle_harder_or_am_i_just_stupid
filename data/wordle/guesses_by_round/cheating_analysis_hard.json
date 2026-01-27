@@ -14460,5 +14460,19 @@
         "delta": 0.18
       }
     }
+  },
+  {
+    "date": "2026-01-26",
+    "word": "freak",
+    "guesses": {
+      "today": 844,
+      "yesterday": 270,
+      "delta": 574,
+      "proportion": {
+        "today": 0.37,
+        "yesterday": 0.12,
+        "delta": 0.26
+      }
+    }
   }
 ]
