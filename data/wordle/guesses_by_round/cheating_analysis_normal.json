@@ -14474,5 +14474,19 @@
         "delta": 0.48
       }
     }
+  },
+  {
+    "date": "2026-01-27",
+    "word": "dusky",
+    "guesses": {
+      "today": 6937,
+      "yesterday": 14,
+      "delta": 6923,
+      "proportion": {
+        "today": 0.39,
+        "yesterday": 0.0,
+        "delta": 0.39
+      }
+    }
   }
 ]
